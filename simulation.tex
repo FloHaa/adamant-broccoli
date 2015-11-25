@@ -1,0 +1,862 @@
+\chapter{Simulation-based comparison between CSP- and PV-power plants}
+To compare CSP and PV technologies, a simulated case study was performed on the basis of a CR system and PTC system. 
+%Special attention was paid in this comparison for a high run time of the system during the day and the covering of a prescribed demand curve.
+Specific attention was given to maximizing daytime operation and meeting the demand curve. 
+% For this comparison the PV system was expanded with an electrical energy storage.
+The photovoltaic system was extended with battery storage. 
+% For the simulation an battery storage was selected.
+% The dimension of the stored energy in this simulation went much beyond the actual technical capacity of individual electrical storage units and reaches more than one-sixt of the actual world battery storage capacity 690~GW \cite{IEA2015}.
+The storage capacity allocated for the simulation considerably exceeds the real capacity of electrical storage units currently available and is more than one-sixth the globally installed battery storage capacity of 690 GW.\cite{IEA2015}
+ %Therefor must be said at this point that this is a theoretical comparison from the viewpoint of the PV, in particular for this plant and storage scale.
+Due to the scale and particularly with respect to the photovoltaic plant, the comparison is theoretical in nature.
+\pagebreak
+\section{General assumptions}
+With the aim of producing quantifiable and comparable results, the different solar supplied power plants will be simulated under different input  parameters. After that, selected comparable output parameters will be analyzed, evaluated and rated.
+
+The plant technologies selected for comparison are: 
+\begin{itemize}
+\item CSP molten salt central receiver with thermal energy storage
+\item CSP synthetic oil parabolic trough with thermal energy storage
+\item PV fixed elevated flat plate collectors with adapted electrical energy storage
+\end{itemize}
+The PV plant has been extended with a lithium-ion battery storage for the simulation, while the thermal energy storage of the CSP plant uses molten salt technology.
+%All power plants got laid out for a maximum power output of 100~MW$_{el}$.
+All plants were laid out for a maximum power output of 100 MW$_{el}$.
+% For the comparison the power plants are forced to cover a selected load scenario.
+The plants are driven to match a selected load scenario.
+% In order to find an individual suitable power plant design to cover the scheduled output of the scenario, different layout conditions, using various storage and collecting field sizes, was tried.
+In order to find an appropriate power plant design to match the load of the scenario, different layout parameters, using various storage and collecting field sizes, were tested.
+% The scenario and there goals are discussed and defined in Section~\ref{Overall simulated configuration}. The location and related weather data is defined in Section~\ref{Location and weather data}.
+The scenario and requirements are defined and discussed in Section~\ref{Overall simulated configuration}. The location and related weather data are described in Section~\ref{Location and weather data}.
+%The solar power plants are implemented and simulated in NREL’s System Advisor Model (SAM) version SAM 2015.6.30 r3 for OS X \cite{NREL2015}.
+The solar power plants are implemented and simulated in NREL’s System Advisor Model (SAM) version SAM 2015.6.30 r3 for OS X \cite{NREL2015}. 
+% SAM is designed to simulate performance and financial models of different types of renewable energies. For the simulation the performance part of the software was used. The financial analysis was made separately. 
+SAM is designed to simulate performance and financial models of different types of renewable energy. For this simulation, only the performance component was used. The financial analysis was done separately. 
+
+The financial parameters and the resulting levelized cost of electricity (LCOE) are calculated separately for all power plants in Microsoft Excel 2011 (vers. 14.5.7) for Mac, using a simplified method which is documented in Appendix~\ref{ChapterLCOE} on page \pageref{ChapterLCOE} using a lifetime of 25~years for each plant.
+
+\subsection{Simulation scenario} \label{Overall simulated configuration}
+%Power plants are forced to supply the system load/demand.
+A hard requirement is that plants meet the full electrical demand in the system. Figure~\ref{LoadScenarios} shows the daily average system load/demand in South Africa for the winter and summer period.
+% The profiles from both load shapes rises at approx 7:00 in the morning and has there peak demand at 20:00 during the summer period.
+Both profiles feature a sharp rise at approx 7:00 and have their peak demand at 20:00 during the summer period.
+In winter, there is an initial peak at 9:00 and a second at 19:00.
+%In order to supply this system load the simulated solar power plants are forced to generate full power output of 100~MW from 7:00 to 22:00. When the system demand comes down during the night also the power plants reduce there output from 22:00 to 7:00 to 50~MW. The scenario is called "night-reduction".
+In order to match this system load, the simulated solar power plants must operate at full power output of 100~MW from 7:00 to 22:00. When the system demand drops during the night, the plants reduce there output from 22:00 to 7:00 to 50~MW. The scenario is called "night reduction".
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=1\linewidth]{FIG/LoadScenarios}
+\caption[South Africa daily average system load/demand for summer and winter days, with scheduled power production curve.]{South Africa daily average system load/demand for summer and winter days, with scheduled power production curve.}\label{LoadScenarios}
+\end{figure}
+%For the comparison the power plants there system design is forced to cover 90~\% of the scheduled electricity production over the first year.  Usually, in feed-in contracts the power output is fixed at specified values. The overproduction is not content of these contracts and is not remunerated. In order to generate exploitable and comparable results and also considering the common feed-in contracts for power plants, the hourly power production is cut to the planed values. So overproduction will not considered in the evaluation and analyses of the systems.
+In this comparison, the system design must handle 90~\% of the scheduled electricity production over the first year. Usually, in feed-in contracts, the deliverable energy is fixed. Any overproduction is not covered by such contracts and is not remunerated. In order to generate exploitable and comparable results and considering standard feed-in contracts, the hourly power production is cut to the planned values and thus overproduction is not considered in this analysis.
+
+%The results of the simulated scenarios and the financial analyses will be rated in two selected categories:
+The results of the simulation and the financial analyses will be evaluated by the following quantitative measures:
+\begin{itemize}
+%\item \textbf{Load curve covering factor} [\%]: The Load curve covering factor (LCCF) describes quantitative how effective the power plant follows the required load curve of the scenarios.
+\item \textbf{Load curve covering factor} [\%]: The load curve covering factor (LCCF) is an effectiveness measure describing how closely the plant follows the load curve.
+%\item \textbf{Levelized cost of electricity} [\textcent /kWh]: The levelized cost of electricity (LCOE) represents the total project lifecycle costs. It is the present value of project costs expressed in cents per kilowatt-hour of electricity generated by the system over its life. \cite{NREL2015a}
+\item \textbf{Levelized cost of electricity} [\textcent /kWh]: The levelized cost of electricity (LCOE) represents the total project life-cycle costs. It is the present value of project costs expressed in cents per kilowatt-hour of electricity generated by the system over its life. \cite{NREL2015a}
+\end{itemize}
+%There is a huge difference between the mentioned LCCF and the widespread capacity factor (CF). The CF is the ratio of the system's predicted electrical output in the first year of operation to the nameplate output, which is equivalent to the quantity of energy the system would generate if it operated at its nameplate capacity for every hour of the year \cite{NREL2015a}. As it is mentioned above is the LCCF calculated from the sum value of load covering in each hour of the year.
+There is an important difference between the LCCF and the widely-used \emph{capacity factor} (CF). The CF is the ratio of the system's electrical output in the first year of operation to the nameplate output, which is equivalent to the quantity of energy the system would generate if it operated at its nameplate capacity for every hour of the year \cite{NREL2015a}. The LCCF is calculated from the sum value of load coverage in each hour of the year.
+
+\subsection{Location and weather data} \label{Location and weather data}
+%For the simulation of the solar power plants the locations and weather parameter of Upington, Northern Cape was used. This location is situated in a region with one of the highest irradiation values of the country, but also has a good water access by the Orange River. This locations was mentioned before in Chapter~\ref{Solar power in South Africa} and is marked in the GHI- and DNI-maps of SA in Figure \ref{irradiation} on Page \pageref{irradiation}.
+In this simulation, locations and weather data for Upington, Northern Cape were used. This region has among the highest irradiation values in the country, but also has good water access due to the Orange River. This location was mentioned before in Chapter~\ref{Solar power in South Africa} and is marked in the GHI- and DNI-maps of SA in Figure \ref{irradiation} on Page \pageref{irradiation}. 
+ 
+\begin{table}[!h]  
+  \centering
+	\begin{tabular}{  p{4.0cm}  C{4.0cm}  C{3.0cm} } 
+
+	\hline	
+\textbf{Item}  & \textbf{Value} & \textbf{Unit} \\ \hline \hline
+Location & Upington & -\\ 
+Station ID &  684240& -  \\ 
+Data source & White Box Technologies, Inc. (31.05.2015) & -\\ \hline
+Latitude & -28.40 &$\,^{\circ}$N \\ 
+Longitude &  21.27 &$\,^{\circ}$E \\ 
+Elevation &  836 & m \\ 
+Total GHI per year  &  2~280 & kWh/m\textsuperscript{2}\\ 
+Total DNI per year &  2~621 & kWh/m\textsuperscript{2}\\ 
+Total DHI per year &  516 & kWh/m\textsuperscript{2}\\ 
+Mean temp. &  21 & $\,^{\circ}\mathrm{C}$\\ 
+Mean wind speed & 3.3 & m/s\\ \hline
+\end{tabular}
+\caption[Location and characteristics for the simulation in SAM.]{Location and characteristics for the simulation in SAM.}\label{tbl: Location}
+\end{table}
+
+
+%The input weather data for the simulation with SAM are in the EPW-format (EnergyPlus Weather Data) and produced by White Box Technologies, Inc. \cite{WhiteBoxTechnologies2015}. The EPW-files are data sets of hourly values of solar radiation and meteorological elements for a typical one-year period. This includes air temperature, dew point temperature, relative Humidity, atmospheric pressure, global horizontal solar radiation, diffuse Horizontal solar radiation, direct normal radiation, wind Speed, wind Direction and cloud cover. The for the simulation most relevant values are summarized in Table \ref{tbl: Location}. The hourly values of global horizontal and direct normal irradiance from the EPW-file is shown in Figure~\ref{Upington_GHI/DNI}. The highest irradiance value during the summer time is 1~199~Wh/m\textsuperscript{2} for GHI and 1~154~Wh/m\textsuperscript{2} for DNI. At the shortest day the highest irradiance is 625~Wh/m\textsuperscript{2} for GHI and 820~Wh/m\textsuperscript{2} for DNI.
+The weather data for the simulation in SAM are in EPW format (EnergyPlus Weather Data) and produced by White Box Technologies, Inc. \cite{WhiteBoxTechnologies2015}. The EPW files are data sets of hourly values of solar radiation and meteorological elements for a typical one-year period. These include air temperature, dew point temperature, relative humidity, atmospheric pressure, global horizontal solar radiation, diffuse horizontal solar radiation, direct normal radiation, wind speed, wind direction and cloud cover. The most relevant parameters for this simulation are summarized in Table \ref{tbl: Location}. The hourly values of global horizontal and direct normal irradiance from the EPW file are shown in Figure~\ref{Upington_GHI/DNI}. The highest irradiance value during the summer is 1~199~Wh/m\textsuperscript{2} for GHI and 1~154~Wh/m\textsuperscript{2} for DNI. At the northern solstice, the highest irradiance is 625~Wh/m\textsuperscript{2} for GHI and 820~Wh/m\textsuperscript{2} for DNI.
+
+
+\begin{figure}[!htbp]
+        \centering
+                \begin{subfigure}[b]{1\textwidth}
+                \centering
+                \includegraphics[width=1\textwidth]{FIG/Upington_GHI}
+                \caption{Global horizontal}\label{Upington_GHI}
+        \end{subfigure}%
+\par\medskip % Linebreak      
+        \begin{subfigure}[b]{1\textwidth}
+                \centering
+                \includegraphics[width=1\textwidth]{FIG/Upington_DNI}
+                \caption{Direct normal }\label{Upington_DNI}
+        \end{subfigure}%
+
+        \caption[Hourly values of irradiance over a full year from Upington used in the simulation.]{Hourly values of irradiance over a full year from Upington used in the simulation.}\label{Upington_GHI/DNI}
+\end{figure}
+\newpage \noindent
+%Most relevant for the simulation is also the position of the sun. SAM calculates the path of the sun by the position of longitude and latitude. Figure~\ref{SunPathUpington} shows the sun path diagram of Upington. From this it appears that the longest day in Upington has 13~h and 56~minutes with a maximum sun height of 85.05$\,^{\circ}$ while the shortest day has just 10~h and 19~minutes and a maximum sun height of 35.93$\,^{\circ}$.
+SAM calculates the path of the sun by the position of longitude and latitude. Figure~\ref{SunPathUpington} shows the solar path diagram at Upington. It is apparent that the longest day in Upington has a duration of 13~h and 56~minutes with a maximum sun height of 85.05$\,^{\circ}$ while the shortest day has a duration of just 10~h and 19~minutes and a maximum sun height of 35.93$\,^{\circ}$.
+
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=0.95\linewidth]{FIG/SunPathUpington}
+\caption[Solar path diagram for Upington.]{Solar path diagram Upington \cite{PVsystSA2015}.}\label{SunPathUpington}
+\end{figure}
+\pagebreak 
+\section{CR power plant design  and simulation}
+%For the CR power plant simulation in SAM the “CSP power tower molten salt" model was used. The EPW weather file for Upington from Section~\ref{Location and weather data} was used as an input file to specify the hourly atmospheric conditions. SAM uses the following input data for the simulation:
+For the CR plant simulation in SAM, the \enquote{CSP power tower molten salt} model was used. The EPW weather file for Upington from Section~\ref{Location and weather data} was used as an input file to specify the hourly atmospheric conditions. SAM uses the following input data for the simulation:
+\begin{itemize}
+\item Latitude ($\,^{\circ}$)
+\item Longitude ($\,^{\circ}$)
+\item Elevation above sea level (m)
+\item DNI (W/m\textsuperscript{2})
+\item Atmospheric pressure (mbar)
+\item Dry bulb temperature ($\,^{\circ}\mathrm{C}$)
+\item Wet bulb temperature ($\,^{\circ}\mathrm{C}$)
+\item Relative humidity (\%)
+\item Wind velocity (m/s)
+\end{itemize}
+This Chapter describes in detail the crucial inputs of the CR power plant components, namely the power cycle, heliostat field, tower and receiver and thermal energy storage (TES).
+
+As already mentioned, financial parameters and the LCOE are calculated separately in Microsoft Excel using a simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}.
+
+\subsubsection{Simulated configurations}
+%The simulated configurations had the goal to reach 90~\% of the scheduled production curve by using variation of solar multiple and full load hours of TES. Also the simulated configurations covers a broad view on the technology possibilities. As already mentioned in Section~\ref{Large scale concentrated solar power (CSP) plants} is the SM the ratio of the receivers thermal output to the power cycles thermal input at design point. So a CR system with a SM of 1 has a receiver and a heliostat field which provides the thermal power needed for the power block to run at full load at the system design point. A receiver and collector field with a SM of 1 don't produce enough thermal power to store energy in a TES while feeding the turbine. A CR system with a SM of 1 is just suitable for systems without TES. To covering the scheduled load the solar multiple was varied from 2 to 3.5 in steps of 0.5. Also the storage full load hours were varied from 6 to 16~h in steps of 2~h. The target of 100~MW net capacity was reached with a gross capacity of 111~MW with an estimated gross-to-net conversion factor of 0.90. Table~\ref{tbl: CR_OverallConfig} summarizes the simulated configurations.
+The simulated configurations were to meet 90~\% of the scheduled production curve by using variation of solar multiples and full load hours of TES. As mentioned in Section~\ref{Large scale concentrated solar power (CSP) plants} the solar multiple (SM) is the ratio of the receiver's thermal output to the power cycles thermal input at the design point. Thus, a CR system with a SM of 1 has a receiver and a heliostat field which provides the thermal power needed for the power block to run at full load at the system design point. A receiver and collector field with an SM of 1 do not produce enough thermal power to store energy in a TES while also feeding the turbine. A CR system with a SM of 1 is just sufficient for systems without TES. In order to cover the expected load, the solar multiple was varied from 2 to 3.5 in steps of 0.5, while storage full load hours were varied from 6 to 16~h in steps of 2~h. The target of \SI{100}{MW} net capacity was reached with a gross capacity of 111~MW with an estimated gross-to-net conversion factor of 0.90. Table~\ref{tbl: CR_OverallConfig} summarizes the simulated configurations.
+
+\begin{table}[!h]  
+  \centering
+	\begin{tabular}{ p{4.0cm}  C{1.0cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} |C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} } 
+	\hline	
+\textbf{Item} & \textbf{Unit} & \multicolumn{12}{c}{\textbf{Value}} \\ \hline \hline
+Net turbine capacity & MW\textsubscript{el} & \multicolumn{12}{c}{100} \\
+Gross turbine capacity & MW\textsubscript{el} & \multicolumn{12}{c}{111} \\ \hline
+Solar multiple & - & \multicolumn{6}{c}{2.0} & \multicolumn{6}{c}{2.5} \\
+TES capacity & h &  6 & 8 & 10 & 12 & 14 & 16 &  6 & 8 & 10 & 12 & 14 & 16 \\ \hline 
+Solar multiple & - & \multicolumn{6}{c}{3.0} & \multicolumn{6}{c}{3.5} \\
+TES capacity & h &  6 & 8 & 10 & 12 & 14 & 16 &  6 & 8 & 10 & 12 & 14 & 16 \\ \hline 
+\end{tabular}
+\caption[Simulated CR solar multiple and thermal energy storage configurations.]{Simulated CR solar multiple and thermal energy storage  configurations.}\label{tbl: CR_OverallConfig}
+\end{table}
+\subsubsection{Power cycle}
+The power cycle of the simulated CR system features a Rankine-cycle steam engine, two open feed-water heaters, a pre-heater, boiler and super-heater \cite{NREL2015a}. As mentioned above has the turbine a gross capacity of 111~MW\textsubscript{el} and a nameplate (net) capacity of 100 MW\textsubscript{el}. 
+\begin{table}[!h]  
+  \centering
+	\begin{tabular}{  p{7.0cm}  C{2.0cm}  C{2.0cm} } 
+	\hline	
+\textbf{Item} & \textbf{Value} & \textbf{Unit} \\ \hline \hline
+Turbine design capacity, gross  & 111 & MW\textsubscript{el} \\ 
+Turbine design capacity, net & 100 & MW\textsubscript{el} \\ 
+Boiler operating pressure & 125 & bar \\ 
+Design inlet temperature & 288 & $\,^{\circ}\mathrm{C}$ \\ 
+Design outlet temperature & 566 & $\,^{\circ}\mathrm{C}$ \\ 
+Cycle conversion efficiency & 41.2 & \% \\ 
+Steam generator design thermal power & 269.42 & MW\textsubscript{th}  \\
+Power block start-up time & 0.5 & h \\ 
+Minimum required start-up temperature & 500 & $\,^{\circ}\mathrm{C}$ \\
+Plant availability  & 96 & \\
+Condenser type & air-cooled & - \\ 
+\hline
+\end{tabular}
+\caption[CR power block and condecer input parameter in SAM.]{CR power block and condecer input parameter in SAM.}\label{tbl: CRPowerplant}
+\end{table}
+The steam generator has a HTF inlet temperature of 566$\,^{\circ}\mathrm{C}$ and outlet temperature of 288$\,^{\circ}\mathrm{C}$ at design point and operates at a pressure of 125 bar. In combination with a air-cooled condenser the CR power cycle system was simulated with a cycle gross efficiency of 41.2\%. A wet-cooled condenser would reaches some higher efficiency, but because of the lack of water in the area of Upington and the requirement by the South African government for CSP plants, a air-cooled condenser was selected. The HTF inlet temperature, pressure and efficiency values where adapted for the configuration from \cite{Kolb2011a}. For starting up the system 
+needs 30 minutes and a min. required temperature of 500$\,^{\circ}\mathrm{C}$. A plant availability of 96~\% was adapted from \cite{Morin2012} in order to simulate system down-times for outages or scheduled maintenance.
+\subsubsection{Heliostat field}
+The heliostat field design was done in SAM using its heliostat field layout optimization tool. For the design, optimization and simulation process, heliostat data from the Sanlúcar 120 heliostat was used \cite{Noone2012}. The Sanlúcar 120 is used in the Planta Solar 10 (PS10) near Seville, Spain and is the origin of Abengoas actual heliostat ASUP 140. For a simulation with the ASUP 140 no sufficient data was available. 
+\begin{table}[!htbp]  
+  \centering
+	\begin{tabular}{ p{4.5cm}  C{1.5cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} } 
+	\hline	
+\textbf{Item} & \textbf{Unit} & \multicolumn{4}{c}{\textbf{Value}} \\ \hline \hline
+racking & - &  \multicolumn{4}{c}{two-axis} \\
+Height & m  &  \multicolumn{4}{c}{9.45} \\
+Width & m  &  \multicolumn{4}{c}{12.84} \\
+Reflective area & m\textsuperscript{2} &  \multicolumn{4}{c}{120.00} \\
+Heliostat availability& \% &  \multicolumn{4}{c}{99} \\
+Design-point DNI & W/m\textsuperscript{2} &  \multicolumn{4}{c}{950} \\
+\hline
+\textbf{Solar multiple}& \textbf{-} & \textbf{2.0} & \textbf{2.5} & \textbf{3.0} & \textbf{3.5}\\ \hline 
+Number of heliostats & - & 9~131 & 11~530 & 13~976 & 16~658 \\
+Max. distance from tower & m & 1~528 & 1~708 & 1~883 & 2010 \\
+Reflective area  & ha & 109.58 & 138.36 & 167.72 & 199.90 \\
+Field land area & ha & 655.59 & 821.92 & 997.95 & 1~190.99 \\ 
+\hline
+\end{tabular}
+\caption[CR heliostat parameter.]{CR heliostat parameter.}\label{tbl: CRHeliostats}
+\end{table}
+The Sanlúcar 120 heliostats have an effective reflective area of 120~m\textsuperscript{2} and are tracked on 2 axes. The heliostat field layout optimization and there design depends on the turbine gross and the SM. The heliostat field was optimized therefore for all four considered configurations. SAM first generates a coarse layout and optimizes the number of heliostats and their position. The goal of the optimization is the maximum flux with minimum power constraints according to the specified design-point DNI which represents the DNI at which the power plant achieves its rated thermal capacity. Table~\ref{tbl: CRHeliostats} summarizes the heliostat datas and the values of the optimized field design for all considered solar multiples.
+
+
+
+The optimized heliostat field layouts of the four considered SM are depict in Figure~\ref{SM}. In order to avoid mutual shading from the heliostats the heliostat density decreases with distance from the tower. The maximum heliostat distance to the tower rises with the higher SM which can be seen in the field diameter. 
+\begin{figure}[!htbp]
+        \centering   
+        \begin{subfigure}[b]{0.5\textwidth}
+                \centering
+                \includegraphics[width=0.95\textwidth]{FIG/SM20}
+                \caption{SM~=~2.0}\label{SM2.0}
+        \end{subfigure}%
+        ~
+        \begin{subfigure}[b]{0.5\textwidth}
+                \centering
+                \includegraphics[width=0.95\textwidth]{FIG/SM25}
+                \caption{SM~=~2.5}\label{SM2.5}
+        \end{subfigure}
+        
+\par\medskip % Linebreak
+                
+        \begin{subfigure}[b]{0.5\textwidth}
+                \centering
+                \includegraphics[width=0.95\textwidth]{FIG/SM30}
+                \caption{SM~=~3.0}\label{SM3.0}
+        \end{subfigure}%
+        ~
+        \begin{subfigure}[b]{0.5\textwidth}
+                \centering
+                \includegraphics[width=0.95\textwidth]{FIG/SM35}
+                \caption{SM~=~3.5}\label{SM3.5}
+        \end{subfigure}
+        \caption[Simulated heliostat field layout at diferent solar multiples (SM).]{Simulated heliostat field layout at diferent solar multiples (SM).}\label{SM}
+\end{figure}
+\subsubsection{Tower and receiver}
+The receiver collects the concentrated irradiance from the surrounding heliostat field. The simulated receiver is build as an external cylindrical receiver and is configurated with 24 panels of thin walled (1.25 mm) receiver tubes with an outer diameter of 60 mm arranged in a circle around the tower. The receiver tubes are made from 316H stainless steel and the external surfaces of the tubes are coated with a black Pyromark paint. The paint is resistant to high temperatures and thermal cycling, and absorbed 95\% of the incident sunlight. This configuration is similar to the receiver of the  Solar Two Project accept of the outer diameter \cite{Bradshaw2002}. The panels containing molten salt (60~\% NaNO\textsubscript{3} and 40~\% KNO\textsubscript{3}) as heat transfer fluid (HTF). The receiver design inlet temperature of 288$\,^{\circ}\mathrm{C}$ and the outlet temperature of 566$\,^{\circ}\mathrm{C}$ was set before in the power block configuration. In order to achieve the desired receiver thermal power output, the height of the tower and receiver dimensions got also adjust with the optimization of the heliostat field design. The results of the optimization is shown in Table~\ref{tbl: CRSolarfield}, as well as the fixed tower and receiver parameter. The heights of the tower range from 179.77 to 236.50~m. The receiver proportions rises with the SM and the field sizes and results in a receiver thermal power range from 538.8 to 943.0 MW\textsubscript{th}.
+\begin{table}[!h]  
+  \centering
+	\begin{tabular}{ p{5.5cm}  C{1.5cm} C{1.2cm} C{1.4cm} C{1.4cm} C{1.4cm} } 
+	\hline	
+\textbf{Item} & \textbf{Unit} & \multicolumn{4}{c}{\textbf{Value}} \\ \hline \hline
+Receiver configuration & - &  \multicolumn{4}{c}{external cylindrical receiver}\\
+Heat transfer fluid & - &  \multicolumn{4}{c}{60~\% NaNO\textsubscript{3} and 40~\% KNO\textsubscript{3}}\\
+Inlet temperatures & $\,^{\circ}\mathrm{C}$  &  \multicolumn{4}{c}{288}\\
+Outlet temperatures & $\,^{\circ}\mathrm{C}$  &  \multicolumn{4}{c}{566}\\
+Receiver tube material & - &  \multicolumn{4}{c}{AISI316 stainless steal}\\
+Receiver tube outer diameter & mm &  \multicolumn{4}{c}{60}\\
+Receiver tube wall thickness & mm &  \multicolumn{4}{c}{1.25}\\
+Number of panels & - &  \multicolumn{4}{c}{24}\\
+Absorption factor  & - &  \multicolumn{4}{c}{0.95}\\
+\hline
+\textbf{Solar multiple} &  & \textbf{2.0} & \textbf{2.5} & \textbf{3.0} & \textbf{3.5}\\ \hline 
+Tower height & m & 179.77 & 200.96 & 221.57 &  236.50\\
+Receiver height  & m & 22.55 & 25.45 & 27.74 &  29.94\\
+Receiver diameter & m & 14.85 & 16.66 & 17.91 & 18.77\\ 
+Receiver aperture area & m\textsuperscript{2} & 1~052 & 1~332 & 1~561 & 1~765 \\ 
+Receiver thermal power & MW\textsubscript{th} & 538.8 & 673.5 & 808.3 & 943.0 \\
+\hline
+\end{tabular}
+\caption[CR heliostat field parameter.]{CR heliostat field parameter.}\label{tbl: CRSolarfield}
+\end{table}
+\subsubsection{Thermal energy storage (TES)}
+The CR system was simulated using a direct two-tank molten salt thermal energy storage (TES). The storage uses directly the HTF (60~\% NaNO\textsubscript{3} and 40~\% KNO\textsubscript{3}) from the receiver as storage medium. Figure~\ref{towerdirecttwotank} on Page~\pageref{towerdirecttwotank} shows a schema of the direct storage for CR system. The design temperature of the hot storage tank (566$\,^{\circ}\mathrm{C}$) and the cold storage tank (288$\,^{\circ}\mathrm{C}$) depends also from the set value in the power block settings as before the design receiver temperatures. So the design temperature difference between the tanks is 278$\,^{\circ}\mathrm{C}$.
+
+
+
+As defined at the begining of this Chapter, the full load hours of TES are varied in steps of 2~h from 6 to 16~h. The TES full load hours represents the time in which the storage can supply enough energy to the steam turbine and the power block to run at full design capacity. So a higher value of TES full load hours extended the time that the power plant can run during nights or cloudy days. Table~\ref{tbl: CRTES} shows that with higher TES full load hours the thermal capacity and tank volume increases as well. The simulated storage capacity is in a range of 1~617~MWh\textsubscript{th} using 6 full load hours and 4~311~MWh\textsubscript{th} using 16 full load hours. 
+\begin{table}[!h]  
+  \centering
+	\begin{tabular}{ p{3.9cm}  C{1.0cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} } 
+	\hline	
+\textbf{Item} & \textbf{Unit} & \multicolumn{6}{c}{\textbf{Value}} \\ \hline \hline
+Storage type & - &  \multicolumn{6}{c}{direct two-tank molten salt}\\
+Storage fluid & - &  \multicolumn{6}{c}{60~\% NaNO\textsubscript{3} and 40~\% KNO\textsubscript{3}}\\
+Hot tank design temp. & $\,^{\circ}\mathrm{C}$ & \multicolumn{6}{c}{566}\\
+Cold tank design temp. & $\,^{\circ}\mathrm{C}$ & \multicolumn{6}{c}{288}\\
+\hline
+\textbf{TES full load hours} & \textbf{h} & \textbf{6} & \textbf{8} & \textbf{10} & \textbf{12} & \textbf{14} & \textbf{16}\\ \hline 
+Thermal capacity & MWh\textsubscript{th} & 1~617 & 2~155 & 2~694 & 3~233 & 3~772 &  4~311\\
+Storage volume  & m\textsuperscript{3} & 7~757 & 10~229 & 12~787 & 15~345 & 17~902 & 20~460\\
+\hline
+\end{tabular}
+\caption[CR system TES parameter.]{CR system TES parameter.}\label{tbl: CRTES}
+\end{table}
+
+SAM 2015.6.30 r3 don't have a power control to follow prescribed hourly net output values. The turbine output of each day needs to be scheduled in front for the simulation. Thereby the parasitic consumer needs highly attention. Figure~\ref{CR_turbineoutput} shows the for the simulation scheduled turbine output matrix. The individual values was fixed during experimental trial. It can be seen that the turbine output is reduced to 50\% during the night as it is specified in the scenario. The power plant follows the schedule till there is no solar irradiance and no more thermal capacity in the storage left to generate power. 
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=0.95\linewidth]{FIG/CR_turbineoutput}
+\caption[TES dispatch control matrix for turbine output fraction of CR simulation in SAM.]{TES dispatch control matrix for turbine output fraction of CR simulation in SAM.}\label{CR_turbineoutput}
+\end{figure}
+\pagebreak
+\subsubsection{Financial parameter}
+The financial parameter for the LCOE calculation of the CR power plant are seperated in different specific cost parts and are sumerized in Table~\ref{tbl: CRFinance}. The method for calculating the LCOE is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE} using a lifetime of 25~years and a real interest rate of 7.5~\% \cite{FraunhoferISE2013}. The interest rate could be reduced with a rising market potential.
+
+
+
+The specific costs of the heliostat field of 180\$/m\textsuperscript{2} coming from J. B. Blackmon \cite{Blackmon2012}. He analyzed the costs of heliostat as a function of area for a representative solar central receiver power plant and calculated the total installed costs for a field of 5~000 heliostats with 148~m\textsuperscript{2} reflective area of approximately 180~\$/m\textsuperscript{2}. The analyze results showed that the costs are increasing with the size of the heliostats from 40~m\textsuperscript{2} on. So the adopted value of 180~\$/m\textsuperscript{2} reflective area for 140~m\textsuperscript{2} heliostats can be assumed as conservative.
+
+The remaining investment costs are based on the "Power Tower Technology Roadmap and Cost Reduction Plan" \cite{Kolb2011} from 2011.
+
+On top of the investment costs a came 15 \% once-off surcharge for EPC and contingencies \cite{Platzer2014}.
+
+Fichtner analyzed the annual O\&M costs with 1.84-1.96~\% of the total investment costs for CR power plants in SA \cite{Fichtner2010}. The value of 2~\% can so also be assumed as conservative.
+
+The costs for the land purchase comes from the "African Agriculture Review" report of the Nedbank Capital, which reported the prices for farmland in SA. For the LCOE calculation of the CSP and PV system was the land purchase costs of \$3,000/ha assumed which is based on these report \cite{Cassell2012}.
+
+\begin{table}[!h]  
+  \centering
+	\begin{tabular}{  p{5.0cm} C{2.0cm} C{1.5cm}  C{1.5cm}  C{4.0cm} } 
+	\hline	
+\textbf{Item} & \textbf{Symbol}& \textbf{Value} & \textbf{Unit} & \textbf{Source}\\ \hline \hline
+Heliostat field &$c_{HF}$ & 180 & \$/m\textsuperscript{2} & \cite{Blackmon2012}\\ 
+Power block & $c_{PB,CR}$ & 1000 & \$/kW\textsubscript{el} & \cite{Kolb2011}\\ 
+Thermal energy storage&$c_{TES,CR}$ & 30 & \$/kWh\textsubscript{th}  & \cite{Kolb2011}\\ 
+Tower and receiver& $c_{T+R}$& 200 & \$/kW\textsubscript{th}  & \cite{Kolb2011}\\ 
+Annual O\&M & $f_{O\&M,CR}$ & 2 & \% &\cite{Fichtner2010}\\
+Land purchase&$c_{LP}$ & 3~000 & \$/ha & \cite{Cassell2012}\\ \hline
+Lifetime &$n$ & 25 & years & \cite{FraunhoferISE2013} \\ 
+Interest rate & $i_{CR}$ & 7.5 & \% & \cite{FraunhoferISE2013} \\ 
+Surcharge for EPC, project management and risk & $f_{EPC,CR}$& 15 & \% & \cite{Platzer2014} \\
+Total plant availability & $f_{avail,plant,CR}$ & 96 & \% & \cite{Morin2012} \\ 
+\hline
+\end{tabular}
+\caption[Finacial input parameter for CR-simulation in SAM.]{Finacial input parameter for CR-simulation in SAM.}\label{tbl: CRFinance}
+\end{table}
+\pagebreak
+\section{PTC power plant design  and simulation}
+The PTC power plant was simulation in the “CSP parabolic trough (physical)" model in SAM using the option "no financial model". As before the input the EPW weather file to specify the hourly atmospheric conditions from Section~\ref{Location and weather data} was used. For the PTC simulation SAM uses the following input data:
+\begin{itemize}
+\item Latitude ($\,^{\circ}$)
+\item Longitude ($\,^{\circ}$)
+\item Elevation above sea level (m)
+\item DNI (W/m\textsuperscript{2})
+\item Atmospheric pressure (mbar)
+\item Dry bulb temperature ($\,^{\circ}\mathrm{C}$)
+\item Wetbulbtemperature($\,^{\circ}\mathrm{C}$)
+\item Relative humidity (\%)
+\item Wind velocity (m/s)
+\end{itemize}
+This Chapter describes in detail the input data of the PTC power plant simulation by there components, namely the  power cycle, solar collector, solar receiver, solar field and thermal energy storage (TES).
+
+Also for the simulation of the PTC are the financial parameters and the LCOE calculated separately Microfoft Excel using a simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}.
+\subsubsection{Simulated configurations}
+In order to reaching the goal of covering 90 \% of the scheduled production curve also the simulated PTC power plant used a variation of solar multiple and full load hours of TES. To covering the scheduled load the solar multiple was varied from 2 to 5.0 in steps of 5.0. This is significantly higher SM compared the simulated CR system was necessary to reach the 90 \% covering factor. As before with the simulation of the CR, the storage full load hours were varied from 6 to 16 h in steps of 2 h. The target of 100 MW net capacity was reached with a gross capacity of 120 MW with an estimated gross-to-net conversion factor of 0.83. The comparatively high gross turbine output is nessasary for the high parasitic burden of the system. Table~\ref{tbl: PTC_OverallConfig} summarizes the simulated configurations.
+\begin{table}[!h]  
+  \centering
+	\begin{tabular}{ p{4.0cm}  C{1.0cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} |C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} } 
+	\hline	
+\textbf{Item} & \textbf{Unit} & \multicolumn{12}{c}{\textbf{Value}} \\ \hline \hline
+Net turbine capacity & MW\textsubscript{el} & \multicolumn{12}{c}{100} \\
+Gross turbine capacity & MW\textsubscript{el} & \multicolumn{12}{c}{120} \\ \hline
+Solar multiple & - & \multicolumn{6}{c}{2.0} & \multicolumn{6}{c}{2.5} \\
+TES capacity & h &  6 & 8 & 10 & 12 & 14 & 16 &  6 & 8 & 10 & 12 & 14 & 16 \\ \hline 
+Solar multiple & - & \multicolumn{6}{c}{3.0} & \multicolumn{6}{c}{3.5} \\
+TES capacity& h &  6 & 8 & 10 & 12 & 14 & 16 &  6 & 8 & 10 & 12 & 14 & 16 \\ \hline 
+Solar multiple & - & \multicolumn{6}{c}{4.0} & \multicolumn{6}{c}{4.5} \\
+TES capacity& h &  6 & 8 & 10 & 12 & 14 & 16 &  6 & 8 & 10 & 12 & 14 & 16 \\ \hline 
+Solar multiple & - & \multicolumn{6}{c}{5.0} & \multicolumn{6}{c}{ } \\
+TES capacity& h &  6 & 8 & 10 & 12 & 14 & 16 &  \multicolumn{6}{c}{ } \\ \hline 
+\end{tabular}
+\caption[Simulated PTC solar multiple and thermal energy storage  configurations.]{Simulated PTC solar multiple and thermal energy storage  configurations.}\label{tbl: PTC_OverallConfig}
+\end{table}
+
+\subsubsection{Power cycle}
+The PTC system also uses the steam Rankine cycle technology. In the modeled cycle, feedwater is heated in open (mixed stream) feedwater heaters with two intermediate turbine extractions - once for high pressure and once for low pressure, and the steam generation equipment consists of a preheater, boiler, and superheater. The HTF temperature at the field outlet is bound primarily by HTF stability, so maximum HTF temperatures for oil troughs typically range between 370$\,^{\circ}\mathrm{C}$ and 410$\,^{\circ}\mathrm{C}$. The turbine has a gross capacity of 120~MW\textsubscript{el}. So the net turbine capacity output at design (nameplate) is 100~MW\textsubscript{el}. The design inlet temperature of the HTF in the steam generator is 393$\,^{\circ}\mathrm{C}$ and outlet temperature of 293$\,^{\circ}\mathrm{C}$ at design point and operates at a pressure of 100 bar.
+
+
+
+Table~\ref{tbl: PTCPowerplant} shows the input parameter for the power block design in SAM. Besides the capacity of the turbine and the condecer type, the parameters are coming from \cite{Wagner2011}. It is obviously, that the cycle conversion efficiency of the PTC power plant is lower than that one from the CR power plant. This is trace back to the lower cycle temperatures and the thereby resulting lower steam pressure in the turbine.
+
+
+
+The air-cooled condenser was selected here as well, because water is an valuable resource in the region of Upington. The cooling system is designed to covers the stem generator thermal power. 
+\begin{table}[!h]  
+  \centering
+	\begin{tabular}{  p{7.0cm}  C{2.0cm}  C{2.0cm} } 
+	\hline	
+\textbf{Item} & \textbf{Value} & \textbf{Unit} \\ \hline \hline
+Turbine design capacity, gross  & 110 & MW\textsubscript{el} \\ 
+Turbine design capacity, net & 100 & MW\textsubscript{el} \\ 
+Boiler operating pressure & 100 & bar \\ 
+Design inlet temperature & 393 & $\,^{\circ}\mathrm{C}$ \\ 
+Design outlet temperature & 291 & $\,^{\circ}\mathrm{C}$ \\ 
+Cycle conversion efficiency & 37.74 & \% \\ 
+Steam generator design thermal power & 318.0 & MW\textsubscript{th}  \\
+Power block start-up time & 0.5 & h \\ 
+Minimum required start-up temperature & 300 & $\,^{\circ}\mathrm{C}$ \\
+Maximum turbine over design operation & 90 & \\
+Condenser type & air-cooled & - \\ 
+\hline
+\end{tabular}
+\caption[PTC power block and condecer input parameter in SAM.]{PTC power block and condecer input parameter in SAM.}\label{tbl: PTCPowerplant}
+\end{table}
+\subsubsection{Solar collector (SCA)}
+For the simulation of the PTC system the Ultimate Trough was selected as solar collector assembly (SCA). This collector is currently not in commercial use, but comparable troughs with similar characteristics are under construction. So the Ultimate Trough can be adopted  without technical modifications and no increase of risk. Figure~\ref{PTC_Ultimate_config} shows the information of the technical input parameter for SAM. These coming directly from a publication of the developer of the Ultimate Trough, Flabeg GmbH and sbp sonne GmbH \cite{Riffelmann2014}. 
+\begin{figure}[bhtp]
+\centering
+\includegraphics[width=0.95\linewidth]{FIG/PTC_Ultimate_config}
+\caption[Screenshot of Ultimate Trough input parameter for SAM.]{Screenshot of Ultimate Trough input parameter for SAM.}\label{PTC_Ultimate_config}
+\end{figure}
+The section "Optical Calculation" shows, that the total optical efficiency at design of the Ultimate Trough is 89.9~\%. The dimensions and main characteristics of the HCE is shown in the section "Receiver Geometry".
+\subsubsection{Solar receiver (HCE)}
+As heat collecting element (HCE) Schott's PTR80 was selected. This receiver tube has with 0.08~m an extended tube outer diameter. Thereby the tube can contain more HTF and reduce the mass flow in the tubes. Figure~\ref{PTC_HCE} shows the for the simulation inserted parameter. The values are the results of measurements of outdoor optical efficiency and indoor receiver heat loss of parabolic trough collector from researchers of National Renewable Energy Laboratory \cite{Kutscher2012}.
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=0.95\linewidth]{FIG/PTC_HCE}
+\caption[Screenshot of Schott PTR80 input parameter for SAM.]{Screenshot of Schott PTR80 input parameter for SAM.}\label{PTC_HCE}
+\end{figure}
+The section "Parameter and Variations" shows the different conditions of the HCE. Variation 1 shows the optimal condition of the HCE with annulus pressure of 0.0001 torr (0.000133~hPa), so an vacuum. The estimated average heat lost is 190~W/m. This Variation counts for 98.5~\% of all HCEs. In Variation 2 the vacuum is lost and which strongly affects the heat loss. It is 1~270~W/m and counts for 1~\% of all HCEs. In Variation 3 also the protection glass is broken, so the heat loss increase to 1~500~W/m. The total weighted losses is 207.35~W/m heat loss at design and about 0.85 optical derate and is shown at the last section most below.
+\subsubsection{Solar field}
+PTC solar fields are separated in sections. In the simulation of the PTC system the solar field is designed in two sections. Each section carries a feed pipe and a return pipe to transport the thermal energy to the power block. Attached to the header pipes are many loops, which contains the SCAs, the HCEs and the HTF. Figure~\ref{PTC_Field_ultimate} shows an typical layout for PTC system with two field subsections. As in the Figure is the simulated PTC system designed by four SCAs per loop \cite{Riffelmann2014}.
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=0.9\linewidth]{FIG/PTC_Field_ultimate}
+\caption[Typical configuration of a solar field layout with two field subsections for a Ultimate Trough.]{Typical configuration of a solar field layout with two field subsections for a Ultimate Trough \cite{Riffelmann2014}.}\label{PTC_Field_ultimate}
+\end{figure}
+
+
+As mentioned before synthetic oil is used as HTF for the simulation of the PTC system. The current standard for HTF in PTC systems is Terminol VP-1. The input parameter for the HTF are shown in Figure~\ref{PTC_HTF} and are limited by the performance characteristics of Terminol VP-1 of 12 to 400$\,^{\circ}\mathrm{C}$ \cite{Therminol2015}. The velocity range of Therminol VP-1 should be in the range of 0.36 and 4.97 m/s \cite{Wagner2014} and is affected by the inner tube diameter of the HCE, the HTF density and the loop flow rate \cite{NREL2015a}. A freeze protection temperature for the HTF of 150$\,^{\circ}\mathrm{C}$ is typically and also assumed for the simulation \cite{Kearney2002}.
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=0.6\linewidth]{FIG/PTC_HTF}
+\caption[Screenshot of HTF input parameter for SAM.]{Screenshot of HTF input parameter for SAM.}\label{PTC_HTF}
+\end{figure}
+
+
+The size of the solar field is strongly effected by the solar multiple and the thermal demand of the steam Rankine cycle. At a solar multiple of 1 (design thermal power of the steam generator) the solar field requires 453003~m\textsuperscript{2} ($\approx$45.3~ha) reflective aperture area of SCA. 65.86 ($\approx$66) loops are required at a SM of 1. The number of loops and so also the field size multiplies by the value of the SM.
+
+
+
+Also the the solar field area and thereby the total land area depending by the SM. Equation~\ref{GL_PTCSolarfieldarea} shows the influence on the solar field area of the ratio between the row spacing and the SCA width. The roe spacing is assumed by 18~m between the parallel SCAs. The total land area results by Equation~\ref{GL_PTCtotallandarea} and is the solar field area multiplies by the factor of non-solar field area. The factor is assumed by 1.4 in the simulation \cite{NREL2015a}.
+\begin{align}
+\textrm{solar field area }(m^2) =\textrm{aperture area }(m^2) \times \frac{\textrm{row spacing }(m)}{ \textrm{SCA width }(m)} \label{GL_PTCSolarfieldarea}
+\end{align}
+\begin{align}
+\textrm{total land area }(m^2) =\textrm{solar field area }(m^2) \times  \textrm{non-solar field multiplier}\label{GL_PTCtotallandarea}
+\end{align}
+Table~\ref{tbl: PTCSolarfield} shows the solar field simulation parameter of the PTC system for the simulation configuration values of the solar multiple. The parameters of the Table comes from the above mentioned relations between the Items. The design power of the steam generator (SG) stays at 318.0~MW\textsubscript{th} while the solar field thermal output rises proportional through the SM. 
+\begin{table}[!h]  
+  \centering
+	\begin{tabular}{ p{3.3cm} C{1.1cm} C{1.1cm} C{1.1cm} C{1.1cm} C{1.1cm} C{1.1cm} C{1.1cm} C{1.1cm} } 
+	\hline	
+\textbf{Item} & \textbf{Unit} & \multicolumn{7}{c}{\textbf{Value}} \\ \hline \hline
+SG Design power & MW\textsubscript{th} &  \multicolumn{7}{c}{318.0}\\
+Design-point DNI & W/m &  \multicolumn{7}{c}{950}\\
+\hline
+\textbf{Solar multiple} &  & \textbf{2.0} & \textbf{2.5} & \textbf{3.0} & \textbf{3.5} & \textbf{4.0} & \textbf{4.5} & \textbf{5.0}\\ \hline 
+Field th. output & MW\textsubscript{th} & 636 & 795 & 954 & 1~113 & 1~272 & 1~431 & 1~590\\
+Number of loops  & - & 132 & 165 & 198 & 231 & 264 & 297 & 330\\ 
+Aperture refl. area & ha & 90.6 & 113.3 & 135.9 & 158.6 & 181.2 & 203.9 & 226.5\\ 
+Total land area & ha & 675 & 845 & 1013 & 1~182 & 1~351 &1~540 & 1~689\\ 
+\hline
+\end{tabular}
+\caption[PTC solar field parameter.]{PTC solar field parameter.}\label{tbl: PTCSolarfield}
+\end{table}
+\pagebreak
+\subsubsection{Thermal energy storage (TES)}
+The thermal energy storage (TES) of the simulated PTC system uses a indirect two-tank molten salt system with "Hitec Solar Salt" as storage fluid. This storage fluid is made from sodium nitrate (60~\% NaNO\textsubscript{3}) and potassium nitrate (40~\% KNO\textsubscript{3}). Solar Salt needs an minimum operating temperature of 238$\,^{\circ}\mathrm{C}$ and and has a maximum operating temperature of 593$\,^{\circ}\mathrm{C}$. \cite{Suite2011,Kearney2003}
+
+\begin{table}[!b]  
+  \centering
+	\begin{tabular}{ p{3.9cm}  C{1.0cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} } 
+	\hline	
+\textbf{Item} & \textbf{Unit} & \multicolumn{6}{c}{\textbf{Value}} \\ \hline \hline
+Storage type & - &  \multicolumn{6}{c}{indirect two-tank molten salt}\\
+Storage fluid & - &  \multicolumn{6}{c}{Hitec Solar Salt}\\
+Hot tank design temp. & $\,^{\circ}\mathrm{C}$ & \multicolumn{6}{c}{391}\\
+Cold tank design temp. & $\,^{\circ}\mathrm{C}$ & \multicolumn{6}{c}{293}\\
+\hline
+\textbf{TES full load hours} & \textbf{h} & \textbf{6} & \textbf{8} & \textbf{10} & \textbf{12} & \textbf{14} & \textbf{16}\\ \hline 
+Thermal capacity & MWh\textsubscript{th} & 1~908 & 2544 & 3~180 & 3~816 & 4~452 & 5~087 \\
+Storage volume  & m\textsuperscript{3} & 25~805 & 34~407 & 43008 & 51~610 & 60~212 & 68~813\\
+\hline
+\end{tabular}
+\caption[PTC system TES parameter.]{PTC system TES parameter.}\label{tbl: PTCTES}
+\end{table}
+
+
+The storage design temperatures depends from the solar field design temperatures, so the designed temperature difference is 98~K. As it is shown in Table~\ref{tbl: PTCTES} the operating temperature limits fits with the storage tank design temperatures. The heater set point is 265$\,^{\circ}\mathrm{C}$ for both storage tanks. The TES full load hours goes from 6 to 16 in steps of 2. The thermal capacity and also the storage volume rises with the TES full load hours. The simulated stored thermal capacity reaches from 1~908~MWh\textsubscript{th}  at 6 full load hours up to 5~087~MWh\textsubscript{th} at 6 full load hours. It is obviously, that the storage volume of the PTC needs to be more than 3 times that much than the storage volume of the CR system. This is the result of lower temperature difference of the HTF and the turbine design capacity.
+
+
+
+Also for the simulation of the PTC system the dispatch control of the turbine output fraction in the storage settings was used. Figure~\ref{PTC_turbineoutput} shows the dispatch control matrix for the turbine output fraction.
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=0.95\linewidth]{FIG/PTC_turbineoutput}
+\caption[TES dispatch control matrix for turbine output fraction of PTC simulation in SAM.]{TES dispatch control matrix for turbine output fraction of PTC simulation in SAM.}\label{PTC_turbineoutput}
+\end{figure}
+\pagebreak
+\subsubsection{Financial parameter}
+The financial parameter for calculating the LCOE of the simulated configuration are shown in Table~\ref{tbl: PTCFinance}. As before at the CR is the PTC power plant calculated over a lifetime of 25~years using a real interest rate of 7.5~\% \cite{FraunhoferISE2013}. Also the total plant availability of  15~\% once-off surcharge for EPC and contingencies on the total investment costs are equal to the CR \cite{Platzer2014}.
+
+
+The specific costs for the collector field inclusive HTF-system is assumed with 275~\$/m\textsuperscript{2} from \cite{Morin2012}. These specific cost could also be reduced by 25~\% by using the assumed cost reduction from Flabeg \cite{FLABEG_FE_GmbH2015}. So the for the simulation assumed costs are highly conservative.
+
+The specific costs for the power block are the same as at the CR but from other sources \cite{Platzer2014}. 
+
+The specific costs of 50~\$/kWh\textsubscript{th} for the TES of the PTC are up to 50\% higher than the CR costs \cite{Platzer2014}. This is reduce to the lower energy density using lower storage temperatures \cite{Steinmann2015}. Other expected specific costs between 35 and 50~\$/kWh\textsubscript{th}  \cite{Steinmann2012}.
+
+As before Fichtner analyzed also the annual O\&M costs for PTC power plants in SA and results costs of 1.96-1.97~\% of the total investment costs \cite{Fichtner2010}. The value of 2~\% can so also be assumed as conservative.
+
+The costs for the land purchase comes from the "African Agriculture Review" report of the Nedbank Capital, which reported the prices for farmland in SA. For the LCOE calculation of the CSP and PV system was the land purchase costs of \$3,000/ha assumed which is based on these report \cite{Cassell2012}.
+\begin{table}[!h]  
+  \centering
+	\begin{tabular}{  p{5.0cm} C{2.0cm} C{1.5cm}  C{1.5cm}  C{4.0cm} } 
+	\hline	
+\textbf{Item} & \textbf{Symbol}& \textbf{Value} & \textbf{Unit} & \textbf{Source}\\ \hline \hline
+Collector field/HTF-system & $c_{CF}$ & 275 & \$/m\textsuperscript{2} & \cite{Morin2012}\\ 
+Power block &$c_{PB,PTC}$ & 1000 & \$/kW\textsubscript{el} & \cite{Platzer2014}\\ 
+Thermal energy storage & $c_{TES,PTC}$ & 50 & \$/kWh\textsubscript{th} & \cite{Platzer2014}\\ 
+Land purchase & $c_{LP}$ & 3~000 & \$/ha & \cite{Cassell2012} \\ 
+Annual O\&M & $f_{O\&M,PTC}$ &2&\% &\cite{Fichtner2010}\\ 
+\hline
+Lifetime&$n$ & 25 & years & \cite{FraunhoferISE2013} \\ 
+Interest rate& $i_{PTC}$& 7.5 & \% & \cite{FraunhoferISE2013} \\ 
+Surcharge for EPC, project management and risk & $f_{EPC,PTC}$ & 15 & \% & \cite{Platzer2014} \\
+Total plant availability &$f_{avail,plant,PTC}$ & 96 & \% & \cite{Morin2012} \\ 
+\hline
+\end{tabular}
+\caption[Finacial input parameter for PTC-simulation in SAM.]{Finacial input parameter for PTC-simulation in SAM.}\label{tbl: PTCFinance}
+\end{table}
+\pagebreak
+\section{PV power plant with electrical energy storage design and simulation}
+For this simulation a PV power plant was extended with an electrical energy storage (EES). This extended PV power plant was simulated in SAM's "Photovoltaic (detailed)" model with enabled battery storage option. Also for this simulation was the EPW weather file for Upington from Section~\ref{Location and weather data} used. For the PV simulation SAM uses the following input data:
+\begin{itemize}
+\item Latitude ($\,^{\circ}$)
+\item Longitude ($\,^{\circ}$)
+\item Elevation above sea level (m)
+\item GHI, DNI and DHI (W/m\textsuperscript{2})
+\item Dry bulb temperature ($\,^{\circ}\mathrm{C}$)
+\item Wind velocity (m/s)
+\end{itemize}
+This section describes in detail the residual input data of the PV power plant with adapted battery storage. As before in the sections of simulated CSP technologies first the essential components of the system are defined. The financial parameters and the LCOE for this simulation was also here calculated separately and is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}.
+
+
+
+As mentioned at the beginning of these Chapter this must be seen as theoretical simulation. Actually there are not that large electrical energy storage systems in form of battery storage available.
+
+
+
+For this simulation the load was conected to the PV and Battery system as shown on Figure~\ref{PV_model_config}. The load shape was defined as before specified before in Chapter~\ref{Overall simulated configuration} and simulates the demand of the power grid. As it is shown there is also the actual power grid connected as additional component, but for this simulation just the power flows between PV, battery and load is in focus. As it is shown in the Figure, SAM actually just support the battery connection at the AC-bus via a power conversion system and is not able to simulate direct DC-connected batteries besides the PV-array before the PV-inverter. However in order to produce comparable results SAM was also used for the simulation of the PV power plant. As mentioned before this system contains out of the PV system with solar modules, solar and inverter and are described in the following section as well as the electrical energy storage.
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=0.55\linewidth]{FIG/PV_model_config}
+\caption[Model of the configurated PV plus batterie scheme.]{Model of the configurated PV plus batterie scheme \cite{Diorio2015}.}\label{PV_model_config}
+\end{figure}
+\subsubsection{Simulated configurations}
+The configurations of the PV system with adapted electrical energy storage has also the target to reach 90~\% of the scheduled production curve from Section~\ref{Overall simulated configuration}. To reach this target it is necessary to over scale the energy production of the PV system to produce enough power to covers the given load and load the storage during the day. This is quite similar to the solar multiple of the CSP system, but can not be put on a same level. Therefore this over scaling will be called "PV multiple" (PVM) and means the multiple of the PV inverter output. For example the system with a maximum inverter output of 100~MW\textsubscript{el} is a PVM of 1 than has the PV system with a PVM of 2 a maximum inverter output of 200~MW\textsubscript{el}. 
+\begin{table}[!b]  
+  \centering
+	\begin{tabular}{ p{4.0cm}  C{1.0cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm}  | C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} } 
+	\hline	
+\textbf{Item} & \textbf{Unit} & \multicolumn{10}{c}{\textbf{Value}} \\ \hline \hline
+Maximum load supply & MW\textsubscript{el} & \multicolumn{10}{c}{100} \\ \hline
+PV multiple & - & \multicolumn{5}{c}{1.0} & \multicolumn{5}{c}{1.8} \\
+EES capacity & h & \multicolumn{5}{c}{-} & 4 & 5 & 6 & 7 & 8 \\ \hline 
+PV multiple & - & \multicolumn{5}{c}{2.0} & \multicolumn{5}{c}{2.2} \\
+EES capacity& h &  4 & 5 & 6 & 7 & 8 & 4 & 5 & 6 & 7 & 8 \\ \hline 
+PV multiple & - & \multicolumn{5}{c}{2.4} & \multicolumn{5}{c}{2.6} \\
+EES capacity & h & 4 & 5 & 6 & 7 & 8 & 4 & 5 & 6 & 7 & 8 \\ \hline 
+\end{tabular}
+\caption[Simulated configurations of the PV system with adapted EES.]{Simulated configurations of the PV system with adapted EES.}\label{tbl: PV_OverallConfig}
+\end{table}
+The simulated system load is maximum 100~MW\textsubscript{el}, so this is also the maximum supply of the system. The PV system was simulated one time without storage and a maximum inverter output of 100~MW\textsubscript{el} which is a PVM of 1. After that, the system was simulated in steps 0.2 of the PVM from 1.8 to 2.6. The adapted energy storage capacity was simulated from 4 to 8 hours in hourly steps. This storage capacity range is also defined for large-scale off-grid application in \cite{IEA2014c}. Table~\ref{tbl: PV_OverallConfig} summarizes the simulated configurations.
+\subsubsection{PV system}
+The simulated PV system is orientated at actual PV systems in SA. Therefore the currently under construction situated Mulilo Sonnedix Prieska PV Project in the Northern Cape will serve as a role model for the main components. In this 75~MW\textsubscript{ac}-project are poly crystalline 305~W\textsubscript{dc} modules of type BYD 305P6C-36 from BYD installed. The efficiency of the modules is about 15.72~\%. The full module specification is in Table~\ref{tbl: PVmodule}. The peak performance of the project is 86.23~MW\textsubscript{dc}. \cite{Morse2014}
+
+\begin{table}[!h]  
+  \centering
+	\begin{tabular}{  p{5.0cm}  C{5.0cm}  C{1.4cm} } 
+	\hline	
+\textbf{Item} & \textbf{Value} & \textbf{Unit} \\ \hline \hline
+Manufacturer  & BYD COMPANY LIMITED & - \\ 
+Model & BYD 305P6C-36 & - \\ 
+Cell type &  poly-crystalline silicon & - \\ \hline
+Maximum power & 304.99 & W\textsubscript{dc} \\ 
+Nominal efficiency & 15.72 & \% \\ 
+Maximum power voltage & 36.2 & V\textsubscript{dc} \\ 
+Maximum power current & 8.4 & A\textsubscript{dc}  \\
+Open circuit voltage & 45.5 & V\textsubscript{dc}  \\ 
+Short circuit current & 8.9 & A\textsubscript{dc}  \\
+Temperature efficiency & -0.41 & \%/$\,^{\circ}\mathrm{C}$\\
+Module area & 1.94 & m\textsuperscript{2} \\ 
+Number of cells & 72 & -\\
+\hline
+\end{tabular}
+\caption[Module specification of BYD 305P6C-36.]{Module specification of BYD 305P6C-36 under STC: 1000~W/m\textsuperscript{2}, cell temperature 25$\,^{\circ}\mathrm{C}$ \cite{NREL2015g}.}\label{tbl: PVmodule}
+\end{table}
+
+
+These for the simulation selected module type was already deposited in the module library in SAM. This large library is based on the database of Go Solar California for photovoltaic modules and inverters from the California Energy Commission \cite{NREL2015g}.
+
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=0.70\linewidth]{FIG/PVModuleVA}
+\caption[Current–voltage characteristic under STC of module BYD 305P6C-36.]{Current–voltage characteristic under STC of module BYD 305P6C-36 \cite{NREL2015g}.}\label{PVModuleVA}
+\end{figure}
+
+
+Figure~\ref{PVModuleVA} shows the module’s current–voltage characteristic with a short circuit voltage of 8.9~A and an open circuit voltage of 45.5~V.\newpage\noindent
+The Mulilo Sonnedix Prieska PV Project install inverter from AEG. These specific AEG Protect PV.800 inverter is not available in the library of SAM, but a similar model with almost the same power rating was selected. Table~\ref{tbl: PVinverter} depicts the specifications of the for the simulation used Ingeteam inverter INGECON SUN 805TL U X420 Outdoor with 805~kW\textsubscript{ac} power at an efficiency of 98.33~\%. The efficiency curve of the inverter can be seen in Figure~\ref{InverterEfficiencyCurve}. 
+
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=0.75\linewidth]{FIG/InverterEfficiencyCurve}
+\caption[Efficientcy characteristic of Ingecon Sun 805TL U X420 Outdoor.]{Efficientcy characteristic of Ingecon Sun 805TL U X420 Outdoor \cite{IngeteamINC.2015,NREL2015g}.}\label{InverterEfficiencyCurve}
+\end{figure}
+\begin{table}[htbp]  
+  \centering
+	\begin{tabular}{ p{6.0cm}  C{7.0cm}  C{1.5cm} } 
+	\hline	
+\textbf{Item} & \textbf{Value} & \textbf{Unit} \\ \hline \hline
+Manufacturer  & Ingeteam Power Technology & - \\ 
+Model & Ingecon Sun 805TL U X420 Outdoor & - \\ 
+Type &  central inverter & - \\ \hline
+\textbf{Input (dc)} &  &  \\ 
+Maximum power & 821.39 & kW\textsubscript{dc} \\ 
+Voltage range & 611-820 & V\textsubscript{dc} \\ 
+Maximum voltage & 1~000 & V\textsubscript{dc} \\ 
+Maximum current & 1~350 & A\textsubscript{dc} \\
+Nominal voltage & 715.91 & V\textsubscript{dc} \\ \hline
+\textbf{Output (ac)} &  &  \\ 
+Maximum power & 805 & kW\textsubscript{ac} \\ 
+Nominal voltage & 420 & V\textsubscript{ac} \\
+Maximum current & 1.35 & A\textsubscript{ac} \\
+Frequency & 50-60 & Hz \\
+cos$\phi$ & 1 & -\\ \hline
+Maximum efficiency & 98.33 & \\% 
+European efficiency & 98.29 & \\% 
+Power consumption in operation &1.25 & kW\textsubscript{dc} \\ 
+Power consumption at night & 0.12 & kW\textsubscript{ac} \\ 
+\hline
+\end{tabular}
+\caption[Inverter specifications of Ingecon Sun 805TL U X420 Outdoor.]{Inverter specifications of Ingecon Sun 805TL U X420 Outdoor \cite{IngeteamINC.2015,NREL2015g}.}\label{tbl: PVinverter}
+\end{table}
+\newpage\noindent
+As mentioned before the PV system was design under similar condition that the Mulilo Sonnedix Prieska PV Project. There a dc/ac ratio of 1.15 is used \cite{Morse2014}. This power ratio compares the photovoltaic array power to the inverter capacity \cite{Woodcock2013}. For the simulated PV system the same ratio was assumed. So at 100 MW\textsubscript{ac} inverter output, a total module capacity of 115 MW\textsubscript{dc} is needed. From the discussed parameter and the PVM SAM calculates the resulting number of modules and inverters as well as other parameters on its own. These PV system parameter are summarized in Table~\ref{tbl: PVsystemdesign}. \\ \noindent
+\begin{table}[!b]  
+  \centering
+	\begin{tabular}{ p{4.5cm} C{1.0cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} } 
+	\hline	
+\textbf{Item} & \textbf{Unit} & \multicolumn{6}{c}{\textbf{Value}} \\ \hline \hline
+Module azimuth & $\,^{\circ}$ &\multicolumn{6}{c}{0 (north)}\\
+Module tilt & $\,^{\circ}$ & \multicolumn{6}{c}{28.4}\\
+Modules per string& - & \multicolumn{6}{c}{21}\\
+String open circuit voltage& V\textsubscript{oc} & \multicolumn{6}{c}{955.3}\\
+String max. power rated voltage& V\textsubscript{mp} & \multicolumn{6}{c}{759.8}\\
+Maximum dc-voltage& V\textsubscript{dc} & \multicolumn{6}{c}{1~000}\\
+Aspired dc/ac-ratio & - &\multicolumn{6}{c}{1.15}\\
+\hline
+\textbf{PV multiple} & - & \textbf{1.0} & \textbf{1.8} & \textbf{2.0} & \textbf{2.2} & \textbf{2.4} & \textbf{2.6}\\ \hline 
+Total inverter capacity & MW\textsubscript{ac} & 99.8 & 180.3 &199.6 & 219.8 & 239.9 & 260.0 \\
+Total module capacity & MW\textsubscript{dc} & 115.0 & 207.0 & 230.0 &253.0 & 276.0 & 299.0 \\
+Strings in parallel & - & 17~954 & 32~318 & 35~909 & 39~500 & 43~091 & 46~682 \\
+Number of modules & - & 377~034 & 678~678& 754~089 & 829~500 & 904~911 & 980~322 \\
+Number of inverter  & - & 124 & 224 & 248 & 273 & 298 & 323 \\
+Total module area & ha & 73.1 & 131.7 & 146.3 & 160.9 & 175.6 & 190.1 \\
+Total land area & ha & 244 & 439 & 488 & 536 & 585 & 634 \\
+\hline
+\end{tabular}
+\caption[PV system design parameter.]{PV system design parameter.}\label{tbl: PVsystemdesign}
+\end{table}
+
+
+For the orientation of the simulated PV-modules the latitude of Upington was used as tilt angle (28.4$\,^{\circ}$) and the azimuth is 0$\,^{\circ}$, so directly facing north. The self-shading model was selected, without external shading parameter. Therefore 2 modules along the side of row and 10 along the bottom of row was selected. Therefrom a shading loss of 0.545~\% on the solar radiation incident on the subarray. Further assumed losses are soiling, mismatch, diodes and connections and wiring losses. The assumed soiling losses reduce the solar radiation incident on the subarray of about 5~\%. The assumed mismatch loss of about 2~\% is related to slight differences in performance of individual modules in the array. Voltage drops across blocking diodes and electrical connections leads to a assumed diodes and connections loss of 0.5~\%. There are also assumed resistive losses of 2~\% in wiring on the dc-side and 1~\% wiring loss between the inverter and the grid connection point on the ac-side of the system.
+
+\subsubsection{Electrical energy storage (EES)}
+The electrical energy storage is adapted though the system as it is shown in Figure~\ref{PV_model_config} on Page~\pageref{PV_model_config}. The EES basically consists out of two parts - the power conversions system (PCS) and the storage unit - as it is shown in Figure~\ref{TCC_EES} on Page~\pageref{TCC_EES}. For the simulation in SAM the PCS was simplified to the conversion efficiency. The AC to DC conversion efficiency was assumed with 99~\% as well as the DC to AC efficiency. Nevertheless for the LCOE calculation it is still relevant to define the performance of the PCS. As it is shown in Table~\ref{tbl: PVsystemdesign} the inverter capacity range is between 240 and 320~MW\textsubscript{ac} for the simulation cases with adapted storage. The maximum scheduled load from Section~\ref{Overall simulated configuration} is 100~MW. So depending from the PV inverter capacity the PCS capacity needs to variate as well to collect the  PV-overproduction. For the calculation of the LCOE it was assumed that the PCS needs to collects the inverter capacity minus the 100~MW daily base load.
+
+
+
+As mentioned before the storage unit consists out of a Li-Ion battery, more precisely a using a Nickel Cobalt Aluminum ($LiNiCoAlO_2$  or NCA) cathode. This battery excels through a less expensive cathode material with improved safety characteristics and high specific energy \cite{NREL2015a}. The voltage characteristics of these battery for the simulation are shown in Figure~\ref{EES_VoltageDischarge}. The NCA battery is inter alia installed in the Tesla Model S and X \cite{Nykvist2015} which uses currently Panasonic cells and will also be installed in Teslas Power Wall system \cite{Shahan2015}. The performance and lifetime of the NCA batteries depending on how they are used. Tesla names the lifetime of 5~000 cycles without mentioning the assumed depth of discharge (DOD) \cite{Shahan2015}.
+
+\begin{figure}[!htbp]  
+\centering
+\includegraphics[width=0.6\linewidth]{FIG/EES_VoltageDischarge}
+\caption[Voltage proparties of NCA Li-Ion battery.]{Voltage proparties of NCA Li-Ion battery..}\label{EES_VoltageDischarge}
+\end{figure}
+
+
+
+The DOD is the amount of capacity in the battery that is usable by the system. For electric vehicles (EV) the DOD is set between 80-95~\% at the "top" end of the battery and 10-20~\% at the "bottom" end \cite{Warner2014}. The state of charge (SOC) is an expression of the present battery capacity as a percentage of maximum capacity and is the inverse of the DOD. It must be noted, that the nominal capacity of a battery is not the effective usable capacity of a battery and depends on the DOD. Also the DOD effects the cycle life of the batteries. The higher the DOD, the lower the cycle life. In other words, the lower the SOC, the longer the cycle life. \cite{MitElectricVehilceTeam2008}
+
+
+
+SAM visualizes the decreasing capacity of the battery over the number of cycles with capacity fades as it is shown in Figure~\ref{CapacityFade} for the NCA. The figure shows the characteristic for 20~\% and 80~\% DOD. As mentioned above the graph shows the higher decreasing of the effective capacity at higher DOD. The performance data behind this graph is coming from \cite{Dahn2011} and correspond with other tests \cite{Read2009}.
+\begin{figure}[bhtp]  
+\centering
+\includegraphics[width=0.75\linewidth]{FIG/CapacityFade}
+\caption[Capacity fade of Nickel Cobalt Aluminum Lithium-Ion battery.]{Capacity fade of Nickel Cobalt Aluminum Lithium-Ion battery.}\label{CapacityFade}
+\end{figure}
+
+It must be noted, that the cycle lifetime is not only affected by the DOD but also by other conditions such as temperature and humidity \cite{MitElectricVehilceTeam2008}. SAM designs the cycle lifetime for the batteries at a constant room temperature of 20$\,^{\circ}\mathrm{C}$ therefore the storage room needs to be conditioned. Also the charging and discharging of the battery results losses in form of heat which needs to get led away. The cooling demand of the EES system is not included in the simulation, but must be actually significant. \cite{Diorio2015} 
+
+
+
+The system was designed for a lifetime of 25 years. Therefore also the EES is designed for this period. For the simulation a amount of 365 cycles per year was assumed. So the NCA was designed for 9~125 cycles whiteout using a battery bank replacement. SAM also can analyses the cycle lifetime of the batteries. This analyses showed that the NCA battery reaches this cycle lifetime with a DOD of 50~\%. But under this conditions the effective capacity of the battery is nearly 0~\% after 25 years. As it is shown in Figure~\ref{CapacityFade} the effective capacity of the NCA battery decreases almost lineal with the cycle number. There are two opportunities to reduce the loss to the effective capacity increasing over the lifetime of the system. First is a battery bank replacement after a specified schedule or loss of effective capacity to a specified amount and second is to use a lower DOD which leads also to a lower effective usable capacity of the battery, so a higher nominal capacity of the battery would be necessary.
+
+
+
+Further is to note that Li-Ion batteries has a expiry period \cite{Jossen2006}. Tesla gives a warranty of 10 years of the batteries \cite{Shahan2015} so it can be expected, that the expiry period is close to these warranty. So also for the simulation an battery bank replacement is indispensable.
+
+
+
+The for a long lifetime an average SOC of 30-70~\% is recommended for Li-Ion batteries \cite{Jossen2006}. Consequently the SOC was set to a maximum of 30~\% and a minimum of 70~\% for the simulation. So a total DOD of 40~\% which signified 40~\% of the nominal battery capacity was assumed as usable. In order to have high storage availability over the total system lifetime it was assumed that the battery bank will replaced at a effective capacity loss of 20~\%. This is also advised for EES in electronic consumer devices \cite{Spotnitz2003}. Resulting from this assumptions the cycle lifetime of the cells in the battery bank is 2~500 cycles. Therefore the battery bank needs to be replaced after 6-7~years. So the battery bank needs to be replaced three times in the total lifetime of the system. 
+
+
+
+Table~\ref{tbl: EESsystemdesign} summarizes results of the discussed parameter for the simulation. The adapted voltage level for this large-scale EES application from 820~V\textsubscript{dc}\ per string is coming from \cite{Leuthold2014}. The remaining values results from the above discussed parameter or are adapted from the SAM library \cite{Diorio2015}. 
+\begin{table}[!htbp]  
+  \centering
+	\begin{tabular}{ p{5.0cm} C{1.0cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} } 
+	\hline	
+\textbf{Item} & \textbf{Unit} & \multicolumn{5}{c}{\textbf{Value}} \\ \hline \hline
+Chemistry & - & \multicolumn{5}{c}{Lithium ion: nickel cobalt aluminum oxide} \\
+Cell nominal voltage & V\textsubscript{dc} &\multicolumn{5}{c}{3.6}\\
+Internal resistance & Ohm &\multicolumn{5}{c}{0.1}\\
+Fully charged cell voltage & V\textsubscript{dc} &\multicolumn{5}{c}{4.2}\\
+Exponential zone cell voltage & V\textsubscript{dc} &\multicolumn{5}{c}{4.1}\\
+Nominal zone cell voltage & V\textsubscript{dc} &\multicolumn{5}{c}{3.6}\\
+Nominal bank voltage & V\textsubscript{dc} &\multicolumn{5}{c}{820}\\
+Cells in in series& - &\multicolumn{5}{c}{228}\\
+Cell capacity & Ah &\multicolumn{5}{c}{55}\\
+C-rate of discharge curve & - &\multicolumn{5}{c}{0.2}\\
+Maximum C-rate charge & per/h &\multicolumn{5}{c}{1}\\
+Maximum C-rate discharge & per/h &\multicolumn{5}{c}{1}\\
+Total DOD& \% &\multicolumn{5}{c}{20}\\
+\hline
+\textbf{Storage capacity at 100~MW output} & \textbf{h} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} \\ \hline 
+Effective capacity & MWh & 400 & 500 & 600 & 700 & 800 \\
+Nominal capacity & MWh & 1~000 & 1~250 & 1~500 & 1~750 & 2~000\\
+Cells & $\times 10^6$ & 5.1 & 6.3 & 7.6 & 8.8 & 10.1\\
+\hline
+\end{tabular}
+\caption[EES system design parameter.]{EES system design parameter.}\label{tbl: EESsystemdesign}
+\end{table}
+\pagebreak
+\subsubsection{Financial parameter}
+The financial parameter for the LCOE calculation are composed in Table~\ref{tbl: PVFinance}. As mentioned before was the LCOE calculation for this simulation made separately in Microfoft Excel using a simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}. As for the other systems is the PV power plant designed for a lifetime of 25~years. 
+
+
+
+The specific large-scale PV system costs in South Africa  amount to 1.285~\$/W\textsubscript{DC,Peak} (14.5~ZAR/W\textsubscript{DC,Peak} using 11.286~USD/ZAR average in 2014 \cite{IRS2015}) which leads from an in 2014 actually built PV system \cite{Terblanche2015}. These specific costs are close to utility-scale PV systems in Europe with specific investments of 1~€/W\textsubscript{DC,Peak} \cite{FraunhoferISE2013}, corresponding to 1.33~\$/W (using the average exchange rate in 2014 of 1.33~\$/€ \cite{StatistaGmbH2015}).
+
+The LCOE was calculated with different interest rates and O\&M costs for the PV power plant and the EES system. The real interest rate for the PV power plant was amused with 2.8~\% \cite{FraunhoferISE2013} and the annual O\&M costs are 1~\%  of the PV investment costs \cite{IEA2014a}. A degradation of 1~\% per year of the annual energy output was assumed for the ageing phenomena of the PV cells \cite{Tidball2010}.
+
+
+
+The storage costs are calculates from three  parts. The costs for the PCS, the battery bank and the replacement costs of the battery bank during the lifetime of the system.
+
+The costs of the PCS of 615~\$/kW (463~€/kW using the average exchange rate in 2014 of 1.33 \$/€ \cite{StatistaGmbH2015}) was taken over from a study toward comparative life cycle cost analysis of EES \cite{Zakeri2015}. This is the average value of  a wide cost range (250-600€/kW) of PCS for Li-Ion EES systems.
+
+For the storage part of the EES a highly optimistic value of 300~\$/kWh was assumed from \cite{Nykvist2015}. The average storage part cost for Li-Ion EES in other studies is 914~\$/kWh \cite{Zakeri2015}.
+
+For the replacement costs of the an other highly optimistic value of 150~\$/kWh was assumed. The cost for the replacement of the storage in \cite{Zakeri2015} are approximately the half of the storage costs. This costs was also assumed with a look to Figure~\ref{CostofLi-ion} on Page~\pageref{CostofLi-ion}.
+
+The assumed EES battery bank replacements during the lifetime was described in this Chapter already.
+
+The annual O\&M costs of 9.18~\$/kW was also a adaption from \cite{Zakeri2015} as well as the real interest rate of 8.0~\% 
+
+
+
+As before for the other solar power plants also for the PV system was land purchase costs of \$3,000/ha \cite{Cassell2012} assumed.
+\pagebreak
+\begin{table}[!h]  
+  \centering
+	\begin{tabular}{  p{5.5cm} C{1.5cm} C{1.5cm}  C{1.5cm}  C{4.0cm} } 
+	\hline	
+\textbf{Item} & \textbf{Symbol}& \textbf{Value} & \textbf{Unit} & \textbf{Source}\\ \hline \hline
+Lifetime &$n$ & 25 & years & \cite{FraunhoferISE2013} \\ \hline
+Solar modules & $c_{sm}$&0.481 & \$/W\textsubscript{dc} & \cite{Terblanche2015}\\ 
+Structural &$c_{st}$ &0.138 & \$/W\textsubscript{dc} & \cite{Terblanche2015} \\ 
+Electrical parts &$c_{ep}$ &0.116 & \$/W\textsubscript{dc} & \cite{Terblanche2015} \\ 
+Inverters&$c_{inv}$ &0.117 & \$/W\textsubscript{dc} & \cite{Terblanche2015} \\ 
+Engineering and labour costs & $c_{elc}$ & 0.242 & \$/W\textsubscript{dc} & \cite{Terblanche2015} \\ 
+Security and infrastructure & $c_{si}$& 0.091 & \$/W\textsubscript{dc} & \cite{Terblanche2015} \\ 
+Transport and logistics & $c_{tl}$& 0.067 & \$/W\textsubscript{dc} & \cite{Terblanche2015}\\ 
+Sub-Station & $c_{ss}$ & 0.071 & \$/W\textsubscript{dc} &\cite{Terblanche2015} \\ \hline
+Total PV system costs & $c_{PV}$ & 1.285 &  \$/W\textsubscript{dc} &\cite{Terblanche2015} \\ 
+Annual degradation factor &$f_{degrad}$ & 1 & \% & \cite{Tidball2010}\\ 
+Annual PV O\&M costs factor &$f_{O\&M,PV}$ & 1 & \% & \cite{IEA2014a}\\
+Interest rate of PV & $i_{PV}$& 2.8 & \% & \cite{FraunhoferISE2013} \\ \hline
+EES PCS costs & & 615 & \$/kW & \cite{Zakeri2015} \\ 
+EES battery bank costs & &300 & \$/kWh & \cite{Nykvist2015} \\ 
+EES battery bank replacement costs & & 150 & \$/kWh & \cite{Zakeri2015} \\ 
+Assumed EES battery bank replacements during lifetime & - & 3 & - & - \\ 
+Annual EES O\&M costs & & 9.18 & \$/kW & \cite{Zakeri2015}\\
+Interest rate of EES & $i_{EES}$& 8.0 & \% & \cite{Zakeri2015} \\ \hline
+Land purchase &$c_{LP}$ & 3~000.00 & \$/ha & \cite{Cassell2012} \\ 
+\hline
+\end{tabular}
+\caption[Finacial input parameter for PV-simulation in SAM.]{Finacial input parameter for PV-simulation in SAM.}\label{tbl: PVFinance}
+\end{table}
+\pagebreak
+\section{Simulation results}
+PV unity scale without storage 
+6-7.5 €cent/kWh (GHI 2000kWh/m2) in 2013 \cite{FraunhoferISE2013}\\
+
+CSP 
+
+
+
+\begin{figure}[p]
+        \centering   
+        \begin{subfigure}[b]{0.75\textwidth}
+                \centering
+                \includegraphics[width=1.05\textwidth]{FIG/CR_LCCF}
+                \caption{CR power plant}\label{CR_LCCF}
+        \end{subfigure}%
+        
+\par\medskip % Linebreak
+                
+        \begin{subfigure}[b]{0.75\textwidth}
+                \centering
+                \includegraphics[width=1.05\textwidth]{FIG/PTC_LCCF}
+                \caption{PTC power plant}\label{PTC_LCCF}
+        \end{subfigure}%
+
+\par\medskip % Linebreak
+                
+        \begin{subfigure}[b]{0.75\textwidth}
+                \centering
+                \includegraphics[width=1.05\textwidth]{FIG/PV_LCCF}
+                \caption{PV power plant with addapted EES}\label{PV_LCCF}
+        \end{subfigure}%
+        \caption[Load curve covering results of simulated solar power plants.]{Load curve covering results of simulated solar power plants.}\label{LCCF}
+\end{figure}
+
+\pagebreak
+\begin{figure}[p]
+        \centering   
+        \begin{subfigure}[b]{0.75\textwidth}
+                \centering
+                \includegraphics[width=1.05\textwidth]{FIG/CR_LCOE}
+                \caption{CR power plant}\label{CR_LCOE}
+        \end{subfigure}%
+        
+\par\medskip % Linebreak
+                
+        \begin{subfigure}[b]{0.75\textwidth}
+                \centering
+                \includegraphics[width=1.05\textwidth]{FIG/PTC_LCOE}
+                \caption{PTC power plant}\label{PTC_LCOE}
+        \end{subfigure}%
+
+\par\medskip % Linebreak
+                
+        \begin{subfigure}[b]{0.75\textwidth}
+                \centering
+                \includegraphics[width=1.05\textwidth]{FIG/PV_LCOE}
+                \caption{PV power plant with addapted EES}\label{PV_LCOE}
+        \end{subfigure}%
+        \caption[Levelized costs of electricity results of simulated solar power plants.]{Levelized costs of electricity results of simulated solar power plants.}\label{LCOE}
+\end{figure}
+
+\section{Interpretation and comparison of results}
+PV-Storage --> Battery lifetime
+Spinnennetzdiagramm 
