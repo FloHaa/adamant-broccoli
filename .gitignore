@@ -1,9 +1,6 @@
 TWBOOKS_2015-16_v2/
 twbooks_2015-16_v2/
-<<<<<<< HEAD
 *.pdf
-=======
->>>>>>> 99e7d64
 *.zip
 *.log
 *.synctex.gz
@@ -17,8 +14,6 @@ twbooks_2015-16_v2/
 *.lot
 *.out
 *.toc
-*.bst
-<<<<<<< HEAD
 *.sh
 *.refs
 
@@ -51,9 +46,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-=======
 protokoll.txt
 *.sh
 __MACOSX/
 Fehler/
->>>>>>> 99e7d64
