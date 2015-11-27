@@ -118,7 +118,7 @@ SAM calculates the path of the sun by the position of longitude and latitude. Fi
 \caption[Solar path diagram for Upington.]{Solar path diagram Upington \cite{PVsystSA2015}.}\label{SunPathUpington}
 \end{figure}
 \pagebreak 
-\section{CR power plant design  and simulation}
+\section{CR power plant design  and simulation} \label{CR power plant design  and simulation}
 %For the CR power plant simulation in SAM the “CSP power tower molten salt" model was used. The EPW weather file for Upington from Section~\ref{Location and weather data} was used as an input file to specify the hourly atmospheric conditions. SAM uses the following input data for the simulation:
 For the CR plant simulation in SAM, the \enquote{CSP power tower molten salt} model was used. The EPW weather file for Upington from Section~\ref{Location and weather data} was used as an input file to specify the hourly atmospheric conditions. SAM uses the following input data for the simulation:
 \begin{itemize}
@@ -137,20 +137,20 @@ This Chapter describes in detail the crucial inputs of the CR power plant compon
 As already mentioned, financial parameters and the LCOE are calculated separately in Microsoft Excel using a simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}.
 
 \subsubsection{Simulated configurations}
-%The simulated configurations had the goal to reach 90~\% of the scheduled production curve by using variation of solar multiple and full load hours of TES. Also the simulated configurations covers a broad view on the technology possibilities. As already mentioned in Section~\ref{Large scale concentrated solar power (CSP) plants} is the SM the ratio of the receivers thermal output to the power cycles thermal input at design point. So a CR system with a SM of 1 has a receiver and a heliostat field which provides the thermal power needed for the power block to run at full load at the system design point. A receiver and collector field with a SM of 1 don't produce enough thermal power to store energy in a TES while feeding the turbine. A CR system with a SM of 1 is just suitable for systems without TES. To covering the scheduled load the solar multiple was varied from 2 to 3.5 in steps of 0.5. Also the storage full load hours were varied from 6 to 16~h in steps of 2~h. The target of 100~MW net capacity was reached with a gross capacity of 111~MW with an estimated gross-to-net conversion factor of 0.90. Table~\ref{tbl: CR_OverallConfig} summarizes the simulated configurations.
-The simulated configurations were to meet 90~\% of the scheduled production curve by using variation of solar multiples and full load hours of TES. As mentioned in Section~\ref{Large scale concentrated solar power (CSP) plants} the solar multiple (SM) is the ratio of the receiver's thermal output to the power cycles thermal input at the design point. Thus, a CR system with a SM of 1 has a receiver and a heliostat field which provides the thermal power needed for the power block to run at full load at the system design point. A receiver and collector field with an SM of 1 do not produce enough thermal power to store energy in a TES while also feeding the turbine. A CR system with a SM of 1 is just sufficient for systems without TES. In order to cover the expected load, the solar multiple was varied from 2 to 3.5 in steps of 0.5, while storage full load hours were varied from 6 to 16~h in steps of 2~h. The target of \SI{100}{MW} net capacity was reached with a gross capacity of 111~MW with an estimated gross-to-net conversion factor of 0.90. Table~\ref{tbl: CR_OverallConfig} summarizes the simulated configurations.
+%The simulated configurations had the goal to reach 90~\% of the scheduled production curve by using variation of solar multiple and full load hours of TES. Also the simulated configurations covers a broad view on the technology possibilities. As already mentioned in Section~\ref{Large scale concentrated solar power (CSP) plants} is the SM the ratio of the receivers thermal output to the power cycles thermal input at design point. So a CR system with a SM of 1 has a receiver and a heliostat field which provides the thermal power needed for the power block to run at full load at the system design point. A receiver and collector field with a SM of 1 don't produce enough thermal power to store energy in a TES while feeding the turbine. A CR system with a SM of 1 is just suitable for systems without TES. To covering the scheduled load the solar multiple was varied from 2 to 3.5 in steps of 0.5. Also the storage full load hours were varied from 8 to 16~h in steps of 2~h. The target of 100~MW net capacity was reached with a gross capacity of 111~MW with an estimated gross-to-net conversion factor of 0.90. Table~\ref{tbl: CR_OverallConfig} summarizes the simulated configurations.
+The simulated configurations were to meet 90~\% of the scheduled production curve by using variation of solar multiples and full load hours of TES. As mentioned in Section~\ref{Large scale concentrated solar power (CSP) plants} the solar multiple (SM) is the ratio of the receiver's thermal output to the power cycles thermal input at the design point. Thus, a CR system with a SM of 1 has a receiver and a heliostat field which provides the thermal power needed for the power block to run at full load at the system design point. A receiver and collector field with an SM of 1 do not produce enough thermal power to store energy in a TES while also feeding the turbine. A CR system with a SM of 1 is just sufficient for systems without TES. In order to cover the expected load, the solar multiple was varied from 2 to 3.5 in steps of 0.5, while storage full load hours were varied from 8 to 16~h in steps of 2~h. The target of \SI{100}{MW} net capacity was reached with a gross capacity of 111~MW with an estimated gross-to-net conversion factor of 0.90. Table~\ref{tbl: CR_OverallConfig} summarizes the simulated configurations.
 
 \begin{table}[!h]  
   \centering
-	\begin{tabular}{ p{4.0cm}  C{1.0cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} |C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} } 
+	\begin{tabular}{ p{4.0cm}  C{1.0cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} | C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} } 
 	\hline	
-\textbf{Item} & \textbf{Unit} & \multicolumn{12}{c}{\textbf{Value}} \\ \hline \hline
-Net turbine capacity & MW\textsubscript{el} & \multicolumn{12}{c}{100} \\
-Gross turbine capacity & MW\textsubscript{el} & \multicolumn{12}{c}{111} \\ \hline
-Solar multiple & - & \multicolumn{6}{c}{2.0} & \multicolumn{6}{c}{2.5} \\
-TES capacity & h &  6 & 8 & 10 & 12 & 14 & 16 &  6 & 8 & 10 & 12 & 14 & 16 \\ \hline 
-Solar multiple & - & \multicolumn{6}{c}{3.0} & \multicolumn{6}{c}{3.5} \\
-TES capacity & h &  6 & 8 & 10 & 12 & 14 & 16 &  6 & 8 & 10 & 12 & 14 & 16 \\ \hline 
+\textbf{Item} & \textbf{Unit} & \multicolumn{10}{c}{\textbf{Value}} \\ \hline \hline
+Net turbine capacity & MW\textsubscript{el} & \multicolumn{10}{c}{100} \\
+Gross turbine capacity & MW\textsubscript{el} & \multicolumn{10}{c}{111} \\ \hline
+Solar multiple & - & \multicolumn{5}{c}{2.0} & \multicolumn{5}{c}{2.5} \\
+TES capacity & h &  8 & 10 & 12 & 14 & 16 &  8 & 10 & 12 & 14 & 16 \\ \hline 
+Solar multiple & - & \multicolumn{5}{c}{3.0} & \multicolumn{5}{c}{3.5} \\
+TES capacity & h &   8 & 10 & 12 & 14 & 16 &  8 & 10 & 12 & 14 & 16 \\ \hline 
 \end{tabular}
 \caption[Simulated CR solar multiple and thermal energy storage configurations.]{Simulated CR solar multiple and thermal energy storage  configurations.}\label{tbl: CR_OverallConfig}
 \end{table}
@@ -328,7 +328,7 @@ Total plant availability & $f_{avail,plant,CR}$ & 96 & \% & \cite{Morin2012} \\
 \caption[Finacial input parameter for CR-simulation in SAM.]{Finacial input parameter for CR-simulation in SAM.}\label{tbl: CRFinance}
 \end{table}
 \pagebreak
-\section{PTC power plant design  and simulation} \labelPTC power plant design  and simulation}
+\section{PTC power plant design  and simulation} \label{PTC power plant design  and simulation}
 The PTC power plant was simulation in the “CSP parabolic trough (physical)" model in SAM using the option "no financial model". As before the input the EPW weather file to specify the hourly atmospheric conditions from Section~\ref{Location and weather data} was used. For the PTC simulation SAM uses the following input data:
 \begin{itemize}
 \item Latitude ($\,^{\circ}$)
@@ -524,7 +524,7 @@ Total plant availability &$f_{avail,plant,PTC}$ & 96 & \% & \cite{Morin2012} \\
 \caption[Finacial input parameter for PTC-simulation in SAM.]{Finacial input parameter for PTC-simulation in SAM.}\label{tbl: PTCFinance}
 \end{table}
 \pagebreak
-\section{PV power plant with electrical energy storage design and simulation}
+\section{PV power plant with electrical energy storage design and simulation} \label{section PV system}
 For this simulation a PV power plant was extended with an electrical energy storage (EES). This extended PV power plant was simulated in SAM's "Photovoltaic (detailed)" model with enabled battery storage option. Also for this simulation was the EPW weather file for Upington from Section~\ref{Location and weather data} used. For the PV simulation SAM uses the following input data:
 \begin{itemize}
 \item Latitude ($\,^{\circ}$)
@@ -1116,7 +1116,12 @@ Comprising the results of the LCOE calculation and associated load curve coverin
 The lowest LCOE for reaching 80~\% of the prescribed load is 27.52~\$cent/kWh using 5~h of EES and also a PVM of 2.6. For reaching 70~\% the 2.2 and 4~h of EES reaches the lowest LCOE of 25.18~\$cent/kWh.
 \pagebreak
 
-
 \section{Interpretation and comparison of results}
 PV-Storage --> Battery lifetime
+
+Large scale storage costs (Deutschland)
+
 Spinnennetzdiagramm 
+PV unity scale without storage 
+6-7.5 €cent/kWh (GHI 2000kWh/m2) in 2013 \cite{FraunhoferISE2013}\\\\
+
