@@ -212,13 +212,13 @@ The optimized heliostat field layouts of the four considered SM are depict in Fi
         \begin{subfigure}[b]{0.5\textwidth}
                 \centering
                 \includegraphics[width=0.95\textwidth]{FIG/SM20}
-                \caption{SM~=~2.0}\label{SM2.0}
+                \caption{SM:~2.0}\label{SM2.0}
         \end{subfigure}%
         ~
         \begin{subfigure}[b]{0.5\textwidth}
                 \centering
                 \includegraphics[width=0.95\textwidth]{FIG/SM25}
-                \caption{SM~=~2.5}\label{SM2.5}
+                \caption{SM:~2.5}\label{SM2.5}
         \end{subfigure}
         
 \par\medskip % Linebreak
@@ -226,13 +226,13 @@ The optimized heliostat field layouts of the four considered SM are depict in Fi
         \begin{subfigure}[b]{0.5\textwidth}
                 \centering
                 \includegraphics[width=0.95\textwidth]{FIG/SM30}
-                \caption{SM~=~3.0}\label{SM3.0}
+                \caption{SM:~3.0}\label{SM3.0}
         \end{subfigure}%
         ~
         \begin{subfigure}[b]{0.5\textwidth}
                 \centering
                 \includegraphics[width=0.95\textwidth]{FIG/SM35}
-                \caption{SM~=~3.5}\label{SM3.5}
+                \caption{SM:~3.5}\label{SM3.5}
         \end{subfigure}
         \caption[Simulated heliostat field layout at diferent solar multiples (SM).]{Simulated heliostat field layout at diferent solar multiples (SM).}\label{SM}
 \end{figure}
@@ -268,20 +268,20 @@ The CR system was simulated using a direct two-tank molten salt thermal energy s
 
 
 
-As defined at the begining of this Chapter, the full load hours of TES are varied in steps of 2~h from 6 to 16~h. The TES full load hours represents the time in which the storage can supply enough energy to the steam turbine and the power block to run at full design capacity. So a higher value of TES full load hours extended the time that the power plant can run during nights or cloudy days. Table~\ref{tbl: CRTES} shows that with higher TES full load hours the thermal capacity and tank volume increases as well. The simulated storage capacity is in a range of 1~617~MWh\textsubscript{th} using 6 full load hours and 4~311~MWh\textsubscript{th} using 16 full load hours. 
+As defined at the begining of this Chapter, the full load hours of TES are varied in steps of 2~h from 8 to 16~h. The TES full load hours represents the time in which the storage can supply enough energy to the steam turbine and the power block to run at full design capacity. So a higher value of TES full load hours extended the time that the power plant can run during nights or cloudy days. Table~\ref{tbl: CRTES} shows that with higher TES full load hours the thermal capacity and tank volume increases as well. The simulated storage capacity is in a range of 2~155~MWh\textsubscript{th} using 8 full load hours and 4~311~MWh\textsubscript{th} using 16 full load hours. 
 \begin{table}[!h]  
   \centering
-	\begin{tabular}{ p{3.9cm}  C{1.0cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} } 
+	\begin{tabular}{ p{3.9cm}  C{1.0cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} } 
 	\hline	
-\textbf{Item} & \textbf{Unit} & \multicolumn{6}{c}{\textbf{Value}} \\ \hline \hline
-Storage type & - &  \multicolumn{6}{c}{direct two-tank molten salt}\\
-Storage fluid & - &  \multicolumn{6}{c}{60~\% NaNO\textsubscript{3} and 40~\% KNO\textsubscript{3}}\\
-Hot tank design temp. & $\,^{\circ}\mathrm{C}$ & \multicolumn{6}{c}{566}\\
-Cold tank design temp. & $\,^{\circ}\mathrm{C}$ & \multicolumn{6}{c}{288}\\
+\textbf{Item} & \textbf{Unit} & \multicolumn{5}{c}{\textbf{Value}} \\ \hline \hline
+Storage type & - &  \multicolumn{5}{c}{direct two-tank molten salt}\\
+Storage fluid & - &  \multicolumn{5}{c}{60~\% NaNO\textsubscript{3} and 40~\% KNO\textsubscript{3}}\\
+Hot tank design temp. & $\,^{\circ}\mathrm{C}$ & \multicolumn{5}{c}{566}\\
+Cold tank design temp. & $\,^{\circ}\mathrm{C}$ & \multicolumn{5}{c}{288}\\
 \hline
-\textbf{TES full load hours} & \textbf{h} & \textbf{6} & \textbf{8} & \textbf{10} & \textbf{12} & \textbf{14} & \textbf{16}\\ \hline 
-Thermal capacity & MWh\textsubscript{th} & 1~617 & 2~155 & 2~694 & 3~233 & 3~772 &  4~311\\
-Storage volume  & m\textsuperscript{3} & 7~757 & 10~229 & 12~787 & 15~345 & 17~902 & 20~460\\
+\textbf{TES full load hours} & \textbf{h} & \textbf{8} & \textbf{10} & \textbf{12} & \textbf{14} & \textbf{16}\\ \hline 
+Thermal capacity & MWh\textsubscript{th} & 2~155 & 2~694 & 3~233 & 3~772 &  4~311\\
+Storage volume  & m\textsuperscript{3} & 10~229 & 12~787 & 15~345 & 17~902 & 20~460\\
 \hline
 \end{tabular}
 \caption[CR system TES parameter.]{CR system TES parameter.}\label{tbl: CRTES}
@@ -329,7 +329,7 @@ Total plant availability & $f_{avail,plant,CR}$ & 96 & \% & \cite{Morin2012} \\
 \caption[Finacial input parameter for CR-simulation in SAM.]{Finacial input parameter for CR-simulation in SAM.}\label{tbl: CRFinance}
 \end{table}
 \subsection{Results of CR power plant simulation}
-This section comprised the results of the simulation of the CR power plant, whose input parameter are discussed in Section \ref{CR power plant design  and simulation}. 
+The following sections illustrates and discuss the obtained simulation and calculation results of the above defined CR power plant. Therefore the load curve covering performance and LCOE as well as the belonging load profiles and duration curves are described and analyzed. The configuration of the power plants to reach 90~\% of the prescribed load while using the best belonging LCOE is defined at the end of each section.
 \subsubsection{Load curve covering}
 To find the suitable power plant configuration of the CR system to reach the target of 90~\% load curve covering, there was 20 various configurations simulated. This section presets and compare mainly the results of the simulation with the lowest SM and hours of TES configuration (SM: 2.0 \& TES: 8~h) with the simulation using the highest SM and hours of TES configuration (SM: 3.5 \& TES: 16~h) representative for all in between. All simulated configurations are shown in Table~\ref{tbl: CR_OverallConfig} on Page~\pageref{tbl: CR_OverallConfig}.
 
@@ -494,7 +494,7 @@ For the simulation of the PTC system the Ultimate Trough was selected as solar c
 \begin{figure}[bhtp]
 \centering
 \includegraphics[width=0.95\linewidth]{FIG/PTC_Ultimate_config}
-\caption[Screenshot of Ultimate Trough input parameter for SAM.]{Screenshot of Ultimate Trough input parameter for SAM.}\label{PTC_Ultimate_config}
+\caption[Screenshot of Ultimate Trough SCA input parameter for SAM.]{Screenshot of Ultimate Trough SCA input parameter for SAM.}\label{PTC_Ultimate_config}
 \end{figure}
 The section "Optical Calculation" shows, that the total optical efficiency at design of the Ultimate Trough is 89.9~\%. The dimensions and main characteristics of the HCE is shown in the section "Receiver Geometry".
 \subsubsection{Solar receiver (HCE)}
@@ -555,26 +555,25 @@ Total land area & ha & 675 & 845 & 1013 & 1~182 & 1~351 &1~540 & 1~689\\
 \subsubsection{Thermal energy storage (TES)}
 The thermal energy storage (TES) of the simulated PTC system uses a indirect two-tank molten salt system with "Hitec Solar Salt" as storage fluid. This storage fluid is made from sodium nitrate (60~\% NaNO\textsubscript{3}) and potassium nitrate (40~\% KNO\textsubscript{3}). Solar Salt needs an minimum operating temperature of 238$\,^{\circ}\mathrm{C}$ and and has a maximum operating temperature of 593$\,^{\circ}\mathrm{C}$. \cite{Suite2011,Kearney2003}
 
-\begin{table}[!b]  
+\begin{table}[htbp]  
   \centering
-	\begin{tabular}{ p{3.9cm}  C{1.0cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} } 
+	\begin{tabular}{ p{3.9cm}  C{1.0cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} } 
 	\hline	
-\textbf{Item} & \textbf{Unit} & \multicolumn{6}{c}{\textbf{Value}} \\ \hline \hline
-Storage type & - &  \multicolumn{6}{c}{indirect two-tank molten salt}\\
-Storage fluid & - &  \multicolumn{6}{c}{Hitec Solar Salt}\\
-Hot tank design temp. & $\,^{\circ}\mathrm{C}$ & \multicolumn{6}{c}{391}\\
-Cold tank design temp. & $\,^{\circ}\mathrm{C}$ & \multicolumn{6}{c}{293}\\
+\textbf{Item} & \textbf{Unit} & \multicolumn{5}{c}{\textbf{Value}} \\ \hline \hline
+Storage type & - &  \multicolumn{5}{c}{indirect two-tank molten salt}\\
+Storage fluid & - &  \multicolumn{5}{c}{Hitec Solar Salt}\\
+Hot tank design temp. & $\,^{\circ}\mathrm{C}$ & \multicolumn{5}{c}{391}\\
+Cold tank design temp. & $\,^{\circ}\mathrm{C}$ & \multicolumn{5}{c}{293}\\
 \hline
-\textbf{TES full load hours} & \textbf{h} & \textbf{6} & \textbf{8} & \textbf{10} & \textbf{12} & \textbf{14} & \textbf{16}\\ \hline 
-Thermal capacity & MWh\textsubscript{th} & 1~908 & 2544 & 3~180 & 3~816 & 4~452 & 5~087 \\
-Storage volume  & m\textsuperscript{3} & 25~805 & 34~407 & 43008 & 51~610 & 60~212 & 68~813\\
+\textbf{TES full load hours} & \textbf{h} & \textbf{8} & \textbf{10} & \textbf{12} & \textbf{14} & \textbf{16}\\ \hline 
+Thermal capacity & MWh\textsubscript{th}  & 2~544 & 3~180 & 3~816 & 4~452 & 5~087 \\
+Storage volume  & m\textsuperscript{3} & 34~407 & 43008 & 51~610 & 60~212 & 68~813\\
 \hline
 \end{tabular}
 \caption[PTC system TES parameter.]{PTC system TES parameter.}\label{tbl: PTCTES}
 \end{table}
 
-
-The storage design temperatures depends from the solar field design temperatures, so the designed temperature difference is 98~K. As it is shown in Table~\ref{tbl: PTCTES} the operating temperature limits fits with the storage tank design temperatures. The heater set point is 265$\,^{\circ}\mathrm{C}$ for both storage tanks. The TES full load hours goes from 6 to 16 in steps of 2. The thermal capacity and also the storage volume rises with the TES full load hours. The simulated stored thermal capacity reaches from 1~908~MWh\textsubscript{th}  at 6 full load hours up to 5~087~MWh\textsubscript{th} at 6 full load hours. It is obviously, that the storage volume of the PTC needs to be more than 3 times that much than the storage volume of the CR system. This is the result of lower temperature difference of the HTF and the turbine design capacity.
+The storage design temperatures depends from the solar field design temperatures, so the designed temperature difference is 98~K. As it is shown in Table~\ref{tbl: PTCTES} the operating temperature limits fits with the storage tank design temperatures. The heater set point is 265$\,^{\circ}\mathrm{C}$ for both storage tanks. The TES full load hours goes from 8 to 16 in steps of 2. The thermal capacity and also the storage volume rises with the TES full load hours. The simulated stored thermal capacity reaches from 2~544~MWh\textsubscript{th}  at 8 full load hours up to 5~087~MWh\textsubscript{th} at 16 full load hours. It is obviously, that the storage volume of the PTC needs to be more than 3 times that much than the storage volume of the CR system. This is the result of lower temperature difference of the HTF and the turbine design capacity.
 
 Also for the simulation of the PTC system the dispatch control of the turbine output fraction in the storage settings was used. Figure~\ref{PTC_turbineoutput} shows the dispatch control matrix for the turbine output fraction.
 \begin{figure}[htbp]  
@@ -847,7 +846,8 @@ Power consumption at night & 0.12 & kW\textsubscript{ac} \\
 \caption[Inverter specifications of Ingecon Sun 805TL U X420 Outdoor.]{Inverter specifications of Ingecon Sun 805TL U X420 Outdoor \cite{IngeteamINC.2015,NREL2015g}.}\label{tbl: PVinverter}
 \end{table}
 \newpage\noindent
-As mentioned before the PV system was design under similar condition that the Mulilo Sonnedix Prieska PV Project. There a dc/ac ratio of 1.15 is used \cite{Morse2014}. This power ratio compares the photovoltaic array power to the inverter capacity \cite{Woodcock2013}. For the simulated PV system the same ratio was assumed. So at 100 MW\textsubscript{ac} inverter output, a total module capacity of 115 MW\textsubscript{dc} is needed. From the discussed parameter and the PVM SAM calculates the resulting number of modules and inverters as well as other parameters on its own. These PV system parameter are summarized in Table~\ref{tbl: PVsystemdesign}. \\ \noindent
+As mentioned before the PV system was design under similar condition that the Mulilo Sonnedix Prieska PV Project. There a dc/ac ratio of 1.15 is used \cite{Morse2014}. This power ratio compares the photovoltaic array power to the inverter capacity \cite{Woodcock2013}. For the simulated PV system the same ratio was assumed. So at 100 MW\textsubscript{ac} inverter output, a total module capacity of 115 MW\textsubscript{dc} is needed. From the discussed parameter and the PVM SAM calculates the resulting number of modules and inverters as well as other parameters on its own. These PV system parameter are summarized in Table~\ref{tbl: PVsystemdesign}.
+
 \begin{table}[!b]  
   \centering
 	\begin{tabular}{ p{4.5cm} C{1.0cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} } 
@@ -874,9 +874,7 @@ Total land area & ha & 244 & 439 & 488 & 536 & 585 & 634 \\
 \caption[PV system design parameter.]{PV system design parameter.}\label{tbl: PVsystemdesign}
 \end{table}
 
-
-For the orientation of the simulated PV-modules the latitude of Upington was used as tilt angle (28.4$\,^{\circ}$) and the azimuth is 0$\,^{\circ}$, so directly facing north. The self-shading model was selected, without external shading parameter. Therefore 2 modules along the side of row and 10 along the bottom of row was selected. Therefrom a shading loss of 0.545~\% on the solar radiation incident on the subarray. Further assumed losses are soiling, mismatch, diodes and connections and wiring losses. The assumed soiling losses reduce the solar radiation incident on the subarray of about 5~\%. The assumed mismatch loss of about 2~\% is related to slight differences in performance of individual modules in the array. Voltage drops across blocking diodes and electrical connections leads to a assumed diodes and connections loss of 0.5~\%. There are also assumed resistive losses of 2~\% in wiring on the dc-side and 1~\% wiring loss between the inverter and the grid connection point on the ac-side of the system.
-
+For the orientation of the simulated PV-modules the latitude of Upington was used as tilt angle (28.4$\,^{\circ}$) and the azimuth is 0$\,^{\circ}$, so directly facing north. The self-shading model was selected, without external shading parameter. Therefore 2 modules along the side of row and 10 along the bottom of row was selected. Therefrom a shading loss of 0.545~\% on the solar radiation incident on the subarray. Further assumed losses are soiling, mismatch, diodes and connections and wiring losses. The assumed soiling losses reduce the solar radiation incident on the subarray of about 5~\%. The assumed mismatch loss of about 2~\% is related to slight differences in performance of individual modules in the array. Voltage drops across blocking diodes and electrical connections leads to a assumed diodes and connections loss of 0.5~\%. There are also assumed resistive losses of 2~\% in wiring on the dc-side and 1~\% wiring loss between the inverter and the grid connection point on the ac-side of the system. All PV system loss parameter coming from a IEEE photovoltaics specialists conference paper about performance parameters for grid-connected PV systems \cite{Marion2005}.
 \subsubsection{Electrical energy storage (EES)}
 The electrical energy storage is adapted though the system as it is shown in Figure~\ref{PV_model_config} on Page~\pageref{PV_model_config}. The EES basically consists out of two parts - the power conversions system (PCS) and the storage unit - as it is shown in Figure~\ref{TCC_EES} on Page~\pageref{TCC_EES}. For the simulation in SAM the PCS was simplified to the conversion efficiency. The AC to DC conversion efficiency was assumed with 99~\% as well as the DC to AC efficiency. Nevertheless for the LCOE calculation it is still relevant to define the performance of the PCS. As it is shown in Table~\ref{tbl: PVsystemdesign} the inverter capacity range is between 240 and 320~MW\textsubscript{ac} for the simulation cases with adapted storage. The maximum scheduled load from Section~\ref{Overall simulated configuration} is 100~MW. So depending from the PV inverter capacity the PCS capacity needs to variate as well to collect the  PV-overproduction. For the calculation of the LCOE it was assumed that the PCS needs to collects the inverter capacity minus the 100~MW daily base load.
 
