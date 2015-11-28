@@ -950,7 +950,7 @@ Cells & $\times 10^6$ & 5.1 & 6.3 & 7.6 & 8.8 & 10.1\\
 \subsubsection{Financial parameter}
 The financial parameter for the LCOE calculation are composed in Table~\ref{tbl: PVFinance}. As mentioned before was the LCOE calculation for this simulation made separately in Microfoft Excel using a simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}. As for the other systems is the PV power plant designed for a lifetime of 25~years. 
 
-The specific large-scale PV system costs in South Africa  amount to 1.285~USD/W\textsubscript{DC,Peak} (14.5~ZAR/W\textsubscript{DC,Peak} using 11.286~USD/ZAR average in 2014 \cite{IRS2015}) which leads from an in 2014 actually built PV system \cite{Terblanche2015}. These specific costs are close to utility-scale PV systems in Europe with specific investments of 1~EUR/W\textsubscript{DC,Peak} \cite{FraunhoferISE2013}, corresponding to 1.33~USD/W (using the average exchange rate in 2014 of 1.33~USD/EUR  \cite{StatistaGmbH2015}).
+The specific large-scale PV system costs in South Africa  amount to 1.285~USD/W\textsubscript{p} (14.5~ZAR/W\textsubscript{p} using 11.286~USD/ZAR average in 2014 \cite{IRS2015}) which leads from an in 2014 actually built PV system \cite{Terblanche2015}. These specific costs are close to utility-scale PV systems in Europe with specific investments of 1~EUR/W\textsubscript{p} \cite{FraunhoferISE2013}, corresponding to 1.33~USD/W\textsubscript{p} (using the average exchange rate in 2014 of 1.33~USD/EUR  \cite{StatistaGmbH2015}).
 
 The LCOE was calculated with different interest rates and O\&M costs for the PV power plant and the EES system. The real interest rate for the PV power plant was amused with 2.8~\% \cite{FraunhoferISE2013} and the annual O\&M costs are 1~\%  of the PV investment costs \cite{IEA2014a}. A degradation of 1~\% per year of the annual energy output was assumed for the ageing phenomena of the PV cells \cite{Tidball2010}.
 
@@ -974,24 +974,24 @@ As before for the other solar power plants also for the PV system was land purch
 	\hline	
 \textbf{Item} & \textbf{Symbol}& \textbf{Value} & \textbf{Unit} & \textbf{Source}\\ \hline \hline
 Lifetime &$n$ & 25 & years & \cite{FraunhoferISE2013} \\ \hline
-Solar modules & $c_{sm}$&0.481 & USD/W\textsubscript{dc} & \cite{Terblanche2015}\\ 
-Structural &$c_{st}$ &0.138 & USD/W\textsubscript{dc} & \cite{Terblanche2015} \\ 
-Electrical parts &$c_{ep}$ &0.116 & USD/W\textsubscript{dc} & \cite{Terblanche2015} \\ 
-Inverters&$c_{inv}$ &0.117 & USD/W\textsubscript{dc} & \cite{Terblanche2015} \\ 
-Engineering and labour costs & $c_{elc}$ & 0.242 & USD/W\textsubscript{dc} & \cite{Terblanche2015} \\ 
-Security and infrastructure & $c_{si}$& 0.091 & USD/W\textsubscript{dc} & \cite{Terblanche2015} \\ 
-Transport and logistics & $c_{tl}$& 0.067 & USD/W\textsubscript{dc} & \cite{Terblanche2015}\\ 
-Sub-Station & $c_{ss}$ & 0.071 & USD/W\textsubscript{dc} &\cite{Terblanche2015} \\ \hline
-Total PV system costs & $c_{PV}$ & 1.285 &  USD/W\textsubscript{dc} &\cite{Terblanche2015} \\ 
+Solar modules & $c_{sm}$&0.481 & USD/W\textsubscript{p} & \cite{Terblanche2015}\\ 
+Structural &$c_{st}$ &0.138 & USD/W\textsubscript{p} & \cite{Terblanche2015} \\ 
+Electrical parts &$c_{ep}$ &0.116 & USD/W\textsubscript{p} & \cite{Terblanche2015} \\ 
+Inverters&$c_{inv}$ &0.117 & USD/W\textsubscript{p} & \cite{Terblanche2015} \\ 
+Engineering and labour costs & $c_{elc}$ & 0.242 & USD/W\textsubscript{p} & \cite{Terblanche2015} \\ 
+Security and infrastructure & $c_{si}$& 0.091 & USD/W\textsubscript{p} & \cite{Terblanche2015} \\ 
+Transport and logistics & $c_{tl}$& 0.067 & USD/W\textsubscript{p} & \cite{Terblanche2015}\\ 
+Sub-Station & $c_{ss}$ & 0.071 & USD/W\textsubscript{p} &\cite{Terblanche2015} \\ \hline
+Total PV system costs & $c_{PV}$ & 1.285 &  USD/W\textsubscript{p} &\cite{Terblanche2015} \\ 
 Annual degradation factor &$f_{degrad}$ & 1 & \% & \cite{Tidball2010}\\ 
 Annual PV O\&M costs factor &$f_{O\&M,PV}$ & 1 & \% & \cite{IEA2014a}\\
 Interest rate of PV & $i_{PV}$& 2.8 & \% & \cite{FraunhoferISE2013} \\ 
-Annual insurance costs& $f_{ins,PV}$ & 0.5 & \% & \cite{InternationalFinanceCorporation2015}\\ \hline
+Annual insurance costs & $f_{ins,PV}$ & 0.5 & \% & \cite{InternationalFinanceCorporation2015}\\ \hline
 EES PCS costs & $c_{EES,PCS}$ & 615 & USD/kW & \cite{Zakeri2015} \\ 
 EES battery bank costs & $c_{EES,BBC}$ &300 & USD/kWh & \cite{Nykvist2015} \\ 
 EES battery bank replacement costs & $c_{EES,BBRC}$ & 150 & USD/kWh & \cite{Zakeri2015} \\ 
 Assumed EES battery bank replacements during lifetime & $n_{BBR}$ & 3 & - & - \\ 
-Annual EES O\&M costs & & 9.18 & USD/kW & \cite{Zakeri2015}\\
+Annual EES O\&M costs & $c_{O\&M,EES}$ & 9.18 & USD/kW & \cite{Zakeri2015}\\
 Interest rate of EES & $i_{EES}$& 8.0 & \% & \cite{Zakeri2015} \\
 Annual insurance costs& $f_{ins,EES}$ & 0.5 & \% & \cite{Cutter2014}\\ \hline
 Land purchase &$c_{LP}$ & 3~000.00 & USD/ha & \cite{Cassell2012} \\ 
