@@ -322,6 +322,7 @@ Annual O\&M & $f_{O\&M,CR}$ & 2 & \% &\cite{Fichtner2010}\\
 Land purchase&$c_{LP}$ & 3~000 & USD/ha & \cite{Cassell2012}\\ \hline
 Lifetime &$n$ & 25 & years & \cite{FraunhoferISE2013} \\ 
 Interest rate & $i_{CR}$ & 7.5 & \% & \cite{FraunhoferISE2013} \\ 
+Annual insurance costs& $f_{ins,CR}$ & 0.5 & \% & \cite{IRENA2012}\\
 Surcharge for EPC, project management and risk & $f_{EPC,CR}$& 15 & \% & \cite{Platzer2014} \\
 Total plant availability & $f_{avail,plant,CR}$ & 96 & \% & \cite{Morin2012} \\ 
 \hline
@@ -607,6 +608,7 @@ Annual O\&M & $f_{O\&M,PTC}$ & 2 & \% &\cite{Fichtner2010}\\
 \hline
 Lifetime&$n$ & 25 & years & \cite{FraunhoferISE2013} \\ 
 Interest rate& $i_{PTC}$& 7.5 & \% & \cite{FraunhoferISE2013} \\ 
+Annual insurance costs& $f_{ins,PTC}$ & 0.5 & \% & \cite{IRENA2012}\\
 Surcharge for EPC, project management and risk & $f_{EPC,PTC}$ & 15 & \% & \cite{Platzer2014} \\
 Total plant availability &$f_{avail,plant,PTC}$ & 96 & \% & \cite{Morin2012} \\ 
 \hline
@@ -983,13 +985,15 @@ Sub-Station & $c_{ss}$ & 0.071 & USD/W\textsubscript{dc} &\cite{Terblanche2015} 
 Total PV system costs & $c_{PV}$ & 1.285 &  USD/W\textsubscript{dc} &\cite{Terblanche2015} \\ 
 Annual degradation factor &$f_{degrad}$ & 1 & \% & \cite{Tidball2010}\\ 
 Annual PV O\&M costs factor &$f_{O\&M,PV}$ & 1 & \% & \cite{IEA2014a}\\
-Interest rate of PV & $i_{PV}$& 2.8 & \% & \cite{FraunhoferISE2013} \\ \hline
-EES PCS costs & & 615 & USD/kW & \cite{Zakeri2015} \\ 
-EES battery bank costs & &300 & USD/kWh & \cite{Nykvist2015} \\ 
-EES battery bank replacement costs & & 150 & USD/kWh & \cite{Zakeri2015} \\ 
-Assumed EES battery bank replacements during lifetime & - & 3 & - & - \\ 
+Interest rate of PV & $i_{PV}$& 2.8 & \% & \cite{FraunhoferISE2013} \\ 
+Annual insurance costs& $f_{ins,PV}$ & 0.5 & \% & \cite{InternationalFinanceCorporation2015}\\ \hline
+EES PCS costs & $c_{EES,PCS}$ & 615 & USD/kW & \cite{Zakeri2015} \\ 
+EES battery bank costs & $c_{EES,BBC}$ &300 & USD/kWh & \cite{Nykvist2015} \\ 
+EES battery bank replacement costs & $c_{EES,BBRC}$ & 150 & USD/kWh & \cite{Zakeri2015} \\ 
+Assumed EES battery bank replacements during lifetime & $n_{BBR}$ & 3 & - & - \\ 
 Annual EES O\&M costs & & 9.18 & USD/kW & \cite{Zakeri2015}\\
-Interest rate of EES & $i_{EES}$& 8.0 & \% & \cite{Zakeri2015} \\ \hline
+Interest rate of EES & $i_{EES}$& 8.0 & \% & \cite{Zakeri2015} \\
+Annual insurance costs& $f_{ins,EES}$ & 0.5 & \% & \cite{Cutter2014}\\ \hline
 Land purchase &$c_{LP}$ & 3~000.00 & USD/ha & \cite{Cassell2012} \\ 
 \hline
 \end{tabular}
@@ -999,9 +1003,9 @@ Land purchase &$c_{LP}$ & 3~000.00 & USD/ha & \cite{Cassell2012} \\
 \subsection{Simulation results of PV power plant}
 In this section the results of the simulated PV system and there belonging LCOE results are described and analyzed. First the PV system without EES and then the results of the PV system with adapted EES. The goal of these Section is to find the suitable PV power plant design configuration to reach a covering of 90~\% of the prescribed load which having the lowest belonging LCOE result.
 \subsubsection{PV power plant without storage}
-As it was described before at the beginning of Section~\ref{section PV system}, the PV system was also simulated without using an EES system. These PV system was designed for a maximum power output of 99.8~MW\textsubscript{ac} and 115.0~MW\textsubscript{dc} as it is defined in Table~\ref{tbl: PVsystemdesign}. It must be noted, that the following results are simulated for the first year of the PV system so for the performance results contains no degradation which is to be expected during the full lifetime. For the LCOE calculation a degradation factor was assumed as it was described in the previous section.
+As it was described before at the beginning of Section~\ref{section PV system}, the PV system was also simulated without using an EES system. These PV system was designed for a maximum power output of 99.8~MW\textsubscript{ac} and 115.0~MW\textsubscript{dc} as it is defined in Table~\ref{tbl: PVsystemdesign}. It must be noted, that the following results are simulated for the first year of the PV system so for the performance results contains no degradation which is to be expected during the full lifetime. For the LCOE calculation a degradation factor was assumed as it was described in the previous section. 
 
-Figure \ref{PVwithoutEESanual} visualizes the resulting annually load covering behavior. It can be seen, that the system can't cover the prescribed load at all. As it is usually for a solar powered system without storage the energy production standstill during the night time. 
+Figure \ref{PVwithoutEESanual} visualizes the resulting annually load covering behavior. It can be seen, that the system can't cover the prescribed load at all. As it is usually for a solar powered system without storage the energy production standstill during the night time. The here shown annual average PV system power output covers about 32.9~\% of the prescribed load in the first year of the system. So the simulated PV system had a annual energy production during the first year of about 233.69~GWh.
 
 \begin{figure}[htbp]  
 \centering
@@ -1025,12 +1029,7 @@ The simulation results of the energy output behavior in Figure~\ref{PVwithoutEES
         \end{subfigure}
         \caption[Power output behavior of PV system.]{Power output behavior of PV system.}\label{PVwithoutEES}
 \end{figure}
-The simulated PV system had a annual energy production during the first year of about 233.69~GWh
-
-
-The here shown annual average PV system power output covers about 32.9~\% of the prescribed load in the first year of the system.
-
-
+The LCOE was calculated taking into account of 1~\% annual degradation of the PV modules and under use of the remaining values from Table~\ref{tbl: PVFinance}. The LCOE was calculated using a the in Appendix~\ref{ChapterLCOE} documented method and results 50.81~USD/MWh. Table 
 \begin{table}[htbp]  
   \centering
 	\begin{tabular}{  p{3.0cm}  C{3.0cm}  C{3.0cm} } 
@@ -1041,7 +1040,7 @@ Load covering &  32.9 & \% \\
 LCOE result & 50.81 & USD/MWh \\
 \hline
 \end{tabular}
-\caption[.]{.}\label{tbl: PVwithoutEESresult}
+\caption[Summary of the results of the simulated PV system without EES.]{Summary of the results of the simulated PV system without EES.}\label{tbl: PVwithoutEESresult}
 \end{table}
 \pagebreak
 \subsubsection{Load curve covering}
@@ -1061,7 +1060,7 @@ The covering of the prescribed load during the day results mainly from the PV sy
 \begin{figure}[!bhtp]  
 \centering
 \includegraphics[width=1\linewidth]{FIG/PV_winter_load}
-\caption[PV system with adapted EES load profile during the time of winter solstice (15. June - 25. June).]{PV system with adapted EES load profile during the time of winter solstice (15. June - 25. June).}\label{PV_winter_load}
+\caption[PV system with adapted EES load profile during the time of winter solstice.]{PV system with adapted EES load profile during the time of winter solstice (15. June - 25. June).}\label{PV_winter_load}
 \end{figure}
 The behavior of the power output of the selected simulated PV power plants and there power flow is shown in Figure~\ref{PV_winter_load} for the time with the lowest irradiance values. During the time of the winter solstice the value of GHI reaches just about 630~W/m\textsuperscript{2} in peak. The graph shows the behavior of the EES during the days and as it was described above the PV system first covers the prescribed load and then charges the EES with there surplus power. In the time span of the 22. to the 25. of June are the irradiance values of GHI during the days almost perfect. Nevertheless, both PV power plant configurations can't produce power without coming to standstill. The configuration with a PVM of 2.0 and 4~h of EES stops covering the prescribed load before this steps down to the night reduction. But the PV power plant configuration with a PVM of 2.8 and 8~h of EES covering the load till in the early morning hours. When comparing the value of the EES charging power it is obviously that there higher charging power peaks at a higher PVM configuration a the lower. 
 
@@ -1070,7 +1069,7 @@ During the winter times captures the EES the whole electricity power from the si
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=1\linewidth]{FIG/PV_summer_load}
-\caption[PV system with adapted EES load profile during the time of summer solstice (16. December - 26. December).]{PV system with adapted EES load profile during the time of summer solstice (16. December - 26. December).}\label{PV_summer_load}
+\caption[PV system with adapted EES load profile during the time of summer solstice.]{PV system with adapted EES load profile during the time of summer solstice (16. December - 26. December).}\label{PV_summer_load}
 \end{figure}
 The graph shows that the lowest PV power plant configuration can't cover the prescribed load during the night. The by the system provided power coming to stand still when the load got reduced for the night reduction at latest. Therefore the electricity production standstill during the night in the annual average load profile (Figure~\ref{PV_annual_profil}) as well. In comparison to that covers the highest PV power plant configuration almost the full prescribed load. Just during the following night times of days with lower irradiance (21. \& 22. December) comes the systems electricity output to standstill. Considering the system electricity output more precise, it offers high overproduction peaks which are the above mentioned situations where the storage got full charged and the PV system produces more power than the load requests.  
 

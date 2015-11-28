@@ -1,13 +1,13 @@
 \chapter{Appendix B: Methodology for calculating the LCOE} \label{ChapterLCOE}
 The LCOE is a financial value to compare different power producing technologies with different financial parameters and generation structures over a hole economical lifetime of power plants. To calculate the LCOE a simplified method from \cite{Morin2012}, originally proposed by \cite{Roy1997} was considered:
 \begin{equation}
-LCOE=\frac{C_{invest}\times(f_{annuity}+f_{ins.ann.})+C_{O\&M}}{E_{el,net,ann.}\times f_{avail,plant}} \label{LCOEold}
+LCOE=\frac{C_{invest}\times(f_{annuity}+f_{ins.ann.})+C_{O\&M}}{E_{el,net,ann.}\times f_{avail,plant}} \label{eq:LCOEold}
 \end{equation}
 This equation is commonly used for CSP plants and don't contain a degradation factor as it is necessary for the lifetime consideration of PV power plants. So the equation was extended with the average degradation factor of full observation period $f_{Full,degrad}$:
 
 For the calculation of the LCOE of all power plants the extended equation was used:
 \begin{equation}
-LCOE=\frac{C_{invest}\times(f_{annuity}+f_{ins.ann.})+C_{O\&M}}{E_{el,net}\times f_{avail,plant} \times f_{Full,degrad}}\label{LCOE}
+LCOE=\frac{C_{invest}\times(f_{annuity}+f_{ins.ann.})+C_{O\&M}}{E_{el,net}\times f_{avail,plant} \times f_{Full,degrad}}\label{eq:LCOE}
 \end{equation}
 with:
 \begin{equation}
@@ -21,10 +21,10 @@ f_{Full,degrad} = \frac{\sum\limits_{t=0}^{n-1} \frac{1}{(1+f_{degrad})^{t}}}{n}
 \begin{itemize}
 \item[ ] 
 \begin{itemize}
-\item[$LCOE$]levelized cost of electricity in \$/kWh
-\item[$C_{invest}$]investment costs in \$
-\item[$C_{O\&M}$]annual operation and maintenance costs in \$
-\item[$E_{el,net}$]produced electricity in the first year in kWh
+\item[$LCOE$]levelized cost of electricity in USD/MWh
+\item[$C_{invest}$]investment costs in USD
+\item[$C_{O\&M}$]annual operation and maintenance costs in USD
+\item[$E_{el,net}$]produced electricity in the first year in MWh
 \item[$f_{annuity}$]annuity factor in \%
 \item[$f_{ins.ann.}$]annual insurance costs in \%
 \item[$f_{avail,plant}$]total plant availability in \%
@@ -36,6 +36,7 @@ f_{Full,degrad} = \frac{\sum\limits_{t=0}^{n-1} \frac{1}{(1+f_{degrad})^{t}}}{n}
 \end{itemize}
 \end{itemize}
 \end{itemize}
+\pagebreak
 \section{CR power plant}
 The investment costs for the CR power plant are calculated with the parameters from Table~\ref{tbl: CRFinance} acording to:
 \begin{equation}
@@ -46,12 +47,12 @@ C_{invest,CR} = (C_{HF}+C_{LP,CR}+C_{PB,CR}+C_{T+R}+C_{TES,CR})\times(1+f_{EPC,C
 \begin{itemize}
 \item[ ] 
 \begin{itemize}
-\item[$C_{invest,CR}$]investment costs of CR in \$
-\item[$C_{HF}$]heliostat field costs in \$
-\item[$C_{LP,CR}$]land purchase costs in \$
-\item[$C_{PB,CR}$]power block costs in \$
-\item[$C_{T+R}$]tower and receiver costs in \$
-\item[$C_{TES,CR}$]thermal energy storage costs in \$
+\item[$C_{invest,CR}$]investment costs of CR in USD
+\item[$C_{HF}$]heliostat field costs in USD
+\item[$C_{LP,CR}$]land purchase costs in USD
+\item[$C_{PB,CR}$]power block costs in USD
+\item[$C_{T+R}$]tower and receiver costs in USD
+\item[$C_{TES,CR}$]thermal energy storage costs in USD
 \item[$f_{EPC,CR}$]surcharge for EPC, project management and risk in \%
 \end{itemize}
 \end{itemize}
@@ -77,15 +78,15 @@ C_{TES,CR} = c_{TES,CR} \times E_{storage,th,CR}
 \begin{itemize}
 \item[ ] 
 \begin{itemize}
-\item[$c_{HF}$]specific heliostat field costs in \$/m\textsuperscript{2}
+\item[$c_{HF}$]specific heliostat field costs in USD/m\textsuperscript{2}
 \item[$A_{reflective}$]heliostat field reflective area in m\textsuperscript{2}
-\item[$c_{LP}$]specific land purchase costs in \$/ha
+\item[$c_{LP}$]specific land purchase costs in USD/ha
 \item[$A_{land,CR}$]total land area of CR power plant in ha
-\item[$c_{PB,CR}$]specific power block and balance of CR plant costs in \$/kW\textsubscript{e}
+\item[$c_{PB,CR}$]specific power block and balance of CR plant costs in USD/kW\textsubscript{e}
 \item[$P_{gross,CR}$]turbine gross capacity of CR power plant in kW\textsubscript{e}
-\item[$c_{T+R}$]specific tower and receiver costs in \$/kW\textsubscript{th}
+\item[$c_{T+R}$]specific tower and receiver costs in USD/kW\textsubscript{th}
 \item[$P_{receiver,th}$]receiver thermal power in kW\textsubscript{th}
-\item[$c_{TES,CR}$]specific thermal energy storage costs for CR power plants in \$/kWh\textsubscript{th}
+\item[$c_{TES,CR}$]specific thermal energy storage costs for CR power plants in USD/kWh\textsubscript{th}
 \item[$E_{storage,th,CR}$]thermal energy storage capacity of CR power plant in kWh\textsubscript{th}
 \end{itemize}
 \end{itemize}
@@ -99,13 +100,14 @@ C_{O\&M,CR} = C_{invest,CR} \times f_{O\&M,CR}
 \begin{itemize}
 \item[ ] 
 \begin{itemize}
-\item[$C_{O\&M,CR}$]annual O\&M costs of CR power plant in \$
-\item[$C_{invest,CR}$]investment costs of CR power plant in \$m
+\item[$C_{O\&M,CR}$]annual O\&M costs of CR power plant in USD
+\item[$C_{invest,CR}$]investment costs of CR power plant in USD
 \item[$f_{O\&M,CR}$]annual O\&M costs factor of CR power plant in \%
 \end{itemize}
 \end{itemize}
 \end{itemize}
 The CR system assume an annual plant availability $f_{avail,plant,CR}$ of 96~\% which is already included in $E_{el,net,ann.}$ as a result from the simulation in SAM. For the CR is no annual degradation provided. The factor $f_{Full,degrad}$ can be neglected.
+\pagebreak
 \section{PTC power plant}
 The investment costs for the PTC power plant are calculated with the parameters from Table~\ref{tbl: PTCFinance} acording to:
 \begin{equation}
@@ -116,11 +118,11 @@ C_{invest,PTC} = (C_{CF}+C_{LP,PTC}+C_{PB,PTC}+C_{TES,PTC})\times(1+f_{EPC,PTC})
 \begin{itemize}
 \item[ ] 
 \begin{itemize}
-\item[$C_{invest,PTC}$]investment costs of PTC in \$
-\item[$C_{CF}$]collector field costs in \$
-\item[$C_{LP,PTC}$]land purchase costs in \$
-\item[$C_{PB,PTC}$]power block costs in \$
-\item[$C_{TES,PTC}$]thermal energy storage costs in \$
+\item[$C_{invest,PTC}$]investment costs of PTC in USD
+\item[$C_{CF}$]collector field costs in USD
+\item[$C_{LP,PTC}$]land purchase costs in USD
+\item[$C_{PB,PTC}$]power block costs in USD
+\item[$C_{TES,PTC}$]thermal energy storage costs in USD
 \item[$f_{EPC,PTC}$]surcharge for EPC, project management and risk in \%
 \end{itemize}
 \end{itemize}
@@ -143,13 +145,13 @@ C_{TES,PTC} = c_{TES,PTC} \times E_{storage,th,PTC}
 \begin{itemize}
 \item[ ] 
 \begin{itemize}
-\item[$c_{CF}$]specific parabolic trough collector field costs in \$/m\textsuperscript{2}
+\item[$c_{CF}$]specific parabolic trough collector field costs in USD/m\textsuperscript{2}
 \item[$A_{reflective}$]parabolic trough collector field reflective area in m\textsuperscript{2}
-\item[$c_{LP}$]specific land purchase costs in \$/ha
+\item[$c_{LP}$]specific land purchase costs in USD/ha
 \item[$A_{land,PTC}$]total land area of PTC power plant in ha
-\item[$c_{PB,PTC}$]specific power block and balance of PTC plant costs in \$/kW\textsubscript{e}
+\item[$c_{PB,PTC}$]specific power block and balance of PTC plant costs in USD/kW\textsubscript{e}
 \item[$P_{gross,PTC}$]turbine gross capacity of PTC power plant in kW\textsubscript{e}
-\item[$c_{TES,PTC}$]specific thermal energy storage costs for PTC power plants in \$/kWh\textsubscript{th}
+\item[$c_{TES,PTC}$]specific thermal energy storage costs for PTC power plants in USD/kWh\textsubscript{th}
 \item[$E_{storage,th,PTC}$]thermal energy storage capacity of PTC power plant in kWh\textsubscript{th}
 \end{itemize}
 \end{itemize}
@@ -163,58 +165,75 @@ C_{O\&M,PTC} = C_{invest,PTC} \times f_{O\&M,PTC}
 \begin{itemize}
 \item[ ] 
 \begin{itemize}
-\item[$C_{O\&M,PTC}$]annual O\&M costs of PTC power plant in \$
-\item[$C_{invest,PTC}$]investment costs of PTC power plant in \$
+\item[$C_{O\&M,PTC}$]annual O\&M costs of PTC power plant in USD
+\item[$C_{invest,PTC}$]investment costs of PTC power plant in USD
 \item[$f_{O\&M,PTC}$]annual O\&M costs factor of PTC power plant in \%
 \end{itemize}
 \end{itemize}
 \end{itemize}
 The PTC system assume an annual plant availability $f_{avail,plant,PTC}$ of 96~\% which is already included in $E_{el,net,ann.}$ as a result from the simulation in SAM. For the CR is no annual degradation provided. The factor $f_{Full,degrad}$ can be neglected.
+\pagebreak
 \section{PV power plant}
+For the addapted EES the LCOE calculation was expanded using the eqation for calculating the LCOE of EES from \cite{Corcuera2015}. The LCOE of the PV system with adapted EES was calculated using the equation:  
+\begin{equation}
+LCOE_{PV+EES}=\frac{(C_{invest,PV}\times(f_{annuity,PV}+f_{ins.ann.,PV})+C_{O\&M,PV})+(C_{invest,EES}\times(f_{annuity,EES}+f_{ins.ann.,EES})+C_{O\&M,EES})}{E_{el,net,PV} \times f_{Full,degrad}}\label{eq:LCOE_PV}
+\end{equation}
+
 The investment costs for the PV system with storage are calculated with the parameters from Table~\ref{tbl: PVFinance} according to:
 \begin{equation}
-C_{invest,PV} = C_{PV-field}+C_{EES}+C_{LP,PV}
+C_{invest,PV} = C_{PV-field}+C_{LP,PV}
+\end{equation} 
+\begin{equation}
+C_{invest,EES} = C_{EES,SP}+C_{EES,PCS}
 \end{equation} 
 \begin{itemize}
 \item[ ] 
 \begin{itemize}
 \item[ ] 
 \begin{itemize}
-\item[$C_{invest,PV}$]investment costs of PV power plant in \$
-\item[$C_{PV-field}$]PV plant costs without storage in \$
-\item[$C_{EES}$]electrical energy storage costs in \$
-\item[$C_{LP,PV}$]land purchase costs in \$
+\item[$C_{invest,PV}$]investment costs of PV power plant in USD
+\item[$C_{PV-field}$]PV plant costs without storage in USD
+\item[$C_{LP,PV}$]land purchase costs in USD
+\item[$C_{invest,EES}$]investment costs of EES in USD
+\item[$C_{EES,SP}$]storage part costs of EES in USD
+\item[$C_{EES,PCS}$]power conversion system costs of EES in USD
 \end{itemize}
 \end{itemize}
 \end{itemize}
-The individual investment cost segments of the PV power plant with electrical energy storage can be derived from:
+The individual investment cost segments of the PV system and the  EES can be derived from:
 \begin{equation}
 C_{PV-field} = P_{peak} \times (c_{sm}+c_{st}+c_{ep}+c_{inv}+c_{elc}+c_{si}+c_{tl}+c_{ss})
 \end{equation} 
 \begin{equation}
-C_{EES} = c_{EES} \times E_{storage,el}
-\end{equation}
-\begin{equation}
 C_{LP,PV} = c_{LP}\times A_{land,PV}
 \end{equation} 
+\begin{equation}
+C_{EES,SP} = c_{EES,BBC} \times E_{EES,el} + c_{EES,BBRC} \times E_{EES,el}  \times n_{BBR}
+\end{equation}
+\begin{equation}
+C_{EES,PCS} = c_{EES,PCS} \times P_{EES,el}
+\end{equation}
 \begin{itemize}
 \item[ ] 
 \begin{itemize}
 \item[ ] 
 \begin{itemize}
 \item[$P_{peak}$]total PV module peak power in W\textsubscript{p}
-\item[$c_{sm}$]solar module costs in \$/W\textsubscript{p}
-\item[$c_{st}$]structural costs in \$/W\textsubscript{p}
-\item[$c_{ep}$]electrical parts costs in \$/W\textsubscript{p}
-\item[$c_{inv}$]inverter costs in \$/W\textsubscript{p}
-\item[$c_{elc}$]engineering and labour costs in \$/W\textsubscript{p}
-\item[$c_{si}$]security and infrastructure costs in \$/W\textsubscript{p}
-\item[$c_{tl}$]transport and logistics costs in \$/W\textsubscript{p}
-\item[$c_{ss}$]sub-station costs in \$/W\textsubscript{p}
-\item[$c_{EES}$]specific electrical energy storage costs in \$/kWh\textsubscript{el}
-\item[$E_{storage,el}$]electrical energy storage capacity in kWh\textsubscript{el}
-\item[$c_{LP}$]specific land purchase costs in \$/ha
+\item[$c_{sm}$]solar module costs in USD/W\textsubscript{p}
+\item[$c_{st}$]structural costs in USD/W\textsubscript{p}
+\item[$c_{ep}$]electrical parts costs in USD/W\textsubscript{p}
+\item[$c_{inv}$]inverter costs in USD/W\textsubscript{p}
+\item[$c_{elc}$]engineering and labour costs in USD/W\textsubscript{p}
+\item[$c_{si}$]security and infrastructure costs in USD/W\textsubscript{p}
+\item[$c_{tl}$]transport and logistics costs in USD/W\textsubscript{p}
+\item[$c_{ss}$]sub-station costs in USD/W\textsubscript{p}
+\item[$c_{LP}$]specific land purchase costs in USD/ha
 \item[$A_{land,PV}$]total land area of PV power plant in ha
+\item[$c_{EES,BBC} $]specific EES battery bank costs in USD/kWh\item[$E_{EES,el}$]electrical energy storage capacity in kWh\textsubscript{el}
+\item[$c_{EES,BBRC}$]specific EES battery bank replacement costs in USD/kWh
+\item[$n_{BBR}$]number of battery bank replacements in lifetime
+\item[$c_{EES,PCS} $]specific EES PCS costs in USD/kW
+\item[$P_{EES,el} $]electrical power of EES in kW\textsubscript{el}
 \end{itemize}
 \end{itemize}
 \end{itemize}
@@ -222,20 +241,21 @@ Also the annual operational and maintenance costs are calculated with parameters
 \begin{equation}
 C_{O\&M,PV} = C_{invest,PV} \times f_{O\&M,PV}
 \end{equation} 
-\begin{itemize}
-\item[ ] 
-\begin{itemize}
-\item[ ] 
-\begin{itemize}
-\item[$C_{O\&M,PV}$]annual O\&M costs of PV power plant in \$
-\item[$C_{invest,PV}$]investment costs of PV power plant in \$
-\item[$f_{O\&M,PV}$]annual O\&M costs factor of PV power plant in \%
-\end{itemize}
-\end{itemize}
-\end{itemize}
-The annual operational and maintenance costs of the EES is already in the $c_{EES}$ included. The annual plant availability $f_{avail,plant}$ is assumed with 100\%. The $f_{annuity}$ for the PV plant is constituted by $f_{annuity,PV}$ and $f_{annuity,EES}$  calculated with:
 \begin{equation}
-f_{annuity}=\frac{f_{annuity,PV}\times(C_{PV-field}+C_{LP,PV})+ f_{annuity,EES}\times C_{EES}}{C_{invest,PV}}
-\end{equation}
-
+C_{O\&M,EES} = c_{O\&M,EES} \times P_{storage}
+\end{equation} 
+\begin{itemize}
+\item[ ] 
+\begin{itemize}
+\item[ ] 
+\begin{itemize}
+\item[$C_{O\&M,PV}$]annual O\&M costs of PV system in USD
+\item[$C_{invest,PV}$]investment costs of PV system in USD
+\item[$f_{O\&M,PV}$]annual O\&M costs factor of PV system in \%
+\item[$C_{O\&M,EES}$]annual O\&M costs of EES in USD
+\item[$c_{O\&M,EES}$]specific annual O\&M costs of EES in USD/kW
+\end{itemize}
+\end{itemize}
+\end{itemize}
+The annual plant availability $f_{avail,plant}$ is assumed with 100~\%. 
 \pagebreak
