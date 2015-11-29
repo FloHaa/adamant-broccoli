@@ -613,7 +613,7 @@ Total plant availability &$f_{avail,plant,PTC}$ & 96 & \% & \cite{Morin2012} \\
 \end{tabular}
 \caption[Finacial input parameter for PTC-simulation in SAM.]{Finacial input parameter for PTC-simulation in SAM.}\label{tbl: PTCFinance}
 \end{table}
-\subsection{Results of PTC power plant simulation}
+\subsection{Results of PTC power plant simulation} \label{sec.resultsPTC}
 This section comprised the results of the simulation from the above designed PTC power plant and there belonging LCOE results. Therefore the load curve covering performance and the belonging load profiles and duration curves are described and analyzed. The goal of these Section is to find the suitable PTC design configuration to reach 90~\% covering of the prescribed load which having the lowest belonging LCOE calculation result.
 \subsubsection{Load curve covering}
 As it was shown in Table~\ref{tbl: PTC_OverallConfig} on Page~\pageref{tbl: PTC_OverallConfig} the PTC system based power plant was simulated in 35 different configurations, using a SM from 2.0 to 5.0 and 8 to \SI{16}{h} of TES, in order to reach the target of 90~\% load curve covering. This section compares the results of the configuration with the lowest SM and TES hours (SM: 2.0 \& TES: \SI{8}{h}) with the configuration using the highest SM and TES hours  (SM: 5.0 \& TES: \SI{16}{h}) representative for all in between.  
@@ -1010,7 +1010,7 @@ Figure \ref{PVwithoutEESanual} visualizes the resulting annually load covering b
 \includegraphics[width=0.8\linewidth]{FIG/PVwithoutEESanual}
 \caption[Annual average profile of the simulated PV power plant without EES.]{Annual average profile of the simulated PV power plant without EES.}\label{PVwithoutEESanual}
 \end{figure}
-The simulation results of the energy output behavior in Figure~\ref{PVwithoutEES} shows that there is a small differences of the daily peak system power output between winter and summer time even though the GHI peak during the summer time is about twice that high then the winter peak. Nevertheless, the shorter sunshine duration reduces the daily energy output anyways. Especially appreciable is the situation at the noon of the 27. December. There the PV field produces more than the inverter can process because they reached there max output power of \SI{99.8}{MW}\textsubscript{ac}.
+The simulation results of the energy output behavior in Figure~\ref{PVwithoutEES} shows that there is a small differences of the daily peak system power output between winter and summer time even though the GHI peak during the summer time is about twice that high then the winter peak. This leads from the irradiation angle of the sunlight and the fixed module tilt angle. However, the shorter sunshine duration reduces the daily energy output anyways. Especially appreciable is the situation at the noon of the 27. December. There the PV field produces more than the inverter can process because they reached there max output power of \SI{99.8}{\mega\watt}\textsubscript{ac}. At this day the PV system produces \SI{767}{\mega\watt\hour}, comparing this to the energy production at the 27. June (\SI{548}{\mega\watt\hour}) the difference in energy production between a summer and a winter day is just about \SI{29}{\percent}.
 
 \begin{figure}[!htbp]
         \centering                
@@ -1027,7 +1027,7 @@ The simulation results of the energy output behavior in Figure~\ref{PVwithoutEES
         \end{subfigure}
         \caption[Power output behavior of PV system.]{Power output behavior of PV system.}\label{PVwithoutEES}
 \end{figure}
-The LCOE was calculated taking into account of 1~\% annual degradation of the PV modules and under use of the remaining values from Table~\ref{tbl: PVFinance}. The LCOE was calculated using a the in Appendix~\ref{ChapterLCOE} documented method and results \SI{50.81}{USD/MWh}. Table 
+The LCOE was calculated taking into account of 1~\% annual degradation of the PV modules and under use of the remaining values from Table~\ref{tbl: PVFinance}. The LCOE was calculated using a the in Appendix~\ref{ChapterLCOE} documented method and results \SI{50.81}{USD/MWh}. Table~\ref{tbl: PVwithoutEESresult} summarizes the results of the PV system without adapted EES.
 \begin{table}[htbp]  
   \centering
 	\begin{tabular}{  p{3.0cm}  C{3.0cm}  C{3.0cm} } 
@@ -1120,11 +1120,86 @@ The lowest LCOE for reaching 80~\% of the prescribed load is \SI{275.18}{USD/MWh
 \pagebreak
 
 \section{Interpretation and comparison of results}
-The results of all simulated solar power plants showed, that the covering of 90~\% of the predicted load curve is technologically possible. 
+The previous sections showed that all simulated solar power plants are able to cover the predicted load curve for more than 90~\% over the year. To describe this in a wildly-used indicator, all simulated power plants are reaching a CF of about 73.1~\% in these specified scenario. The selected power plant configuration of each technology to cover the prescribed load at the lowest LCOE are summarized in Table~\ref{tbl: summaryresult}.
+\begin{table}[!htbp]  
+  \centering
+	\begin{tabular}{ p{3.0cm} C{3.6cm} C{3.6cm} C{3.6cm} } 
+	\hline	
+&\multicolumn{3}{c}{\textbf{Selected configuration to cover the predicted load}}\\
 
-PV-Storage --> Battery lifetime
+\textbf{Type} & \textbf{$\geq$~70~\%} & \textbf{$\geq$~80~\%} & \textbf{$\geq$~90~\%} \\ \hline \hline
+CR power plant 	& SM:~2.0 \& TES:~10~h	& SM:~2.5 \& TES:~10~h & SM:~3.0 \& TES:~14~h \\
+PTC power plant	& SM:~3.0 \& TES:~10~h	& SM:~3.5 \& TES:~12~h & SM:~5.0 \& TES:~12~h  \\
+PV power plant	& PVM:~2.2 \& EES:~4~h	& PVM:~2.6 \& EES:~5~h & PVM:~2.8 \& EES:~7~h \\
+\hline
+\end{tabular}
+\caption[Summary of selected solar power plant configurations to reach the target load covering at lowest LCOE.]{Summary of selected solar power plant configurations to reach the target load covering at lowest LCOE.}\label{tbl: summaryresult}
+\end{table}
+
+The summary in the Table shows, that the expenditure in technical and therefore also in economic terms are quite different between the technologies to reaching higher load curve coverings. When comparing the rising multiple of the design point of the solar power plants to reach a higher amount of annual load covering it seams that the effort is quite different between the technologies. When comparing the necessary growing multiple to the design point of the power plants to reach higher annual load curve covering it seams obviously that the effort of the PTC technology rises at most. The PTC power plant needs a about five-times larger solar field (SM of 5.0) in reference to the design point to cover 90~\% of the predicted load curve. This is particular high, especially in comparison to the SM of the CR power plant system at the same design point which needs just a three times larger heliostat field. As it was shown before in Section~\ref{sec.resultsPTC} the high effort of the PTC technology to reach high load curve covering values is based on the optical efficiency loss of the solar field at low irradiation angle through the cosine effect. The optical efficiency loss through the cosine effect affects also the CR system, but thanks to the two-axis tracking of the heliostats is the influence comparatively small. 
+
+As the solar fields needs to be over scaled to producing enough thermal power for the whole day also in winter times, both CSP technologies needs to reduce the field optical focus fraction in summer times. The average field optical focus fraction, for both CSP technologies from the Table which covers more then 90~\% are shown in Figure~\ref{FocusFraction} for December. Both technology needs to reduce the thermal output of there receivers by optical focus fraction significantly during the December. The December average shows that more than 60~\% of the CR heliostat field is defocused from 13:00 to 15:00 and also the solar field of the PTC plant needs a focus fraction up to over 50~\% in December. 
+\begin{figure}[!htbp]
+        \centering                
+        \begin{subfigure}[b]{0.5\textwidth}
+                \centering
+                \includegraphics[width=1\textwidth]{FIG/FocusFraction/DecemberCR}
+                \caption{Average CR heliostat field focus fraction in December at a SM of 3.0 and 14~h of TES.}\label{DecemberCR}
+        \end{subfigure}%
+        ~
+        \begin{subfigure}[b]{0.5\textwidth}
+                \centering
+                \includegraphics[width=1\textwidth]{FIG/FocusFraction/DecemberPTC}
+                \caption{Average PTC SCA field focus fraction in December at a SM of 5.0 and 12~h of TES.}\label{DecemberPTC}
+        \end{subfigure}
+        \caption[Average field optical focus fraction in December of for 90~\% load curve covering configurated CSP technologies.]{Average field optical focus fraction in December of for 90~\% load curve covering configurated CSP technologies.}\label{FocusFraction}
+\end{figure}
+
+The designed PV power plant is fixed orientated and doesn't track the sun, nevertheless for reaching a covering of 90~\% of the prescribed load over the first year the PV power plant needs a lower multiple of the design point than the other two solar power plants. This mainly comes from the characteristics of the PV system by using GHI instead of DNI. Upington has a huge amount on direct irradiation but also cloudy days with diffuse irradiance (see Figure~\ref{DHI-DIF}). Therefrom the PV power plant needs a lower multiple of the PV system and a smaller storage compared to the CSP power plants.
+
+The annual average load profiles of the in Table~\ref{tbl: summaryresult} specified  power plant configuration over 90~\% load covering are compared in Figure~\ref{90_annual_profil}. It can be seen that they profiles of the three solar power plant are relatively equal. But it is noticeable that the PV plant can fully cover the load from 10:00 to 16:00 over the full year. Compared to are the annual average net energy outputs of the CSP plants just below, but can't cover the load like the PV power plant. This mainly comes from the not exactly configurable turbine power output control, which settings was described in the respective simulation design sections. It can be assumed that under real conditions a steam Rankine power output control is working far more accurate. 
+
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=0.8\linewidth]{FIG/90_annual_profil}
+\caption[Annual average load profile of selected PV power plant configurations.]{Annual average load profile of selected PV power plant configurations.}\label{90_annual_profil}
+\end{figure}
+As the line chart shows all simulated solar power plants are having there main leak in supply during the morning hours. But this mainly comes from the weaker power generation during the winter time, where the irradiation amount and angle of sunlight radiation is lower. Basically can be said that all three here shown solar power plant covers the load almost continuously over the year, but during the mentioned time during the winter all solar power plants coming to standstill. This can also be seen in the net power output heat maps of Figure~\ref{Heatmap}. The Figures describes the net power output of the selected simulated solar power plants at any hour of the simulated year and describes therefore the values of the annual average load profile from above more in detail. The power reduction during the night time from 22:00 to 7:00 is clearly visible in the heat maps. 
+
+\begin{figure}[!htbp]
+        \centering   
+        \begin{subfigure}[b]{1\textwidth}
+                \centering
+                \includegraphics[width=1\textwidth]{FIG/HeatmapCR}
+                \caption{CR with a SM of 3.0 and 14~h of TES.}\label{HeatmapCR}
+        \end{subfigure}
+        
+\par\medskip % Linebreak
+
+        \begin{subfigure}[b]{1\textwidth}
+                \centering
+                \includegraphics[width=1\textwidth]{FIG/HeatmapPTC}
+                \caption{PTC with a SM of 5.0 and 12~h of TES.}\label{HeatmapPTC}
+        \end{subfigure}
+        
+\par\medskip % Linebreak     
+           
+        \begin{subfigure}[b]{1\textwidth}
+                \centering
+                \includegraphics[width=1\textwidth]{FIG/HeatmapPV}
+                \caption{PV with a PVM of 2.8 and 7~h of EES.}\label{HeatmapPV}
+        \end{subfigure}
+        \caption[Net power output to predicted load from selected solar power plants shown as heat map over the simulated year.]{Net power output to predicted load from selected solar power plants shown as heat map over the simulated year.}\label{Heatmap}
+\end{figure}
+At first it is obviously when comparing the heat maps that at the time of winter solstice all power plants coming to standstill in the morning hours. When taking a view at the stating time of the power plants during that time it can be noted that the PV power plant starts about one hour earlier than the other two plants. On one site this leads from the for the PV system usable diffuse share of the GHI at dawn and on the other site from the set power block starting up time of 30 minutes for both CSP plants. It can also be noted, that the PTC system is starting with less power output then the CSP system at these time of the year.
+
+The heat map of the PTC shows a slightly lower power output during the time from 8:00 to 12:00 in summer time. This leads from the above mentioned power output control, but also from high parasitic consumer of the power plant during that time. When taking an eye on the power output of the PV power plant it can be said that the plant fully covers the predicted load over the year from 11:00 to 13:00.
+
+PV-Storage -- Battery lifetime
 
 Large scale storage costs (Deutschland)
+
+LCOE battery storage 200~USD/MWh from \cite{Corcuera2015}
 
 Spinnennetzdiagramm 
 PV unity scale without storage 
