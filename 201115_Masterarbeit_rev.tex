@@ -92,6 +92,15 @@
 %\par
 %- Thomas Edison (1931)}
 
+% siunitx-Konfiguration
+\sisetup{detect-all}
+\DeclareSIQualifier\electric{el}
+\DeclareSIQualifier\thermal{th}
+\DeclareSIUnit\wattel{\watt\electric}
+\DeclareSIUnit\wattth{\watt\thermal}
+\DeclareSIUnit\usd{USD}
+\DeclareSIUnit\eur{EUR}
+
 %\usepackage{stdpage}
 \KOMAoption{parskip}{half}
 \begin{document}
@@ -151,7 +160,6 @@
     \newcommand{\edition}{~edition}%Edition -> note, that you have to write "edition = {2nd},"!
 }}}
 
-\sisetup{detect-all}
 
 \maketitle
 %% Einführung 
