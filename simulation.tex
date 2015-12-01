@@ -297,7 +297,9 @@ The financial parameter for the LCOE calculation of the CR power plant are seper
 
 
 
-The specific costs of the heliostat field of \SI{180}{USD/m^2} coming from J. B. Blackmon \cite{Blackmon2012}. He analyzed the costs of heliostat as a function of area for a representative solar central receiver power plant and calculated the total installed costs for a field of 5~000 heliostats with \SI{148}{m^2} reflective area of approximately \SI{180}{USD/m^2}. The analyze results showed that the costs are increasing with the size of the heliostats from \SI{40}{\square\metre} on. So the adopted value of \SI{180}{\usd\per\square\metre} reflective area for \SI{140}{\square\metre} heliostats can be assumed as conservative.
+
+The specific costs of the heliostat field of \SI{180}{\usd\per\square\metre} coming from J. B. Blackmon \cite{Blackmon2012}. He analyzed the costs of heliostat as a function of area for a representative solar central receiver power plant and calculated the total installed costs for a field of 5~000 heliostats with \SI{148}{\square\metre} reflective area of approximately \SI{180}{\usd\per\square\metre}. The analyze results showed that the costs are increasing with the size of the heliostats from \SI{40}{\square\metre} on. So the adopted value of \SI{180}{\usd\per\square\metre} reflective area for \SI{140}{\square\metre} heliostats can be assumed as conservative.
+
 
 The remaining investment costs are based on the "Power Tower Technology Roadmap and Cost Reduction Plan" \cite{Kolb2011} from 2011.
 
@@ -337,7 +339,7 @@ To find the suitable power plant configuration of the CR system to reach the tar
 \includegraphics[width=0.8\linewidth]{FIG/CR_annual_profil}
 \caption[Annual average load profile of selected CR power plant configurations.]{Annual average load profile of selected CR power plant configurations.}\label{CR_annual_profil}
 \end{figure}
-Figure~\ref{CR_annual_profil} shows the annual load curve covering of the above mentioned CR power plant high and low configurations with the prescribed load curve. The Figure shows, that the CR power plant using a SM of 3.5 and \SI{16}{h} of TES for the configuration can cover almost at any time of the year the prescribed load curve. The decreasing of the supplied electricity \SI{8}{am} leads from the winter duration and will be shown in the following. The lower CR power plant configuration can just cover between \SI{11}{am} and \SI{5}{pm} almost the same amount electricity during the year than the high configuration. In the morning times between 6 and \SI{7}{am} the energy production is coming to standstill the whole year. The results of all annual average load profiles can be found in Appendix~\ref{all_load_profile}.
+Figure~\ref{CR_annual_profil} shows the annual load curve covering of the above mentioned CR power plant high and low configurations with the prescribed load curve. The Figure shows, that the CR power plant using a SM of 3.5 and \SI{16}{h} of TES for the configuration can cover almost at any time of the year the prescribed load curve. The decreasing of the supplied electricity 8:00 leads from the winter duration and will be shown in the following. The lower CR power plant configuration can just cover between 11:00 and 17:00 almost the same amount electricity during the year than the high configuration. In the morning times between 6:00 and 7:00 the energy production is coming to standstill the whole year. The results of all annual average load profiles can be found in Appendix~\ref{all_load_profile}.
 
 At this point it might be necessary to remind, that it is just the electricity used for the annual load covering as well as for the LCOE calculation which is actually supplied at the requested time step. So the electricity which is overproduced at any time of the year is not considered. This can also be seen in Figure~\ref{CR_winter_load}. 
 \begin{figure}[htbp]  
@@ -426,9 +428,9 @@ The PTC power plant was simulation in the “CSP parabolic trough (physical)" mo
 \begin{itemize}
 \item Latitude ($\,^{\circ}$)
 \item Longitude ($\,^{\circ}$)
-\item Elevation above sea level (\si{\metre})
+\item Elevation above sea level (m)
 \item DNI (\si{\watt\per\square\metre})
-\item Atmospheric pressure (mbar)
+\item Atmospheric pressure (\si{\milli\bar})
 \item Dry bulb temperature (\si{\celsius})
 \item Wetbulbtemperature(\si{\celsius})
 \item Relative humidity (\si{\percent})
@@ -584,7 +586,9 @@ Also for the simulation of the PTC system the dispatch control of the turbine ou
 The financial parameter for calculating the LCOE of the simulated configuration are shown in Table~\ref{tbl: PTCFinance}. As before at the CR is the PTC power plant calculated over a lifetime of \SI{25}{years} using a real interest rate of 7.5~\% \cite{FraunhoferISE2013}. Also the total plant availability of  15~\% once-off surcharge for EPC and contingencies on the total investment costs are equal to the CR \cite{Platzer2014}.
 
 
-The specific costs for the collector field inclusive HTF-system is assumed with \SI{275}{USD/m^2} from \cite{Morin2012}. These specific cost could also be reduced by 25~\% by using the assumed cost reduction from Flabeg \cite{FLABEG_FE_GmbH2015}. So the for the simulation assumed costs are highly conservative.
+
+The specific costs for the collector field inclusive HTF-system is assumed with \SI{275}{\usd\per\square\metre} from \cite{Morin2012}. These specific cost could also be reduced by 25~\% by using the assumed cost reduction from Flabeg \cite{FLABEG_FE_GmbH2015}. So the for the simulation assumed costs are highly conservative.
+
 
 The specific costs for the power block are the same as at the CR but from other sources \cite{Platzer2014}. 
 
@@ -598,17 +602,17 @@ The costs for the land purchase comes from the "African Agriculture Review" repo
 	\begin{tabular}{  p{5.0cm} C{2.0cm} C{1.5cm}  C{1.5cm}  C{4.0cm} } 
 	\hline	
 \textbf{Item} & \textbf{Symbol}& \textbf{Value} & \textbf{Unit} & \textbf{Source}\\ \hline \hline
-Collector field/HTF-system & $c_{CF}$ & 275 & \si{\usd\square\metre} & \cite{Morin2012}\\ 
-Power block &$c_{PB,PTC}$ & 1000 & USD/kW\textsubscript{el} & \cite{Platzer2014}\\ 
+Collector field/HTF-system & $c_{CF}$ & 275 & \si{\usd\per\square\metre} & \cite{Morin2012}\\ 
+Power block &$c_{PB,PTC}$ & 1000 & \si{\usd\per\kilo\wattel} & \cite{Platzer2014}\\ 
 Thermal energy storage & $c_{TES,PTC}$ & 50 & \si{\usd\per\kilo\wattth\hour} & \cite{Platzer2014}\\ 
-Land purchase & $c_{LP}$ & 3~000 & USD/ha & \cite{Cassell2012} \\ 
-Annual O\&M & $f_{O\&M,PTC}$ & 2 & \% &\cite{Fichtner2010}\\ 
+Land purchase & $c_{LP}$ & 3~000 & \si{\usd\per\hectare} & \cite{Cassell2012} \\ 
+Annual O\&M & $f_{O\&M,PTC}$ & 2 & \si{\percent} &\cite{Fichtner2010}\\ 
 \hline
-Lifetime&$n$ & 25 & years & \cite{FraunhoferISE2013} \\ 
-Interest rate& $i_{PTC}$& 7.5 & \% & \cite{FraunhoferISE2013} \\ 
-Annual insurance costs& $f_{ins,PTC}$ & 0.5 & \% & \cite{IRENA2012}\\
-Surcharge for EPC, project management and risk & $f_{EPC,PTC}$ & 15 & \% & \cite{Platzer2014} \\
-Total plant availability &$f_{avail,plant,PTC}$ & 96 & \% & \cite{Morin2012} \\ 
+Lifetime&$n$ & 25 & \si{\year} & \cite{FraunhoferISE2013} \\ 
+Interest rate& $i_{PTC}$& 7.5 & \si{\percent} & \cite{FraunhoferISE2013} \\ 
+Annual insurance costs& $f_{ins,PTC}$ & 0.5 & \si{\percent} & \cite{IRENA2012}\\
+Surcharge for EPC, project management and risk & $f_{EPC,PTC}$ & 15 & \si{\percent} & \cite{Platzer2014} \\
+Total plant availability &$f_{avail,plant,PTC}$ & 96 & \si{\percent} & \cite{Morin2012} \\ 
 \hline
 \end{tabular}
 \caption[Finacial input parameter for PTC-simulation in SAM.]{Finacial input parameter for PTC-simulation in SAM.}\label{tbl: PTCFinance}
@@ -739,7 +743,7 @@ For this simulation a PV power plant was extended with an electrical energy stor
 \item Elevation above sea level (\si{\metre})
 \item GHI, DNI and DHI (\si{\watt\per\square\metre})
 \item Dry bulb temperature (\si{\celsius})
-\item Wind velocity (m/s)
+\item Wind velocity (\si{\metre\per\second})
 \end{itemize}
 This section describes in detail the residual input data of the PV power plant with adapted battery storage. As before in the sections of simulated CSP technologies first the essential components of the system are defined. The financial parameters and the LCOE for this simulation was also here calculated separately and is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}.
 
@@ -774,7 +778,7 @@ EES capacity & h & 4 & 5 & 6 & 7 & 8 & 4 & 5 & 6 & 7 & 8 \\ \hline
 \end{table}
 The simulated system load is maximum \SI{100}{\mega\wattel}, so this is also the maximum supply of the system. The PV system was simulated one time without storage and a maximum inverter output of \SI{100}{\mega\wattel} which is a PVM of 1. After that, the system was simulated in steps 0.2 of the PVM from 1.8 to 2.6. The adapted energy storage capacity was simulated from 4 to 8 hours in hourly steps. This storage capacity range is also defined for large-scale off-grid application in \cite{IEA2014c}. Table~\ref{tbl: PV_OverallConfig} summarizes the simulated configurations.
 \subsubsection{PV system}
-The simulated PV system is orientated at actual PV systems in SA. Therefore the currently under construction situated Mulilo Sonnedix Prieska PV Project in the Northern Cape will serve as a role model for the main components. In this \SI{75}{MW}\textsubscript{ac}-project are poly crystalline \SI{305}{W}\textsubscript{dc} modules of type BYD 305P6C-36 from BYD installed. The efficiency of the modules is about 15.72~\%. The full module specification is in Table~\ref{tbl: PVmodule}. The peak performance of the project is \SI{86.23}{MW}\textsubscript{dc}. \cite{Morse2014}
+The simulated PV system is orientated at actual PV systems in SA. Therefore the currently under construction situated Mulilo Sonnedix Prieska PV Project in the Northern Cape will serve as a role model for the main components. In this \SI{75}{\mega\wattsdc}-project are poly crystalline \SI{305}{\wattsdc} modules of type BYD 305P6C-36 from BYD installed. The efficiency of the modules is about 15.72~\%. The full module specification is in Table~\ref{tbl: PVmodule}. The peak performance of the project is \SI{86.23}{\mega\wattsdc}. \cite{Morse2014}
 
 \begin{table}[htbp]  
   \centering
@@ -784,18 +788,18 @@ The simulated PV system is orientated at actual PV systems in SA. Therefore the 
 Manufacturer  & BYD COMPANY LIMITED & - \\ 
 Model & BYD 305P6C-36 & - \\ 
 Cell type &  poly-crystalline silicon & - \\ \hline
-Maximum power & 304.99 & W\textsubscript{dc} \\ 
-Nominal efficiency & 15.72 & \% \\ 
-Maximum power voltage & 36.2 & V\textsubscript{dc} \\ 
-Maximum power current & 8.4 & A\textsubscript{dc}  \\
-Open circuit voltage & 45.5 & V\textsubscript{dc}  \\ 
-Short circuit current & 8.9 & A\textsubscript{dc}  \\
-Temperature efficiency & -0.41 & \%/\si{\celsius}\\
-Module area & 1.94 & (\si{\square\metre}) \\ 
+Maximum power & 304.99 & \si{\wattel} \\ 
+Nominal efficiency & 15.72 & \si{\percent} \\ 
+Maximum power voltage & 36.2 & \si{\voltsdc} \\ 
+Maximum power current & 8.4 & \si{\ampsdc}  \\
+Open circuit voltage & 45.5 & \si{\voltsdc}  \\ 
+Short circuit current & 8.9 & \si{\ampsdc}  \\
+Temperature efficiency & -0.41 & \si{\percent\celsius}\\
+Module area & 1.94 & \si{\square\metre} \\ 
 Number of cells & 72 & -\\
 \hline
 \end{tabular}
-\caption[Module specification of BYD 305P6C-36.]{Module specification of BYD 305P6C-36 under STC: \SI{1000}{\watt\per\square\metre}, cell temperature 25\si{\celsius} \cite{NREL2015g}.}\label{tbl: PVmodule}
+\caption[Module specification of BYD 305P6C-36.]{Module specification of BYD 305P6C-36 under STC: \SI{1000}{\watt\per\square\metre}, cell temperature \SI{25}{\celsius} \cite{NREL2015g}.}\label{tbl: PVmodule}
 \end{table}
 
 

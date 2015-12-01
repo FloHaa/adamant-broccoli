@@ -1,5 +1,5 @@
 % FH Technikum Wien
-% !TEX encoding = UTF-8 Unicode
+% Explizite Kodierung ist nicht normkonform!
 %
 % Erstellung von Master- und Bachelorarbeiten an der FH Technikum Wien mit Hilfe von LaTeX und der Klasse TWBOOK
 %
@@ -96,10 +96,18 @@
 \sisetup{detect-all}
 \DeclareSIQualifier\electric{el}
 \DeclareSIQualifier\thermal{th}
+\DeclareSIQualifier\dc{dc}
+\DeclareSIQualifier\ac{ac}
 \DeclareSIUnit\wattel{\watt\electric}
 \DeclareSIUnit\wattth{\watt\thermal}
 \DeclareSIUnit\usd{USD}
 \DeclareSIUnit\eur{EUR}
+\DeclareSIUnit\year{a}
+\DeclareSIUnit\voltsdc{\volt\dc}
+\DeclareSIUnit\voltsac{\volt\ac}
+\DeclareSIUnit\ampsdc{\ampere\dc}
+\DeclareSIUnit\ampsac{\ampere\ac}
+\DeclareSIUnit\wattsdc{\watt\dc}
 
 %\usepackage{stdpage}
 \KOMAoption{parskip}{half}
