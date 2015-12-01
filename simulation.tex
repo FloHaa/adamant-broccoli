@@ -297,7 +297,7 @@ The financial parameter for the LCOE calculation of the CR power plant are seper
 
 
 
-The specific costs of the heliostat field of \SI{180}{USD/m}^2 coming from J. B. Blackmon \cite{Blackmon2012}. He analyzed the costs of heliostat as a function of area for a representative solar central receiver power plant and calculated the total installed costs for a field of 5~000 heliostats with \SI{148}{m}^2 reflective area of approximately \SI{180}{USD/m}^2. The analyze results showed that the costs are increasing with the size of the heliostats from \SI{40}{\square\metre} on. So the adopted value of \SI{180}{\usd\per\square\metre} reflective area for \SI{140}{\square\metre} heliostats can be assumed as conservative.
+The specific costs of the heliostat field of \SI{180}{USD/m^2} coming from J. B. Blackmon \cite{Blackmon2012}. He analyzed the costs of heliostat as a function of area for a representative solar central receiver power plant and calculated the total installed costs for a field of 5~000 heliostats with \SI{148}{m^2} reflective area of approximately \SI{180}{USD/m^2}. The analyze results showed that the costs are increasing with the size of the heliostats from \SI{40}{\square\metre} on. So the adopted value of \SI{180}{\usd\per\square\metre} reflective area for \SI{140}{\square\metre} heliostats can be assumed as conservative.
 
 The remaining investment costs are based on the "Power Tower Technology Roadmap and Cost Reduction Plan" \cite{Kolb2011} from 2011.
 
@@ -316,9 +316,9 @@ Heliostat field &$c_{HF}$ & 180 & \si{\usd\square\metre} & \cite{Blackmon2012}\\
 Power block & $c_{PB,CR}$ & 1000 & \si{\usd\per\kilo\wattel} & \cite{Kolb2011}\\ 
 Thermal energy storage&$c_{TES,CR}$ & 30 & \si{\usd\per\kilo\wattth\hour}  & \cite{Kolb2011}\\ 
 Tower and receiver& $c_{T+R}$& 200 & \si{\usd\per\kilo\wattth} & \cite{Kolb2011}\\ 
-Annual O\&M & $f_{O\&M,CR}$ & 2 & \% &\cite{Fichtner2010}\\
-Land purchase&$c_{LP}$ & 3~000 & \si{\usd\per\hectare} & \cite{Cassell2012}\\ \hline
-Lifetime &$n$ & 25 & \si{\year} & \cite{FraunhoferISE2013} \\ 
+Annual O\&M & $f_{O\&M,CR}$ & 2 & \si{\percent} &\cite{Fichtner2010}\\
+Land purchase& $c_{LP}$ & 3~000 & \si{\usd\per\hectare} & \cite{Cassell2012}\\ \hline
+Lifetime & $n$ & 25 & years & \cite{FraunhoferISE2013} \\ 
 Interest rate & $i_{CR}$ & 7.5 & \si{\percent} & \cite{FraunhoferISE2013} \\ 
 Annual insurance costs& $f_{ins,CR}$ & 0.5 & \si{\percent} & \cite{IRENA2012}\\
 Surcharge for EPC, project management and risk & $f_{EPC,CR}$& 15 & \si{\percent} & \cite{Platzer2014} \\
@@ -426,8 +426,8 @@ The PTC power plant was simulation in the “CSP parabolic trough (physical)" mo
 \begin{itemize}
 \item Latitude ($\,^{\circ}$)
 \item Longitude ($\,^{\circ}$)
-\item Elevation above sea level (m)
-\item DNI (W/m^2)
+\item Elevation above sea level (\si{\metre})
+\item DNI (\si{\watt\per\square\metre})
 \item Atmospheric pressure (mbar)
 \item Dry bulb temperature (\si{\celsius})
 \item Wetbulbtemperature(\si{\celsius})
@@ -566,7 +566,7 @@ Cold tank design temp. & \si{\celsius} & \multicolumn{5}{c}{293}\\
 \hline
 \textbf{TES full load hours} & \textbf{h} & \textbf{8} & \textbf{10} & \textbf{12} & \textbf{14} & \textbf{16}\\ \hline 
 Thermal capacity & \si{\mega\wattth\hour}  & 2~544 & 3~180 & 3~816 & 4~452 & 5~087 \\
-Storage volume  & m^3 & 34~407 & 43008 & 51~610 & 60~212 & 68~813\\
+Storage volume  & \si{\cubed\metre} & 34~407 & 43~008 & 51~610 & 60~212 & 68~813\\
 \hline
 \end{tabular}
 \caption[PTC system TES parameter.]{PTC system TES parameter.}\label{tbl: PTCTES}
@@ -584,7 +584,7 @@ Also for the simulation of the PTC system the dispatch control of the turbine ou
 The financial parameter for calculating the LCOE of the simulated configuration are shown in Table~\ref{tbl: PTCFinance}. As before at the CR is the PTC power plant calculated over a lifetime of \SI{25}{years} using a real interest rate of 7.5~\% \cite{FraunhoferISE2013}. Also the total plant availability of  15~\% once-off surcharge for EPC and contingencies on the total investment costs are equal to the CR \cite{Platzer2014}.
 
 
-The specific costs for the collector field inclusive HTF-system is assumed with \SI{275}{USD/m}^2 from \cite{Morin2012}. These specific cost could also be reduced by 25~\% by using the assumed cost reduction from Flabeg \cite{FLABEG_FE_GmbH2015}. So the for the simulation assumed costs are highly conservative.
+The specific costs for the collector field inclusive HTF-system is assumed with \SI{275}{USD/m^2} from \cite{Morin2012}. These specific cost could also be reduced by 25~\% by using the assumed cost reduction from Flabeg \cite{FLABEG_FE_GmbH2015}. So the for the simulation assumed costs are highly conservative.
 
 The specific costs for the power block are the same as at the CR but from other sources \cite{Platzer2014}. 
 
@@ -598,7 +598,7 @@ The costs for the land purchase comes from the "African Agriculture Review" repo
 	\begin{tabular}{  p{5.0cm} C{2.0cm} C{1.5cm}  C{1.5cm}  C{4.0cm} } 
 	\hline	
 \textbf{Item} & \textbf{Symbol}& \textbf{Value} & \textbf{Unit} & \textbf{Source}\\ \hline \hline
-Collector field/HTF-system & $c_{CF}$ & 275 & USD/m^2 & \cite{Morin2012}\\ 
+Collector field/HTF-system & $c_{CF}$ & 275 & \si{\usd\square\metre} & \cite{Morin2012}\\ 
 Power block &$c_{PB,PTC}$ & 1000 & USD/kW\textsubscript{el} & \cite{Platzer2014}\\ 
 Thermal energy storage & $c_{TES,PTC}$ & 50 & \si{\usd\per\kilo\wattth\hour} & \cite{Platzer2014}\\ 
 Land purchase & $c_{LP}$ & 3~000 & USD/ha & \cite{Cassell2012} \\ 
@@ -736,8 +736,8 @@ For this simulation a PV power plant was extended with an electrical energy stor
 \begin{itemize}
 \item Latitude ($\,^{\circ}$)
 \item Longitude ($\,^{\circ}$)
-\item Elevation above sea level (m)
-\item GHI, DNI and DHI (W/m^2)
+\item Elevation above sea level (\si{\metre})
+\item GHI, DNI and DHI (\si{\watt\per\square\metre})
 \item Dry bulb temperature (\si{\celsius})
 \item Wind velocity (m/s)
 \end{itemize}
@@ -791,7 +791,7 @@ Maximum power current & 8.4 & A\textsubscript{dc}  \\
 Open circuit voltage & 45.5 & V\textsubscript{dc}  \\ 
 Short circuit current & 8.9 & A\textsubscript{dc}  \\
 Temperature efficiency & -0.41 & \%/\si{\celsius}\\
-Module area & 1.94 & m^2 \\ 
+Module area & 1.94 & (\si{\square\metre}) \\ 
 Number of cells & 72 & -\\
 \hline
 \end{tabular}

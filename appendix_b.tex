@@ -178,8 +178,7 @@ For the addapted EES the LCOE calculation was expanded using the eqation for cal
 \begin{equation}
 LCOE_{PV+EES}=\frac{(C_{invest,PV}\times(f_{annuity,PV}+f_{ins.ann.,PV})+C_{O\&M,PV})+(C_{invest,EES}\times(f_{annuity,EES}+f_{ins.ann.,EES})+C_{O\&M,EES})}{E_{el,net,PV} \times f_{Full,degrad}}\label{eq:LCOE_PV}
 \end{equation}
-
-The investment costs for the PV system with storage are calculated with the parameters from Table~\ref{tbl: PVFinance} according to:
+The annual plant availability $f_{avail,plant}$ is assumed with 100~\% and was therefore not included. The investment costs for the PV system with storage are calculated with the parameters from Table~\ref{tbl: PVFinance} according to:
 \begin{equation}
 C_{invest,PV} = C_{PV-field}+C_{LP,PV}
 \end{equation} 
@@ -257,5 +256,5 @@ C_{O\&M,EES} = c_{O\&M,EES} \times P_{storage}
 \end{itemize}
 \end{itemize}
 \end{itemize}
-The annual plant availability $f_{avail,plant}$ is assumed with 100~\%. 
+ 
 \pagebreak
