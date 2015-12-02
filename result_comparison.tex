@@ -1,0 +1,118 @@
+\chapter{Interpretation and comparison of results}
+The previous sections showed that all simulated solar power plants are able to cover the predicted load curve for more than 90~\% over the year using specified configurations. To describe this in a wildly-used indicator, all simulated power plants are reaching a CF of about 73.1~\% in these specified scenario. The selected power plant configuration of each technology to cover the prescribed load at the lowest LCOE are summarized in Table~\ref{tbl: summaryresult}.
+\begin{table}[!htbp]  
+  \centering
+	\begin{tabular}{ p{3.0cm} C{3.6cm} C{3.6cm} C{3.6cm} } 
+	\hline	
+&\multicolumn{3}{c}{\textbf{Selected configuration to cover the predicted load}}\\
+
+\textbf{Type} & \textbf{$\geq$~70~\%} & \textbf{$\geq$~80~\%} & \textbf{$\geq$~90~\%} \\ \hline \hline
+CR power plant 	& SM:~2.0 \& TES:~10~h	& SM:~2.5 \& TES:~10~h & SM:~3.0 \& TES:~14~h \\
+PTC power plant	& SM:~3.0 \& TES:~10~h	& SM:~3.5 \& TES:~12~h & SM:~5.0 \& TES:~12~h  \\
+PV power plant	& PVM:~2.2 \& EES:~4~h	& PVM:~2.6 \& EES:~5~h & PVM:~2.8 \& EES:~7~h \\
+\hline
+\end{tabular}
+\caption[Summary of selected solar power plant configurations to reach the target load covering at lowest LCOE.]{Summary of selected solar power plant configurations to reach the target load covering at lowest LCOE.}\label{tbl: summaryresult}
+\end{table}
+
+The summary in the Table shows, that the expenditure in technical and therefore also in economic terms are quite different between the technologies to reaching higher load curve coverings. When comparing the rising multiple of the design point of the solar power plants to reach a higher amount of annual load covering it seams that the effort is quite different between the technologies. When comparing the necessary growing multiple to the design point of the power plants to reach higher annual load curve covering it seams obviously that the effort of the PTC technology rises at most. The PTC power plant needs a about five-times larger solar field (SM of 5.0) in reference to the design point to cover 90~\% of the predicted load curve. This is particular high, especially in comparison to the SM of the CR power plant system at the same design point which needs just a three times larger heliostat field. As it was shown before in Section~\ref{sec.resultsPTC} the high effort of the PTC technology to reach high load curve covering values is based on the optical efficiency loss of the solar field at low irradiation angle through the cosine effect. The optical efficiency loss through the cosine effect affects also the CR system, but thanks to the two-axis tracking of the heliostats is the influence comparatively small. 
+
+As the solar fields needs to be over scaled to producing enough thermal power for the whole day also in winter times, both CSP technologies needs to reduce the field optical focus fraction in summer times. The average field optical focus fraction, for both CSP technologies from the Table which covers more then 90~\% are shown in Figure~\ref{FocusFraction} for December. Both technology needs to reduce the thermal output of there receivers by optical focus fraction significantly during the December. The December average shows that more than 60~\% of the CR heliostat field is defocused from 13:00 to 15:00 and also the solar field of the PTC plant needs a focus fraction up to over 50~\% in December. 
+\begin{figure}[!htbp]
+        \centering                
+        \begin{subfigure}[b]{0.5\textwidth}
+                \centering
+                \includegraphics[width=1\textwidth]{FIG/FocusFraction/DecemberCR}
+                \caption{Average CR heliostat field focus fraction in December at a SM of 3.0 and 14~h of TES.}\label{DecemberCR}
+        \end{subfigure}%
+        ~
+        \begin{subfigure}[b]{0.5\textwidth}
+                \centering
+                \includegraphics[width=1\textwidth]{FIG/FocusFraction/DecemberPTC}
+                \caption{Average PTC SCA field focus fraction in December at a SM of 5.0 and 12~h of TES.}\label{DecemberPTC}
+        \end{subfigure}
+        \caption[Average field optical focus fraction in December of for 90~\% load curve covering configurated CSP technologies.]{Average field optical focus fraction in December of for 90~\% load curve covering configurated CSP technologies.}\label{FocusFraction}
+\end{figure}
+
+The designed PV power plant is fixed orientated and doesn't track the sun, nevertheless for reaching a covering of 90~\% of the prescribed load over the first year the PV power plant needs a lower multiple of the design point than the other two solar power plants. This mainly comes from the characteristics of the PV system by using GHI instead of DNI. Upington has a huge amount on direct irradiation but also cloudy days with diffuse irradiance (see Figure~\ref{DHI-DIF}). Therefrom the PV power plant needs a lower multiple of the PV system and a smaller storage compared to the CSP power plants. Also the surplus net output of the simulated PV power plants is just about 2.2 and 5.5~\% over the year. Compared with the defocused solar field capacities of the CSP plants this is a very small value.
+
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=0.8\linewidth]{FIG/90_annual_profil}
+\caption[Annual average load profile of selected PV power plant configurations.]{Annual average load profile of selected PV power plant configurations.}\label{90_annual_profil}
+\end{figure}
+The annual average load profiles of the in Table~\ref{tbl: summaryresult} specified  power plant configuration over 90~\% load covering are compared in Figure~\ref{90_annual_profil}. It can be seen that they profiles of the three solar power plant are relatively equal. But it is noticeable that the PV plant can fully cover the load from 10:00 to 16:00 over the full year. Compared to are the annual average net energy outputs of the CSP plants just below, but can't cover the load like the PV power plant. This mainly comes from the not exactly configurable turbine power output control, which settings was described in the respective simulation design sections. It can be assumed that under real conditions a steam Rankine power output control is working far more accurate. 
+
+As the line chart shows all simulated solar power plants are having there main leak in supply during the morning hours. But this mainly comes from the weaker power generation during the winter time, where the irradiation amount and angle of sunlight radiation is lower. Basically can be said that all three here shown solar power plant covers the load almost continuously over the year, but during the mentioned time during the winter all solar power plants coming to standstill. This can also be seen in the net power output heat maps of Figure~\ref{Heatmap}. The Figures describes the net power output of the selected simulated solar power plants at any hour of the simulated year. It just shows the net power output which is covering  the prescribed load and no surplus net power. It describes therefore the values of the annual average load profile from the line chart above more in detail. The power reduction during the night time from 22:00 to 7:00 is clearly visible in the heat maps. Also can be seen, that all solar power plants has interruptions in supply on various days in the year which leads from low direct or global irradiation at days of bad weather. 
+
+\begin{figure}[!htbp]
+        \centering   
+        \begin{subfigure}[b]{1\textwidth}
+                \centering
+                \includegraphics[width=1\textwidth]{FIG/HeatmapCR}
+                \caption{CR with a SM of 3.0 and 14~h of TES.}\label{HeatmapCR}
+        \end{subfigure}
+        
+\par\medskip % Linebreak
+
+        \begin{subfigure}[b]{1\textwidth}
+                \centering
+                \includegraphics[width=1\textwidth]{FIG/HeatmapPTC}
+                \caption{PTC with a SM of 5.0 and 12~h of TES.}\label{HeatmapPTC}
+        \end{subfigure}
+        
+\par\medskip % Linebreak     
+           
+        \begin{subfigure}[b]{1\textwidth}
+                \centering
+                \includegraphics[width=1\textwidth]{FIG/HeatmapPV}
+                \caption{PV with a PVM of 2.8 and 7~h of EES.}\label{HeatmapPV}
+        \end{subfigure}
+        \caption[Net power output to predicted load from selected solar power plants shown as heat map over the simulated year.]{Net power output to predicted load from selected solar power plants shown as heat map over the simulated year.}\label{Heatmap}
+\end{figure}
+At first it is obviously when comparing the heat maps that at the time of winter solstice all power plants coming to standstill in the morning hours. When taking a view at the stating time of the power plants during that time it can be noted that the PV power plant starts about one hour earlier than the other two plants. On one site this leads from the for the PV system usable diffuse share of the GHI at dawn and on the other site from the set power block starting up time of 30 minutes for both CSP plants. It can also be noted, that the PTC system is starting with less power output then the CSP system at these time of the year.
+
+The heat map of the PTC shows a slightly lower power output during the time from 8:00 to 12:00 in summer time. This leads from the above mentioned power output control, but also from high parasitic consumer of the power plant during that time. When taking an eye on the power output of the PV power plant it can be said that the plant fully covers the predicted load over the year from 11:00 to 13:00.
+
+The comparison shows that all solar power plants are able to cover the predicted load with there individual configured systems. But the cost effort is most different between the systems which also reflected in the investment costs and therefrom in the LCOE. Figure~\ref{LCOEcomparision} summarizes the the LCOE calculation results of the solar power plants at different load curve covering from the previous sections and compares them with each other and with public projections. 
+
+It can be seen that the PV system without EES reaches with 51~USD/MWh the lowest LCOE of the simulated power plants, but covers the predicted load curve just about 33~\%. In comparison with other projections can be seen that the PV system in Upington reaches an excellent LCOE. The Fraunhofer ISE institute names the LCOE range for PV systems in 2013 between 80 and 160~USD/GWh (60-120~EUR/GWh using the avarage exchange rate in 2013 of 1.33 USD/EUR \cite{StatistaGmbH2015}) in areas with a GHI from 1~450 to 2~000~kWh/m\textsuperscript{2} \cite{FraunhoferISE2013}. When using the higher GHI value of Upington and the lower assumed invest costs the calculated LCOE seams realistic. The International Energy Agency (IEA) published the LCOE vlaues of the year 2014 in there annual report of "Tracking Clean Energy Progress 2015" \cite{IEA2015}. These values can be assumed for the international average market. But the GHI value of Upington must be noted as above-average.
+
+In order to make the results of the chart more common it might be helpful to remember that a load curve covering (LCC) of 70~\% is equal with a capacity factor of about 57~\% and  a LCC of 90~\% equals a capacity factor of about 73~\% as it was described at the beginning of this Chapter.
+
+When comparing the LCOE results of the simulated solar power plant it must be noted that the degradation of the EES storage is not included in the LCOE calculation of the PV power plant with adapted EES. 
+
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=1\linewidth]{FIG/LCOEcomparision}
+\caption[Summary of calculated LCOE results of Simulated solar power plants compared with public projections.]{Summary of calculated LCOE results of Simulated solar power plants compared with public projections.}\label{LCOEcomparision}
+\end{figure}
+The lowest LCOE calculation results of the simulated solar power plants which covers more than 90~\% of the predicted load curve has the CR power plant with about 150~USD/MWh. The CR power plant in generally reaches the lowest LCOE values while having a high load curve covering rate. Also the LCOE result of the PTC power plant is with 189~USD/MWh relatively low. When comparing this values with the projections of Fraunhofer ISE institute and IEA they are looking quite optimistic. 
+
+When taking an eye on the LCOE calculation results of the simulated PV power plant it is obviously that they are much more expansive then the CSP power plants. The LCOE of the cheapest PV power plant which reaches the 90~\% LCC is about twice that high than that from the CR power plant. For the comparison also must be remembered, that the costs of the EES storage part was assumed extremely low in comparison with the average marked price. But when using other optimistic LCOE calculations of battery EES the result seams realistic. Vassallo calculated a LCOE of a battery EES with about 200~USD/MWh pure storage costs \cite{Corcuera2015}. This also goes in hands with the battery EES LCOE results from Zakeri. He names the range of LCOE for battery storage between 278 and 821~USD/MWh (209 -617~EUR/MWh exchange rate 1.33 USD/EUR \cite{StatistaGmbH2015})   at a energy price of 66.5~USD/MWh and 8\% interest rate\cite{Zakeri2015}. However he results the LCOE of the Li-Ion battery at the top end.
+
+
+
+
+\begin{figure}[!htbp]
+        \centering                
+        \begin{subfigure}[b]{0.5\textwidth}
+                \centering
+                \includegraphics[width=1\textwidth]{FIG/CR_LCOE_90_BreakDown}
+                \caption{LCOE break-down for .}\label{CR_LCOE_90_BreakDown}
+        \end{subfigure}%
+        ~
+        \begin{subfigure}[b]{0.5\textwidth}
+                \centering
+                \includegraphics[width=1\textwidth]{FIG/PTC_LCOE_90_BreakDown}
+                \caption{LCOE break-down for .}\label{PTC_LCOE_90_BreakDown}
+        \end{subfigure}
+\par\medskip % Linebreak   
+        \begin{subfigure}[b]{0.5\textwidth}
+                \centering
+                \includegraphics[width=1\textwidth]{FIG/PV_LCOE_90_BreakDown}
+                \caption{LCOE break-down for .}\label{PV_LCOE_90_BreakDown}
+        \end{subfigure}
+        \caption[Break-down of selected LCOE calculation results of PV systems with adapted EES.]{Break-down of selected LCOE calculation results of PV systems with adapted EES.}\label{SMPV_LCOE_BreakDown}
+\end{figure}
+
