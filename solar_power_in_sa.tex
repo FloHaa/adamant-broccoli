@@ -1,5 +1,5 @@
-\chapter{Solar energy in South Africa and load curve covering concept}\label{Solar power in South Africa}
-Almost all power that we use on our planet comes from the sun. Direct in form of radiation or indirect during wind, water and vegetation. Also the fossil power resources and reserves are stored energy from the sun in from of organic carbon compounds. 
+\chapter{Solar energy and system load in South Africa}\label{Solar power in South Africa}
+Almost all power that we use on our planet comes from the sun. Direct in form of radiation or indirect during wind, water and vegetation. Also the fossil power resources and reserves are stored energy from the sun in from of organic carbon compounds.
 
 The sun emits a power rate of about 3.83x10\textsuperscript{26}W. Of this total, only a tiny fraction, \SI{1367}{\watt\per\square\metre} (solar constant) reaches the Earth’s atmosphere. The solar radiation is reduced by absorption and reflection effects in the atmosphere.  The reduction is about \SI{30}{\percent} on a clear day and about \SI{90}{\percent} on a very cloudy day. \cite{Stine2001a}
 
@@ -10,18 +10,22 @@ When taking an eye on the world map in Figure~\ref{WorldDNI} it can be noticed t
 \includegraphics[width=1\linewidth]{FIG/WorldDNI}
 \caption[World map of Direct normal irradiation.]{World map of Direct normal irradiation \cite{SolarGIS2015c}.}\label{WorldDNI}
 \end{figure}  
-\section{Solar irradiation in South Africa}
-As shown above, solar irradiation is highly depending from the location. The solar irradiance of a specific location can be measured on-site by ground measurement devices or site-adapted by interpolated satellite data, which is validated with other ground measurement devices. Thereby is the direct and indirect as well as the total sun irradiance crucial. These solar irradiation parameter are here defined:
+\pagebreak
+\section{Solar radiation}
+As shown above, solar irradiation is highly depending from the location. The solar irradiance of a specific location can be measured on-site by ground measurement devices or site-adapted by interpolated satellite data, which is validated with other ground measurement devices. Thereby is the direct and indirect as well as the total sun irradiance crucial.
+These solar irradiation parameter are here defined:
 \begin{itemize}
-\item \textbf{Global Horizontal Irradiance (GHI)} in \si{\watt\hour\per\square\metre\year} or \si{\watt\per\square\metre}: GHI is the total amount of shortwave radiation received from above by a horizontal surface. It includes direct (beam) and a diffuse (scattered) irradiation. This value is of particular interest to PV or solar water heater with a fixed inclined angle.
-\item \textbf{Direct Normal Irradiance (DNI)} in \si{\watt\hour\per\square\metre\year} or \si{\watt\per\square\metre}: DNI is the amount of solar radiation received per unit area by a surface that is always held perpendicular (or normal) to the rays that come in a straight line from the direction of the sun at its current position in the sky. Diffuse irradiation is totally excluded from the DNI. This quantity is of particular interest to  installations that track the position of the sun.
-\item \textbf{Diffuse Horizontal Irradiance (DHI)} in \si{\watt\hour\per\square\metre\year} or \si{\watt\per\square\metre}: DHI is the amount of radiation received per unit area by a surface that does not arrive on a direct path from the sun, but has been scattered by molecules and particles in the atmosphere and comes equally from all directions.
+\item \textbf{\emph{Global Horizontal Irradiance} (GHI)} in \si{\kilo\watt\hour\per\squared\metre\year} or \si{\watt\per\squared\metre}: GHI is the total amount of shortwave radiation received from above by a horizontal surface. It includes direct (beam) and a diffuse (scattered) irradiation. This value is of particular interest when designing PV or solar water heater systems with a fixed inclined angle.
+\item \textbf{\emph{Direct Normal Irradiance} (DNI)} in \si{\kilo\watt\hour\per\squared\metre\year} or \si{\watt\per\squared\metre}: DNI is the amount of solar radiation received per unit area by a surface that is always held perpendicular (or normal) to the rays that come in a straight line from the direction of the sun at its current position in the sky. Diffuse irradiation is totally excluded from the DNI. This quantity is relevant for installations that track the position of the sun.
+\item \textbf{\emph{Diffuse Horizontal Irradiance} (DHI)} in \si{\kilo\watt\hour\per\squared\metre\year} or \si{\watt\per\squared\metre}: DHI is the amount of radiation received per unit area by a surface that does not arrive on a direct path from the sun, but has been scattered by molecules and particles in the atmosphere and comes equally from all directions.
 \end{itemize}
-Furthermore is irradiance understood as instantaneous density of solar radiation incident on a given surface, typically expressed in \si{\watt\per\square\metre} and irradiation is the sum of irradiance over a time period expressed in \si{\joule\per\square\metre} or more commonly used in \si{\watt\hour\per\square\metre}. The connection between the solar radiation parameters is shown in Equation \ref{GL_GHI}. The angle $\theta_\text{z}$ is the angle between the direction of the sun and the zenith (directly overhead).
+%Furthermore is irradiance understood as instantaneous density of solar radiation incident on a given surface, typically expressed in W/m\textsuperscript{2} and irradiation is the sum of irradiance over a time period expressed in J/m\textsuperscript{2} or more commonly used in Wh/m\textsuperscript{2}. The connection between the solar radiation parameters is shown in Equation \ref{GL_GHI}.The angle $\theta_\text{z}$ is the angle between the direction of the sun and the zenith (directly overhead).
+\emph{Irradiance} is understood as the instantaneous density of solar radiation incident on a given surface and is typically expressed in \si{\watt\per\squared\metre} and \emph{irradiation} is the sum of irradiance over a time period expressed in \si{\joule\per\squared\metre} or the more commonly used \si{\watt\hour\per\squared\metre}. The relationship between solar radiation parameters is shown by Equation \ref{GL_GHI}.The angle $\theta_\text{z}$ is the angle between the direction of the sun and the zenith (directly overhead).
 \begin{align}
-GHI=DNI*\cos(\theta_{z})+DHI \label{GL_GHI}
+\text{GHI}=\text{DNI}\cdot\cos(\theta_{z})+\text{DHI}\label{GL_GHI}
 \end{align}
-The GHI is decisive for the power output of PV systems and the DNI for CSP systems. Figure\ref{irradiation} shows the solar GHI and the DNI data for SA. It is shown, that the ceiling value for GHI can be more than \SI{2300}{\kilo\watt\hour\per\square\metre\year}, whereas in some parts of the country the DNI  value attains about \SI{3200}{\kilo\watt\hour\per\square\metre\year}. This is significantly high than in the most regions worldwide, therefor SA is predestined for using solar technologies. The figure shows, that the southeastern coastline has predominantly the lowest irradiance values. The solar irradiation rise significant in the inland. The highest GHI can be find close to the Namibian boarder in the northeast of the country. The direct beam is also at highest in the western part of SA. The area around Springbok in the province Northern Cape has the highest DNI value of the country.
+
+The GHI is decisive for the power output of PV systems and the DNI for CSP systems. Figure\ref{irradiation} shows the solar GHI and the DNI data for SA. In South Africa, the ceiling for GHI is more than \SI{2300}{\kilo\watt\hour\per\squared\metre\year}, while in some parts of the country DNI is as high as \SI{2900}{\kilo\watt\hour\per\squared\metre\year} (Figure\ref{irradiation}), significantly higher than in most regions of the world. As such, solar power is South Africa is particularly well-suited to solar power. The highest GHI occurs close to the Namibian border in the northwest. The direct beam is also at its highest in western SA. The area around Springbok in Northern Cape province has the highest DNI.
 
 \begin{figure}[h!]
         \centering
@@ -38,6 +42,7 @@ The GHI is decisive for the power output of PV systems and the DNI for CSP syste
         \end{subfigure}
         \caption{Solar radiation maps of South Africa.}\label{irradiation}
 \end{figure}
+\pagebreak
 Both maps demonstrates, that the highest values of solar irradiation can be found in the northwestern part of SA, which allocated in the Northern Cape Province. Currently all CSP plants and about two-thirds of the PV systems of SA are developed in the Northern Cape \cite{Forder2015}. Thereby the region around the city of Upington is highly attractive, owning to the high irradiation value in connection with a reliable water access due to the Orange River and the possibility of a close access to the Eskom grid. 
 
 Therefore the location parameter and weather data of Upington was selected for the simulation and calculations in this thesis \cite{WhiteBoxTechnologies2015}. The hourly values of GHI and DNI over a full year for Upington are shown in Figure~\ref{Upington_GHI/DNI}. The highest irradiance value during the summer are \SI{1199}{\watt\hour\per\square\metre} for GHI and \SI{1154}{\watt\hour\per\square\metre} for DNI. At the northern solstice, the highest irradiance is \SI{625}{\watt\hour\per\square\metre} for GHI and \SI{820}{\watt\hour\per\square\metre} for DNI. 
@@ -50,13 +55,13 @@ So it is obviously that the irradiation values demonstrates significant seasonal
                 \centering
                 \includegraphics[width=1\textwidth]{FIG/Upington_GHI}
                 \caption{Global horizontal irradiance}\label{Upington_GHI}
-        \end{subfigure}%
+        \end{subfigure}
 \par\medskip % Linebreak      
         \begin{subfigure}[b]{1\textwidth}
                 \centering
                 \includegraphics[width=1\textwidth]{FIG/Upington_DNI}
                 \caption{Direct normal irradiance}\label{Upington_DNI}
-        \end{subfigure}%
+        \end{subfigure}
 
         \caption[Hourly values of irradiance over a full year from Upington used for the simulation.]{Hourly values of irradiance over a full year from Upington used for the simulation.}\label{Upington_GHI/DNI}
 \end{figure}
@@ -92,10 +97,11 @@ Mean wind speed & 3.3 & \si{\metre\per\second}\\ \hline
 \caption[Location and characteristics for the simulation in SAM.]{Location and characteristics for the simulation in SAM.}\label{tbl: Location}
 \end{table}
 \pagebreak
+
 \section{Current stage of solar power in South Africa}
 South Africa started there expansion in the field of solar power plants with the first round of the REIPPPP in 2011. As it was mentioned before in Section~\ref{ElectricitySA} the REIPPPP has currently a capacity of \SI{5237}{\mega\watt} committed inclusive \SI{1899}{\mega\watt} PV systems and \SI{600}{\mega\watt} CSP plants. Additionally comes one CSP project with \SI{100}{\mega\watt} from Eskom which is not a part of the REIPPPP.
 
-Figure \ref{Solar-map} shows the allocation of all currently committed solar power plants of the REIPPPP. Yellow marked are PV-power plants and CSP plants are marked in orange (some marks cover them mutually). The numbers in the single marks expose to which REIPPPP-Round it belongs.
+Figure \ref{Solar-map} shows the allocation of all currently committed solar power plants of the REIPPPP. Yellow marked are PV-power plants and CSP plants are marked in orange (some marks cover them mutually). The numbers in the single marks expose in which REIPPPP-Round it belongs.
 
 Currently SA has 27 fully operational PV-power plants with a total capacity of \SI{1059.05}{\mega\watt} further six PV-power plants with in total of \SI{442.5}{\mega\watt} are under construction. \cite{Forder2015}
 
@@ -134,7 +140,6 @@ It is a  hard requirement that plants meet the full electrical demand in the sys
 \includegraphics[width=1\linewidth]{FIG/LoadScenarios}
 \caption[South Africa daily average system load/demand for summer and winter days, with prescribed generation profile.]{South Africa daily average system load/demand for summer and winter days, with prescribed generation profile.}\label{LoadScenarios}
 \end{figure}
-
 Considering the system load, the supply structure and the point of time by load shedding it is unequivocally that the South African power supply needs adjustable power plants which can support the demand during the evening hours till 22:00 in particular. 
 
 In order to support the South African power supply were it is needed, the for the comparison selected solar power plants are forced to cover a prescribed generation profile. The solar power plants must operate at full power output of \SI{100}{\mega\watt} from 7:00 to 22:00. When the system demand drops during the night, the plants reduce there output from 22:00 to 7:00 to \SI{50}{\mega\watt}. At a covering of \SI{100}{\percent} of the prescribed generation the solar power plants would produce \SI{711.75}{\giga\watt\hour} per year.
@@ -143,17 +148,20 @@ With consideration to solar energy is depending on weather and seasonal conditio
 
 Usually, in feed-in contracts, the deliverable maximum net power output of power plants is fixed. Any overproduction is not covered by such contracts and is not remunerated. In order to generate exploitable and comparable results and considering standard feed-in contracts, the hourly power production is cut to the planned values and thus overproduction is not considered in this analysis.
 
+From the perspective of the power plant the prescribed generation profile can be seen as load. Therefore is in the following thesis with load curve 
+the generation profile described. This load curve is not to be confused with the system load in SA which constantly changes. The load curve is fix defined for this comparison.
+
 The results of the solar power plant simulations will therefore evaluated and compared by the following quantitative measures:
 \begin{itemize}
-\item \textbf{Generation curve covering} [\si{\percent}]: The generation curve covering (GCC) is an effectiveness measure describing how closely the plant follows the prescribed generation curve over the full year. It is defined as:
+\item \textbf{Load curve covering} [\si{\percent}]: The load curve covering (LCC) is an effectiveness measure describing how closely the plant follows the prescribed generation curve over the full year. It is defined as:
 
 \begin{equation}
-\mbox{GCC} = \sum\limits_{t=1}^{8760} \frac{\mbox{prescribed generation at }t\mbox{ in MW}}{\mbox{actual plant net output at }t\mbox{ in MW}} \label{GL_GCC}
+\mbox{LCC} = \sum\limits_{t=1}^{8760} \frac{\mbox{prescribed generation at }t\mbox{ in MW}}{\mbox{actual plant net output at }t\mbox{ in MW}} \label{GL_GCC}
 \end{equation} 
 
 \item \textbf{Levelized cost of electricity} [USD/\si{\mega\watt\hour}]: The levelized cost of electricity (LCOE) represents the total project life-cycle costs. It is the present value of project costs expressed in USD per megawatt-hour of electricity generated by the system over its life.
 \end{itemize}
 These performance and financial parameter are the only releavant indicator for the evaluation in this thesis, other indicators can be seen as supplement. 
 
-It must be noted, that there is an important difference between the GCC and the widely-used \emph{capacity factor} (CF). The CF is the ratio of the system's electrical net output in the first year of operation to the nameplate output (CSP) or peak output (PV), which is equivalent to the quantity of energy the system would generate if it operated at its nameplate capacity for every hour of the year \cite{NREL2015a}. The GCC is calculated from the sum value of prescribed generation coverage in each hour of the year. 
+It must be noted, that there is an important difference between the LCC and the widely-used \emph{capacity factor} (CF). The CF is the ratio of the system's electrical net output in the first year of operation to the nameplate output (CSP) or peak output (PV), which is equivalent to the quantity of energy the system would generate if it operated at its nameplate capacity for every hour of the year \cite{NREL2015a}. The LCC is calculated from the sum value of prescribed generation coverage in each hour of the year. 
 \pagebreak 

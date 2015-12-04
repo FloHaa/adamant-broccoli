@@ -1,4 +1,4 @@
-\chapter{Simulation-based comparison of solar powered power plants}
+\chapter{Simulation-based comparison of solar power plants}
 To compare CSP and PV technologies, a simulated case study was performed on the basis of a CR system and PTC system. 
 %Special attention was paid in this comparison for a high run time of the system during the day and the covering of a prescribed demand curve.
 Specific attention was given to maximizing daytime operation and meeting the demand curve. 
@@ -6,7 +6,7 @@ Specific attention was given to maximizing daytime operation and meeting the dem
 The photovoltaic system was extended with battery storage. 
 % For the simulation an battery storage was selected.
 % The dimension of the stored energy in this simulation went much beyond the actual technical capacity of individual electrical storage units and reaches more than one-sixt of the actual world battery storage capacity \SI{690}{GW} \cite{IEA2015}.
-The storage capacity allocated for the simulation considerably exceeds the real capacity of electrical storage units currently available and is more than one-sixth the globally installed battery storage capacity of \SI{690}{GW}.\cite{IEA2015}
+The storage capacity allocated for the simulation considerably exceeds the real capacity of electrical storage units currently available and is more than one-sixth the globally installed battery storage capacity of \SI{690}{GW} \cite{IEA2015}.
  %Therefor must be said at this point that this is a theoretical comparison from the viewpoint of the PV, in particular for this plant and storage scale.
 Due to the scale and particularly with respect to the photovoltaic plant, the comparison is theoretical in nature.
 \section{General assumptions}
@@ -34,31 +34,5 @@ SAM is designed to simulate performance and financial models of different types 
 
 The financial parameters and the resulting levelized cost of electricity (LCOE) are calculated separately for all power plants in Microsoft Excel 2011 (vers. 14.5.7) for Mac, using a simplified method which is documented in Appendix~\ref{ChapterLCOE} on page \pageref{ChapterLCOE} using a lifetime of \SI{25}{years} for each plant.
 
-\subsection{Scenario of simulations} \label{Overall simulated configuration}
-%Power plants are forced to supply the system load/demand.
-A hard requirement is that plants meet the full electrical demand in the system. Figure~\ref{LoadScenarios} shows the daily average system load/demand in South Africa for the winter and summer period.
-% The profiles from both load shapes rises at approx 7:00 in the morning and has there peak demand at 20:00 during the summer period.
-Both profiles feature a sharp rise at approx 7:00 and have their peak demand at 20:00 during the summer period.
-In winter, there is an initial peak at 9:00 and a second at 19:00.
-%In order to supply this system load the simulated solar power plants are forced to generate full power output of \SI{100}{MW} from 7:00 to 22:00. When the system demand comes down during the night also the power plants reduce there output from 22:00 to 7:00 to \SI{50}{MW}. The scenario is called "night-reduction".
-In order to match this system load, the simulated solar power plants must operate at full power output of \SI{100}{MW} from 7:00 to 22:00. When the system demand drops during the night, the plants reduce there output from 22:00 to 7:00 to \SI{50}{MW}. The scenario is called "night reduction".
-\begin{figure}[htbp]  
-\centering
-\includegraphics[width=1\linewidth]{FIG/LoadScenarios}
-\caption[South Africa daily average system load/demand for summer and winter days, with scheduled power production curve.]{South Africa daily average system load/demand for summer and winter days, with scheduled power production curve.}\label{LoadScenarios}
-\end{figure}
-%For the comparison the power plants there system design is forced to cover 90~\% of the scheduled electricity production over the first year.  Usually, in feed-in contracts the power output is fixed at specified values. The overproduction is not content of these contracts and is not remunerated. In order to generate exploitable and comparable results and also considering the common feed-in contracts for power plants, the hourly power production is cut to the planed values. So overproduction will not considered in the evaluation and analyses of the systems.
-In this comparison, the system design must handle 90~\% of the scheduled electricity production over the first year. Usually, in feed-in contracts, the deliverable energy is fixed. Any overproduction is not covered by such contracts and is not remunerated. In order to generate exploitable and comparable results and considering standard feed-in contracts, the hourly power production is cut to the planned values and thus overproduction is not considered in this analysis.
 
-%The results of the simulated scenarios and the financial analyses will be rated in two selected categories:
-The results of the simulation and the financial analyses will be evaluated by the following quantitative measures:
-\begin{itemize}
-%\item \textbf{Load curve covering factor} [\%]: The Load curve covering factor (LCCF) describes quantitative how effective the power plant follows the required load curve of the scenarios.
-\item \textbf{Load curve covering factor} [\%]: The load curve covering factor (LCCF) is an effectiveness measure describing how closely the plant follows the load curve.
-%\item \textbf{Levelized cost of electricity} [\textcent /kWh]: The levelized cost of electricity (LCOE) represents the total project lifecycle costs. It is the present value of project costs expressed in cents per kilo-hour of electricity generated by the system over its life. \cite{NREL2015a}
-\item \textbf{Levelized cost of electricity} [\textcent /kWh]: The levelized cost of electricity (LCOE) represents the total project life-cycle costs. It is the present value of project costs expressed in cents per kilowatt-hour of electricity generated by the system over its life. \cite{NREL2015a}
-\end{itemize}
-%There is a huge difference between the mentioned LCCF and the widespread capacity factor (CF). The CF is the ratio of the system's predicted electrical output in the first year of operation to the nameplate output, which is equivalent to the quantity of energy the system would generate if it operated at its nameplate capacity for every hour of the year \cite{NREL2015a}. As it is mentioned above is the LCCF calculated from the sum value of load covering in each hour of the year.
-There is an important difference between the LCCF and the widely-used \emph{capacity factor} (CF). The CF is the ratio of the system's electrical output in the first year of operation to the nameplate output, which is equivalent to the quantity of energy the system would generate if it operated at its nameplate capacity for every hour of the year \cite{NREL2015a}. The LCCF is calculated from the sum value of load coverage in each hour of the year.
-%At a covering of 100~\% of the predicted load the solar power plants would produce \SI{711.75}{GWh} per year. But at a 100~\% CF the solar power plants would need to produce \SI{876.00}{GWh} per year. Therefore is in the selected scenario a maximum CF of just 81.25~\% with a full covering of the predicted load possible.
-At a coverage of \SI{100}{\percent} of the predicted load, the solar power plants would produce \SI{711.75}{\giga\watt\hour\per\year}, but at a \SI{100}{\percent} CF they would need to produce \SI{876.00}{\giga\watt\hour\per\year}. In the current scenario, the maximum CF is just \SI{81.25}{\percent}, even though full load coverage is possible.
+\pagebreak 
