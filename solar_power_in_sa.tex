@@ -95,7 +95,7 @@ Mean wind speed & 3.3 & \si{\metre\per\second}\\ \hline
 \section{Current stage of solar power in South Africa}
 South Africa started there expansion in the field of solar power plants with the first round of the REIPPPP in 2011. As it was mentioned before in Section~\ref{ElectricitySA} the REIPPPP has currently a capacity of \SI{5237}{\mega\watt} committed inclusive \SI{1899}{\mega\watt} PV systems and \SI{600}{\mega\watt} CSP plants. Additionally comes one CSP project with \SI{100}{\mega\watt} from Eskom which is not a part of the REIPPPP.
 
-Figure \ref{Solar-map} shows the allocation of all currently committed solar power plants of the REIPPPP. Yellow marked are PV-power plants and CSP plants are marked in orange (some marks cover them mutually). The numbers in the single marks expose in which REIPPPP-Round it belongs.
+Figure \ref{Solar-map} shows the allocation of all currently committed solar power plants of the REIPPPP. Yellow marked are PV-power plants and CSP plants are marked in orange (some marks cover them mutually). The numbers in the single marks expose to which REIPPPP-Round it belongs.
 
 Currently SA has 27 fully operational PV-power plants with a total capacity of \SI{1059.05}{\mega\watt} further six PV-power plants with in total of \SI{442.5}{\mega\watt} are under construction. \cite{Forder2015}
 
@@ -111,19 +111,36 @@ Most of the South African PV-power plants are allocated in the Northern Cape. So
 "KaXu Solar One" is the first and currently only full operational CSP plant in SA. It is using parabolic trough technology and a 2.5~h thermal energy storage for generating \SI{100}{\mega\watt} capacity. The CSP-plants "Khi Solar One" and "Bokpoort CSP Project" with a capacity of each 50~MW are under construction as well as the \SI{100}{\mega\watt} "Xina CSP South Africa" project. Further three CSP-plants are awaiting construction, they have all a capacity of each \SI{100}{\mega\watt}. As mentioned before, all eight CSP projects are located in the Northern Cape Province of SA. \cite{Forder2015}
 \pagebreak
 \section{System load in SA and predicted solar power generation profil} \label{SystemloadinSA}
-%Power plants are forced to supply the system load/demand.
-A hard requirement is that plants meet the full electrical demand in the system. Figure~\ref{LoadScenarios} shows the daily average system load/demand in South Africa for the winter and summer period.
-% The profiles from both load shapes rises at approx 7:00 in the morning and has there peak demand at 20:00 during the summer period.
-Both profiles feature a sharp rise at approx 7:00 and have their peak demand at 20:00 during the summer period.
-In winter, there is an initial peak at 9:00 and a second at 19:00.
-%In order to supply this system load the simulated solar power plants are forced to generate full power output of \SI{100}{MW} from 7:00 to 22:00. When the system demand comes down during the night also the power plants reduce there output from 22:00 to 7:00 to \SI{50}{MW}. The scenario is called "night-reduction".
-In order to match this system load, the simulated solar power plants must operate at full power output of \SI{100}{MW} from 7:00 to 22:00. When the system demand drops during the night, the plants reduce there output from 22:00 to 7:00 to \SI{50}{MW}. The scenario is called "night reduction".
+The South African supply structure is based on coal-fired thermal power plants, as it was shown in Section~\ref{ElectricitySA} before. But also the renewable energy supply is getting noteworthy for the supply structure in SA. When taking an eye on Figure~\ref{systemload} it can be noted that wind and PV power also makes a small share of the daily electricity supply. It has to be said that by the time of spring in 2014 the KaXu Solar One CSP plant was not completed and so CSP supply in SA doesn't exist. The reveals that the power demand in SA rises in the morning hours and is coming to a peak demand in the evening hours. The surplus energy during the night got compensated by pump storage and reduction by supply imports. 
+
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=1\linewidth]{FIG/systemload}
+\caption[Actual South African supply structure for a spring day, the 17. October 2014.]{Actual South African supply structure for a spring day, the 17. October 2014 \cite{CSIR2015}.}\label{systemload}
+\end{figure}
+It is shown that the PV supply can support the South African demand during the day and reduces thereby the generation of coal-fired thermal power plants. But by the time of the daily peak demand, in the evening hours, the PV supply is coming to standstill, whereby this demand needs to be covered by pumped storage or expansive open cycle gas turbines (OCGT).
+
+When taking an eye on the load shedding history of the first half year of 2015 in Figure~\ref{Load_shedding} it is obviously that the capacity bottleneck in SA is mostly during the daytime and particularly during the evening peak hours till 22:00. This makes clear at which time the support of new power plants is necessary for a secure electricity supply in SA.
+\pagebreak
+
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=1\linewidth]{FIG/Load_shedding}
+\caption[Hourly distribution of actual load shedding from January to June 2015.]{Hourly distribution of actual load shedding from January to June 2015 \cite{CSIREnergyCentre2015}.}\label{Load_shedding}
+\end{figure}
+It is a  hard requirement that plants meet the full electrical demand in the system. Figure~\ref{LoadScenarios} shows the daily average system load/demand in South Africa for the winter and summer period (2011). It can be seen that the summer profile has a particularly lower demand than the winter profile (up to \SI{15}{\percent} difference) and after a sharp rise at approx 7:00 the demand has a constant system load during the day due to commercial, agricultural and residential demand caused by air-conditioning, pool pumps and geysers, which comes to their peak demand at 20:00. In winter, there is an initial peak at 9:00 and a second at 19:00 mainly caused by residential customers due to electrical heating, lighting, cooking, geysers and pool pumps.
+
 \begin{figure}[htbp]  
 \centering
 \includegraphics[width=1\linewidth]{FIG/LoadScenarios}
 \caption[South Africa daily average system load/demand for summer and winter days, with scheduled power production curve.]{South Africa daily average system load/demand for summer and winter days, with scheduled power production curve.}\label{LoadScenarios}
 \end{figure}
-%For the comparison the power plants there system design is forced to cover 90~\% of the scheduled electricity production over the first year.  Usually, in feed-in contracts the power output is fixed at specified values. The overproduction is not content of these contracts and is not remunerated. In order to generate exploitable and comparable results and also considering the common feed-in contracts for power plants, the hourly power production is cut to the planed values. So overproduction will not considered in the evaluation and analyses of the systems.
+
+Considering the system load, the supply structure and the point of time by load shedding it is unequivocally that the South African power supply needs adjustable power plants which can support the demand during the evening hours till 22:00 in particular. 
+
+\pagebreak
+In order to match this system load, the simulated solar power plants must operate at full power output of \SI{100}{MW} from 7:00 to 22:00. When the system demand drops during the night, the plants reduce there output from 22:00 to 7:00 to \SI{50}{MW}. The scenario is called "night reduction".
+
 In this comparison, the system design must handle 90~\% of the scheduled electricity production over the first year. Usually, in feed-in contracts, the deliverable energy is fixed. Any overproduction is not covered by such contracts and is not remunerated. In order to generate exploitable and comparable results and considering standard feed-in contracts, the hourly power production is cut to the planned values and thus overproduction is not considered in this analysis.
 
 %The results of the simulated scenarios and the financial analyses will be rated in two selected categories:
