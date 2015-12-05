@@ -1,10 +1,10 @@
 \chapter{Large scale solar power plants}
 %Almost all power that we use on our planet comes from the sun. Direct in form of radiation or indirect during wind, water and vegetation. Also the fossil power resources and reserves are stored energy from the sun in from of organic carbon compounds. There are two main technologies for generating electricity out of direct sun radiation. One is the direct conversion of solar irradiance to electrical energy while using photovoltaic. The other is to generate heat and convert it to electrical power. Figure~\ref{OverviewSTP} gives an abstract of the common technologies using direct solar power to generating electric power. This chapter has the focus on large-scale solar power plants and describes parts from both technologies.
-Virtually all energy consumed on Earth comes from the sun, whether directly in the form of solar radiation, or indirectly through wind, the water cycle or vegetation. There are two main technologies for generating electricity out of direct solar radiation. One is the direct conversion of solar irradiance to electrical energy via the photovoltaic effect. The other is to first convert that solar irradiance into heat and use that heat to generate electricity. Figure~\ref{OverviewSTP} graphically shows the relationships between common solar technologies for generating generating electric power. This Chapter introduces the solar technologies to cover the in Section~\ref{SystemloadinSA} defined plant load curve. Therefore the technologies which are the focus of this work are highlighted in red.
+Virtually all energy consumed on Earth comes from the sun, whether directly in the form of solar radiation, or indirectly through wind, the water cycle or vegetation. There are two main technologies for generating electricity out of direct solar radiation. One is the direct conversion of solar irradiance to electrical energy via the photovoltaic effect. The other is to first convert that solar irradiance into heat and use that heat to generate electricity. Figure~\ref{OverviewSTP} graphically shows the relationships between common solar technologies for generating generating electric power. This Chapter introduces the solar technologies to cover the in Section~\ref{SystemloadinSA} defined power plant net output load curve. Therefore the technologies which are the focus of this work are highlighted in red.
 
 \begin{figure}[!h] 
 \centering
-\includegraphics[width=0.75\linewidth]{FIG/OverviewSTP}
+\includegraphics[width=0.8\linewidth]{FIG/OverviewSTP}
 \caption[Overview of Solar Power Technologies.]{Overview of Solar Power Technologies.}\label{OverviewSTP}
 \end{figure}
 
@@ -71,7 +71,7 @@ The two most common CSP plant technologies are parabolic trough collector (PTC) 
 
 
 %As mentioned above is main difference between the CSP technology families how they concentrate the solar radiation. This strongly affects their overall efficiency. The parabolic dish has the best annual optical efficiency (about 90\%) because the concentrator axis is always parallel to the sun rays. The worst (about 50\%) is observed for linear Fresnel systems because of poor performance in the morning and in the evening. Intermediate values (65-75\%) are obtained for parabolic trough and tower systems. For each family the actual efficiency varies with the location, the time of day and the season of the year. \cite{EASAC2011} 
-The main difference between the CSP technology families is in how they concentrate the solar radiation, which affects their overall efficiency. The parabolic dish has the best annual optical efficiency (\sim\SI{90}{\percent}) because the concentrator axis is always parallel to the sun's rays. The worst (\sim\SI{50}{\percent}) is observed for linear Fresnel systems because of poor performance in the morning and in the evening. Intermediate efficiencies (\SIrange{65}{75}{\percent}) are obtained for parabolic trough and central receiver systems. For each family, actual efficiency varies with location, time of day and season \cite{EASAC2011}.
+The main difference between the CSP technology families is in how they concentrate the solar radiation, which affects their overall efficiency. The parabolic dish has the best annual optical efficiency (\sim\SI{90}{\percent}) because the concentrator axis is always parallel to the sun's rays. The worst (\sim\SI{50}{\percent}) is observed for linear Fresnel systems because of poor performance at low solar irradiation angles. Intermediate efficiencies (\SIrange{65}{75}{\percent}) are obtained for parabolic trough and central receiver systems. For each family, actual efficiency varies with location, time of day and season \cite{EASAC2011}.
 
 %The capacity range of an CSP-plant is also strongly affected by the concentration ratio. The most common definition of concentration ratio is the ratio of the area of reflector aperture ($A_a$) to the area of receiver ($A_r$). The area concentration is:
 The capacity range of a CSP plant is also strongly affected by the concentration ratio, which is defined as the ratio of the area of reflector aperture ($A_a$) to the area of receiver ($A_r$):
@@ -100,7 +100,7 @@ Dish-Stirling & 0.01-0.4 & 1~000-3~000 & 29 & 16-28 & 30-40  \\ \hline
 % I do not understand the intended meaning of this sentence:
 %But actually the technical implementation of concentration ratio is the main parameter for the capacity range of a CSP plant.
 
-Table~\ref{tbl: CSPCharacteristics} gives an overview of performance characteristics (for further details, see Appendix I, Part A, Figure~\ref{CSPOverview1} on page~\pageref{CSPOverview1} and Figure~\ref{CSPOverview2} on page~\pageref{CSPOverview2}). PTC, LFR, and CR systems can be coupled to steam cycles of \SI{10280}{\mega\watt} electric capacity (and more), with thermal cycle efficiencies of \SIrange{30}{45}{\percent}. Stirling engines that are coupled to dish systems have similar efficiency ranges. The conversion efficiency of the power block is consistent with conventional power plants. The annual system efficiency is the net power generation over incident beam radiation. This is lower than the conversion efficiencies of conventional steam or combined cycles because it includes include the conversion of solar radiative energy to heat within the collector and the conversion of the heat to electricity in the power block \cite{Pitz-Paal.2013}.
+Table~\ref{tbl: CSPCharacteristics} gives an overview of performance characteristics. PTC, LFR, and CR systems can be coupled to steam cycles of \SIrange{10}{280}{\mega\watt} electric capacity (and more), with thermal cycle efficiencies of \SIrange{30}{45}{\percent}. Stirling engines that are coupled to dish systems have similar efficiency ranges. The conversion efficiency of the power block is consistent with conventional power plants. The annual system efficiency is the net power generation over incident beam radiation. This is lower than the conversion efficiencies of conventional steam or combined cycles because it includes include the conversion of solar radiative energy to heat within the collector and the conversion of the heat to electricity in the power block \cite{Pitz-Paal.2013}.
 
 \begin{figure}[!h] 
 \centering
@@ -109,62 +109,57 @@ Table~\ref{tbl: CSPCharacteristics} gives an overview of performance characteris
 \end{figure}
 
 %The development of the actual CSP plant technology goes back in the 1970's and 1980's, which is a consequent from the first two Oil crises. Figure~\ref{CSP_technology_development} shows the historical development of PTC, LFR in the Figure called linear Fresnel collector (LFC) and the CR (tower). The parabolic dishes have not succeeded at all and aren't shown here. The reason for that is mainly due to the high structural costs of moving an large diameter dish with two-axes tracking. One might observe that the predominant technology is the PTC, with an installed capacity well above 3~GW. CR have started the exponential development some years later compared to PTC, which explains why the operational installed capacity is much lower. Similarly the development for LFR have started even later, which drives to the lowest installed capacity of the three technologies. The difference in the timing of the three successful technologies is very influenced by the CSP development in its first golden period, the 1980's. In such period important central tower prototypes were built in USA (Solar One, Solar Two, CESA-1) and a 365~MW PTC solar plant was installed in the Mojave Desert. When the oil prices dropped at the end of the second oil crises interest on renewable energies was lost until the last decade. 
-The development of the CSP technology began in earnest in the 1970s, a consequence of the first two oil price shocks. Figure~\ref{CSP_technology_development} shows the historical development of PTC and LFR (called linear Fresnel collector (LFC) here) technologies and the CR (tower). Parabolic dish systems have not been widely adopted and are not shown here; this is mainly due to the high costs associated with moving a large diameter dish with two-axis tracking. The predominant technology remains PTC, with an installed capacity well above \SI{3}{GW}. The development of central receiver systems began decades later, and that of linear Fresnel reflector systems later still; the operational installed capacity is proportional to the number of years the technology has been available. In the 1980s, important central tower prototypes were built in the USA (\emph{Solar One}, \emph{Solar Two}, \emph{CESA-1}) and the \SI{365}{\mega\watt} PTC solar plant was built at Kramer Junction in the Mojave Desert. When the oil prices dropped after the second oil crisis, interest in renewable energies was lost and it did not return until the beginning of the new millenium. 
+The development of the CSP technology began in earnest in the 1970s, a consequence of the first two oil price shocks. Figure~\ref{CSP_technology_development} shows the historical development of PTC and LFR (called linear Fresnel collector (LFC) here) technologies and the CR (tower). Parabolic dish systems have not been widely adopted and are not shown here; this is mainly due to the high costs associated with moving a large diameter dish with two-axis tracking. The predominant technology remains PTC, with an installed capacity well above \SI{3}{GW}. The first commercial scaled CR systems started decades later, and that of linear Fresnel reflector systems later still; the operational installed capacity is proportional to the number of years the technology has been available. In the 1980s, important central tower prototypes were built in the USA (\emph{Solar One}, \emph{Solar Two}, \emph{CESA-1}) and the \SI{365}{\mega\watt} PTC solar plant was built at Kramer Junction in the Mojave Desert. When the oil prices dropped after the second oil crisis, interest in renewable energies was lost and it did not return until the beginning of the new millenium. 
 
-%With regard to the past development in the different CSP technology dealt the following chapters with the PTC (\ref{subsection_PTC}) as well as with the solar tower technology (\ref{subsection_CRS}). The necessary concepts of the storage systems (\ref{Subsection_storage_system}) and an overview of common heat transfer fluids (\ref{subsection_HTF}) are also included. The systems for the converting thermal to electrical power will be also summarized (\ref{subsection_powerblock}).  Parabolic dishes and LFC are not further considered depending to the development stage.
+With regard to the past development in the different CSP technology deals this theses with the PTC as well as with the CR technology. The most relevant facts to the separate technologies and there technical components are described in the following shortly in order to describe there technical possibilities to cover the prescribed load curve. 
 
-% The meaning of the previous paragraph is not clear; moreover, it is considered poor style to spend time describing other parts of the document; the reader can extract this information from the section headers and the table of contents.
+\subsubsection{Overview of CR system technology}
+As it was mentioned above, a CSP system basically consists of five main part, namely concentration system, solar receiver, storage, power block and heat transfer fluid (HTF) system. Which are in case of a CR power plant a solar field (heliostat field) consisting by several two-axis tracking heliostats, a thermal receiver which is mounted on a tower, a thermal storage usually using molten salt or a steam accumulator (depending on HTF), a power block mostly based on Rankine cycle technology and steam or molten salt as HTF. Figure~\ref{towerdirecttwotank} shows the simplified CR power plant scheme of the demonstration project \emph{Solar Two} (1995-2001). 
 
-\pagebreak
-
-\subsection{Central tower concentrating solar power} \label{subsection_CRS}
-
-\begin{figure}[htbp] 
-\centering
-\includegraphics[width=0.6\linewidth]{FIG/power_tower}
-\caption[Schematic CR power plant concept.]{Schematic CR power plant concept \cite{U.S.DOE2013}.}\label{power_tower}
-\end{figure}
-
+Currently CR systems can be separated by two receiver types, external (tube) receiver and cavity receiver \cite{Hoffschmidt2014}. The \emph{Solar Two} project used a external receiver to heat up molten salt at a top temperature of \SI{565}{\celsius} \cite{Reilly2001}. This project concept was the basic research for the current state of art in CR power plants using molten salt as HTF. Typical solar heat fluxes in this type of receiver are up to \SI{1}{\mega\watt\per\square\metre} \cite{Pitz-Paal.2013}. Cavity receiver are currently mostly used in connection with direct saturated or super heated steam production, which is not easy to store over longer duration and therefore not suitable for the defined load profile in thesis \cite{Hoffschmidt2014,Steinmann2015}.
 
 \begin{figure}[htbp]  
 \centering
 \includegraphics[width=0.45\linewidth]{FIG/towerdirecttwotank}
-\caption[Simplified scheme of \emph{Solar Two} CRS power plant with direct storage of molten salt used as heat transfer fluid.]{Simplified scheme of \emph{Solar Two} CRS power plant with direct storage of molten salt used as heat transfer fluid \cite{Richter2013}.}\label{towerdirecttwotank}
+\caption[Simplified scheme of \emph{Solar Two} CR power plant with direct storage of molten salt used as heat transfer fluid.]{Simplified scheme of \emph{Solar Two} CR power plant with direct storage of molten salt used as heat transfer fluid \cite{Richter2013}.}\label{towerdirecttwotank}
 \end{figure}
 
-\pagebreak
-\subsection{Parabolic-trough concentrating solar power} \label{subsection_PTC}
+Classical two-axis tracking heliostats design is dominated by mirrors brought into position by steel structures and drives that guarantee high accuracies underwind loads and thermal stress situations \cite{Alexopoulos2013}. The reflective surface of can therefore reach sizes from \SIrange{1.1}{320}{\square\metre} \cite{Blackmon2012,Tyner2014}. There is not really one specific size pushed through for commercial scale application, but one of the marked leader \emph{Abengoa Solar} currently uses \SI{140}{\square\metre} heliostats for CR projects in SA \cite{Abengoa2014}.
 
+The main advantage for using molten salt as HTF is the comparatively high thermal range and its good manageability storage characteristics. Molten salt in CR systems can be stored directly in two tanks as its shown in the scheme. For the storage capacity, the thermal range of the receiver temperature and the storage volume is decisive. The storage capacity is usually measured in hours of storage capacity at full load turbine output. Commercial direct molten salt thermal energy storages (TES) in CR systems currently reaches storage capacities of \SI{17.5}{\hour} \cite{NREL2015b}.
 
-\begin{figure}[htbp] 
+\subsubsection{Overview of PTC system technology} 
+The concentration system of a PTC plant consist out of parabolic shaped mirrors which is focusing the solar beam on to a receiver tube in the focus point of the parabola. Commonly synthetic oil is used as HTF which flows through the receiver tube (also known as heat collecting element (HCE)). From the receiver, the heat up synthetic oil gets either transported to the power block or to a TES. The PTC system technology currently also uses mostly molten salt as storage fluid, but indirect due to the different used fluids of storage and solar field. Figure~\ref{troughtindirecttwotank} shows a simplified scheme of the currently most used PTC system.
+
+\begin{figure}[htbp]  
 \centering
-\includegraphics[width=0.7\linewidth]{FIG/parabolic_troughs}
-\caption[Schematic parabolic trough power plant concept.]{Schematic parabolic trough power plant concept \cite{U.S.DOE2013}.}\label{parabolic_troughs}
+\includegraphics[width=0.65\linewidth]{FIG/troughtindirecttwotank}
+\caption[Simplified scheme of PTC power plant with indirect storage system.]{Simplified scheme of PTC power plant with indirect storage system \cite{Steinmann2012}.}\label{troughtindirecttwotank}
 \end{figure}
+The parabolic shaped mirrors and the HCE are typically assembled on a support structure mounted on a series of aligned pylons. The center pylon is equipped with a hydraulic drive system to allow tracking of the total solar collector assembly (SCA). Figure~\ref{SCA_EuroTrough} shows a SCA exemplary by using the EuroTrough system. The solar field of a PTC system consists of one or more parallel loops of SCAs. A common header pipe provides each loop with an equal flow rate of HTF. A second header collects the hot HTF to return it either directly to the power cycle or to the TES. \cite{Lupfert2013,Maccari2015}
 
 \begin{figure}[htbp] 
 \centering
 \includegraphics[width=1\linewidth]{FIG/SCA_EuroTrough}
-\caption[Solar Collector Assembly (SCA) composed of 12 EuroTrough collector elements (SCE).]{Solar Collector Assembly (SCA) composed of 12 EuroTrough collector elements (SCE) \cite{VonReeken2014}.}\label{SCA_EuroTrough}
+\caption[Typical solar collector assembly composed of 12 EuroTrough collector elements.]{Typical solar collector assembly (SCA) composed of 12 EuroTrough collector elements \cite{VonReeken2014}.}\label{SCA_EuroTrough}
 \end{figure}
+Current collector sizes varied from \SIrange{2.55}{8}{\metre}, but in order to reduce the total costs of PTC systems the trend for commercial scaled collector sizes is increasing. \cite{AbengoaSolar2013b,Pitz-Paal.2013,VonReeken2014}
 
-\pagebreak
-\begin{figure}[htbp] 
-\centering
-\includegraphics[width=1\linewidth]{FIG/Kollektoren}
-\caption[Evolution of parabolic trough collector sizes over 3 development cycles (Eurotrough, HelioTrough, Ultimate Trough).]{Evolution of parabolic trough collector sizes over 3 development cycles (Eurotrough, HelioTrough, Ultimate Trough)\cite{Schlaichbergermannundpartner}.}\label{Kollektoren}
-\end{figure}
+All commercial scale PTC systems uses actually oil based HTF. The first commercial used PTC power plant \emph{SEGS-1}, built 1984 in California, uses a mineral oil as HTF in the HCE, which heats up from \SIrange{240}{305}{\celsius}. The upper temperature end for a stable use of mineral oil is around \SI{300}{\celsius}. In order to increase the maximum process temperature actual PTC systems uses synthetic oil with a maximum working temperature of \SI{400}{\celsius}. \cite{Gil2010,Richter2013,Therminol2015}
 
+Synthetic oil is quite expansive therefore it is not used as fluid for TES aplication. Molten salt is more than ten times less expansive, that's the main reason why it is currently used as storage medium in the TES of PTC systems \cite{Gil2010}. 
 
-\begin{figure}[htbp]  
-\centering
-\includegraphics[width=0.45\linewidth]{FIG/troughtindirecttwotank}
-\caption[Simplified scheme of PTC power plant with indirect storage system using molten salt.]{Simplified scheme of PTC power plant with indirect storage system using molten salt \cite{Steinmann2012}.}\label{troughtindirecttwotank}
-\end{figure}
+There is a huge research and development expenses for using molten salt also as HTF in the HCE for PTC systems, but currently there are no commercial scale PTC power plants projects with molten salt applications as HTF known. \cite{Maccari2015}
+
+At this stage it can be noted, that PTC uses a lower thermal process temperature than the CR systems, which effects on the one hand the efficiency of the thermal process (Rankine cycle) and on the other hand the required dimensions of the TES medium. 
+
+Furthermore must be noted that the power output of a PTC plant is more effected by the seaseonal variation of the irradiance angle due to not traking the sun in two axis and a thereby resulting higher cosine efficinetcy loss. \cite{Jorgenson2013}
 
 \pagebreak
 \section{Large scale PV power plants}\label{Large scale photo voltaic (PV) power plants}
+
 two axis tracking PV
+
 \subsection{Large-scale PV power plants}
 
 \subsection{Large-scale electrical energy storage systems}
