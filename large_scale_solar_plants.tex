@@ -66,7 +66,7 @@ The two most common CSP plant technologies are parabolic trough collector (PTC) 
     \end{minipage}    
     \\ \hline
   \end{tabular}
-  \caption[CSP technology families.]{CSP technology families \cite{IEA2014b}.}\label{tbl: CSPtech}
+  \caption[CSP technology families.]{CSP technology families \cite{IEA2014c}.}\label{tbl: CSPtech}
 \end{table}
 
 
@@ -199,39 +199,38 @@ In 2013 PV systems cost about \SIrange{30}{44}{\percent} what they cost in 2008 
 Installations for unity-scale PV systems in SA currently has a similar cost distribiution then it is shown actually in Itally. Modules makes in SA a share of \SI{37}{\percent} of the total investment cost, while it is \SI{40}{\percent} in Italy. The share of Inverter costs makes \SI{10}{\percent} in SA and \SI{13}{\percent} in Itally. Therefore it can be noteced that the share of further soft costs is higher for unity-scale PV systems in SA then in Italy and makes more than the half of installation costs. \cite{IEA2014c,Terblanche2015}
 \pagebreak
 \subsubsection{Large-scale electrical energy storage systems}
-
+For supplying the in Section~\ref{SystemloadinSA} prescribed load curve even due to night time the PV system needs assistance by a EES. In generally can be said that a EES consists by two main sections, namely the power conversion system (PCS) and the energy storage unit. A PCS is used to adjust the voltage, current, and other power characteristics of the storage based on the load requirements. PCS may consist of two separated units for charging and discharging with different characteristics. Energy storage section is the other part of EES that is designated to contain the storage medium, e.g. water reservoirs in pumped hydroelectric storage (PHS). Because PCS and energy storage units have inherent inefficiencies and losses, overall efficiency of EES technologies is defined by Equation~\ref{Overall storage efficiency}, in which $E_{out}$ and $E_{in}$ are output and input electric energy, respectively \cite{Kaldellis2009}.
+\begin{equation}
+\textrm{Overall storage efficiency}=\frac{E_{out}}{E_{in}} \label{Overall storage efficiency}
+\end{equation}
+Figure~\ref{TCC_EES} illustrates the main sections of a typical EES system and the associated losses.
 
 \begin{figure}[htbp]  
 \centering
 \includegraphics[width=0.65\linewidth]{FIG/EESSchema}
-\caption[Schema of an electrical energy storage (EES) system and there energy losses.]{Schema of an electrical energy storage (EES) system and there energy losses.}\label{TCC_EES}
+\caption[Main sections of electrical energy storage system and there energy losses.]{Main sections of electrical energy storage (EES) system and there energy losses.}\label{TCC_EES}
 \end{figure}
-
-\begin{equation}
-\textrm{Overall storage efficiency (AC-to-AC)} =\frac{E_{out} \textrm{ (kWh)} }{E_{in} \textrm{ (kWh)}}
-\end{equation}
-
+In 2014 the global large-scale energy storage capacity was more than \SI{140}{\giga\watt} of which about \SI{97}{\percent} was allocated by PHS. Rapid deployment of wind and solar PV energy has led to integrate challenges and the need for more flexible storage opportunities. Thereby also alternative grid connected energy storage concepts are growing. Between 2005 and 2014 there was a sharp increase in global capacity of large-scale battery storages from \SIrange{120}{690}{\mega\watt}. Figure~\ref{EESgridCapacity} describes the global capacity development for grid connected storage. It must be noted, that the thermal storage share in this chart also includes decentralized hot water boilers, which is not to be confused with TES of CSP applications.
 
 \begin{figure}[htbp]  
 \centering
 \includegraphics[width=1\linewidth]{FIG/EESgridCapacity}
-\caption[Installed capacity for grid connected storage.]{Installed capacity for grid connected storage \cite{IEA2015}.}\label{EESgridCapacity}
+\caption[Worldwide installed capacity for grid connected storage.]{Worldwide installed capacity for grid connected storage \cite{IEA2015}.}\label{EESgridCapacity}
 \end{figure}
+For supporting the PV system by supplying the prescribed load curve, the EES requires a Power output of about \SI{100}{\mega\watt} and a storage capacity from several hours. Therefor not many technologies comes into question. Figure~\ref{EEStechnologies} shows that just four EES technology fields could meet the requirements of the prescribed load, namely pumped hydroelectric storage (PHS), compressed air energy storage (CAES), hydrogen (H\textsubscript{2}) storage and battery storage.
 
+The PHS technology is fully mature and reaches efficiency ranges of \SIrange{70}{85}{\percent} with lifetimes between 20~000 and 50~000 cycles \cite{IEA2014c}. But the applicability of this technology is required by potential energy of the storage medium and is therefore highly limited by the regional landscape and there differences in altitude. Furthermore is the apply of PHS in desert regions not well located due to high evaporation losses.
+
+The efficiency of the H\textsubscript{2} storage is below \SI{40}{\percent} and mainly still in demonstration stage \cite{IEA2014c,IEA2015}. Therefore this technology is also not suited for a adaption to a PV system.
 
 \begin{figure}[htbp]  
 \centering
-\includegraphics[width=0.4\linewidth]{FIG/EEStechnologies}
-\caption[.]{\cite{IEA2014c}.}\label{EEStechnologies}
+\includegraphics[width=0.6\linewidth]{FIG/EEStechnologies}
+\caption[Energy storage technologies ranges.]{Energy storage technologies ranges \cite{IEA2014c}.}\label{EEStechnologies}
 \end{figure}
+The CAES technology is at a deployed maturity stage and has a for the application as PV system adapted EED a suitable capacity range of \SIrange{100}{300}{\mega\watt}. Also the cycle lifetime of 10~000 to 25~000 cycles is convincing. But with a range of \SIrange{50}{75}{\percent} efficiency, it would have had to high losses, which must be compensated by a oversized PV system. Thererfor is CAES not applyed in the subsequently comparision.  \cite{IEA2014c}
 
-\begin{figure}[htbp]  
-\centering
-\includegraphics[width=1\linewidth]{FIG/EESgridBattery}
-\caption[Economic and technical development of grid-scale battery storage caracteristics.]{Economic and technical development of grid-scale battery storage caracteristics \cite{IEA2015}.}\label{EESgridBattery}
-\end{figure}
-
-
+Battery storage technology includes different battery technology types. Most important are Li-Ion 
 
 \begin{figure}[htbp]  
 \centering
