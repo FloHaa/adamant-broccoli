@@ -1,4 +1,4 @@
-\chapter{Large scale solar power plants}
+\chapter{Large-scale solar power plants}
 %Almost all power that we use on our planet comes from the sun. Direct in form of radiation or indirect during wind, water and vegetation. Also the fossil power resources and reserves are stored energy from the sun in from of organic carbon compounds. There are two main technologies for generating electricity out of direct sun radiation. One is the direct conversion of solar irradiance to electrical energy while using photovoltaic. The other is to generate heat and convert it to electrical power. Figure~\ref{OverviewSTP} gives an abstract of the common technologies using direct solar power to generating electric power. This chapter has the focus on large-scale solar power plants and describes parts from both technologies.
 Virtually all energy consumed on Earth comes from the sun, whether directly in the form of solar radiation, or indirectly through wind, the water cycle or vegetation. There are two main technologies for generating electricity out of direct solar radiation. One is the direct conversion of solar irradiance to electrical energy via the photovoltaic effect. The other is to first convert that solar irradiance into heat and use that heat to generate electricity. Figure~\ref{OverviewSTP} graphically shows the relationships between common solar technologies for generating generating electric power. This Chapter introduces the solar technologies to cover the in Section~\ref{SystemloadinSA} defined power plant net output load curve. Therefore the technologies which are the focus of this work are highlighted in red.
 
@@ -157,14 +157,50 @@ Furthermore must be noted that the power output of a PTC plant is more effected 
 
 \pagebreak
 \section{Large scale PV power plants}\label{Large scale photo voltaic (PV) power plants}
+PV cells are semiconductor devices that convert solar irradiance due to the photovoltaic effect directly into direct current (DC).
+Grid-tied systems require inverters to transform DC power in alternating current (AC). Therefore it is in the nature of PV systems that the generate power just during daytime. To support the South African system load even at the most critical time - the evening hours - the PV system needs a storage opportunity for electrical power. Such an electrical energy storage (EES) could either be DC- or AC-site connected with the PV system depending on the EES technology. Figure~\ref{PVMainComp} shows a with a EES extended feasible PV plant scheme.
 
-two axis tracking PV
+\begin{figure}[!h] 
+\centering
+\includegraphics[width=0.75\linewidth]{FIG/PVMainComp}
+\caption[Main components of feasible a PV plant.]{Main components of feasible a PV plant.}\label{PVMainComp}
+\end{figure}
+Such a PV plant scheme is currently not in a commercial use and is therefore more of theoretically nature. Nevertheless with this schema the covering of the prescribed load curve is conceivable.
+\subsubsection{Large-scale PV systems}
+As it was said above, PC cells generates electricity in form of DC power. The cells are interconnected to form modules, which are then combined to form arrays and systems. PV can be used in various applications with capacities from less then one watt up to hundreds of megawatts. The balance of system (BOS) of grid-tied PV systems includes inverters, transformer, wiring and monitoring equipment, as well as structural components for installing modules.  
 
-\subsection{Large-scale PV power plants}
+Crystalline silicon (c-Si) modules, whether single- (sc-Si also known as mono-Si) or multi-crystalline (mc-Si also known as multi-Si), largely dominate the PV-market. Cells are usually sliced from ingots or castings of highly purified silicon. The manufacturing process creates a potential junction, deposits an anti-reflective costing and adds metal contacts. Cells are then grouped into modules with a transparent glass for the front, a weatherproof material for the back and often a rounded by a frame. Modules are usually guaranteed for a lifetime of 20 years at minimum \SI{80}{\percent} of there rated output, and sometimes at \SI{70}{\percent} for 30 years. In the last 10 years, the efficiency of average commercial silicon modules increased from about \SIrange{12}{16}{\percent}, while the record lavatory cell efficiency is currently \SI{25.6}{\percent} for sc-Si and \SI{20.8}{\percent} for mc-Si wafer-based technology. \cite{FraunhoferISE2015}
 
-\subsection{Large-scale electrical energy storage systems}
-electrical energy storage (EES)
-EESSchema
+Two main alternative solar cell commercial technologies exist: multi-junction cells, used in CPV (will not be dealt with any further) and thin films, based on either amorphous silicon (a-Si), cadmium-telluride (CdTe), copper-indium-(di)selenide (CIS), copper-indium-gallium-(di)selenide (CIGS) or copper-zinc-tin-sulfide \cite{IEA2014c}. The highest lab efficiency in thin film technology is \SI{21.0}{\percent} for CdTe and \SI{20.5}{\percent} for CIGS solar cells. The efficiency of average commercial CdTe module increased from \SIrange{9}{13}{\percent} in the last 10 years \cite{FraunhoferISE2015}.
+
+PV is a fast growing market as it can be seen in Figure~\ref{PV_Prod_by_Tech}. A global installing rate of about \SI{130}{\mega\watt} new PV systems per day should therefore be expected for 2014. The Compound Annual Growth Rate (CAGR) of PV installations was \SI{44}{\percent} between 2000 to 2014 \cite{FraunhoferISE2015}. 
+
+ \begin{figure}[htbp]  
+\centering
+\includegraphics[width=0.7\linewidth]{FIG/PV_Prod_by_Tech}
+\caption[Worldwide annual PV production by technology.]{Worldwide annual PV production by technology in \si{\giga\watt}\textsubscript{p} \cite{FraunhoferISE2015}.}\label{PV_Prod_by_Tech}
+\end{figure}
+Since 2010 the world has added more PV capacity than it had in the previous four decades \cite{IEA2014c}. In 2014 the worldwide installed cumulative PV capacity was about \SI{183}{\giga\watt}\textsubscript{p} whereof \SI{21}{\percent} are allocated Germany. About \SI{80}{\percent} of the actually worldwide cumulative installed PV capacity is assigned to Europe and Asia. Figure~\ref{PV_Install_global} shows the development of the worldwide cumulative installed PV capacity from 2008 to 2014. \cite{FraunhoferISE2015}
+
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=0.7\linewidth]{FIG/PV_Install_global}
+\caption[Worldwide cumulative PV installation until 2014.]{Worldwide cumulative PV installation until 2014 \cite{FraunhoferISE2015}.}\label{PV_Install_global}
+\end{figure}
+The emergence of the global PV market has stimulated rapid cost reductions of modules and systems. In the last few years, intense competition and global over capacities led many PV cell and module manufacturer to price their products too low for investment cost recovery, and thereby several companies failed. 
+
+In 2013 PV systems cost about \SIrange{30}{44}{\percent} what they cost in 2008 (see Figure~\ref{PVsystemCosts}). Prices for PV systems are more diversified than for cells and modules, which tend to be global commodities. Small systems, such as rooftop, are more expansive than larger ones, especially ground-based, unity-scale systems. The prices for the different system types varies significantly among countries. Most of the gap comes from differences in "soft costs", which includes permitting, inspection, interconnection and labour costs \cite{IEA2014c}. Therefore it is important to use country-specific prices for calculating costs.
+
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=1\linewidth]{FIG/PVsystemCosts}
+\caption[PV system cost development by size.]{PV system cost development in Italy by size \cite{IEA2014c}.}\label{PVsystemCosts}
+\end{figure}
+Installations for unity-scale PV systems in SA currently has a similar cost distribiution then it is shown actually in Itally. Modules makes in SA a share of \SI{37}{\percent} of the total investment cost, while it is \SI{40}{\percent} in Italy. The share of Inverter costs makes \SI{10}{\percent} in SA and \SI{13}{\percent} in Itally. Therefore it can be noteced that the share of further soft costs is higher for unity-scale PV systems in SA then in Italy and makes more than the half of installation costs. \cite{IEA2014c,Terblanche2015}
+\pagebreak
+\subsubsection{Large-scale electrical energy storage systems}
+
+
 \begin{figure}[htbp]  
 \centering
 \includegraphics[width=0.65\linewidth]{FIG/EESSchema}
@@ -174,6 +210,28 @@ EESSchema
 \begin{equation}
 \textrm{Overall storage efficiency (AC-to-AC)} =\frac{E_{out} \textrm{ (kWh)} }{E_{in} \textrm{ (kWh)}}
 \end{equation}
+
+
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=1\linewidth]{FIG/EESgridCapacity}
+\caption[Installed capacity for grid connected storage.]{Installed capacity for grid connected storage \cite{IEA2015}.}\label{EESgridCapacity}
+\end{figure}
+
+
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=0.4\linewidth]{FIG/EEStechnologies}
+\caption[.]{\cite{IEA2014c}.}\label{EEStechnologies}
+\end{figure}
+
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=1\linewidth]{FIG/EESgridBattery}
+\caption[Economic and technical development of grid-scale battery storage caracteristics.]{Economic and technical development of grid-scale battery storage caracteristics \cite{IEA2015}.}\label{EESgridBattery}
+\end{figure}
+
+
 
 \begin{figure}[htbp]  
 \centering
