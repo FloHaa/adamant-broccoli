@@ -159,11 +159,11 @@ Also for the simulation of the PTC system the dispatch control of the turbine ou
 \caption[TES dispatch control matrix for turbine output fraction of PTC simulation in SAM.]{TES dispatch control matrix for turbine output fraction of PTC simulation in SAM.}\label{PTC_turbineoutput}
 \end{figure}
 \subsubsection{Financial parameter}
-The financial parameter for calculating the LCOE of the simulated configuration are shown in Table~\ref{tbl: PTCFinance}. As before at the CR is the PTC power plant calculated over a lifetime of \SI{25}{years} using a real interest rate of 7.5~\% \cite{FraunhoferISE2013}. Also the total plant availability of  15~\% once-off surcharge for EPC and contingencies on the total investment costs are equal to the CR \cite{Platzer2014}.
+The financial parameter for calculating the LCOE of the simulated configuration are shown in Table~\ref{tbl: PTCFinance}. As before at the CR is the PTC power plant calculated over a lifetime of \SI{25}{years}. Also the total plant availability of  15~\% once-off surcharge for EPC and contingencies on the total investment costs are equal to the CR \cite{Platzer2014}.
 
 
 
-The specific costs for the collector field inclusive HTF-system is assumed with \SI{275}{\usd\per\square\metre} from \cite{Morin2012}. These specific cost could also be reduced by 25~\% by using the assumed cost reduction from Flabeg \cite{FLABEG_FE_GmbH2015}. So the for the simulation assumed costs are highly conservative.
+The specific costs for the collector field inclusive HTF-system is assumed with \SI{210}{\usd\per\square\metre}. The assuption is based on the cost calculation study which received specific costs values from 2010 of \SI{275}{\usd\per\square\metre}\cite{Morin2012}. These specific cost was be reduced by \SI{25}{\percent} by using the assumed cost reduction from Flabeg  \cite{FLABEG_FE_GmbH2015}.
 
 
 The specific costs for the power block are the same as at the CR but from other sources \cite{Platzer2014}. 
@@ -178,14 +178,14 @@ The costs for the land purchase comes from the "African Agriculture Review" repo
 	\begin{tabular}{  p{5.0cm} C{2.0cm} C{1.5cm}  C{1.5cm}  C{4.0cm} } 
 	\hline	
 \textbf{Item} & \textbf{Symbol}& \textbf{Value} & \textbf{Unit} & \textbf{Source}\\ \hline \hline
-Collector field/HTF-system & $c_{CF}$ & 275 & \si{\usd\per\square\metre} & \cite{Morin2012}\\ 
+Collector field/HTF-system & $c_{CF}$ & 210 & \si{\usd\per\square\metre} & \cite{Morin2012,FLABEG_FE_GmbH2015}\\ 
 Power block &$c_{PB,PTC}$ & 1000 & \si{\usd\per\kilo\wattel} & \cite{Platzer2014}\\ 
 Thermal energy storage & $c_{TES,PTC}$ & 50 & \si{\usd\per\kilo\wattth\hour} & \cite{Platzer2014}\\ 
 Land purchase & $c_{LP}$ & 3~000 & \si{\usd\per\hectare} & \cite{Cassell2012} \\ 
 Annual O\&M & $f_{O\&M,PTC}$ & 2 & \si{\percent} &\cite{Fichtner2010}\\ 
 \hline
 Lifetime&$n$ & 25 & \si{\year} & \cite{FraunhoferISE2013} \\ 
-Interest rate& $i_{PTC}$& 7.5 & \si{\percent} & \cite{FraunhoferISE2013} \\ 
+WACC rate & $i_{WACC}$ & 8.0 & \si{\percent} & assumption from Section~\ref{section WACC} \\ 
 Annual insurance costs& $f_{ins,PTC}$ & 0.5 & \si{\percent} & \cite{IRENA2012}\\
 Surcharge for EPC, project management and risk & $f_{EPC,PTC}$ & 15 & \si{\percent} & \cite{Platzer2014} \\
 Total plant availability &$f_{avail,plant,PTC}$ & 96 & \si{\percent} & \cite{Morin2012} \\ 
@@ -280,7 +280,7 @@ The target of 90~\% load covering is just reached by a SM of 5.0 and more then \
 \subsubsection{Levelized costs of electricity}
 For the calculated LCOE the finacial input parameter in Table~\ref{tbl: PTCFinance} and a simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE} was used. These results of the LCOE claculation for the simulated PTC configurations can be seen in Figure~\ref{PTC_LCOE}. 
 
-The lowest LCOE result of the simulated PTC power plants is \SI{161.69}{USD/MWh} at a SM of 2.5 and \SI{8}{h} of TES. The \SI{10}{h} TES has marginal higher result using a SM of 3.0 (\SI{162.00}{USD/MWh}) and 2.5 (\SI{162.35}{USD/MWh}). The highest LCOE result of \SI{216.63}{USD/MWh} was reached at a SM of 2.0 and \SI{16}{h} of TES. 
+The lowest LCOE result of the simulated PTC power plants is \SI{144.91}{USD/MWh} at a SM of 3.0 and \SI{10}{h} of TES. The \SI{8}{h} TES at a SM of 2.5 has marginal higher result of (\SI{145.17}{USD/MWh}). The highest LCOE result of \SI{202.95}{USD/MWh} was reached at a SM of 2.0 and \SI{16}{h} of TES. 
 
 Depending from almost identical load curve covering is the behavior of LCOE results of the simulated TES variations 12, 14 and \SI{16}{h} almost identical. The difference in the height of the charts results from the higher investment cost of the larger storage configuration.
 
@@ -291,9 +291,9 @@ Depending from almost identical load curve covering is the behavior of LCOE resu
 \end{figure}
 The calculated annual LCOE's of the simulated PTC power plants are composed by six cost parts, namely the investment costs of the collector field, TES, power block, land purchase and additional EPC, project management (PM) and risk as well as the annual operation and maintenance (O\&M) costs. The share of the annual LCOE for the selected PTC power plants can be seen in Figure~\ref{PTC_LCOE_BreakDown}. The share of the land purchase is almost irrelevant for the LCOE. 
 
-When comprising the load curve covering results and the LCOE calculation results of the simulated PTC power plants, the lowest LCOE for reaching the target of 90~\% load curve covering is \SI{192.15}{USD/MWh} at a SM of 5.0 and \SI{16}{h} of TES. 
+When comprising the load curve covering results and the LCOE calculation results of the simulated PTC power plants, the lowest LCOE for reaching the target of 90~\% load curve covering is \SI{167.45}{USD/MWh} at a SM of 5.0 and \SI{12}{h} of TES. 
 
-For reaching a covering of 80~\% of the load curve the PTC configuration with a SM of 3.5 and \SI{12}{h} of TES has the lowest LCOE with \SI{170.32}{USD/MWh}. The lowest LCOE for reaching 70~\% of the prescribed load curve is \SI{162.00}{USD/MWh} at a SM of 3.0 and \SI{10}{h} of TES.
+For reaching a covering of 80~\% of the load curve the PTC configuration with a SM of 3.5 and \SI{12}{h} of TES has the lowest LCOE with \SI{151.84}{USD/MWh}. The lowest LCOE for reaching 70~\% of the prescribed load curve is \SI{144.91}{USD/MWh} at a SM of 3.0 and \SI{10}{h} of TES.
 \begin{figure}[!htbp]
         \centering                
         \begin{subfigure}[b]{0.5\textwidth}

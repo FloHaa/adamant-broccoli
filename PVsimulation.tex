@@ -180,7 +180,7 @@ Further is to note that Li-Ion batteries has a expiry period \cite{Jossen2006}. 
 
 
 
-The for a long lifetime an average SOC of 30-70~\% is recommended for Li-Ion batteries \cite{Jossen2006}. Consequently the SOC was set to a maximum of 30~\% and a minimum of 70~\% for the simulation. So a total DOD of 40~\% which signified 40~\% of the nominal battery capacity was assumed as usable. In order to have high storage availability over the total system lifetime it was assumed that the battery bank will replaced at a effective capacity loss of 20~\%. This is also advised for EES in electronic consumer devices \cite{Spotnitz2003}. Resulting from this assumptions the cycle lifetime of the cells in the battery bank is 2~500 cycles. Therefore the battery bank needs to be replaced after 6-\SI{7}{years}. So the battery bank needs to be replaced three times in the total lifetime of the system. 
+The for a long lifetime an average SOC of \SIrange{30}{70}{\percent} is recommended for li-ion batteries \cite{Jossen2006}. Consequently the SOC was set to a maximum of \SI{30}{\percent} and a minimum of \SI{70}{\percent} for the simulation. So a total DOD of \SI{40}{\percent} which signified \SI{40}{\percent} of the nominal battery capacity was assumed as usable. In order to have high storage availability over the total system lifetime it was assumed that the battery bank will replaced at a effective capacity loss of \SIrange{20}{25}{\percent}. This is also advised for EES in electronic consumer devices \cite{Spotnitz2003}. Resulting from this assumptions the cycle lifetime of the cells in the battery bank is 2~500 to 3~200 cycles. Therefore the battery bank needs to be replaced after \SIrange{6}{9}{years}. So the battery bank needs to be replaced two to three times in the total lifetime of the system. For the calculation two battery bank replacements was assumed. 
 
 
 
@@ -218,19 +218,19 @@ The financial parameter for the LCOE calculation are composed in Table~\ref{tbl:
 
 The specific large-scale PV system costs in South Africa  amount to \SI{1.285}{USD/W}\textsubscript{p} (\SI{14.5}{ZAR/W}\textsubscript{p} using \SI{11.286}{USD/ZAR} average in 2014 \cite{IRS2015}) which leads from an in 2014 actually built PV system \cite{Terblanche2015}. These specific costs are close to utility-scale PV systems in Europe with specific investments of \SI{1}{EUR/W}\textsubscript{p} \cite{FraunhoferISE2013}, corresponding to \SI{1.33}{USD/W}\textsubscript{p} (using the average exchange rate in 2014 of \SI{1.33}{USD/EUR}  \cite{StatistaGmbH2015}).
 
-The LCOE was calculated with different interest rates and O\&M costs for the PV power plant and the EES system. The real interest rate for the PV power plant was amused with 2.8~\% \cite{FraunhoferISE2013} and the annual O\&M costs are 1~\%  of the PV investment costs \cite{IEA2014a}. A degradation of 1~\% per year of the annual energy output was assumed for the ageing phenomena of the PV cells \cite{Tidball2010}.
+The LCOE was calculated with different interest rates and O\&M costs for the PV power plant and the EES system. The annual O\&M costs for the PV system are \SI{1}{\percent}  of the PV investment costs \cite{IEA2014a}. A degradation of \SI{1}{\percent} per year of the annual energy output was assumed for the ageing phenomena of the PV cells \cite{Tidball2010}.
 
 The storage costs are calculates from three  parts. The costs for the PCS, the battery bank and the replacement costs of the battery bank during the lifetime of the system.
 
-The costs of the PCS of \SI{615}{USD/kW} (\SI{463}{EUR/kW} using the average exchange rate in 2014 of 1.33 USD/EUR \cite{StatistaGmbH2015}) was taken over from a study toward comparative life cycle cost analysis of EES \cite{Zakeri2015}. This is the average value of  a wide cost range (250-600€/kW) of PCS for Li-Ion EES systems.
+The costs of the PCS of \SI{615}{USD/kW} (\SI{463}{EUR/kW} using the average exchange rate in 2014 of 1.33 USD/EUR \cite{StatistaGmbH2015}) was taken over from a study toward comparative life cycle cost analysis of EES \cite{Zakeri2015}. This is the average value of  a wide cost range (250-600€/kW) of PCS for li-ion based EES systems.
 
 For the storage part of the EES a highly optimistic value of \SI{300}{USD/kWh} was assumed from \cite{Nykvist2015}. The average storage part cost for Li-Ion EES in other studies is \SI{914}{USD/kWh} \cite{Zakeri2015}.
 
-For the replacement costs of the an other highly optimistic value of \SI{150}{USD/kWh} was assumed. The cost for the replacement of the storage in \cite{Zakeri2015} are approximately the half of the storage costs. This costs was also assumed with a look to Figure~\ref{CostofLi-ion} on Page~\pageref{CostofLi-ion}.
+The cost for the replacement of the storage in \cite{Zakeri2015} are approximately the half of the storage costs. Therefore is the replacement costs decreasing not that intense and was assumed with \SI{250}{USD/kWh}.
 
 The assumed EES battery bank replacements during the lifetime was described in this Chapter already.
 
-The annual O\&M costs of \SI{9.18}{USD/kW} was also a adaption from \cite{Zakeri2015} as well as the real interest rate of 8.0~\%.
+The annual O\&M costs of \SI{3}{\percent} of the was adapted from the IEA. \cite{IEA2014c}
 
 As before for the other solar power plants also for the PV system was land purchase costs of 3~000USD/ha \cite{Cassell2012} assumed.
 \pagebreak
@@ -251,14 +251,14 @@ Sub-Station & $c_{ss}$ & 0.071 & USD/W\textsubscript{p} &\cite{Terblanche2015} \
 Total PV system costs & $c_{PV}$ & 1.285 &  USD/W\textsubscript{p} &\cite{Terblanche2015} \\ 
 Annual degradation factor &$f_{degrad}$ & 1 & \% & \cite{Tidball2010}\\ 
 Annual PV O\&M costs factor &$f_{O\&M,PV}$ & 1 & \% & \cite{IEA2014a}\\
-Interest rate of PV & $i_{PV}$& 2.8 & \% & \cite{FraunhoferISE2013} \\ 
+WACC rate & $i_{WACC}$ & 8.0 & \si{\percent} & assumption from Section~\ref{section WACC} \\ 
 Annual insurance costs & $f_{ins,PV}$ & 0.5 & \% & \cite{InternationalFinanceCorporation2015}\\ \hline
 EES PCS costs & $c_{EES,PCS}$ & 615 & USD/kW & \cite{Zakeri2015} \\ 
 EES battery bank costs & $c_{EES,BBC}$ &300 & USD/kWh & \cite{Nykvist2015} \\ 
-EES battery bank replacement costs & $c_{EES,BBRC}$ & 150 & USD/kWh & \cite{Zakeri2015} \\ 
-Assumed EES battery bank replacements during lifetime & $n_{BBR}$ & 3 & - & - \\ 
-Annual EES O\&M costs & $c_{O\&M,EES}$ & 9.18 & USD/kW & \cite{Zakeri2015}\\
-Interest rate of EES & $i_{EES}$& 8.0 & \% & \cite{Zakeri2015} \\
+EES battery bank replacement costs & $c_{EES,BBRC}$ & 250 & USD/kWh & assumption \\ 
+Assumed EES battery bank replacements during lifetime & $n_{BBR}$ & 2 & - & assumption \\ 
+Annual EES O\&M costs & $c_{O\&M,EES}$ & 3 & \% & \cite{IEA2014c}\\
+WACC rate & $i_{WACC}$ & 8.0 & \si{\percent} & assumption from Section~\ref{section WACC} \\ 
 Annual insurance costs& $f_{ins,EES}$ & 0.5 & \% & \cite{Cutter2014}\\ \hline
 Land purchase &$c_{LP}$ & 3~000.00 & USD/ha & \cite{Cassell2012} \\ 
 \hline
@@ -303,7 +303,7 @@ The LCOE was calculated taking into account of 1~\% annual degradation of the PV
 \textbf{Item} & \textbf{Value} & \textbf{Unit} \\ \hline \hline
 First year energy & 233.69 & GWh \\ 
 Load covering &  32.9 & \% \\ 
-LCOE result & 50.81 & USD/MWh \\
+LCOE result & 77.61 & USD/MWh \\
 \hline
 \end{tabular}
 \caption[Summary of the results of the simulated PV system without EES.]{Summary of the results of the simulated PV system without EES.}\label{tbl: PVwithoutEESresult}
@@ -359,7 +359,7 @@ The from the energy output derived load curve covering results of the simulated 
 \subsubsection{Levelized costs of electricity}
 The LCOE was calculated by using the finacial input parameter from Table~\ref{tbl: PVFinance} and a simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}. It must be noted, that the calculation is based on the simulation result for the first year PV power plant results under consulting of a degradation factor for the PV system, but not for the EES. The results of the LCOE claculation for the simulated PV power plant configurations can be seen in Figure~\ref{PV_LCOE}. 
 
-The lowest LCOE result of \SI{251.83}{USD/MWh} is reached at a PVM of 2.2 and the lowest EES configuration and is marginal lower than  \SI{252.42}{USD/MWh} at a PVM of 2.4 with the same EES configuration. Generally must be said that there are no overlaps of LCOE lines in this chart and the spacing leads from the EES system costs.
+The lowest LCOE result of \SI{336.34}{USD/MWh} is reached at a PVM of 2.2 using the lowest simulated EES configuration and is marginal lower than  \SI{338.02}{USD/MWh} at a PVM of 2.4 with the same EES configuration. Generally must be said that there are no overlaps of LCOE lines in this chart and the spacing leads from the EES system costs.
 
 \begin{figure}[htbp]  
 \centering
@@ -383,7 +383,7 @@ The EES systems costs share makes the main part of the LCOE cost of the simulate
         \end{subfigure}
         \caption[Break-down of selected LCOE calculation  results of PV systems with adapted EES.]{Break-down of selected LCOE calculation results of PV systems with adapted EES.}\label{SMPV_LCOE_BreakDown}
 \end{figure}
-Comprising the results of the LCOE calculation and associated load curve covering results shows that for covering 90\% of the predicted load the configuration of PVM 2.8 and \SI{7}{h} of EES reaching the lowest LCOE of \SI{315.39}{USD/MWh}. But the configuration owns an high value of surplus output of about 5.5~\% (see Figure~\ref{PV_energy_output}). The configuration PVM 2.6 reaches also the 90~\% load curve covering with a share of just 2.1~\% surplus output and a LCOE of \SI{322.18}{USD/MWh}.
+Comprising the results of the LCOE calculation and associated load curve covering results shows that for covering 90\% of the predicted load the configuration of PVM 2.8 and \SI{7}{h} of EES reaching the lowest LCOE of \SI{417.57}{USD/MWh}. But the configuration owns an high value of surplus output of about 5.5~\% (see Figure~\ref{PV_energy_output}). The configuration PVM 2.6 reaches also the 90~\% load curve covering with a share of just 2.1~\% surplus output and a LCOE of \SI{425.75}{USD/MWh}.
 
-The lowest LCOE for reaching 80~\% of the prescribed load is \SI{275.18}{USD/MWh} using \SI{5}{h} of EES and also a PVM of 2.6. For reaching 70~\% the 2.2 and \SI{4}{h} of EES reaches the lowest LCOE of \SI{251.83}{USD/MWh}.
+The lowest LCOE for reaching 80~\% of the prescribed load is \SI{366.94}{USD/MWh} using \SI{5}{h} of EES and also a PVM of 2.6. For reaching 70~\% the 2.2 and \SI{4}{h} of EES reaches the lowest LCOE of \SI{336.34}{USD/MWh}.
 \pagebreak
