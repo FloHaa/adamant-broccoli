@@ -1,15 +1,6 @@
-\chapter{Simulation-based comparison of solar power plants}
-To compare CSP and PV technologies, a simulated case study was performed on the basis of a CR system and PTC system. 
-%Special attention was paid in this comparison for a high run time of the system during the day and the covering of a prescribed demand curve.
-Specific attention was given to maximizing daytime operation and meeting the demand curve. 
-% For this comparison the PV system was expanded with an electrical energy storage.
-The photovoltaic system was extended with battery storage. 
-% For the simulation an battery storage was selected.
-% The dimension of the stored energy in this simulation went much beyond the actual technical capacity of individual electrical storage units and reaches more than one-sixt of the actual world battery storage capacity \SI{690}{GW} \cite{IEA2015}.
-The storage capacity allocated for the simulation considerably exceeds the real capacity of electrical storage units currently available and is more than one-sixth the globally installed battery storage capacity of \SI{690}{GW} \cite{IEA2015}.
- %Therefor must be said at this point that this is a theoretical comparison from the viewpoint of the PV, in particular for this plant and storage scale.
-Due to the scale and particularly with respect to the photovoltaic plant, the comparison is theoretical in nature.
-\section{General assumptions}
+\chapter{General assumptions for a simulation-based comparison of large-scale solar power plants}
+To compare CSP and PV technologies, a simulated case study was performed on the basis of a CR system, PTC system and a PV system with addapted EES. Specific attention was given to maximizing daytime operation and meeting the prescribed demand curve as it was defined in Section~\ref{SystemloadinSA}. The photovoltaic system was extended with battery storage. The storage capacity allocated for the simulation considerably exceeds the real capacity of electrical storage units currently available and is more than one-sixth the globally installed battery storage capacity of \SI{690}{GW} \cite{IEA2015}. Due to the scale and particularly with respect to the photovoltaic plant, the comparison is theoretical in nature.
+
 With the aim of producing quantifiable and comparable results, the different solar supplied power plants will be simulated under different input  parameters. After that, selected comparable output parameters will be analyzed, evaluated and rated.
 
 The plant technologies selected for comparison are: 
@@ -18,19 +9,7 @@ The plant technologies selected for comparison are:
 \item CSP synthetic oil parabolic trough with thermal energy storage
 \item PV fixed elevated flat plate collectors with adapted electrical energy storage
 \end{itemize}
-The PV plant has been extended with a lithium-ion battery storage for the simulation, while the thermal energy storage of the CSP plant uses molten salt technology.
-%All power plants got laid out for a maximum power output of \SI{100}{MW}$_{el}$.
-All plants were laid out for a maximum power output of \SI{100}{\mega\wattel}.
-% For the comparison the power plants are forced to cover a selected load scenario.
-The plants are driven to match a selected load scenario.
-% In order to find an individual suitable power plant design to cover the scheduled output of the scenario, different layout conditions, using various storage and collecting field sizes, was tried.
-In order to find an appropriate power plant design to match the load of the scenario, different layout parameters, using various storage and collecting field sizes, were tested.
-% The scenario and there goals are discussed and defined in Section~\ref{Overall simulated configuration}. The location and related weather data is defined in Section~\ref{Location and weather data}.
-The scenario and requirements are defined and discussed in Section~\ref{Overall simulated configuration}. The location and related weather data are described in Section~\ref{Location and weather data}.
-%The solar power plants are implemented and simulated in NREL’s System Advisor Model (SAM) version SAM 2015.6.30 r3 for OS X \cite{NREL2015}.
-The solar power plants are implemented and simulated in NREL’s System Advisor Model (SAM) version SAM 2015.6.30 r3 for OS X \cite{NREL2015}. 
-% SAM is designed to simulate performance and financial models of different types of renewable energies. For the simulation the performance part of the software was used. The financial analysis was made separately. 
-SAM is designed to simulate performance and financial models of different types of renewable energy. For this simulation, only the performance component was used. The financial analysis was done separately. 
+The PV plant has been extended with a lithium-ion battery storage for the simulation, while the thermal energy storage of the CSP plant uses molten salt technology. All plants were laid out for a maximum net power output of \SI{100}{\mega\wattel}. The plants are driven to match a selected load curve. In order to find an appropriate power plant design to match the load of the scenario, different layout parameters, using various storage and collecting field sizes, were tested. The location and related weather data was described in Section~\ref{Solar radiation}. The solar power plants was implemented and simulated in NREL’s System Advisor Model (SAM) version SAM 2015.6.30 r3 for OS X \cite{NREL2015}. SAM is designed to simulate performance and financial models of different types of renewable energy. For this simulation, only the performance component was used. The financial analysis was done separately. 
 
 The financial parameters and the resulting levelized cost of electricity (LCOE) are calculated separately for all power plants in Microsoft Excel 2011 (vers. 14.5.7) for Mac, using a simplified method which is documented in Appendix~\ref{ChapterLCOE} on page \pageref{ChapterLCOE} using a lifetime of \SI{25}{years} for each plant.
 
