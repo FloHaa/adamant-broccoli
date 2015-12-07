@@ -241,7 +241,23 @@ The spread of total capital costs of the different EES technologies can be seen 
 \includegraphics[width=0.65\linewidth]{FIG/TCC_EES}
 \caption[Total capital cost in EUR of large-scale EES systems per unit of nominal power rating including costs of power electronics, storage part, fixed obtain and maintainence and maybe incidental replacement costs.]{Total capital cost in EUR of large-scale EES systems per unit of nominal power rating including costs of power electronics, storage part, fixed obtain and maintainence and maybe incidental replacement costs \cite{Zakeri2015}.}\label{TCC_EES}
 \end{figure}
+\section{Impact of cost of capital on the levelised cost of solar power}
+Most low-carbon technologies in the power sector, specially solar and wind powered renewable, incur the main part of there cost up-front. They are costly to build but, thanks to cost free renewable source, comparative inexpensive to operate.
 
+The weighted average cost of capital (WACC), which is a mix of the  rate of return on capital and the interest rate for dept, at which the necessary capital and dept can be obtained is a crucial factor shaping the delivered cost of energy from solar technologies. The lower the WACC, the less expansive is energy from solar resources. In turn, factors that increase the WACC drive up the LCOE. In the case of a PV system, if the WACC exceeds \SI{9}{\percent}, finacing costs begin to dominate the LCOE of PV electricity (see Figure~\ref{WACC}). 
+
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=1\linewidth]{FIG/WACC}
+\caption[Example for the impact of cost of capital on the levelised cost of solar PV systems.]{Example for the impact of cost of capital on the levelised cost of solar PV systems \cite{IEA2015}.}\label{WACC}
+\end{figure}
+Several factors influence the cost of financing. For technically mature technologies, the most relevant risk are those associated with the general investment climate in a market, the maturity of the local supply chain and the off-taker agreements. Depending on the policy, market and regulatory framework, investors may be exposed to substantial risk, which is bound to increase the WACC. \cite{IEA2014c} 
+
+The International Energy Agency calculates there LCOE for solar power applications (CSP and PV systems) with a WACC of \SI{8}{\percent} \cite{IEA2014c}. This also can be assumed for a EES application \cite{Zakeri2015}.
+
+As it was said, the WACC depends from the regional marked. For SA the WACC varied in 2013 from \SIrange{7.93}{8.89}{\percent} for onshore wind applications \cite{IEA2015}. For the subsequently simulation is therefore a WACC of \SI{8}{\percent} for all solar power plants assumed.
+
+\pagebreak
 \section{General assumptions for a simulation-based comparison of large-scale solar power plants}
 To compare large-scale CSP and PV technologies, a simulated case study was performed on the basis of a CR system, PTC system and a PV system with addapted EES. Specific attention was given to maximizing daytime operation and meeting the prescribed demand curve as it was defined in Section~\ref{SystemloadinSA}. The photovoltaic system was extended with battery storage. The storage capacity allocated for the simulation considerably exceeds the real capacity of electrical storage units currently available and is more than one-sixth the globally installed battery storage capacity of \SI{690}{GW} \cite{IEA2015}. Due to the scale and particularly with respect to the photovoltaic plant, the comparison is theoretical in nature.
 
@@ -253,6 +269,6 @@ The plant technologies selected for comparison are:
 \item CSP synthetic oil parabolic trough with thermal energy storage
 \item PV fixed elevated flat plate collectors with adapted electrical energy storage
 \end{itemize}
-The PV plant has been extended with a lithium-ion battery storage for the simulation, while the thermal energy storage of the CSP plant uses molten salt technology. All plants were laid out for a maximum net power output of \SI{100}{\mega\wattel}. The plants are driven to match a selected load curve. In order to find an appropriate power plant design to match the load of the scenario, different layout parameters, using various storage and collecting field sizes, were tested. The location and related weather data was described in Section~\ref{Solar radiation}. The solar power plants was implemented and simulated in NREL’s System Advisor Model (SAM) version SAM 2015.6.30 r3 for OS X \cite{NREL2015}. SAM is designed to simulate performance and financial models of different types of renewable energy. For this simulation, only the performance component was used. The financial analysis was done separately. 
+The PV plant has been extended with a lithium-ion battery storage for the simulation, while the thermal energy storage of the CSP plant uses molten salt technology. All plants were laid out for a maximum net power output of \SI{100}{\mega\wattel}. The plants are driven to match a selected load curve. In order to find an appropriate power plant design to match the load of the scenario, different layout parameters, using various storage and collecting field sizes, were tested. The location and related weather data of Upington was definde and described in Section~\ref{Solar radiation} for this simulation. The solar power plants was implemented and simulated in NREL’s System Advisor Model (SAM) version SAM 2015.6.30 r3 for OS X \cite{NREL2015}. SAM is designed to simulate performance and financial models of different types of renewable energy. For this simulation, only the performance component was used. The financial analysis was done separately. 
 
 The financial parameters and the resulting levelized cost of electricity (LCOE) are calculated separately for all power plants in Microsoft Excel 2011 (vers. 14.5.7) for Mac, using a simplified method which is documented in Appendix~\ref{ChapterLCOE} on page \pageref{ChapterLCOE} using a lifetime of \SI{25}{years} for each plant.
