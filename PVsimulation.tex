@@ -1,30 +1,22 @@
 \chapter{PV power plant with adapted EES}
+For this simulation a PV power plant was extended with an electrical energy storage (EES). This extended PV power plant was simulated in SAM's \enquote{Photovoltaic (detailed)} model with enabled battery storage option. Also for this simulation was the EPW weather file for Upington from Section~\ref{Solar radiation} inserted. The LCOE for this simulation was also in this case calculated separately and is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}.
+
 \section{Design and simulation} \label{section PV system}
-For this simulation a PV power plant was extended with an electrical energy storage (EES). This extended PV power plant was simulated in SAM's "Photovoltaic (detailed)" model with enabled battery storage option. Also for this simulation was the EPW weather file for Upington from Section~\ref{Solar radiation} used. For the PV simulation SAM uses the following input data:
-\begin{itemize}
-\item Latitude ($\,^{\circ}$)
-\item Longitude ($\,^{\circ}$)
-\item Elevation above sea level (\si{\metre})
-\item GHI, DNI and DHI (\si{\watt\per\square\metre})
-\item Dry bulb temperature (\si{\celsius})
-\item Wind velocity (\si{\metre\per\second})
-\end{itemize}
-This section describes in detail the residual input data of the PV power plant with adapted battery storage. As before in the sections of simulated CSP technologies first the essential components of the system are defined. The financial parameters and the LCOE for this simulation was also here calculated separately and is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}.
+This section describes in detail the residual input data of the PV power plant with adapted battery storage. As before in the sections of simulated CSP technologies first the essential components of the system are defined. 
 
+As mentioned already in Section~\ref{General assumptions} this must be seen as theoretical simulation. Actually there are not that large electrical energy storage systems in form of battery storage in commercial use.
 
-
-As mentioned at the beginning of these Chapter this must be seen as theoretical simulation. Actually there are not that large electrical energy storage systems in form of battery storage available.
-
-
-
-For this simulation the load was conected to the PV and Battery system as shown on Figure~\ref{PV_model_config}. The load shape was defined as before specified before in Chapter~\ref{Overall simulated configuration} and simulates the demand of the power grid. As it is shown there is also the actual power grid connected as additional component, but for this simulation just the power flows between PV, battery and load is in focus. As it is shown in the Figure, SAM actually just support the battery connection at the AC-bus via a power conversion system and is not able to simulate direct DC-connected batteries besides the PV-array before the PV-inverter. However in order to produce comparable results SAM was also used for the simulation of the PV power plant. As mentioned before this system contains out of the PV system with solar modules, solar and inverter and are described in the following section as well as the electrical energy storage.
-\begin{figure}[htbp]  
+\begin{figure}[!b]  
 \centering
-\includegraphics[width=0.55\linewidth]{FIG/PV_model_config}
+\includegraphics[width=0.6\linewidth]{FIG/PV_model_config}
 \caption[Model of the configurated PV plus batterie scheme.]{Model of the configurated PV plus batterie scheme \cite{Diorio2015}.}\label{PV_model_config}
 \end{figure}
-\subsubsection{Simulated configurations}
-The configurations of the PV system with adapted electrical energy storage has also the target to reach 90~\% of the scheduled production curve from Section~\ref{Overall simulated configuration}. To reach this target it is necessary to over scale the energy production of the PV system to produce enough power to covers the given load and load the storage during the day. This is quite similar to the solar multiple of the CSP system, but can not be put on a same level. Therefore this over scaling will be called "PV multiple" (PVM) and means the multiple of the PV inverter output. For example the system with a maximum inverter output of \SI{100}{\mega\wattel} is a PVM of 1 than has the PV system with a PVM of 2 a maximum inverter output of \SI{200}{\mega\wattel}. 
+For this simulation the load was connected to the PV and Battery system as shown on Figure~\ref{PV_model_config}. The load shape was defined as specified in Section~\ref{SystemloadinSA} and simulates the demand of the power grid. As it is shown there is also the actual power grid connected as additional component, but for this simulation just the power flows between PV, battery and load is in focus. As it is shown in the Figure, SAM actually just support the battery connection at the AC-bus via a power conversion system and is not able to simulate direct DC-connected batteries besides the PV-array before the PV-inverter. However in order to produce comparable results SAM was also used for the simulation of the PV power plant. As mentioned before this system contains out of the PV system with solar modules, solar and inverter and are described in the following section as well as the electrical energy storage.
+
+The configurations of the PV system with adapted electrical energy storage has also the target to reach 90~\% of the scheduled generation curve. To reach this target it is necessary to over scale the energy production of the PV system to produce enough power to covers the given load and charge the storage during the day. This is quite similar to the solar multiple of the CSP system, but can not be put on a same level. Therefore this over scaling will be called "PV multiple" (PVM) and means the multiple of the PV inverter output. For example the system with a maximum inverter output of \SI{100}{\mega\wattel} is a PVM of 1 than has the PV system with a PVM of 2 a maximum inverter output of \SI{200}{\mega\wattel}. 
+
+The simulated system load is maximum \SI{100}{\mega\wattel}, so this is also the maximum supply of the system. The PV system was simulated one time without storage and a maximum inverter output of \SI{100}{\mega\wattel} which is a PVM of 1. After that, the system was simulated in steps 0.2 of the PVM from 1.8 to 2.6. The adapted energy storage capacity was simulated from 4 to 8 hours in hourly steps. This storage capacity range is also defined for large-scale off-grid application in \cite{IEA2014c}. Table~\ref{tbl: PV_OverallConfig} summarizes the simulated configurations.
+
 \begin{table}[htbp]  
   \centering
 	\begin{tabular}{ p{4.0cm}  C{1.0cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm}  | C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} } 
@@ -40,82 +32,21 @@ EES capacity & h & 4 & 5 & 6 & 7 & 8 & 4 & 5 & 6 & 7 & 8 \\ \hline
 \end{tabular}
 \caption[Simulated configurations of the PV system with adapted EES.]{Simulated configurations of the PV system with adapted EES.}\label{tbl: PV_OverallConfig}
 \end{table}
-The simulated system load is maximum \SI{100}{\mega\wattel}, so this is also the maximum supply of the system. The PV system was simulated one time without storage and a maximum inverter output of \SI{100}{\mega\wattel} which is a PVM of 1. After that, the system was simulated in steps 0.2 of the PVM from 1.8 to 2.6. The adapted energy storage capacity was simulated from 4 to 8 hours in hourly steps. This storage capacity range is also defined for large-scale off-grid application in \cite{IEA2014c}. Table~\ref{tbl: PV_OverallConfig} summarizes the simulated configurations.
+\pagebreak
 \subsubsection{PV system}
-The simulated PV system is orientated at actual PV systems in SA. Therefore the currently under construction situated Mulilo Sonnedix Prieska PV Project in the Northern Cape will serve as a role model for the main components. In this \SI{75}{\mega\wattsdc}-project are poly crystalline \SI{305}{\wattsdc} modules of type BYD 305P6C-36 from BYD installed. The efficiency of the modules is about 15.72~\%. The full module specification is in Table~\ref{tbl: PVmodule}. The peak performance of the project is \SI{86.23}{\mega\wattsdc}. \cite{Morse2014}
+The simulated PV system is orientated at actual PV systems in SA. Therefore the currently under construction situated Mulilo Sonnedix Prieska PV Project in the Northern Cape will serve as a role model for the main components. In this \SI{75}{\mega\wattsac}-project are poly crystalline \SI{305}{\wattsdc} modules of type \enquote{BYD 305P6C-36} from BYD installed. The efficiency of the modules is about 15.72~\%. The peak performance of the project is \SI{86.23}{\mega\wattsdc}. \cite{Morse2014}
+
+The full module specification as well as the belonging current–voltage characteristic diagram can be found in Appendix~\ref{PVdocumentary} on Page~\pageref{tbl: PVmodule}. These, for the simulation selected, module type was already deposited in the module library in SAM, which is based on the database of Go Solar California for photovoltaic modules and inverters from the California Energy Commission \cite{NREL2015g}. 
+
+The Mulilo Sonnedix Prieska PV Project install inverter from AEG. These specific \enquote{AEG Protect PV.800} inverter is not available in the library of SAM, therefore an Ingeteam inverter \enquote{INGECON SUN 805TL U X420 Outdoor} a similar model with almost the same power rating was selected. The full specifications of the Inverter with \SI{805}{\kilo\wattsac} power at an efficiency of \SI{98.33}{\percent} and the belonging efficiency curve is also documented in Appendix~\ref{PVdocumentary} on Page~\pageref{tbl: PVinverter}.
+
+As mentioned the PV system was design under similar condition than the Mulilo Sonnedix Prieska PV Project. There a DC/AC ratio of 1.15 is used \cite{Morse2014}. This power ratio compares the photovoltaic array power to the inverter capacity \cite{Woodcock2013}. For the simulated PV system the same ratio was assumed. So at \SI{100}{\mega\wattsac} inverter output, a total module capacity of \SI{115}{\mega\wattsdc} is needed. From the discussed parameter and the PVM SAM calculates the resulting number of modules and inverters as well as other parameters on its own. 
+
+For the orientation of the simulated PV-modules the latitude of Upington was used as tilt angle (28.4$\,^{\circ}$) and the azimuth is 0$\,^{\circ}$, so directly facing north. The self-shading model was selected, without external shading parameter. Therefore 2 modules along the side of row and 10 along the bottom of row was selected. Therefrom a shading loss of \SI{0.545}{\percent} on the solar radiation incident on the subarray. Further assumed losses are soiling, mismatch, diodes and connections and wiring losses. The assumed soiling losses reduce the solar radiation incident on the subarray of about \SI{5}{\percent}. The assumed mismatch loss of about \SI{2}{\percent} is related to slight differences in performance of individual modules in the array. Voltage drops across blocking diodes and electrical connections leads to a assumed diodes and connections loss of \SI{0.5}{\percent}. There are also assumed resistive losses of 2~\% in wiring on the dc-side and \SI{1}{\percent} wiring loss between the inverter and the grid connection point on the ac-side of the system. All PV system loss parameter coming from a IEEE photovoltaics specialists conference paper about performance parameters for grid-connected PV systems \cite{Marion2005}.
+
+The for the simulation defined PV system parameter are summarized in Table~\ref{tbl: PVsystemdesign}.
 
 \begin{table}[htbp]  
-  \centering
-	\begin{tabular}{  p{5.0cm}  C{5.0cm}  C{1.4cm} } 
-	\hline	
-\textbf{Item} & \textbf{Value} & \textbf{Unit} \\ \hline \hline
-Manufacturer  & BYD COMPANY LIMITED & - \\ 
-Model & BYD 305P6C-36 & - \\ 
-Cell type &  poly-crystalline silicon & - \\ \hline
-Maximum power & 304.99 & \si{\wattel} \\ 
-Nominal efficiency & 15.72 & \si{\percent} \\ 
-Maximum power voltage & 36.2 & \si{\voltsdc} \\ 
-Maximum power current & 8.4 & \si{\ampsdc}  \\
-Open circuit voltage & 45.5 & \si{\voltsdc}  \\ 
-Short circuit current & 8.9 & \si{\ampsdc}  \\
-Temperature efficiency & -0.41 & \si{\percent\celsius}\\
-Module area & 1.94 & \si{\square\metre} \\ 
-Number of cells & 72 & -\\
-\hline
-\end{tabular}
-\caption[Module specification of BYD 305P6C-36.]{Module specification of BYD 305P6C-36 under STC: \SI{1000}{\watt\per\square\metre}, cell temperature \SI{25}{\celsius} \cite{NREL2015g}.}\label{tbl: PVmodule}
-\end{table}
-
-
-These for the simulation selected module type was already deposited in the module library in SAM. This large library is based on the database of Go Solar California for photovoltaic modules and inverters from the California Energy Commission \cite{NREL2015g}.
-
-\begin{figure}[htbp]  
-\centering
-\includegraphics[width=0.70\linewidth]{FIG/PVModuleVA}
-\caption[Current–voltage characteristic under STC of module BYD 305P6C-36.]{Current–voltage characteristic under STC of module BYD 305P6C-36 \cite{NREL2015g}.}\label{PVModuleVA}
-\end{figure}
-
-
-Figure~\ref{PVModuleVA} shows the module’s current–voltage characteristic with a short circuit voltage of \SI{8.9}{A} and an open circuit voltage of \SI{45.5}{V}.\newpage\noindent
-The Mulilo Sonnedix Prieska PV Project install inverter from AEG. These specific AEG Protect PV.800 inverter is not available in the library of SAM, but a similar model with almost the same power rating was selected. Table~\ref{tbl: PVinverter} depicts the specifications of the for the simulation used Ingeteam inverter INGECON SUN 805TL U X420 Outdoor with \SI{805}{kW}\textsubscript{ac} power at an efficiency of 98.33~\%. The efficiency curve of the inverter can be seen in Figure~\ref{InverterEfficiencyCurve}. 
-
-\begin{figure}[htbp]  
-\centering
-\includegraphics[width=0.75\linewidth]{FIG/InverterEfficiencyCurve}
-\caption[Efficientcy characteristic of Ingecon Sun 805TL U X420 Outdoor.]{Efficientcy characteristic of Ingecon Sun 805TL U X420 Outdoor \cite{IngeteamINC.2015,NREL2015g}.}\label{InverterEfficiencyCurve}
-\end{figure}
-\begin{table}[htbp]  
-  \centering
-	\begin{tabular}{ p{6.0cm}  C{7.0cm}  C{1.5cm} } 
-	\hline	
-\textbf{Item} & \textbf{Value} & \textbf{Unit} \\ \hline \hline
-Manufacturer  & Ingeteam Power Technology & - \\ 
-Model & Ingecon Sun 805TL U X420 Outdoor & - \\ 
-Type &  central inverter & - \\ \hline
-\textbf{Input (dc)} &  &  \\ 
-Maximum power & 821.39 & kW\textsubscript{dc} \\ 
-Voltage range & 611-820 & V\textsubscript{dc} \\ 
-Maximum voltage & 1~000 & V\textsubscript{dc} \\ 
-Maximum current & 1~350 & A\textsubscript{dc} \\
-Nominal voltage & 715.91 & V\textsubscript{dc} \\ \hline
-\textbf{Output (ac)} &  &  \\ 
-Maximum power & 805 & kW\textsubscript{ac} \\ 
-Nominal voltage & 420 & V\textsubscript{ac} \\
-Maximum current & 1.35 & A\textsubscript{ac} \\
-Frequency & 50-60 & Hz \\
-cos$\phi$ & 1 & -\\ \hline
-Maximum efficiency & 98.33 & \\% 
-European efficiency & 98.29 & \\% 
-Power consumption in operation &1.25 & kW\textsubscript{dc} \\ 
-Power consumption at night & 0.12 & kW\textsubscript{ac} \\ 
-\hline
-\end{tabular}
-\caption[Inverter specifications of Ingecon Sun 805TL U X420 Outdoor.]{Inverter specifications of Ingecon Sun 805TL U X420 Outdoor \cite{IngeteamINC.2015,NREL2015g}.}\label{tbl: PVinverter}
-\end{table}
-\newpage\noindent
-As mentioned before the PV system was design under similar condition that the Mulilo Sonnedix Prieska PV Project. There a dc/ac ratio of 1.15 is used \cite{Morse2014}. This power ratio compares the photovoltaic array power to the inverter capacity \cite{Woodcock2013}. For the simulated PV system the same ratio was assumed. So at 100 MW\textsubscript{ac} inverter output, a total module capacity of 115 MW\textsubscript{dc} is needed. From the discussed parameter and the PVM SAM calculates the resulting number of modules and inverters as well as other parameters on its own. These PV system parameter are summarized in Table~\ref{tbl: PVsystemdesign}.
-
-\begin{table}[!b]  
   \centering
 	\begin{tabular}{ p{4.5cm} C{1.0cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} } 
 	\hline	
@@ -125,12 +56,12 @@ Module tilt & $\,^{\circ}$ & \multicolumn{6}{c}{28.4}\\
 Modules per string& - & \multicolumn{6}{c}{21}\\
 String open circuit voltage& V\textsubscript{oc} & \multicolumn{6}{c}{955.3}\\
 String max. power rated voltage& V\textsubscript{mp} & \multicolumn{6}{c}{759.8}\\
-Maximum dc-voltage& V\textsubscript{dc} & \multicolumn{6}{c}{1~000}\\
-Aspired dc/ac-ratio & - &\multicolumn{6}{c}{1.15}\\
+Maximum dc-voltage& \si{\voltsdc}& \multicolumn{6}{c}{1~000}\\
+Aspired DC/AC-ratio & - &\multicolumn{6}{c}{1.15}\\
 \hline
 \textbf{PV multiple} & - & \textbf{1.0} & \textbf{1.8} & \textbf{2.0} & \textbf{2.2} & \textbf{2.4} & \textbf{2.6}\\ \hline 
-Total inverter capacity & MW\textsubscript{ac} & 99.8 & 180.3 &199.6 & 219.8 & 239.9 & 260.0 \\
-Total module capacity & MW\textsubscript{dc} & 115.0 & 207.0 & 230.0 &253.0 & 276.0 & 299.0 \\
+Total inverter capacity & \si{\mega\wattsac} & 99.8 & 180.3 &199.6 & 219.8 & 239.9 & 260.0 \\
+Total module capacity & \si{\mega\wattsdc}  & 115.0 & 207.0 & 230.0 &253.0 & 276.0 & 299.0 \\
 Strings in parallel & - & 17~954 & 32~318 & 35~909 & 39~500 & 43~091 & 46~682 \\
 Number of modules & - & 377~034 & 678~678& 754~089 & 829~500 & 904~911 & 980~322 \\
 Number of inverter  & - & 124 & 224 & 248 & 273 & 298 & 323 \\
@@ -141,27 +72,14 @@ Total land area & ha & 244 & 439 & 488 & 536 & 585 & 634 \\
 \caption[PV system design parameter.]{PV system design parameter.}\label{tbl: PVsystemdesign}
 \end{table}
 
-For the orientation of the simulated PV-modules the latitude of Upington was used as tilt angle (28.4$\,^{\circ}$) and the azimuth is 0$\,^{\circ}$, so directly facing north. The self-shading model was selected, without external shading parameter. Therefore 2 modules along the side of row and 10 along the bottom of row was selected. Therefrom a shading loss of 0.545~\% on the solar radiation incident on the subarray. Further assumed losses are soiling, mismatch, diodes and connections and wiring losses. The assumed soiling losses reduce the solar radiation incident on the subarray of about 5~\%. The assumed mismatch loss of about 2~\% is related to slight differences in performance of individual modules in the array. Voltage drops across blocking diodes and electrical connections leads to a assumed diodes and connections loss of 0.5~\%. There are also assumed resistive losses of 2~\% in wiring on the dc-side and 1~\% wiring loss between the inverter and the grid connection point on the ac-side of the system. All PV system loss parameter coming from a IEEE photovoltaics specialists conference paper about performance parameters for grid-connected PV systems \cite{Marion2005}.
 \subsubsection{Electrical energy storage (EES)}
-The electrical energy storage is adapted though the system as it is shown in Figure~\ref{PV_model_config} on Page~\pageref{PV_model_config}. For the simulation in SAM the PCS was simplified to the conversion efficiency. The AC to DC conversion efficiency was assumed with 99~\% as well as the DC to AC efficiency. Nevertheless for the LCOE calculation it is still relevant to define the performance of the PCS. As it is shown in Table~\ref{tbl: PVsystemdesign} the inverter capacity range is between 240 and \SI{320}{MW}\textsubscript{ac} for the simulation cases with adapted storage. The maximum scheduled load from Section~\ref{Overall simulated configuration} is \SI{100}{MW}. So depending from the PV inverter capacity the PCS capacity needs to variate as well to collect the  PV-overproduction. For the calculation of the LCOE it was assumed that the PCS needs to collects the inverter capacity minus the \SI{100}{MW} daily base load.
+The electrical energy storage is adapted though the system as it is shown in Figure~\ref{PV_model_config} on Page~\pageref{PV_model_config}. For the simulation in SAM the PCS was simplified to the conversion efficiency. The AC to DC conversion efficiency was assumed with \SI{99}{\percent} as well as the DC to AC efficiency. Nevertheless for the LCOE calculation it is still relevant to define the performance of the PCS. As it is shown in Table~\ref{tbl: PVsystemdesign} the inverter capacity range is between \SIlist{180;260}{\mega\wattsac} for the simulation cases with adapted storage. The maximum scheduled load from Section~\ref{SystemloadinSA} is \SI{100}{\mega\watt}. So depending from the PV inverter capacity the PCS capacity needs to variate as well to collect the  PV-overproduction. For the calculation of the LCOE it was assumed that the PCS needs to collects the inverter capacity minus the \SI{100}{MW} daily base load.
 
+As mentioned before the storage unit consists out of a Li-ion battery, more precisely a using a nickel cobalt aluminum ($LiNiCoAlO_2$  or NCA) cathode. This battery excels through a less expensive cathode material with improved safety characteristics and high specific energy \cite{NREL2015a}. The voltage characteristics of these battery can be seen in Appendix~\ref{PVdocumentary} on Page~\pageref{EES_VoltageDischarge}. The NCA li-ion battery is inter alia installed in the Tesla Model S and X \cite{Nykvist2015} which uses currently Panasonic cells and will also be installed in Teslas Power Wall system \cite{Shahan2015}. The performance and lifetime of the NCA li-ion batteries depending on how they are used. Tesla names the lifetime of 5~000 cycles without mentioning the assumed depth of discharge (DOD) \cite{Shahan2015}.
 
+The DOD is the amount of capacity in the battery that is usable by the system. For electric vehicles (EV) the DOD is set between\SIrange{80}{95}{\percent} at the "top" end of the battery and \SIrange{10}{20}{\percent} at the "bottom" end \cite{Warner2014}. The state of charge (SOC) is an expression of the present battery capacity as a percentage of maximum capacity and is the inverse of the DOD. It must be noted, that the nominal capacity of a battery is not the effective usable capacity of a battery and depends on the DOD. Also the DOD effects the cycle life of the batteries. The higher the DOD, the lower the cycle life.  \cite{MitElectricVehilceTeam2008}
 
-As mentioned before the storage unit consists out of a li-ion battery, more precisely a using a nickel cobalt aluminum ($LiNiCoAlO_2$  or NCA) cathode. This battery excels through a less expensive cathode material with improved safety characteristics and high specific energy \cite{NREL2015a}. The voltage characteristics of these battery for the simulation are shown in Figure~\ref{EES_VoltageDischarge}. The NCA li-ion battery is inter alia installed in the Tesla Model S and X \cite{Nykvist2015} which uses currently Panasonic cells and will also be installed in Teslas Power Wall system \cite{Shahan2015}. The performance and lifetime of the NCA li-ion batteries depending on how they are used. Tesla names the lifetime of 5~000 cycles without mentioning the assumed depth of discharge (DOD) \cite{Shahan2015}.
-
-\begin{figure}[!htbp]  
-\centering
-\includegraphics[width=0.6\linewidth]{FIG/EES_VoltageDischarge}
-\caption[Voltage proparties of NCA Li-Ion battery.]{Voltage proparties of NCA Li-Ion battery..}\label{EES_VoltageDischarge}
-\end{figure}
-
-
-
-The DOD is the amount of capacity in the battery that is usable by the system. For electric vehicles (EV) the DOD is set between 80-95~\% at the "top" end of the battery and 10-20~\% at the "bottom" end \cite{Warner2014}. The state of charge (SOC) is an expression of the present battery capacity as a percentage of maximum capacity and is the inverse of the DOD. It must be noted, that the nominal capacity of a battery is not the effective usable capacity of a battery and depends on the DOD. Also the DOD effects the cycle life of the batteries. The higher the DOD, the lower the cycle life. In other words, the lower the SOC, the longer the cycle life. \cite{MitElectricVehilceTeam2008}
-
-
-
-SAM visualizes the decreasing capacity of the battery over the number of cycles with capacity fades as it is shown in Figure~\ref{CapacityFade} for the NCA. The figure shows the characteristic for 20~\% and 80~\% DOD. As mentioned above the graph shows the higher decreasing of the effective capacity at higher DOD. The performance data behind this graph is coming from \cite{Dahn2011} and correspond with other tests \cite{Read2009}.
+SAM visualizes the decreasing capacity of the battery over the number of cycles with capacity fades as it is shown in Figure~\ref{CapacityFade} for the NCA. The figure shows the characteristic for \SIlist{20;80}{\percent} DOD. As mentioned above the graph shows the higher decreasing of the effective capacity at higher DOD. The performance data behind this graph is coming from \cite{Dahn2011} and correspond with other tests \cite{Read2009}.
 \begin{figure}[bhtp]  
 \centering
 \includegraphics[width=0.75\linewidth]{FIG/CapacityFade}
@@ -182,9 +100,7 @@ Further is to note that Li-Ion batteries has a expiry period \cite{Jossen2006}. 
 
 The for a long lifetime an average SOC of \SIrange{30}{70}{\percent} is recommended for li-ion batteries \cite{Jossen2006}. Consequently the SOC was set to a maximum of \SI{30}{\percent} and a minimum of \SI{70}{\percent} for the simulation. So a total DOD of \SI{40}{\percent} which signified \SI{40}{\percent} of the nominal battery capacity was assumed as usable. In order to have high storage availability over the total system lifetime it was assumed that the battery bank will replaced at a effective capacity loss of \SIrange{20}{25}{\percent}. This is also advised for EES in electronic consumer devices \cite{Spotnitz2003}. Resulting from this assumptions the cycle lifetime of the cells in the battery bank is 2~500 to 3~200 cycles. Therefore the battery bank needs to be replaced after \SIrange{6}{9}{years}. So the battery bank needs to be replaced two to three times in the total lifetime of the system. For the calculation two battery bank replacements was assumed. 
 
-
-
-Table~\ref{tbl: EESsystemdesign} summarizes results of the discussed parameter for the simulation. The adapted voltage level for this large-scale EES application from \SI{820}{V}\textsubscript{dc}\ per string is coming from \cite{Leuthold2014}. The remaining values results from the above discussed parameter or are adapted from the SAM library \cite{Diorio2015}. 
+Table~\ref{tbl: EESsystemdesign} summarizes results of the discussed parameter for the simulation. The adapted voltage level for this large-scale EES application from \SI{820}{\voltsdc} per string is coming from \cite{Leuthold2014}. The remaining values results from the above discussed parameter or are adapted from the SAM library \cite{Diorio2015}. 
 \begin{table}[!htbp]  
   \centering
 	\begin{tabular}{ p{5.0cm} C{1.0cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} } 
@@ -202,7 +118,7 @@ Cell capacity & Ah &\multicolumn{5}{c}{55}\\
 C-rate of discharge curve & - &\multicolumn{5}{c}{0.2}\\
 Maximum C-rate charge & per/h &\multicolumn{5}{c}{1}\\
 Maximum C-rate discharge & per/h &\multicolumn{5}{c}{1}\\
-Total DOD& \% &\multicolumn{5}{c}{20}\\
+Total DOD& \% &\multicolumn{5}{c}{40}\\
 \hline
 \textbf{Storage capacity at \SI{100}{MW} output} & \textbf{h} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} \\ \hline 
 Effective capacity & MWh & 400 & 500 & 600 & 700 & 800 \\
@@ -214,7 +130,7 @@ Cells & $\times 10^6$ & 5.1 & 6.3 & 7.6 & 8.8 & 10.1\\
 \end{table}
 \pagebreak
 \subsubsection{Financial parameter}
-The financial parameter for the LCOE calculation are composed in Table~\ref{tbl: PVFinance}. As mentioned before was the LCOE calculation for this simulation made separately in Microfoft Excel using a simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}. As for the other systems is the PV power plant designed for a lifetime of \SI{25}{years}. 
+As for the other systems is the PV power plant designed for a lifetime of \SI{25}{years} with land purchase costs of 3~000USD/ha \cite{Cassell2012} assumed.
 
 The specific large-scale PV system costs in South Africa  amount to \SI{1.285}{USD/W}\textsubscript{p} (\SI{14.5}{ZAR/W}\textsubscript{p} using \SI{11.286}{USD/ZAR} average in 2014 \cite{IRS2015}) which leads from an in 2014 actually built PV system \cite{Terblanche2015}. These specific costs are close to utility-scale PV systems in Europe with specific investments of \SI{1}{EUR/W}\textsubscript{p} \cite{FraunhoferISE2013}, corresponding to \SI{1.33}{USD/W}\textsubscript{p} (using the average exchange rate in 2014 of \SI{1.33}{USD/EUR}  \cite{StatistaGmbH2015}).
 
@@ -226,13 +142,11 @@ The costs of the PCS of \SI{615}{USD/kW} (\SI{463}{EUR/kW} using the average exc
 
 For the storage part of the EES a highly optimistic value of \SI{300}{USD/kWh} was assumed from \cite{Nykvist2015}. The average storage part cost for Li-Ion EES in other studies is \SI{914}{USD/kWh} \cite{Zakeri2015}.
 
-The cost for the replacement of the storage in \cite{Zakeri2015} are approximately the half of the storage costs. Therefore is the replacement costs decreasing not that intense and was assumed with \SI{250}{USD/kWh}.
-
-The assumed EES battery bank replacements during the lifetime was described in this Chapter already.
+The cost for the replacement of the storage in \cite{Zakeri2015} are approximately the half of the storage costs. Therefore is the replacement costs decreasing not that intense and was assumed with \SI{250}{USD/kWh}. The assumed EES battery bank replacements during the lifetime was described in this Chapter already.
 
 The annual O\&M costs of \SI{3}{\percent} of the was adapted from the IEA. \cite{IEA2014c}
 
-As before for the other solar power plants also for the PV system was land purchase costs of 3~000USD/ha \cite{Cassell2012} assumed.
+The financial parameter for the LCOE calculation are composed in Table~\ref{tbl: PVFinance}.
 \pagebreak
 \begin{table}[!h]  
   \centering
@@ -256,7 +170,7 @@ Annual insurance costs & $f_{ins,PV}$ & 0.5 & \% & \cite{InternationalFinanceCor
 EES PCS costs & $c_{EES,PCS}$ & 615 & USD/kW & \cite{Zakeri2015} \\ 
 EES battery bank costs & $c_{EES,BBC}$ &300 & USD/kWh & \cite{Nykvist2015} \\ 
 EES battery bank replacement costs & $c_{EES,BBRC}$ & 250 & USD/kWh & assumption \\ 
-Assumed EES battery bank replacements during lifetime & $n_{BBR}$ & 2 & - & assumption \\ 
+EES battery bank replacements during lifetime & $n_{BBR}$ & 2 & - & assumption \\ 
 Annual EES O\&M costs & $c_{O\&M,EES}$ & 3 & \% & \cite{IEA2014c}\\
 WACC rate & $i_{WACC}$ & 8.0 & \si{\percent} & assumption from Section~\ref{section WACC} \\ 
 Annual insurance costs& $f_{ins,EES}$ & 0.5 & \% & \cite{Cutter2014}\\ \hline
@@ -269,7 +183,7 @@ Land purchase &$c_{LP}$ & 3~000.00 & USD/ha & \cite{Cassell2012} \\
 \section{Simulation results of PV power plant}
 In this section the results of the simulated PV system and there belonging LCOE results are described and analyzed. First the PV system without EES and then the results of the PV system with adapted EES. The goal of these Section is to find the suitable PV power plant design configuration to reach a covering of 90~\% of the prescribed load which having the lowest belonging LCOE result.
 \subsubsection{PV power plant without storage}
-As it was described before at the beginning of Section~\ref{section PV system}, the PV system was also simulated without using an EES system. These PV system was designed for a maximum power output of \SI{99.8}{MW}\textsubscript{ac} and \SI{115.0}{MW}\textsubscript{dc} as it is defined in Table~\ref{tbl: PVsystemdesign}. It must be noted, that the following results are simulated for the first year of the PV system so for the performance results contains no degradation which is to be expected during the full lifetime. For the LCOE calculation a degradation factor was assumed as it was described in the previous section. 
+As it was described before at the beginning of Section~\ref{section PV system}, the PV system was also simulated without using an EES system. These PV system was designed for a maximum power output of \SI{99.8}{\mega\wattsac} and \SI{115.0}{\mega\wattsdc} as it is defined in Table~\ref{tbl: PVsystemdesign}. It must be noted, that the following results are simulated for the first year of the PV system so for the performance results contains no degradation which is to be expected during the full lifetime. For the LCOE calculation a degradation factor was assumed as it was described in the previous section. 
 
 Figure \ref{PVwithoutEESanual} visualizes the resulting annually load covering behavior. It can be seen, that the system can't cover the prescribed load at all. As it is usually for a solar powered system without storage the energy production standstill during the night time. The here shown annual average PV system power output covers about 32.9~\% of the prescribed load in the first year of the system. So the simulated PV system had a annual energy production during the first year of about \SI{233.69}{GWh}.
 
@@ -310,18 +224,18 @@ LCOE result & 77.61 & USD/MWh \\
 \end{table}
 \pagebreak
 \subsubsection{Load curve covering}
-The PV system was also simulated with the adapted EES system as it was described before in Section~\ref{section PV system}. In order to find a suitable size of the PV system and for the adapted EES, there was 25 different configurations simulated as they are described in Table~\ref{tbl: PV_OverallConfig}. The lowest defined configuration was simulated using a PVM of 2.0 and a \SI{4}{h} of EES. The highest simulation configuration was defined with a PVM of 2.8 and a EES capacity for \SI{8}{h} at \SI{100}{MW} output. In the following the simulation results of these configurations are delineated  representative for the remaining 23 configurations in between. 
+The PV system was also simulated with the adapted EES system as it was described before in Section~\ref{section PV system}. In order to find a suitable size of the PV system and for the adapted EES, there was 25 different configurations simulated as they are described in Table~\ref{tbl: PV_OverallConfig}. The lowest defined configuration was simulated using a PVM of 2.0 and a \SI{4}{h} of EES. The highest simulation configuration was defined with a PVM of 2.8 and a EES capacity for \SI{8}{h} at \SI{100}{\mega\watt} output. In the following the simulation results of these configurations are delineated  representative for the remaining 23 configurations in between. 
 
 The simulation results are based on the first year energy output of the designed PV power plants and don't includes degradation of the PV system or the adapted EES system. 
 
-The result of the simulation for the both selected configurations are present in the annual average load profile in Figure~\ref{PV_annual_profil}. The simulation result shows that the highest configuration can cover the load almost completely during the simulated first year and just has appreciable shortfalls of covering in the morning hours. Considering the the load curve behavior from \SI{10}{am} to \SI{4}{pm} it can be noticed, that the predicted load is covered over the whole year in that time span. Compared to that covers the lowest PV power plant configuration much less of the predicted load curve. The  annual average load profile shows that during the night the system coming to standstill from 12 pm to 5 am over the full year. Nevertheless, the PV power plant can cover the prescribed load completely during the midday at any time of the year. The remaining  annual average load profile simulation results can be found in Appendix~\ref{all_load_profile}.
+The result of the simulation for the both selected configurations are present in the annual average load profile in Figure~\ref{PV_annual_profil}. The simulation result shows that the highest configuration can cover the load almost completely during the simulated first year and just has appreciable shortfalls of covering in the morning hours. Considering the the load curve behavior from 10:00 to 16:00 it can be noticed, that the predicted load is covered over the whole year in that time span. Compared to that covers the lowest PV power plant configuration much less of the predicted load curve. The  annual average load profile shows that during the night the system coming to standstill from 0:00 to 5:00 over the full year. Nevertheless, the PV power plant can cover the prescribed load completely during the midday at any time of the year. The remaining  annual average load profile simulation results can be found in Appendix~\ref{all_load_profile}.
 
 \begin{figure}[htbp]  
 \centering
 \includegraphics[width=0.8\linewidth]{FIG/PV_annual_profil}
 \caption[Annual average load profile of selected PV power plant configurations.]{Annual average load profile of selected PV power plant configurations.}\label{PV_annual_profil}
 \end{figure}
-The covering of the prescribed load during the day results mainly from the PV system, which also loads with there surplus power production the EES. During the night the EES taken over the covering of the load till it reaches the fixed bottom limit of the SOC. If the EES is fully loaded and the PV system is still producing more electricity than the prescribed load needs the surplus power is not going in to the load curve covering calculation as well as into the LCOE calculation as it was defined in Section~\ref{Overall simulated configuration}. 
+The covering of the prescribed load during the day results mainly from the PV system, which also loads with there surplus power production the EES. During the night the EES taken over the covering of the load till it reaches the fixed bottom limit of the SOC. If the EES is fully loaded and the PV system is still producing more electricity than the prescribed load needs the surplus power is not going in to the load curve covering calculation as well as into the LCOE calculation as it was defined in Section~\ref{SystemloadinSA}. 
 
 \begin{figure}[!bhtp]  
 \centering
@@ -366,23 +280,7 @@ The lowest LCOE result of \SI{336.34}{USD/MWh} is reached at a PVM of 2.2 using 
 \includegraphics[width=1\linewidth]{FIG/PV_LCOE}
 \caption[LCOE calculation results for PV systems with adapted EES simulation.]{LCOE calculation results for PV systems with adapted EES simulation.}\label{PV_LCOE}
 \end{figure}
-The EES systems costs share makes the main part of the LCOE cost of the simulated PV power plants with an adapted EES. The break-down of the LCOE is shown for the lowest and highest configuration in Figure~\ref{SMPV_LCOE_BreakDown}. This chart clarify the big impact of the EES cost. At the lowest configuration 81~\% of the LCOE are traced to the EES and at the highest about 86~\%. The other results showed that the range of the EES is between 76\% and 89~\% of the calculated LCOE's.
 
-\begin{figure}[!htbp]
-        \centering                
-        \begin{subfigure}[b]{0.5\textwidth}
-                \centering
-                \includegraphics[width=1\textwidth]{FIG/PV_LCOE_lowinvest_BreakDown}
-                \caption{LCOE break-down for PVM~2.0 and \SI{4}{h}~EES.}\label{PV_LCOE_lowinvest_BreakDown}
-        \end{subfigure}%
-        ~
-        \begin{subfigure}[b]{0.5\textwidth}
-                \centering
-                \includegraphics[width=1\textwidth]{FIG/PV_LCOE_highinvest_BreakDown}
-                \caption{LCOE break-down for PVM~2.8 and \SI{8}{h}~EES.}\label{PV_LCOE_highinvest_BreakDown}
-        \end{subfigure}
-        \caption[Break-down of selected LCOE calculation  results of PV systems with adapted EES.]{Break-down of selected LCOE calculation results of PV systems with adapted EES.}\label{SMPV_LCOE_BreakDown}
-\end{figure}
 Comprising the results of the LCOE calculation and associated load curve covering results shows that for covering 90\% of the predicted load the configuration of PVM 2.8 and \SI{7}{h} of EES reaching the lowest LCOE of \SI{417.57}{USD/MWh}. But the configuration owns an high value of surplus output of about 5.5~\% (see Figure~\ref{PV_energy_output}). The configuration PVM 2.6 reaches also the 90~\% load curve covering with a share of just 2.1~\% surplus output and a LCOE of \SI{425.75}{USD/MWh}.
 
 The lowest LCOE for reaching 80~\% of the prescribed load is \SI{366.94}{USD/MWh} using \SI{5}{h} of EES and also a PVM of 2.6. For reaching 70~\% the 2.2 and \SI{4}{h} of EES reaches the lowest LCOE of \SI{336.34}{USD/MWh}.

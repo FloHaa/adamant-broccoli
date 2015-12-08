@@ -1,25 +1,9 @@
 \chapter{CR power plant simulation}
+For the CR plant simulation in SAM, the \enquote{CSP power tower molten salt} model was selected. To specify the hourly atmospheric conditions the EPW weather file for Upington from Section~\ref{Solar radiation} was used as an input file. As already mentioned, the LCOE was calculated separately using a simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}.
 \section{Design  and simulation} \label{CR power plant design  and simulation}
-%For the CR power plant simulation in SAM the “CSP power tower molten salt" model was used. The EPW weather file for Upington from Section~\ref{Location and weather data} was used as an input file to specify the hourly atmospheric conditions. SAM uses the following input data for the simulation:
-For the CR plant simulation in SAM, the \enquote{CSP power tower molten salt} model was used. The EPW weather file for Upington from Section~\ref{Solar radiation} was used as an input file to specify the hourly atmospheric conditions. SAM uses the following input data for the simulation:
-\begin{itemize}
-\item Latitude (\si{\degree})
-\item Longitude (\si{\degree})
-\item Elevation above sea level (\si{\metre})
-\item DNI (\si{\watt\per\square\metre})
-\item Atmospheric pressure (\si{\milli\bar})
-\item Dry bulb temperature (\si{\celsius})
-\item Wet bulb temperature (\si{\celsius})
-\item Relative humidity (\si{\percent})
-\item Wind velocity (\si{\metre\per\second})
-\end{itemize}
-This Chapter describes in detail the crucial inputs of the CR power plant components, namely the power cycle, heliostat field, tower and receiver and thermal energy storage (TES).
+This section describes in detail the crucial inputs of the CR power plant components, namely the power cycle, heliostat field, tower and receiver and thermal energy storage (TES), as well as there individual financial parameter.
 
-As already mentioned, financial parameters and the LCOE are calculated separately in Microsoft Excel using a simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}.
-
-\subsubsection{Simulated configurations}
-%The simulated configurations had the goal to reach 90~\% of the scheduled production curve by using variation of solar multiple and full load hours of TES. Also the simulated configurations covers a broad view on the technology possibilities. As already mentioned in Section~\ref{Large scale concentrated solar power (CSP) plants} is the SM the ratio of the receivers thermal output to the power cycles thermal input at design point. So a CR system with a SM of 1 has a receiver and a heliostat field which provides the thermal power needed for the power block to run at full load at the system design point. A receiver and collector field with a SM of 1 don't produce enough thermal power to store energy in a TES while feeding the turbine. A CR system with a SM of 1 is just suitable for systems without TES. To covering the scheduled load the solar multiple was varied from 2 to 3.5 in steps of 0.5. Also the storage full load hours were varied from 8 to \SI{16}{h} in steps of \SI{2}{h}. The target of \SI{100}{MW} net capacity was reached with a gross capacity of \SI{111}{MW} with an estimated gross-to-net conversion factor of 0.90. Table~\ref{tbl: CR_OverallConfig} summarizes the simulated configurations.
-The simulated configurations were to meet 90~\% of the scheduled production curve by using variation of solar multiples and full load hours of TES. As mentioned in Section~\ref{Large scale concentrated solar power (CSP) plants} the solar multiple (SM) is the ratio of the receiver's thermal output to the power cycles thermal input at the design point. Thus, a CR system with a SM of 1 has a receiver and a heliostat field which provides the thermal power needed for the power block to run at full load at the system design point. A receiver and collector field with an SM of 1 do not produce enough thermal power to store energy in a TES while also feeding the turbine. A CR system with a SM of 1 is just sufficient for systems without TES. In order to cover the expected load, the solar multiple was varied from 2 to 3.5 in steps of 0.5, while storage full load hours were varied from 8 to \SI{16}{h} in steps of \SI{2}{h}. The target of \SI{100}{MW} net capacity was reached with a gross capacity of \SI{111}{MW} with an estimated gross-to-net conversion factor of \si{0.90}. Table~\ref{tbl: CR_OverallConfig} summarizes the simulated configurations.
+The simulated configurations were to meet 90~\% of the scheduled production curve by using variation of solar multiples and full load hours of TES. As mentioned in Section~\ref{Large scale concentrated solar power (CSP) plants} the solar multiple (SM) is the ratio of the receiver's thermal output to the power cycles thermal input at the design point. Thus, a CR system with a SM of 1 has a receiver and a heliostat field which provides the thermal power needed for the power block to run at full load at the system design point. A receiver and collector field with an SM of 1 do not produce enough thermal power to store energy in a TES while also feeding the turbine. A CR system with a SM of 1 is just sufficient for systems without TES. In order to cover the expected load, the solar multiple was varied from 2 to 3.5 in steps of 0.5, while storage full load hours were varied from 8 to \SI{16}{h} in steps of \SI{2}{h}. The target of \SI{100}{MW} net capacity was reached with a gross capacity of \SI{111}{MW} with an estimated gross-to-net conversion of \SI{90}{\percent}. Table~\ref{tbl: CR_OverallConfig} summarizes the simulated configurations.
 
 \begin{table}[!h]  
   \centering
@@ -37,6 +21,9 @@ TES capacity & h &   8 & 10 & 12 & 14 & 16 &  8 & 10 & 12 & 14 & 16 \\ \hline
 \end{table}
 \subsubsection{Power cycle}
 The power cycle of the simulated CR system features a Rankine-cycle steam engine, two open feed-water heaters, a pre-heater, boiler and super-heater \cite{NREL2015a}. As mentioned above has the turbine a gross capacity of \SI{111}{\mega\wattel} and a nameplate (net) capacity of 100 \si{\mega\wattel}. 
+
+The steam generator has a HTF inlet temperature of \SI{566}{\celsius} and outlet temperature of \SI{288}{\celsius} at design point and operates at a pressure of \SI{125}{\bar}. In combination with a air-cooled condenser the CR power cycle system was simulated with a cycle gross efficiency of \SI{41.2}{\percent}. A wet-cooled condenser would reaches some higher efficiency, but because of the lack of water in the area of Upington and the requirement by the South African government for CSP plants, a air-cooled condenser was selected. The HTF inlet temperature, pressure and efficiency values where adapted for the configuration from \cite{Kolb2011a}. For starting up the system needs 30 minutes and a min. required temperature of \SI{500}{\celsius}. A plant availability of 96~\% was adapted from \cite{Morin2012} in order to simulate system down-times for outages or scheduled maintenance.
+
 \begin{table}[!h]  
   \centering
 	\begin{tabular}{  p{7.0cm}  C{2.0cm}  C{2.0cm} } 
@@ -57,8 +44,6 @@ Condenser type & air-cooled & - \\
 \end{tabular}
 \caption[CR power block and condecer input parameter in SAM.]{CR power block and condecer input parameter in SAM.}\label{tbl: CRPowerplant}
 \end{table}
-The steam generator has a HTF inlet temperature of \SI{566}{\celsius} and outlet temperature of \SI{288}{\celsius} at design point and operates at a pressure of \SI{125}{\bar}. In combination with a air-cooled condenser the CR power cycle system was simulated with a cycle gross efficiency of \SI{41.2}{\percent}. A wet-cooled condenser would reaches some higher efficiency, but because of the lack of water in the area of Upington and the requirement by the South African government for CSP plants, a air-cooled condenser was selected. The HTF inlet temperature, pressure and efficiency values where adapted for the configuration from \cite{Kolb2011a}. For starting up the system 
-needs 30 minutes and a min. required temperature of \SI{500}{\celsius}. A plant availability of 96~\% was adapted from \cite{Morin2012} in order to simulate system down-times for outages or scheduled maintenance.
 \subsubsection{Heliostat field}
 The heliostat field design was done in SAM using its heliostat field layout optimization tool. For the design, optimization and simulation process, heliostat data from the Sanlúcar 120 heliostat was used \cite{Noone2012}. The Sanlúcar 120 is used in the Planta Solar 10 (PS10) near Seville, Spain and is the origin of Abengoas actual heliostat ASUP 140. For a simulation with the ASUP 140 no sufficient data was available. 
 \begin{table}[!htbp]  
@@ -84,36 +69,8 @@ Field land area & ha & 655.59 & 821.92 & 997.95 & 1~190.99 \\
 \end{table}
 The Sanlúcar 120 heliostats have an effective reflective area of \SI{120}{\square\metre} and are tracked on 2 axes. The heliostat field layout optimization and there design depends on the turbine gross and the SM. The heliostat field was optimized therefore for all four considered configurations. SAM first generates a coarse layout and optimizes the number of heliostats and their position. The goal of the optimization is the maximum flux with minimum power constraints according to the specified design-point DNI which represents the DNI at which the power plant achieves its rated thermal capacity. Table~\ref{tbl: CRHeliostats} summarizes the heliostat datas and the values of the optimized field design for all considered solar multiples.
 
-The optimized heliostat field layouts of the four considered SM are depict in Figure~\ref{SM}. In order to avoid mutual shading from the heliostats the heliostat density decreases with distance from the tower. The maximum heliostat distance to the tower rises with the higher SM which can be seen in the field diameter. 
-\begin{figure}[!htbp]
-        \centering   
-        \begin{subfigure}[b]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.95\textwidth]{FIG/SM20}
-                \caption{SM:~2.0}\label{SM2.0}
-        \end{subfigure}%
-        ~
-        \begin{subfigure}[b]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.95\textwidth]{FIG/SM25}
-                \caption{SM:~2.5}\label{SM2.5}
-        \end{subfigure}
-        
-\par\medskip % Linebreak
-                
-        \begin{subfigure}[b]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.95\textwidth]{FIG/SM30}
-                \caption{SM:~3.0}\label{SM3.0}
-        \end{subfigure}%
-        ~
-        \begin{subfigure}[b]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.95\textwidth]{FIG/SM35}
-                \caption{SM:~3.5}\label{SM3.5}
-        \end{subfigure}
-        \caption[Simulated heliostat field layout at diferent solar multiples (SM).]{Simulated heliostat field layout at diferent solar multiples (SM).}\label{SM}
-\end{figure}
+The optimized heliostat field layouts which was used in the simulation can be seen in Appendix~\ref{documentary} on Page~\pageref{SM}.
+
 \subsubsection{Tower and receiver}
 The receiver collects the concentrated irradiance from the surrounding heliostat field. The simulated receiver is build as an external cylindrical receiver and is configurated with 24 panels of thin walled (1.25 mm) receiver tubes with an outer diameter of 60 mm arranged in a circle around the tower. The receiver tubes are made from 316H stainless steel and the external surfaces of the tubes are coated with a black Pyromark paint. The paint is resistant to high temperatures and thermal cycling, and absorbed 95\% of the incident sunlight. This configuration is similar to the receiver of the  Solar Two Project accept of the outer diameter \cite{Bradshaw2002}. The panels containing molten salt (60~\% NaNO\textsubscript{3} and 40~\% KNO\textsubscript{3}) as heat transfer fluid (HTF). The receiver design inlet temperature of 288$\,^{\circ}\mathrm{C}$ and the outlet temperature of 566$\,^{\circ}\mathrm{C}$ was set before in the power block configuration. In order to achieve the desired receiver thermal power output, the height of the tower and receiver dimensions got also adjust with the optimization of the heliostat field design. The results of the optimization is shown in Table~\ref{tbl: CRSolarfield}, as well as the fixed tower and receiver parameter. The heights of the tower range from 179.77 to \SI{236.50}{m}. The receiver proportions rises with the SM and the field sizes and results in a receiver thermal power range from 538.8 to 943.0 \si{\mega\wattth}.
 \begin{table}[!h]  
@@ -141,6 +98,7 @@ Receiver thermal power & \si{\mega\wattth} & 538.8 & 673.5 & 808.3 & 943.0 \\
 \end{tabular}
 \caption[CR heliostat field parameter.]{CR heliostat field parameter.}\label{tbl: CRSolarfield}
 \end{table}
+
 \subsubsection{Thermal energy storage (TES)}
 The CR system was simulated using a direct two-tank molten salt thermal energy storage (TES). The storage uses directly the HTF (60~\% NaNO\textsubscript{3} and 40~\% KNO\textsubscript{3}) from the receiver as storage medium. Figure~\ref{towerdirecttwotank} on Page~\pageref{towerdirecttwotank} shows a schema of the direct storage for CR system. The design temperature of the hot storage tank (566$\,^{\circ}\mathrm{C}$) and the cold storage tank (288$\,^{\circ}\mathrm{C}$) depends also from the set value in the power block settings as before the design receiver temperatures. So the design temperature difference between the tanks is 278$\,^{\circ}\mathrm{C}$.
 
@@ -165,19 +123,9 @@ Storage volume  & \si{\cubed\metre} & 10~229 & 12~787 & 15~345 & 17~902 & 20~460
 \caption[CR system TES parameter.]{CR system TES parameter.}\label{tbl: CRTES}
 \end{table}
 
-SAM 2015.6.30 r3 don't have a power control to follow prescribed hourly net output values. The turbine output of each day needs to be scheduled in front for the simulation. Thereby the parasitic consumer needs highly attention. Figure~\ref{CR_turbineoutput} shows the for the simulation scheduled turbine output matrix. The individual values was fixed during experimental trial. It can be seen that the turbine output is reduced to \SI{50}{\percent} during the night as it is specified in the scenario. The power plant follows the schedule till there is no solar irradiance and no more thermal capacity in the storage left to generate power. 
-\begin{figure}[htbp]  
-\centering
-\includegraphics[width=0.95\linewidth]{FIG/CR_turbineoutput}
-\caption[TES dispatch control matrix for turbine output fraction of CR simulation in SAM.]{TES dispatch control matrix for turbine output fraction of CR simulation in SAM.}\label{CR_turbineoutput}
-\end{figure}
-\pagebreak
+SAM 2015.6.30 r3 don't have a power control to follow prescribed hourly net output values. The turbine output of each day needs to be scheduled in front for the simulation. Thereby the parasitic consumer needs highly attention. The for the simulation designed scheduled turbine output matrix can be found in Appendix~\ref{documentary} on Page~\pageref{CR_turbineoutput}.
+
 \subsubsection{Financial parameter}
-The financial parameter for the LCOE calculation of the CR power plant are seperated in different specific cost parts and are sumerized in Table~\ref{tbl: CRFinance}. The method for calculating the LCOE is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE} using a lifetime of \SI{25}{years}.
-
-
-
-
 The specific costs of the heliostat field of \SI{180}{\usd\per\square\metre} coming from J. B. Blackmon \cite{Blackmon2012}. He analyzed the costs of heliostat as a function of area for a representative solar central receiver power plant and calculated the total installed costs for a field of 5~000 heliostats with \SI{148}{\square\metre} reflective area of approximately \SI{180}{\usd\per\square\metre}. The analyze results showed that the costs are increasing with the size of the heliostats from \SI{40}{\square\metre} on. So the adopted value of \SI{180}{\usd\per\square\metre} reflective area for \SI{140}{\square\metre} heliostats can be assumed as conservative.
 
 
@@ -188,6 +136,8 @@ On top of the investment costs a came 15 \% once-off surcharge for EPC and conti
 Fichtner analyzed the annual O\&M costs with 1.84-1.96~\% of the total investment costs for CR power plants in SA \cite{Fichtner2010}. The value of \SI{2}{\percent} can so also be assumed as conservative.
 
 The costs for the land purchase comes from the "African Agriculture Review" report of the Nedbank Capital, which reported the prices for farmland in SA. For the LCOE calculation of the CSP and PV system was the land purchase costs of \SI{3000}{USD/ha} assumed which is based on these report \cite{Cassell2012}.
+
+The financial parameter for the LCOE calculation of the CR power plant are seperated in different specific cost parts and are sumerized in Table~\ref{tbl: CRFinance}. The method for calculating the LCOE is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE} using a lifetime of \SI{25}{years}.
 
 \begin{table}[!h]  
   \centering
@@ -209,8 +159,9 @@ Total plant availability & $f_{avail,plant,CR}$ & 96 & \si{\percent} & \cite{Mor
 \end{tabular}
 \caption[Finacial input parameter for CR-simulation in SAM.]{Finacial input parameter for CR-simulation in SAM.}\label{tbl: CRFinance}
 \end{table}
+\pagebreak
 \section{Results of CR power plant simulation}
-The following sections illustrates and discuss the obtained simulation and calculation results of the above defined CR power plant. Therefore the load curve covering performance and LCOE as well as the belonging load profiles and duration curves are described and analyzed. The configuration of the power plants to reach 90~\% of the prescribed load while using the best belonging LCOE is defined at the end of each section.
+The following sections illustrates and discuss the obtained simulation and calculation results of the defined CR power plant. Therefore the load curve covering performance and LCOE as well as the belonging load profiles and duration curves are described and analyzed.
 \subsubsection{Load curve covering}
 To find the suitable power plant configuration of the CR system to reach the target of 90~\% load curve covering, there was 20 various configurations simulated. This section presets and compare mainly the results of the simulation with the lowest SM and hours of TES configuration (SM: 2.0 \& TES: \SI{8}{h}) with the simulation using the highest SM and hours of TES configuration (SM: 3.5 \& TES: \SI{16}{h}) representative for all in between. All simulated configurations are shown in Table~\ref{tbl: CR_OverallConfig} on Page~\pageref{tbl: CR_OverallConfig}.
 
@@ -268,36 +219,19 @@ Figure~\ref{CR_LCCF} summarizes the results of the load curve covering for all s
 \caption[Load curve covering result of simulated CR systems.]{Load curve covering result of simulated CR systems.}\label{CR_LCCF}
 \end{figure}
 The results of the load curve covering shows that there is no appreciable difference between the \SIlist{12;14;16}{h} of TES. At a SM of 3.5 the difference is just \SI{1.4}{\percent} load curve covering between \SIlist{12;16}{h} of TES. There is just a addition of \SI{0.6}{\percent} for the \SI{8}{h} TES and the SM 3.0 to 3.5 configurations.
- 
+\pagebreak
 \subsubsection{Levelized costs of electricity}
 The results of the calculation shows that the lowest LCOE of \SI{142.31}{USD/MWh} is reached at a SM of 2.0 and \SI{10}{h} of TES and is just  marginal cheaper then using \SI{8}{h} of TES with a LCOE of \SI{143.04}{USD/MWh}. The LCOE addition from SM 2.0 to 2.5 is goes minimal up to \SI{138.25}{USD/MWh} for \SI{10}{h} of TES. The highest LCOE result of the simulated configurations is \SI{185.20}{USD/MWh} at a SM of 3.5 and \SI{8}{h} of TES. 
+
+The results of the LCOE claculation for the simulated CR configurations can be seen in Figure~\ref{CR_LCOE}. They are calculated using the finacial input parameter in Table~\ref{tbl: CRFinance} and a simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}. 
+
+The behavior of the 12, 14 and \SI{16}{h} of TES results for all SM of the LCOE is almost identical. Just the individual value is differently.
 
 \begin{figure}[htbp]  
 \centering
 \includegraphics[width=1\linewidth]{FIG/CR_LCOE}
 \caption[LCOE calculation results for CR simulation.]{LCOE calculation results for CR simulation.}\label{CR_LCOE}
 \end{figure}
-
-The results of the LCOE claculation for the simulated CR configurations can be seen in Figure~\ref{CR_LCOE}. They are calculated using the finacial input parameter in Table~\ref{tbl: CRFinance} and a simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}. 
-
-The behavior of the 12, 14 and \SI{16}{h} of TES results for all SM of the LCOE is almost identical. Just the individual value is differently.
-
-\begin{figure}[!htbp]
-        \centering                
-        \begin{subfigure}[b]{0.5\textwidth}
-                \centering
-                \includegraphics[width=1\textwidth]{FIG/CR_LCOE_lowinvest_BreakDown}
-                \caption{LCOE break-down for SM~2.0 and \SI{8}{h}~TES.}\label{CR_LCOE_lowinvest_BreakDown}
-        \end{subfigure}%
-        ~
-        \begin{subfigure}[b]{0.5\textwidth}
-                \centering
-                \includegraphics[width=1\textwidth]{FIG/CR_LCOE_highinvest_BreakDown}
-                \caption{LCOE break-down for SM~3.5 and \SI{16}{h}~TES.}\label{CR_LCOE_highinvest_BreakDown}
-        \end{subfigure}
-        \caption[Break-down of selected CR-LCOE calculation results.]{Break-down of selected CR-LCOE calculation results.}\label{CR_LCOE_BreakDown}
-\end{figure}
-The calculated LCOEs of the simulated CR power plants is composed by seven cost parts. The investment costs of power block, tower and receiver, heliostat field, land purchase, TES, additional EPC, project management (PM) and risk as well as the annual costs for operation and maintain (O\&M). The brake-down of the LCOE components can be seen in Figure~\ref{CR_LCOE_BreakDown} for the simulation of the lowest and the highest configuration.  It can be seen that the investment costs of the land purchase don't have any influence to the LCOE of the simulated CR configurations. Also the share of the EPC, PM and risk as well as the share of O\&M don't varies much.
 
 When comprising the results of the load curve covering with the LCOE calculation the lowest LCOE for reaching the target of 90~\% is the configuration of a SM of 3.0 and \SI{14}{h} of TES. The LCOE for these configuration is \SI{154.75}{USD/MWh}. 
 
