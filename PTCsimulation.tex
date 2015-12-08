@@ -1,22 +1,10 @@
 \chapter{PTC power plant}
+The PTC power plant was simulation in the \enquote{CSP parabolic trough (physical)} model in SAM using the option \enquote{no financial model}. As before the input the EPW weather file from Section~\ref{Solar radiation} was used to specify the hourly atmospheric conditions. 
+Also for the simulation of the PTC was the LCOE calculated separately using again the simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}.
 \section{Design  and simulation} \label{PTC power plant design  and simulation}
-The PTC power plant was simulation in the “CSP parabolic trough (physical)" model in SAM using the option "no financial model". As before the input the EPW weather file to specify the hourly atmospheric conditions from Section~\ref{Solar radiation} was used. For the PTC simulation SAM uses the following input data:
-\begin{itemize}
-\item Latitude ($\,^{\circ}$)
-\item Longitude ($\,^{\circ}$)
-\item Elevation above sea level (m)
-\item DNI (\si{\watt\per\square\metre})
-\item Atmospheric pressure (\si{\milli\bar})
-\item Dry bulb temperature (\si{\celsius})
-\item Wetbulbtemperature(\si{\celsius})
-\item Relative humidity (\si{\percent})
-\item Wind velocity (\si{\metre\per\second})
-\end{itemize}
-This Chapter describes in detail the input data of the PTC power plant simulation by there components, namely the  power cycle, solar collector, solar receiver, solar field and thermal energy storage (TES).
+This section describes in detail the input data of the PTC power plant simulation by there components, namely the  power cycle, solar collector, solar receiver, solar field and thermal energy storage (TES). After that the belonging financial parameter are defind.
 
-Also for the simulation of the PTC are the financial parameters and the LCOE calculated separately Microfoft Excel using a simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}.
-\subsubsection{Simulated configurations}
-In order to reaching the goal of covering 90 \% of the scheduled production curve also the simulated PTC power plant used a variation of solar multiple and full load hours of TES. To covering the scheduled load the solar multiple was varied from 2 to 5.0 in steps of 5.0. This is significantly higher SM compared the simulated CR system was necessary to reach the \SI{90}{\percent} covering factor. As before with the simulation of the CR, the storage full load hours were varied from \si{8} to \SI{16}{h} in steps of \SI{2}{h}. The target of \SI{100}{MW} net capacity was reached with a gross capacity of \SI{120}{MW} with an estimated gross-to-net conversion factor of \si{0.83}. The comparatively high gross turbine output is nessasary for the high parasitic burden of the system. Table~\ref{tbl: PTC_OverallConfig} summarizes the simulated configurations.
+In order to reaching the goal of covering 90 \% of the scheduled production curve also the simulated PTC power plant used a variation of solar multiple and full load hours of TES. To covering the scheduled load the solar multiple was varied from 2 to 5.0 in steps of 5.0. This is significantly higher SM compared the simulated CR system was necessary to reach the \SI{90}{\percent} covering factor. As before with the simulation of the CR, the storage full load hours were varied from \si{8} to \SI{16}{h} in steps of \SI{2}{h}. The target of \SI{100}{MW} net capacity was reached with a gross capacity of \SI{120}{MW} with an estimated gross-to-net conversion of \SI{83}{\percent}. The comparatively high gross turbine output is nessasary for the high parasitic burden of the system. Table~\ref{tbl: PTC_OverallConfig} summarizes the simulated configurations.
 \begin{table}[!h]  
   \centering
 	\begin{tabular}{ p{4.0cm}  C{1.0cm}  C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} |C{0.3cm}  C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} } 
@@ -67,39 +55,17 @@ Condenser type & air-cooled & - \\
 \caption[PTC power block and condecer input parameter in SAM.]{PTC power block and condecer input parameter in SAM.}\label{tbl: PTCPowerplant}
 \end{table}
 \subsubsection{Solar collector (SCA)}
-For the simulation of the PTC system the Ultimate Trough was selected as solar collector assembly (SCA). This collector is currently not in commercial use, but comparable troughs with similar characteristics are under construction. So the Ultimate Trough can be adopted  without technical modifications and no increase of risk. Figure~\ref{PTC_Ultimate_config} shows the information of the technical input parameter for SAM. These coming directly from a publication of the developer of the Ultimate Trough, Flabeg GmbH and sbp sonne GmbH \cite{Riffelmann2014}. 
-\begin{figure}[bhtp]
-\centering
-\includegraphics[width=0.95\linewidth]{FIG/PTC_Ultimate_config}
-\caption[Screenshot of Ultimate Trough SCA input parameter for SAM.]{Screenshot of Ultimate Trough SCA input parameter for SAM.}\label{PTC_Ultimate_config}
-\end{figure}
-The section "Optical Calculation" shows, that the total optical efficiency at design of the Ultimate Trough is 89.9~\%. The dimensions and main characteristics of the HCE is shown in the section "Receiver Geometry".
+For the simulation of the PTC system the Ultimate Trough was selected as solar collector assembly (SCA). This collector is currently not in commercial use, but comparable troughs with similar characteristics are under construction. So the Ultimate Trough can be adopted without technical modifications and no increase of risk. The technical input parameter of the Ultimate Trough for SAM coming directly from the developer (Flabeg GmbH and sbp sonne GmbH) and are documented in Appendix~\ref{PTCdocumentary} on Page~\pageref{PTC_Ultimate_config}. \cite{Riffelmann2014}
+
 \subsubsection{Solar receiver (HCE)}
-As heat collecting element (HCE) Schott's PTR80 was selected. This receiver tube has with \SI{0.08}{m} an extended tube outer diameter. Thereby the tube can contain more HTF and reduce the mass flow in the tubes. Figure~\ref{PTC_HCE} shows the for the simulation inserted parameter. The values are the results of measurements of outdoor optical efficiency and indoor receiver heat loss of parabolic trough collector from researchers of the American National Renewable Energy Laboratory \cite{Kutscher2012}.
-\begin{figure}[htbp]  
-\centering
-\includegraphics[width=0.95\linewidth]{FIG/PTC_HCE}
-\caption[Screenshot of Schott PTR80 input parameter for SAM.]{Screenshot of Schott PTR80 input parameter for SAM.}\label{PTC_HCE}
-\end{figure}
-The section "Parameter and Variations" shows the different conditions of the HCE. Variation 1 shows the optimal condition of the HCE with annulus pressure of 0.0001 torr (\SI{0.000133}{hPa}), so an vacuum. The estimated average heat lost is \SI{190}{W/m}. This Variation counts for 98.5~\% of all HCEs. In Variation 2 the vacuum is lost and which strongly affects the heat loss. It is 1~\SI{270}{W/m} and counts for 1~\% of all HCEs. In Variation 3 also the protection glass is broken, so the heat loss increase to 1~\SI{500}{W/m}. The total weighted losses is \SI{207.35}{W/m} heat loss at design and about 0.85 optical derate and is shown at the last section most below.
+As heat collecting element (HCE) Schott's PTR80 was selected. This receiver tube has with \SI{0.08}{m} an extended tube outer diameter. Thereby the tube can contain more HTF and reduce the mass flow in the tubes. The input data of the HCE for SAM comming from researchers of the American National Renewable Energy Laboratory (NREL) \cite{Kutscher2012}. The specified input parameter are documented in Appendix~\ref{PTCdocumentary} on Page~\pageref{PTC_HCE}. The total weighted losses of the HCE elements is \SI{207.35}{W/m} heat loss at design combined with about 0.85 optical derate (reduction in optical efficiency).
+
 \subsubsection{Solar field}
-PTC solar fields are separated in sections. In the simulation of the PTC system the solar field is designed in two sections. Each section carries a feed pipe and a return pipe to transport the thermal energy to the power block. Attached to the header pipes are many loops, which contains the SCAs, the HCEs and the HTF. Figure~\ref{PTC_Field_ultimate} shows an typical layout for PTC system with two field subsections. As in the Figure is the simulated PTC system designed by four SCAs per loop \cite{Riffelmann2014}.
-\begin{figure}[htbp]  
-\centering
-\includegraphics[width=0.9\linewidth]{FIG/PTC_Field_ultimate}
-\caption[Typical configuration of a solar field layout with two field subsections for a Ultimate Trough.]{Typical configuration of a solar field layout with two field subsections for a Ultimate Trough \cite{Riffelmann2014}.}\label{PTC_Field_ultimate}
-\end{figure}
+PTC solar fields are separated in sections. In the simulation of the PTC system the solar field is designed in two sections. Each section carries a feed pipe and a return pipe to transport the thermal energy to the power block. Attached to the header pipes are many loops, which contains the SCAs, the HCEs and the HTF. 
 
+As mentioned before synthetic oil is used as HTF for the simulation of the PTC system, more precisely Terminol VP-1, which is currently the standard for HTF in PTC systems. Thereby is the system limited by the performance characteristics of Terminol VP-1 of 12 to 400\si{\celsius} \cite{Therminol2015}. The velocity range of Therminol VP-1 should be in the range of 0.36 and 4.97 m/s \cite{Wagner2014} and is affected by the inner tube diameter of the HCE, the HTF density and the loop flow rate \cite{NREL2015a}. A freeze protection temperature for the HTF of 150\si{\celsius} is typically and also assumed for the simulation \cite{Kearney2002}. The input parameter of the HTF for the PTC system are documented in Appendix~\ref{PTCdocumentary} on Page~\pageref{PTC_HTF}. 
 
-As mentioned before synthetic oil is used as HTF for the simulation of the PTC system. The current standard for HTF in PTC systems is Terminol VP-1. The input parameter for the HTF are shown in Figure~\ref{PTC_HTF} and are limited by the performance characteristics of Terminol VP-1 of 12 to 400\si{\celsius} \cite{Therminol2015}. The velocity range of Therminol VP-1 should be in the range of 0.36 and 4.97 m/s \cite{Wagner2014} and is affected by the inner tube diameter of the HCE, the HTF density and the loop flow rate \cite{NREL2015a}. A freeze protection temperature for the HTF of 150\si{\celsius} is typically and also assumed for the simulation \cite{Kearney2002}.
-\begin{figure}[htbp]  
-\centering
-\includegraphics[width=0.6\linewidth]{FIG/PTC_HTF}
-\caption[Screenshot of HTF input parameter for SAM.]{Screenshot of HTF input parameter for SAM.}\label{PTC_HTF}
-\end{figure}
-
-
-The size of the solar field is strongly effected by the solar multiple and the thermal demand of the steam Rankine cycle. At a solar multiple of \si{1} (design thermal power of the steam generator) the solar field requires \SI{453003}{\square\metre} ($\approx$\SI{45.3}{ha}) reflective aperture area of SCA. \si{65.86} ($\approx$66) loops are required at a SM of \si{1}. The number of loops and so also the field size multiplies by the value of the SM.
+The size of the solar field is strongly effected by the solar multiple and the thermal demand of the power block. At a solar multiple of \si{1} (design thermal power of the steam generator) the solar field requires \SI{453003}{\square\metre} ($\approx$\SI{45.3}{ha}) reflective aperture area of SCA. \si{65.86} ($\approx$66) loops are required at a SM of \si{1}. The number of loops and so also the field size multiplies by the value of the SM.
 
 
 
@@ -152,27 +118,22 @@ Storage volume  & \si{\cubed\metre} & 34~407 & 43~008 & 51~610 & 60~212 & 68~813
 
 The storage design temperatures depends from the solar field design temperatures, so the designed temperature difference is \SI{98}{K}. As it is shown in Table~\ref{tbl: PTCTES} the operating temperature limits fits with the storage tank design temperatures. The heater set point is 265\si{\celsius} for both storage tanks. The TES full load hours goes from 8 to 16 in steps of 2. The thermal capacity and also the storage volume rises with the TES full load hours. The simulated stored thermal capacity reaches from 2~\SI{544}{MWh}\textsubscript{th}  at 8 full load hours up to 5~\SI{087}{MWh}\textsubscript{th} at 16 full load hours. It is obviously, that the storage volume of the PTC needs to be more than 3 times that much than the storage volume of the CR system. This is the result of lower temperature difference of the HTF and the turbine design capacity.
 
-Also for the simulation of the PTC system the dispatch control of the turbine output fraction in the storage settings was used. Figure~\ref{PTC_turbineoutput} shows the dispatch control matrix for the turbine output fraction.
-\begin{figure}[htbp]  
-\centering
-\includegraphics[width=0.95\linewidth]{FIG/PTC_turbineoutput}
-\caption[TES dispatch control matrix for turbine output fraction of PTC simulation in SAM.]{TES dispatch control matrix for turbine output fraction of PTC simulation in SAM.}\label{PTC_turbineoutput}
-\end{figure}
+Also for the simulation of the PTC system the dispatch control of the turbine output fraction in the storage settings was used. The implanted settings are documented in Appendix~\ref{PTCdocumentary} on Page~\pageref{PTC_turbineoutput}. 
+
 \subsubsection{Financial parameter}
-The financial parameter for calculating the LCOE of the simulated configuration are shown in Table~\ref{tbl: PTCFinance}. As before at the CR is the PTC power plant calculated over a lifetime of \SI{25}{years}. Also the total plant availability of  15~\% once-off surcharge for EPC and contingencies on the total investment costs are equal to the CR \cite{Platzer2014}.
+As before at the CR is the PTC power plant calculated over a lifetime of \SI{25}{years}. Also the total plant availability and the once-off surcharge for EPC and contingencies on the total investment costs are equal to the CR \cite{Platzer2014}.
 
+The specific costs for the collector field inclusive HTF-system is assumed with \SI{210}{\usd\per\square\metre}. The assuption is based on the cost calculation study which received specific costs values from 2010 of \SI{275}{\usd\per\square\metre} \cite{Morin2012}. These specific cost was be reduced by \SI{25}{\percent} by using the assumed cost reduction from Flabeg  \cite{FLABEG_FE_GmbH2015}.
 
+The specific costs for the power block are equal the costs in CR system but using spezified PTC sources \cite{Platzer2014}.
 
-The specific costs for the collector field inclusive HTF-system is assumed with \SI{210}{\usd\per\square\metre}. The assuption is based on the cost calculation study which received specific costs values from 2010 of \SI{275}{\usd\per\square\metre}\cite{Morin2012}. These specific cost was be reduced by \SI{25}{\percent} by using the assumed cost reduction from Flabeg  \cite{FLABEG_FE_GmbH2015}.
+The specific costs of \SI{50}{USD/kWh}\textsubscript{th} for the TES of the PTC are up to 50~\% higher than the TES of CR costs \cite{Platzer2014}. This is reduce to the lower energy density using lower storage temperatures \cite{Steinmann2015}. Other expected specific costs between 35 and \SI{50}{USD/kWh}\textsubscript{th} \cite{Steinmann2012}.
 
+As before Fichtner analyzed also the annual O\&M costs for PTC power plants in SA and results costs of \SIrange{1.96}{1.97}{\percent} of the total investment costs \cite{Fichtner2010}. The value of \SI{2}{\percent} can so be assumed as conservative.
 
-The specific costs for the power block are the same as at the CR but from other sources \cite{Platzer2014}. 
+For the LCOE calculation of the CSP and PV system was the land purchase costs of \SI{3000}{USD/ha} assumed which is based on the "African Agriculture Review" \cite{Cassell2012}.
 
-The specific costs of \SI{50}{USD/kWh}\textsubscript{th} for the TES of the PTC are up to 50~\% higher than the CR costs \cite{Platzer2014}. This is reduce to the lower energy density using lower storage temperatures \cite{Steinmann2015}. Other expected specific costs between 35 and \SI{50}{USD/kWh}\textsubscript{th} \cite{Steinmann2012}.
-
-As before Fichtner analyzed also the annual O\&M costs for PTC power plants in SA and results costs of 1.96-1.97~\% of the total investment costs \cite{Fichtner2010}. The value of 2~\% can so also be assumed as conservative.
-
-The costs for the land purchase comes from the "African Agriculture Review" report of the Nedbank Capital, which reported the prices for farmland in SA. For the LCOE calculation of the CSP and PV system was the land purchase costs of 3~\SI{000}{USD/ha} assumed which is based on these report \cite{Cassell2012}.
+All financial parameter for calculating the LCOE of the simulated configuration are summarized in Table~\ref{tbl: PTCFinance}.
 \begin{table}[!h]  
   \centering
 	\begin{tabular}{  p{5.0cm} C{2.0cm} C{1.5cm}  C{1.5cm}  C{4.0cm} } 
@@ -198,28 +159,26 @@ This section comprised the results of the simulation from the above designed PTC
 \subsubsection{Load curve covering}
 As it was shown in Table~\ref{tbl: PTC_OverallConfig} on Page~\pageref{tbl: PTC_OverallConfig} the PTC system based power plant was simulated in 35 different configurations, using a SM from 2.0 to 5.0 and 8 to \SI{16}{h} of TES, in order to reach the target of 90~\% load curve covering. This section compares the results of the configuration with the lowest SM and TES hours (SM: 2.0 \& TES: \SI{8}{h}) with the configuration using the highest SM and TES hours  (SM: 5.0 \& TES: \SI{16}{h}) representative for all in between.  
 
-The annual average load curve covering result of the selected simulated PTC configurations is shown in Figure~\ref{PTC_annual_profil}. It can be seen, that the PTC power plant using a SM of 5.0 and \SI{16}{h} of TES covers mostly any time of the year the prescribed load curve. But it is also obviously that power supply declines during the night from \SI{3}{am} on and is also decreasing in the morning hours at \SI{8}{am}. In comparison to that covers the PTC power plant using a SM of 2.0 and \SI{8}{h} of TES significantly less of the year the prescribed load curve. This simulated configuration of the PTC system starts declining the covering directly in the afternoon and standstill during the night from 3 to \SI{6}{am} during the whole year. All annual average load profile simulation results can be found in Appendix~\ref{all_load_profile}.
-
 \begin{figure}[htbp]  
 \centering
 \includegraphics[width=0.8\linewidth]{FIG/PTC_annual_profil}
 \caption[Annual average load profile of selected PTC power plant configurations.]{Annual average load profile of selected PTC power plant configurations.}\label{PTC_annual_profil}
 \end{figure}
-The annual average load curve covering coming from the covering of the prescribed load at any time of the year through the net output of the power plant. The net output variate at any time step and depends on one side from the local whether date and on the other side from the set parameters. The annual sun paths diagram of Upington can be seen on Page~\pageref{SunPathUpington} in Figure~\ref{SunPathUpington}. 
+The annual average load curve covering result of the selected simulated PTC configurations is shown in Figure~\ref{PTC_annual_profil}. It can be seen, that the PTC power plant using a SM of 5.0 and \SI{16}{h} of TES covers mostly any time of the year the prescribed load curve. But it is also obviously that power supply declines during the night from \SI{3}{am} on and is also decreasing in the morning hours at \SI{8}{am}. In comparison to that covers the PTC power plant using a SM of 2.0 and \SI{8}{h} of TES significantly less of the year the prescribed load curve. This simulated configuration of the PTC system starts declining the covering directly in the afternoon and standstill during the night from 3 to \SI{6}{am} during the whole year. All annual average load profile simulation results can be found in Appendix~\ref{all_load_profile}.
 
 Figure~\ref{PTC_winter_load} shows the load curve behavior of the selected PTC power plant configurations during the time of winter solstice, so the time with the shortest time of sunlight and the lowest angle of the incoming sunlight in Upington, SA. In the portrayed time line the DNI coming fro the whether file has a maximum of a about \SI{830}{\watt\per\square\metre} in peak times and there are also days with lower or almost no direct irradiance. 
-
-The net electricity production of the PTC power plant with low configurations don't reach the prescribed load at any time in this portrayed time line. Therefore it is obviously that the solar field don't collect enough thermal energy during the day for filling up the storage to supply the steam turbines also by night. The power that is produced by the solar field goes at any time directly to the power generation and without direct sun irradiance the production is coming to standstill. The parasitic consumer has a peak load of about \SI{8}{MW} during these days in these configuration.
-
-In comparison to that is reaches the net electricity production of the PTC power plant with high configurations almost everyday the prescribed load for some hours. These configuration can also produce enough thermal energy by the solar field to fill up the storage to produce energy till after midnight. But also in that configuration is coming to standstill every night and rises first with the incoming direct irradiance again. In this configuration there is a peak load of about \SI{12}{MW} coming from the parasitic consumer. 
-
-The overproduction of the net output depends on the gross output control and the variable parasitic consumers. The turbine output was preset for all PTC power plant simulation using the turbine output fraction of the TES dispatch control matrix which illustrated in Figure~\ref{PTC_turbineoutput} on Page~\pageref{PTC_turbineoutput}. So it was not possible to regulate the net output under variable external influences at any time. 
 
 \begin{figure}[htbp]  
 \centering
 \includegraphics[width=1\linewidth]{FIG/PTC_winter_load}
 \caption[PTC load profile during the time of winter solstice (15. June - 25. June).]{PTC load profile during the time of winter solstice (15. June - 25. June).}\label{PTC_winter_load}
 \end{figure}
+The net electricity production of the PTC power plant with low configurations don't reach the prescribed load at any time in this portrayed time line. Therefore it is obviously that the solar field don't collect enough thermal energy during the day for filling up the storage to supply the steam turbines also by night. The power that is produced by the solar field goes at any time directly to the power generation and without direct sun irradiance the production is coming to standstill. The parasitic consumer has a peak load of about \SI{8}{MW} during these days in these configuration.
+
+In comparison to that is reaches the net electricity production of the PTC power plant with high configurations almost everyday the prescribed load for some hours. These configuration can also produce enough thermal energy by the solar field to fill up the storage to produce energy till after midnight. But also in that configuration is coming to standstill every night and rises first with the incoming direct irradiance again. In this configuration there is a peak load of about \SI{12}{MW} coming from the parasitic consumer. 
+
+The overproduction of the net output depends on the gross output control and the variable parasitic consumers. The turbine output was preset for all PTC power plant simulation using the turbine output fraction of the TES dispatch control matrix which illustrated in Figure~\ref{PTC_turbineoutput} on Page~\pageref{PTC_turbineoutput}. So it was not possible to regulate the net output under variable external influences at any time. 
+
 It is obviously that the performance of the PCT power plant isn't great at all during the winter solstice. Neither under high then low performance configurations. This leads mainly from the declining optical performance of the solar collector field under impact of lower sunlight angle during the winter months. This performance loss can mainly reduce to the cosine efficiency of the solar field. Figure~\ref{PTC_field_eff} gives an impression of the strong influence of the cosine efficiency on the total optical field efficiency of the simulated PTC power plants. It can be seen that the cosine effect reduces the total field efficiency by almost 50~\% during the midday in June. 
 
 \begin{figure}[!htbp]
@@ -241,16 +200,14 @@ The loss in optical field performance by the cosine effect arise from the low an
 
 The load behavior of the two exemplary PTC power plants during the summer solstice is shown in Figure~\ref{PTC_summer_load}. It is obviously that the higher values of the DNI which reaches 1~\SI{150}{\watt\per\square\metre} in peak and the better field efficiency leads to a considerably higher covering of the prescribed load in both configurations. 
 
-The lower PTC configuration which is using a SM of 2.0 and \SI{8}{h} of TES can cover almost the full daytime load and a part of the night time load eith the net electricity production. But under this configuration the PTC power plant can't cover the prescribed load during the night at the best irradiance time of the year, therefrom is also the mentioned gap in production in the annual average load curve coming which was mentioned at the beginning of these section. The net electricity production over-scaled prescribed load at the beginning of the days which leads from the mentioned gross power output control. The parasitic consumers reaching a peak demand of \SI{15}{MW} in this configuration. 
-
-Figure~\ref{PTC_summer_load} shows also the load behavior of the PTC power plant with the highest simulated configuration, which doesn't stand still in this portrayed time span. The graph shows that the net out put is not constant at all. This is coming from the gross power output control and from the massive rises from the parasitic consumers, especially the solar field HTF pump. These pump needs to move a high volume of HTF through the HCEs. At a SM of 5.0 the solar field produce 5 times that much heat then the steam turbine actually needs at the design point. This over-scaling is necessary for the energy production in winter times during the night. Therefore the fractions of focused SCA's getting reduced when the generated energy filled up the storage completely and no more energy in demanded by the steam turbine. This is what  happens to the total parasitic consumption in the chart. The fractions of focused SCA's getting reduced so the power of solar field HTF pump is getting reduced as well. The peak of the parasitic consumers reaching a demand of about \SI{33}{MW} which makes about 27.5~\% of the gross turbine capacity.
-
 \begin{figure}[htbp]  
 \centering
 \includegraphics[width=1\linewidth]{FIG/PTC_summer_load}
 \caption[PTC load profile during the time of summer solstice (16. December - 26. December).]{PTC load profile during the time of summer solstice (16. December - 26. December).}\label{PTC_summer_load}
 \end{figure}
-The parasitic demand is composed from different electrical loads of the PTC power plant. Dominantly is the mentioned solar field HTF pump but also the condenser operation of the power cycle. Additionally are the parasitic consumption of the TES \& cycle HTF pump, the field collector drives and the fixed loads. Figure~\ref{PTC_parasitics} shows the share of the produced gross energy of the selected configurations for the simulated year. About 10~\% of the annual gross energy production is going to the parasitic consumers. Therefrom goes about one-third respectively to the condenser operation and the solar field HTF pump. The reaming parasitic load is shared by the TES \& cycle HTF pump and the fixed loads. The share of the field collector drives to the parasitic loads is below 1~\% in any case.
+The lower PTC configuration which is using a SM of 2.0 and \SI{8}{h} of TES can cover almost the full daytime load and a part of the night time load eith the net electricity production. But under this configuration the PTC power plant can't cover the prescribed load during the night at the best irradiance time of the year, therefrom is also the mentioned gap in production in the annual average load curve coming which was mentioned at the beginning of these section. The net electricity production over-scaled prescribed load at the beginning of the days which leads from the mentioned gross power output control. The parasitic consumers reaching a peak demand of \SI{15}{MW} in this configuration. 
+
+Figure~\ref{PTC_summer_load} shows also the load behavior of the PTC power plant with the highest simulated configuration, which doesn't stand still in this portrayed time span. The graph shows that the net out put is not constant at all. This is coming from the gross power output control and from the massive rises from the parasitic consumers, especially the solar field HTF pump. These pump needs to move a high volume of HTF through the HCEs. At a SM of 5.0 the solar field produce 5 times that much heat then the steam turbine actually needs at the design point. This over-scaling is necessary for the energy production in winter times during the night. Therefore the fractions of focused SCA's getting reduced when the generated energy filled up the storage completely and no more energy in demanded by the steam turbine. This is what  happens to the total parasitic consumption in the chart. The fractions of focused SCA's getting reduced so the power of solar field HTF pump is getting reduced as well. The peak of the parasitic consumers reaching a demand of about \SI{33}{MW} which makes about 27.5~\% of the gross turbine capacity.
 
 \begin{figure}[!thbp]
         \centering   
@@ -267,11 +224,13 @@ The parasitic demand is composed from different electrical loads of the PTC powe
         \end{subfigure}
         \caption[Share of annual gross energy output of selected PTC power plant configurations.]{Share of annual gross energy output of selected PTC power plant configurations.}\label{PTC_parasitics}
 \end{figure}
+The parasitic demand is composed from different electrical loads of the PTC power plant. Dominantly is the mentioned solar field HTF pump but also the condenser operation of the power cycle. Additionally are the parasitic consumption of the TES \& cycle HTF pump, the field collector drives and the fixed loads. Figure~\ref{PTC_parasitics} shows the share of the produced gross energy of the selected configurations for the simulated year. About 10~\% of the annual gross energy production is going to the parasitic consumers. Therefrom goes about one-third respectively to the condenser operation and the solar field HTF pump. The reaming parasitic load is shared by the TES \& cycle HTF pump and the fixed loads. The share of the field collector drives to the parasitic loads is below 1~\% in any case.
+
 Figure~\ref{PTC_parasitics_low} names the total net output for covering the prescribed load at about \SI{380.51}{GWh} for the PTC power plant with a SM of 2.0 and \SI{8}{h} of TES. The total sum of the annual prescribed load is \SI{711.75}{GWh}. Therefrom results a covering of 53.5~\% of the PTC power plant with the lowest configurations. The annual net output result of the highest simulated PTC configuration can be found in Figure~\ref{PTC_parasitics_high} and is about \SI{646.70}{GWh} which results in a load covering from about 90.9~\% over the year of the prescribed load. 
 
 The remaining load covering results of all simulated PTC power plants can be found in Figure~\ref{PTC_LCCF}. The chart shows that at a SM of 2 all simulated TES variations reaching a load curve covering of 53.4~\%. It can be noteced that the growing rate of the covering is declining with the rising SM. The growing rate from the SM 2.0 to 2.5 is between 10.9~\% and 14.9~\% while it is from the SM 4.5 to 5.0 just between 1~\% and 2~\%. Also there is no noticeable gain between using 12, 14 or \SI{16}{h} of TES. The difference is at highest 0.7~\%. 
 
-\begin{figure}[htbp]  
+\begin{figure}[bhtp]  
 \centering
 \includegraphics[width=1\linewidth]{FIG/PTC_LCCF}
 \caption[Load curve covering result of simulated PTC systems.]{Load curve covering result of simulated PTC systems.}\label{PTC_LCCF}
@@ -289,24 +248,8 @@ Depending from almost identical load curve covering is the behavior of LCOE resu
 \includegraphics[width=1\linewidth]{FIG/PTC_LCOE}
 \caption[LCOE calculation results for PTC simulation.]{LCOE calculation results for PTC simulation.}\label{PTC_LCOE}
 \end{figure}
-The calculated annual LCOE's of the simulated PTC power plants are composed by six cost parts, namely the investment costs of the collector field, TES, power block, land purchase and additional EPC, project management (PM) and risk as well as the annual operation and maintenance (O\&M) costs. The share of the annual LCOE for the selected PTC power plants can be seen in Figure~\ref{PTC_LCOE_BreakDown}. The share of the land purchase is almost irrelevant for the LCOE. 
 
 When comprising the load curve covering results and the LCOE calculation results of the simulated PTC power plants, the lowest LCOE for reaching the target of 90~\% load curve covering is \SI{167.45}{USD/MWh} at a SM of 5.0 and \SI{12}{h} of TES. 
 
 For reaching a covering of 80~\% of the load curve the PTC configuration with a SM of 3.5 and \SI{12}{h} of TES has the lowest LCOE with \SI{151.84}{USD/MWh}. The lowest LCOE for reaching 70~\% of the prescribed load curve is \SI{144.91}{USD/MWh} at a SM of 3.0 and \SI{10}{h} of TES.
-\begin{figure}[!htbp]
-        \centering                
-        \begin{subfigure}[b]{0.5\textwidth}
-                \centering
-                \includegraphics[width=1\textwidth]{FIG/PTC_LCOE_lowinvest_BreakDown}
-                \caption{LCOE break-down for SM~2.0 and \SI{8}{h}~TES.}\label{PTC_LCOE_lowinvest_BreakDown}
-        \end{subfigure}%
-        ~
-        \begin{subfigure}[b]{0.5\textwidth}
-                \centering
-                \includegraphics[width=1\textwidth]{FIG/PTC_LCOE_highinvest_BreakDown}
-                \caption{LCOE break-down for SM~5.0 and \SI{16}{h}~TES.}\label{PTC_LCOE_highinvest_BreakDown}
-        \end{subfigure}
-        \caption[Break-down of selected PTC-LCOE calculation results.]{Break-down of selected PTC-LCOE calculation results.}\label{PTC_LCOE_BreakDown}
-\end{figure}
 \pagebreak

@@ -38,6 +38,7 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{rotating}
+\usepackage{tabularx}
 %
 % Bitte in der folgenden Zeile den Zitierstandard festlegen
 \newcommand{\FHTWCitationType}{HARVARD} % IEEE oder HARVARD möglich - wenn Sie zwischen IEEE und HARVARD wechseln, bitte die temorären Dateien (aux, bbl, ...) löschen
@@ -96,8 +97,8 @@
 \sisetup{detect-all}
 \DeclareSIQualifier\electric{el}
 \DeclareSIQualifier\thermal{th}
-\DeclareSIQualifier\dc{dc}
-\DeclareSIQualifier\ac{ac}
+\DeclareSIQualifier\dc{DC}
+\DeclareSIQualifier\ac{AC}
 \DeclareSIUnit\wattel{\watt\electric}
 \DeclareSIUnit\wattth{\watt\thermal}
 \DeclareSIUnit\usd{USD}
@@ -108,6 +109,7 @@
 \DeclareSIUnit\ampsdc{\ampere\dc}
 \DeclareSIUnit\ampsac{\ampere\ac}
 \DeclareSIUnit\wattsdc{\watt\dc}
+\DeclareSIUnit\wattsac{\watt\ac}
 
 %\usepackage{stdpage}
 \KOMAoption{parskip}{half}
@@ -196,7 +198,7 @@
 %
 \clearpage
 \appendix
-
+\include{appendix_a}
 \include{appendix_b}
 \include{appendix_c}
 \include{appendix_d}
