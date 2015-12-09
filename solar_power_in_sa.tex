@@ -3,10 +3,10 @@
 
 %The sun emits a power rate of about 3.83x10\textsuperscript{26}W. Of this total, only a tiny fraction, \SI{1367}{\watt\per\square\metre} (solar constant) reaches the Earth’s atmosphere. The solar radiation is reduced by absorption and reflection effects in the atmosphere.  The reduction is about \SI{30}{\percent} on a clear day and about \SI{90}{\percent} on a very cloudy day. \cite{Stine2001a}
 
-The sun's radiative power is \SI{3.83e26}{\watt}, only a tiny fraction of which, \SI{1367}{\watt\per\square\metre} (the solar constant), reaches the Earth’s atmosphere. The solar radiation is reduced by absorption and reflection effects in the atmosphere.  The reduction is about approximately \SI{30}{\percent} on a clear day and approximately \SI{90}{\percent} on a very cloudy day \cite{Stine2001a}.
+The sun's radiative power is \SI{3.83e26}{\watt}, only a tiny fraction of which (\SI{1367}{\watt\per\square\metre}, the solar constant) reaches the Earth’s atmosphere. The solar radiation is reduced by absorption and reflection effects in the atmosphere.  This reduction is approximately \SI{30}{\percent} on a clear day and approximately \SI{90}{\percent} on a very cloudy day \cite{Stine2001a}.
 
 %When taking an eye on the world map in Figure~\ref{WorldDNI} it can be noticed that some parts of the world receive much higher direct parts of the sun’s irradiation than others. In particular four regions worldwide are worth mentioning. The Atacama Desert in South America, the Mojave Desert in North America, a huge part of Australia and parts of the southern Africa. Therefore SA is one of the country with the highest potential for generating solar electricity in the world.
-The sun's radiation does not strike the Earth's surface uniformly, meaning that some parts of the world receive much more direct irradiation than others (Figure~\ref{WorldDNI}). South Africa is one of the four regions of the Earth's surface that receive the highest portion of direct normal irradiation, making it an ideal for solar electricity generation.
+The sun's radiation does not strike the Earth's surface uniformly, meaning that some parts of the world receive much more direct irradiation than others (Figure~\ref{WorldDNI}). South Africa is one of the four regions of the Earth's surface that receive the highest portion of direct normal irradiation, making it ideal for solar electricity generation.
 
 \begin{figure}[h!] 
 \centering
@@ -16,7 +16,7 @@ The sun's radiation does not strike the Earth's surface uniformly, meaning that 
 \pagebreak
 \section{Solar radiation} \label{Solar radiation}
 %As shown above, solar irradiation is highly depending from the location. The solar irradiance of a specific location can be measured on-site by ground measurement devices or site-adapted by interpolated satellite data, which is validated with other ground measurement devices \cite{Paulescu2013}. Thereby is the direct and indirect as well as the total sun irradiance crucial.
-Solar irradiation can be highly variable, depending on the location, so accurate on-site measurement and differentiation of direct and indirect irradiance are crucial. The solar irradiance of a specific location can be measured on-site by ground measurement devices or site-adapted by interpolated satellite data, which is validated with other ground measurement devices \cite{Paulescu2013}.
+Solar irradiation can be highly variable depending on the location, so accurate on-site measurement and differentiation of direct and indirect irradiance are crucial. The solar irradiance of a specific location can be measured on-site by ground measurement devices or site-adapted by interpolated satellite data, which is validated with other ground measurement devices \cite{Paulescu2013}.
 
 %These solar irradiation parameter are here defined:
 Solar irradiation parameters are defined here.
@@ -32,7 +32,7 @@ Solar irradiation parameters are defined here.
 \text{GHI}=\text{DNI}\cdot\cos(\theta_{z})+\text{DHI}\label{GL_GHI}
 \end{align}
 
-The GHI is a determining factor for the power output of PV systems and the DNI for CSP systems. In South Africa, the ceiling for GHI is more than \SI{2300}{\kilo\watt\hour\per\square\metre\per\year}, while in some parts of the country DNI is as high as \SI{2900}{\kilo\watt\hour\per\square\metre\per\year} (Figure\ref{irradiation}), significantly higher than in most regions of the world. The highest GHI occurs close to the Namibian border in the northwest. The direct beam is also at its highest in western SA. The area around Springbok in Northern Cape province has the highest DNI.
+The GHI is a determining factor for the power output of PV systems and the DNI for CSP systems. In South Africa, the ceiling for GHI is more than \SI{2300}{\kilo\watt\hour\per\square\metre\per\year}, while in some parts of the country DNI is as high as \SI{2900}{\kilo\watt\hour\per\square\metre\per\year} (Figure\ref{irradiation}), significantly higher than in most regions of the world. The highest GHI occurs close to the Namibian border in the northwest. The direct beam is also at its highest in western South Africa. The area around Springbok in Northern Cape province has the highest DNI.
 
 \begin{figure}[h!]
         \centering
@@ -90,7 +90,7 @@ The solar path for Upington is characterized in Figure~\ref{SunPathUpington}. Th
 
 The annual totals are \SI{2280}{\kilo\watt\hour\per\square\metre\per\year} via GHI and \SI{2621}{\kilo\watt\hour\per\square\metre\per\year} via DNI. When comparing the data used for the simulation with the solar irradiation maps in Figure~\ref{irradiation}, note that the annual total DNI acccording to SolarGIS \cite{SolarGIS2015b} is about \SI{200}{\kilo\watt\hour\per\square\metre\per\year} higher than the value used for the simulation in this thesis.
 
-The weather data for the simulation are in EPW format (EnergyPlus Weather Data) and produced by White Box Technologies, Inc. \cite{WhiteBoxTechnologies2015}. The EPW files are data sets of hourly values of solar radiation and meteorological elements for a typical one-year period. These include air temperature (\si{\celsius}), dew point temperature (\si{\celsius}), relative humidity (\si{\percent}), atmospheric pressure(\si{\milli\bar}), global horizontal solar radiation (\si{\watt\per\square\metre}), diffuse horizontal solar radiation (\si{\watt\per\square\metre}), direct normal radiation (\si{\watt\per\square\metre}), wind speed (\si{\metre\per\second}), wind direction (\si{\degree}) and snow depth (\si{\metre}). The most relevant parameters for the simulation are summarized in Table \ref{tbl: Location}. 
+The weather data for the simulation are in EPW format (EnergyPlus Weather Data) and produced by White Box Technologies, Inc. \cite{WhiteBoxTechnologies2015}. The EPW files are data sets of hourly values of solar radiation and meteorological elements for a typical one-year period. These include air temperature (\si{\celsius}), dew point temperature (\si{\celsius}), relative humidity (\si{\percent}), atmospheric pressure(\si{\milli\bar}), global horizontal solar radiation (\si{\watt\per\square\metre}), diffuse horizontal solar radiation (\si{\watt\per\square\metre}), direct normal radiation (\si{\watt\per\square\metre}), wind speed (\si{\metre\per\second}), wind direction (\si{\degree}) and snow depth (\si{\metre}). The relevant parameters for the simulation are summarized in Table \ref{tbl: Location}. 
  
 \begin{table}[!h]  
   \centering
@@ -146,7 +146,7 @@ South Africa has 27 fully operational PV plants with a total capacity of \SI{105
 \section{System load in South Africa and prescribed load profile} \label{SystemloadinSA}
 %The South African supply structure is based on coal-fired thermal power plants, as it was shown in Section~\ref{ElectricitySA} before. But also the renewable energy supply is getting noteworthy for the supply structure in SA. When taking an eye on Figure~\ref{systemload} it can be noted that wind and PV power also makes a small share of the daily electricity supply. It has to be said that by the time of spring in 2014 the KaXu Solar One CSP plant was not completed and so CSP supply in SA doesn't exist. The reveals that the power demand in SA rises in the morning hours and is coming to a peak demand in the evening hours. The surplus energy during the night got compensated by pump storage and reduction by supply imports. 
 
-The South African electricity infrastructure is built on coal-fired thermal power plants, but the renewable energy supply is becoming more important. Wind and PV generation provides a small share of the daily electricity supply (Figure~\ref{systemload})\footnote{By spring 2014, the KaXu Solar One CSP plant was not complete, so CSP is not accounted for in this system load profile.}. Electricity demand rises in the morning hours and peaks at 20:00. The peak demand is covered by pumped storage hydro. 
+The South African electricity infrastructure is built on coal-fired thermal power plants, but the renewable energy supply is becoming more important. Wind and PV generation provide a small share of the daily electricity supply (Figure~\ref{systemload}).\footnote{By spring 2014, the KaXu Solar One CSP plant was not complete, so CSP is not accounted for in this system load profile.} Electricity demand rises in the morning hours and peaks at 20:00. The peak demand is covered by pumped storage hydro. 
 
 
 \begin{figure}[htbp]  
@@ -187,7 +187,7 @@ Considering system load, supply structure and load shedding history (Figure~\ref
 \end{figure}
 
 %In order to support the South African power supply were it is needed, the for the comparison selected solar power plants are forced to cover a prescribed generation profile. The solar power plants must operate at full power output of \SI{100}{\mega\watt} from 7:00 to 22:00. When the system demand drops during the night, the plants reduce there output from 22:00 to 7:00 to \SI{50}{\mega\watt}. At a covering of \SI{100}{\percent} of the prescribed generation the solar power plants would produce \SI{711.75}{\giga\watt\hour} per year.
-In ensure power is available when needed, the selected solar power plants are forced to meet a prescribed profile. They must operate at a full output of \SI{100}{\mega\watt} from 7:00 to 22:00. When system demand drops during the night, the plants throttle output from 22:00 to 7:00 to \SI{50}{\mega\watt}. At \SI{100}{\percent} coverage of the prescribed profile, the solar plants would produce \SI{711.75}{\giga\watt\hour} per year.
+To ensure power is available when needed, the selected solar power plants are forced to meet a prescribed profile. They must operate at a full output of \SI{100}{\mega\watt} from 7:00 to 22:00. When system demand drops during the night, the plants throttle output from 22:00 to 7:00 to \SI{50}{\mega\watt}. At \SI{100}{\percent} coverage of the prescribed profile, the solar plants would produce \SI{711.75}{\giga\watt\hour} per year.
 
 %With consideration to solar energy is depending on weather and seasonal conditions the individual system design must handle \SI{90}{\percent} of the prescribed generation profile and with regard to the PV system whose module efficiency deteriorates over there lifetime it is just defined for the first year of the plants. [Ich verstehe leider nicht was du hier schreibst.]
 
