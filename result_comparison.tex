@@ -83,7 +83,9 @@ The comparison shows that all solar power plants are able to cover the predicted
 \includegraphics[width=1\linewidth]{FIG/LCOEcomparision}
 \caption[Summary of calculated LCOE results of simulated solar power plants compared with public projections.]{Summary of calculated LCOE results of simulated solar power plants compared with public projections.}\label{LCOEcomparision}
 \end{figure}
-It can be seen that the PV system without EES reaches with \SI{78}{USD/MWh} the lowest LCOE of the simulated power plants, but therby it covers the load curve just about \SI{33}{\percent}. In comparison with other projections can be seen that the PV system in Upington reaches an extreamly low LCOE result. The Fraunhofer ISE institute names the LCOE range\footnote{PV system LCOE result rages from \SIrange{60}{120}{EUR/GWh} by using a WACC of \SI{4.7}{\percent}  \cite{FraunhoferISE2013} at an avarage exchange rate in 2013 and 2014 of \SI{1.33}{USD/EUR} \cite{StatistaGmbH2015}.} for PV systems in 2013 between 80 and \SI{160}{USD/GWh} for areas with a GHI of \SIrange{1450}{2000}{\kilo\watt\hour\per\square\metre\per\year} \cite{FraunhoferISE2013}. When including the higher GHI value of Upington (\SI{2280}{\kilo\watt\hour\per\square\metre\per\year}) and the lower assumed invest costs than in 2013 the calculated LCOE seams realistic. The International Energy Agency (IEA) published the LCOE values for the year 2015 in there annual report of "Tracking Clean Energy Progress 2014" more conservative \cite{IEA2014c}.
+Overall for all simulated solar power plants can be said, that with the higher load covering rate also the LCOE increases.
+
+It can be seen that the PV system without EES reaches with \SI{78}{USD/MWh} the lowest LCOE of the simulated power plants, but therby it covers the load curve just about \SI{33}{\percent} over the first year. In comparison with other projections can be seen that the PV system in Upington reaches an low LCOE result. The Fraunhofer ISE institute names the LCOE range\footnote{PV system LCOE result rages from \SIrange{60}{120}{EUR/GWh} by using a WACC of \SI{4.7}{\percent}  \cite{FraunhoferISE2013} at an avarage exchange rate in 2013 and 2014 of \SI{1.33}{USD/EUR} \cite{StatistaGmbH2015}.} for PV systems in 2013 between 80 and \SI{160}{USD/GWh} for areas with a GHI of \SIrange{1450}{2000}{\kilo\watt\hour\per\square\metre\per\year} \cite{FraunhoferISE2013}. When including the higher GHI value of Upington (\SI{2280}{\kilo\watt\hour\per\square\metre\per\year}) and the lower assumed invest costs than in 2013 the calculated LCOE seams realistic. The International Energy Agency (IEA) published the LCOE values for the year 2015 in there annual report of "Tracking Clean Energy Progress 2014" more conservative \cite{IEA2014c}.
 
 The lowest LCOE calculation results of the simulated solar power plants which covers more than \SI{90}{\percent} of the predicted load curve has the CR power plant with about \SI{155}{USD/MWh}. The CR power plant in generally reaches the lowest LCOE values while having a high load curve covering rate. Also the LCOE result of the PTC power plant is with \SI{167}{USD/MWh} relatively low. When comparing this values with the projections of Fraunhofer ISE institute from 2013 the results looking quite optimistic. But when comparing with the electricity cost range from the IEA publication the CSP simulation results seams realistic.
 
@@ -110,18 +112,33 @@ The LCOE calculation results of the simulated PV system with adapted EES is by f
         \end{subfigure}
         \caption[Break-down of selected LCOE calculation results.]{Break-down of selected LCOE calculation results.}\label{SMPV_LCOE_BreakDown}
 \end{figure}
+Comparing the LCOE break-down shares (Figure~\ref{SMPV_LCOE_BreakDown}) of the selected simulated solar power plants it shows that the CSP power plants costs are dominated by the concentrating and heat collecting components, while the main cost part of the PV power plant is the EES part. The EES makes more than \SI{80}{\percent} of the PV plants LCOE share. This is a huge share compared with the TES of the CSP plants. It can be seen that the TES of the PTC system has a greater proportion of the costs than in the CR system, which is based in the twice that high specific costs for the storage. The capital cost for land purchase are that low that they has no influence on any simulated solar power plant LCOE. 
+
+The sum of the specific investment costs of the selected CSP plants are with \SI{7503}{USD/kW} for the CR system and \SI{7540}{USD/kW} for the PTC system almost the same. This fits also to the from the IEA predicted average specific investment cost in 2015 with about \SI{7362}{USD/kW} \cite{IEA2014c}. The PV system was calculated with specific investment costs of \SI{1285}{USD/kW} (Page~\pageref{SUBSUBPVFinancialparameter}) which is below the prognosticated cost range of the IEA for large-scale solar PV systems (Figure~\ref{investmentcost}). 
+
+The IEA gives also a prediction for solar power investment cost degradation till 2050. After this prognosis will the specific investment costs of the CSP decrease by about \SI{54}{\percent} and the PV system costs by about \SI{60}{\percent} in total till 2050 \cite{IEA2014c}.
+
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=1\linewidth]{FIG/investmentcost}
+\caption[Specific investment cost of seleced simulated solar power plants and IEA cost degradation prediction.]{Specific investment cost of seleced simulated solar power plants and IEA cost degradation prediction.}\label{investmentcost}
+\end{figure}
+As it was shown the costs of the PV power plant with EES is dominated by the cost for the EES storage unit. Nevertheless the assumed specific cost of the Li-ion batteries of \SI{300}{USD/kWh}  (Page~\pageref{SUBSUBPVFinancialparameter}) is comparatively optimistic as it can be seen in Figure~\ref{CostofLi-ion}. But in these publication "Rapidly falling costs of battery packs for electric vehicles" it was shown, that the annual cost reductions for battery storage was about \SI{8}{\percent} the past years which led to the current average battery cost for market-leading actors of \SI{300}{USD/kWh} in 2014 and predicts the costs for 2017-2018 at around \SI{230}{USD/kWh} \cite{Nykvist2015}. It can not be assumed that this high annual cost reductions can be retained over the next decades, but storage costs of \SI{200}{USD/kWh} in 2020, as well as \SI{150}{USD/kWh} in 2030 could be feasible, which confirms also other publications \cite{MckinseyQuaterly2012}.
+
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=1\linewidth]{FIG/CostofLi-ion}
+\caption[Cost of battery packs in battery electric vehicles.]{Cost of battery packs in battery electric vehicles \cite{Nykvist2015}.}\label{CostofLi-ion}
+\end{figure}
+The estimated cost reduction for the coming decades of solar power applications and EES was used for a medium-term lookout of the LCOE of the selected simulated systems. Figure~\ref{Costdegrad} shows the expected cost development of the selected solar power plants\footnote{Using the average cost reduction behaviour from \cite{IEA2014c} and assumed storage part cost of the EES of \SI{200}{USD/kWh} in 2020 and \SI{150}{USD/kWh} in 2030.} and the currently expected costs per \si{MWh} for new-built conventional power stations\footnote{Costs per \si{MWh} for conventional new-built options as per IRP Update \cite{CSIR2015a} by using a avarage exchange rate from 2014 of \SI{11.286}{USD/ZAR} \cite{IRS2015}.}. 
+
+It can be seen that the reduction of the EES storage part effects the electricity price of the PV power plant with EES enormously and could halved the LCOE by 2030. 
 
 
 \begin{figure}[htbp]  
 \centering
-\includegraphics[width=0.95\linewidth]{FIG/investmentcost}
-\caption[]{}\label{investmentcost}
+\includegraphics[width=1\linewidth]{FIG/Costdegrad}
+\caption[.]{.}\label{Costdegrad}
 \end{figure}
 
-
-
-\begin{figure}[htbp]  
-\centering
-\includegraphics[width=0.95\linewidth]{FIG/CostofLi-ion}
-\caption[Cost of Li-ion battery packs in battery electric vehicles.]{Cost of Li-ion battery packs in battery electric vehicles \cite{Nykvist2015}.}\label{CostofLi-ion}
-\end{figure}
+EES almost that cheap as Diesel (OCGT)
