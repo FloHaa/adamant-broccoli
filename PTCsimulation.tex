@@ -90,7 +90,7 @@ PTC solar fields are divided into sections. In the simulated system, the solar f
 A synthetic oil, Therminol VP-1, is used as HTF in this simulation. This limits the temperature envelope to \SIrange{12}{400}{\celsius} \cite{Therminol2015}. The velocity envelope of Therminol VP-1 is \SIrange{0.36}{4.97}{\meter\per\second} \cite{Wagner2014}. Actual stream velocity is determine by the inner tube diameter of the HCE, the HTF density and the loop flow rate \cite{NREL2015a}. (For the specifications of the HTF for the PTC system, see Appendix~\ref{PTCdocumentary}, page~\pageref{PTC_HTF}.) 
 
 %The size of the solar field is strongly effected by the solar multiple and the thermal demand of the power block. At a solar multiple of \si{1} (design thermal power of the steam generator) the solar field requires \SI{453003}{\square\metre} ($\approx$\SI{45.3}{ha}) reflective aperture area of SCA. \si{65.86} ($\approx$66) loops are required at a SM of \si{1}. The number of loops and so also the field size multiplies by the value of the SM.
-The size of the solar field is coupled to the solar multiple and the thermal demand of the power block. At a solar multiple of \si{1} (design thermal power of the steam generator) the solar field has \SI{453003}{\square\metre} (\SI{45.3}{ha}) of reflective aperture, corresponding to \si{65.86} ($\approx$66) loops.
+The size of the solar field is coupled to the solar multiple and the thermal demand of the power block. At a solar multiple of \si{1} (design thermal power of the steam generator) the solar field has \SI{453003}{\square\metre} (\SI{45.3}{\hectare}) of reflective aperture, corresponding to \si{65.86} ($\approx$66) loops.
 
 %Also the the solar field area and thereby the total land area depending by the SM. Equation~\ref{GL_PTCSolarfieldarea} shows the influence on the solar field area of the ratio between the row spacing and the SCA width. The roe spacing is assumed by \SI{18}{m} between the parallel SCAs. The total land area results by Equation~\ref{GL_PTCtotallandarea} and is the solar field area multiplies by the factor of non-solar field area. The factor is assumed by \si{1.4} in the simulation \cite{NREL2015a}.
 
@@ -116,7 +116,7 @@ Design-point DNI & \si{\watt\per\metre} &  \multicolumn{7}{c}{\num{950}}\\
 \textbf{Solar multiple} &  & \textbf{2.0} & \textbf{2.5} & \textbf{3.0} & \textbf{3.5} & \textbf{4.0} & \textbf{4.5} & \textbf{5.0}\\ \hline 
 Field thermal output & \si{\mega\wattth} & \num{636} & \num{795} & \num{954} & \num{1113} & \num{1272} & \num{1431} & \num{1590}\\
 Number of loops  & - & \num{132} & \num{165} & \num{198} & \num{231} & \num{264} & \num{297} & \num{330}\\ 
-Aperture reflective area & \si{\ha} & \num{90.6} & \num{113.3} & \num{135.9} & \num{158.6} & \num{181.2} & \num{203.9} & \num{226.5}\\ 
+Aperture reflective area & \si{\hectare} & \num{90.6} & \num{113.3} & \num{135.9} & \num{158.6} & \num{181.2} & \num{203.9} & \num{226.5}\\ 
 Total land area & ha & \num{675} & \num{845} & \num{1013} & \num{1182} & \num{1351} & \num{1540} & \num{1689}\\ 
 \hline
 \end{tabular}
@@ -172,7 +172,7 @@ Fichtner analyzed the annual O\&M costs for PTC power plants in South Africa and
 
 %For the LCOE calculation of the CSP and PV system was the land purchase costs of \SI{3000}{USD/ha} assumed which is based on the "African Agriculture Review" \cite{Cassell2012}.
 
-For the LCOE calculation, land purchase costs of \SI{3000}{USD/ha} were assumed, based on the "African Agriculture Review" \cite{Cassell2012}.
+For the LCOE calculation, land purchase costs of \SI{3000}{USD/\hectare} were assumed, based on the "African Agriculture Review" \cite{Cassell2012}.
 
 %All financial parameter for calculating the LCOE of the simulated configuration are summarized in Table~\ref{tbl: PTCFinance}.
 
@@ -278,50 +278,73 @@ The smaller PTC configuration using a SM of \num{2.0} and \SI{8}{h} of TES can c
 
 %Figure~\ref{PTC_summer_load} shows also the load behavior of the PTC power plant with the highest simulated configuration, which doesn't stand still in this portrayed time span. The graph shows that the net out put is not constant at all. This is coming from the gross power output control and from the massive rises from the parasitic consumers, especially the solar field HTF pump. These pump needs to move a high volume of HTF through the HCEs. At a SM of 5.0 the solar field produce 5 times that much heat then the steam turbine actually needs at the design point. This over-scaling is necessary for the energy production in winter times during the night. Therefore the fractions of focused SCA's getting reduced when the generated energy filled up the storage completely and no more energy in demanded by the steam turbine. This is what  happens to the total parasitic consumption in the chart. The fractions of focused SCA's getting reduced so the power of solar field HTF pump is getting reduced as well. The peak of the parasitic consumers reaching a demand of about \SI{33}{MW} which makes about 27.5~\% of the gross turbine capacity.
 
-Figure~\ref{PTC_summer_load} also shows the load behaviour of the PTC power plant with the highest simulated configuration, which does not drop out in this time span. The graph shows that the net out put is not constant at all. This is coming from the gross power output control and from the massive rises from the parasitic consumers, especially the solar field HTF pump. These pump needs to move a high volume of HTF through the HCEs. At a SM of 5.0 the solar field produce 5 times that much heat then the steam turbine actually needs at the design point. This over-scaling is necessary for the energy production in winter times during the night. Therefore the fractions of focused SCA's getting reduced when the generated energy filled up the storage completely and no more energy in demanded by the steam turbine. This is what  happens to the total parasitic consumption in the chart. The fractions of focused SCA's getting reduced so the power of solar field HTF pump is getting reduced as well. The peak of the parasitic consumers reaching a demand of about \SI{33}{MW} which makes about 27.5~\% of the gross turbine capacity.
+Figure~\ref{PTC_summer_load} also shows the behaviour of the plant with the largest configuration, which does not drop out in this time span. Net output is not constant. This is due to gross power output control and massive increases in parasitic load, especially the solar field HTF pumps. These pumps move a large volume of HTF through the HCEs. At a SM of \num{5.0}, the solar field produce \num{5} times as much heat as the steam turbine needs at the design point. This over-scaling is necessary for energy production during the night in winter. The focused SCA fraction is reduced when storage is full and steam turbine demand is met.
 
+% This is what happens to the total parasitic consumption in the chart. The fractions of focused SCA's getting reduced so the power of solar field HTF pump is getting reduced as well. The peak of the parasitic consumers reaching a demand of about \SI{33}{MW} which makes about 27.5~\% of the gross turbine capacity.
+
+As the focused SCA fraction is reduced, so is the solar field HTF pump throughput. Parasitic loads peak at \SI{33}{MW}, corresponding to \SI{27.5}{\percent} of the gross turbine capacity.
 
 \begin{figure}[!thbp]
         \centering   
         \begin{subfigure}[b]{0.65\textwidth}
                 \centering
                 \includegraphics[width=1\textwidth]{FIG/PTC_parasitics_low}
-                \caption{SM: 2.0 TES: 8 h}\label{PTC_parasitics_low}
+                \caption{SM: \num{2.0} TES: \SI{8}{h}}\label{PTC_parasitics_low}
         \end{subfigure}
 \par\medskip % Linebreak              
         \begin{subfigure}[b]{0.65\textwidth}
                 \centering
                 \includegraphics[width=1\textwidth]{FIG/PTC_parasitics_high}
-                \caption{SM: 5.0 TES: 16 h}\label{PTC_parasitics_high}
+                \caption{SM: \num{5.0} TES: \SI{16}{h}\label{PTC_parasitics_high}
         \end{subfigure}
         \caption[Share of annual gross energy output of selected PTC power plant configurations.]{Share of annual gross energy output of selected PTC power plant configurations.}\label{PTC_parasitics}
 \end{figure}
-The parasitic demand is composed from different electrical loads of the PTC power plant. Dominantly is the mentioned solar field HTF pump but also the condenser operation of the power cycle. Additionally are the parasitic consumption of the TES \& cycle HTF pump, the field collector drives and the fixed loads. Figure~\ref{PTC_parasitics} shows the share of the produced gross energy of the selected configurations for the simulated year. About 10~\% of the annual gross energy production is going to the parasitic consumers. Therefrom goes about one-third respectively to the condenser operation and the solar field HTF pump. The reaming parasitic load is shared by the TES \& cycle HTF pump and the fixed loads. The share of the field collector drives to the parasitic loads is below 1~\% in any case.
+%The parasitic demand is composed from different electrical loads of the PTC power plant. Dominantly is the mentioned solar field HTF pump but also the condenser operation of the power cycle. Additionally are the parasitic consumption of the TES \& cycle HTF pump, the field collector drives and the fixed loads. Figure~\ref{PTC_parasitics} shows the share of the produced gross energy of the selected configurations for the simulated year. About 10~\% of the annual gross energy production is going to the parasitic consumers. Therefrom goes about one-third respectively to the condenser operation and the solar field HTF pump. The reaming parasitic load is shared by the TES \& cycle HTF pump and the fixed loads. The share of the field collector drives to the parasitic loads is below 1~\% in any case.
 
-Figure~\ref{PTC_parasitics_low} names the total net output for covering the prescribed load at about \SI{380.51}{GWh} for the PTC power plant with a SM of 2.0 and \SI{8}{h} of TES. The total sum of the annual prescribed load is \SI{711.75}{GWh}. Therefrom results a covering of 53.5~\% of the PTC power plant with the lowest configurations. The annual net output result of the highest simulated PTC configuration can be found in Figure~\ref{PTC_parasitics_high} and is about \SI{646.70}{GWh} which results in a load covering from about 90.9~\% over the year of the prescribed load. 
+About \SI{10}{\percent} of annual gross energy production goes to parasitic consumers. Dominant parasitic loads are the solar field HTF pump but also the condenser operation of the power cycle, followed by the TES and cycle HTF pump, field collector drives and fixed loads (Figure~\ref{PTC_parasitics}).
 
-The remaining load covering results of all simulated PTC power plants can be found in Figure~\ref{PTC_LCCF}. The chart shows that at a SM of 2 all simulated TES variations reaching a load curve covering of 53.4~\%. It can be noteced that the growing rate of the covering is declining with the rising SM. The growing rate from the SM 2.0 to 2.5 is between 10.9~\% and 14.9~\% while it is from the SM 4.5 to 5.0 just between 1~\% and 2~\%. Also there is no noticeable gain between using 12, 14 or \SI{16}{h} of TES. The difference is at highest 0.7~\%. 
+%Figure~\ref{PTC_parasitics_low} names the total net output for covering the prescribed load at about \SI{380.51}{GWh} for the PTC power plant with a SM of 2.0 and \SI{8}{h} of TES. The total sum of the annual prescribed load is \SI{711.75}{GWh}. Therefrom results a covering of 53.5~\% of the PTC power plant with the lowest configurations. The annual net output result of the highest simulated PTC configuration can be found in Figure~\ref{PTC_parasitics_high} and is about \SI{646.70}{GWh} which results in a load covering from about 90.9~\% over the year of the prescribed load. 
+For the configuration with a SM of \num{2.0} and \SI{8}{h} of TES, total net output is \SI{380.51}{GWh} (Figure~\ref{PTC_parasitics_low}). With total annual demand of \SI{711.75}{GWh}, load coverage is \SI{53.5}{\percent} for the smallest configuration. 
+%The annual net output result of the highest simulated PTC configuration can be found in Figure~\ref{PTC_parasitics_high} and is about \SI{646.70}{GWh} which results in a load covering from about 90.9~\% over the year of the prescribed load. 
+
+The annual net output of the largest configuration is \SI{646.70}{GWh}, which corresponds to a load coverage of \SI{90.9\{\percent} (Figure~\ref{PTC_parasitics_high}).
+
+%The remaining load covering results of all simulated PTC power plants can be found in Figure~\ref{PTC_LCCF}. The chart shows that at a SM of 2 all simulated TES variations reaching a load curve covering of 53.4~\%. It can be noteced that the growing rate of the covering is declining with the rising SM. The growing rate from the SM 2.0 to 2.5 is between 10.9~\% and 14.9~\% while it is from the SM 4.5 to 5.0 just between 1~\% and 2~\%. Also there is no noticeable gain between using 12, 14 or \SI{16}{h} of TES. The difference is at highest 0.7~\%. 
+
+At a SM of \num{2}, all TES variations achieve at least \SI{53.4}{\percent} coverage. The rate of increase in load coverage declines with rising SM (SM \numrange{2.0}{2.5}: \SIrange{10.9}{14.9}{\percent}, SM \numrange{4.5}{5.0}: \SIrange{1}{2}{\percent}) There is no significant marginal benefit to \num{12}, \num{14} or \SI{16}{h} of TES (Figure~\ref{PTC_LCCF}).
 
 \begin{figure}[bhtp]  
 \centering
 \includegraphics[width=1\linewidth]{FIG/PTC_LCCF}
-\caption[Load curve covering result of simulated PTC systems.]{Load curve covering result of simulated PTC systems.}\label{PTC_LCCF}
+\caption[Load curve coverage of simulated PTC systems.]{Load curve coverage of simulated PTC systems.}\label{PTC_LCCF}
 \end{figure}
-The target of 90~\% load covering is just reached by a SM of 5.0 and more then \SI{12}{h} of TES and it can be noted that it seams to be really elaborate for reaching that high value of annual covering using a PTC plant. 70~\% load covering was reached at all simulated PTC configurations. While 80~\% load covering was reached by all configurations besides the \SI{8}{h} of TES.
-\subsubsection{Levelized costs of electricity}
-For the calculated LCOE the finacial input parameter in Table~\ref{tbl: PTCFinance} and a simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE} was used. These results of the LCOE claculation for the simulated PTC configurations can be seen in Figure~\ref{PTC_LCOE}. 
 
-The lowest LCOE result of the simulated PTC power plants is \SI{144.91}{USD/MWh} at a SM of 3.0 and \SI{10}{h} of TES. The \SI{8}{h} TES at a SM of 2.5 has marginal higher result of (\SI{145.17}{USD/MWh}). The highest LCOE result of \SI{202.95}{USD/MWh} was reached at a SM of 2.0 and \SI{16}{h} of TES. 
+%The target of 90~\% load covering is just reached by a SM of 5.0 and more then \SI{12}{h} of TES and it can be noted that it seams to be really elaborate for reaching that high value of annual covering using a PTC plant. 70~\% load covering was reached at all simulated PTC configurations. While 80~\% load covering was reached by all configurations besides the \SI{8}{h} of TES.
 
-Depending from almost identical load curve covering is the behavior of LCOE results of the simulated TES variations 12, 14 and \SI{16}{h} almost identical. The difference in the height of the charts results from the higher investment cost of the larger storage configuration.
+The target \SI{90}{\percent} load coverage is reached at a SM of \num{5.0} and more than \SI{12}{h} of TES, implying a substantial investment. Load coverage of at least \SI{70}{\percent} was achieved in all simulated PTC configurations,  \SI{80}{\percent} load coverage was achieved by all configurations except the \SI{8}{h} TES.
 
-\begin{figure}[htbp]  
+\subsubsection{Levelised costs of electricity}
+%For the calculated LCOE the finacial input parameter in Table~\ref{tbl: PTCFinance} and a simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE} was used. These results of the LCOE claculation for the simulated PTC configurations can be seen in Figure~\ref{PTC_LCOE}. 
+
+Financial parameters in Table~\ref{tbl: PTCFinance} and a simplified method (see Appendix~\ref{ChapterLCOE}, page \pageref{ChapterLCOE}) were used to compute LCOE. 
+
+%The lowest LCOE result of the simulated PTC power plants is \SI{144.91}{USD/MWh} at a SM of 3.0 and \SI{10}{h} of TES. The \SI{8}{h} TES at a SM of 2.5 has marginal higher result of (\SI{145.17}{USD/MWh}). The highest LCOE result of \SI{202.95}{USD/MWh} was reached at a SM of 2.0 and \SI{16}{h} of TES. 
+
+The lowest LCOE result of the simulated PTC power plants is \SI{144.91}{USD/MWh} at a SM of \num{3.0} and \SI{10}{h} of TES. At \SI{8}{h} TES and SM of \num{2.5}, LCOE is negligibly higher (\SI{145.17}{USD/MWh}). The most expensive configuration is SM of 2.0 and \SI{16}{h} of TES, with LCOE of \SI{202.95}{USD/MWh} (Figure~\ref{PTC_LCOE}). 
+
+%Depending from almost identical load curve covering is the behavior of LCOE results of the simulated TES variations 12, 14 and \SI{16}{h} almost identical. The difference in the height of the charts results from the higher investment cost of the larger storage configuration.
+The LCOE for the \SIlist{12;14;16}{h} TES configurations are practically identical due to the load curve coverage.
+
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=1\linewidth]{FIG/PTC_LCOE}
 \caption[LCOE calculation results for PTC simulation.]{LCOE calculation results for PTC simulation.}\label{PTC_LCOE}
 \end{figure}
 
-When comprising the load curve covering results and the LCOE calculation results of the simulated PTC power plants, the lowest LCOE for reaching the target of 90~\% load curve covering is \SI{167.45}{USD/MWh} at a SM of 5.0 and \SI{12}{h} of TES. 
+%When comprising the load curve covering results and the LCOE calculation results of the simulated PTC power plants, the lowest LCOE for reaching the target of 90~\% load curve covering is \SI{167.45}{USD/MWh} at a SM of 5.0 and \SI{12}{h} of TES. 
 
-For reaching a covering of 80~\% of the load curve the PTC configuration with a SM of 3.5 and \SI{12}{h} of TES has the lowest LCOE with \SI{151.84}{USD/MWh}. The lowest LCOE for reaching 70~\% of the prescribed load curve is \SI{144.91}{USD/MWh} at a SM of 3.0 and \SI{10}{h} of TES.
-\pagebreak
+The lowest LCOE for \SI{90}{\percent} load curve coverage is \SI{167.45}{USD/MWh} at a SM of \num{5.0} and \SI{12}{h} of TES.
+
+%For reaching a covering of 80~\% of the load curve the PTC configuration with a SM of 3.5 and \SI{12}{h} of TES has the lowest LCOE with \SI{151.84}{USD/MWh}. The lowest LCOE for reaching 70~\% of the prescribed load curve is \SI{144.91}{USD/MWh} at a SM of 3.0 and \SI{10}{h} of TES.
+
+At a coverage \SI{80}{\percent}, the configuration with a SM of \num{3.5} and \SI{12}{h} of TES has the lowest LCOE of \SI{151.84}{USD/MWh}, at \SI{70}{\percent}, the lowest LCOE is at a SM of \num{3.0} and \SI{10}{h} TES, with \SI{144.91}{USD/MWh}.
