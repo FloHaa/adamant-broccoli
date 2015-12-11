@@ -229,7 +229,7 @@ The net electricity production of the PTC plant with a small configuration does 
 
 %In comparison to that is reaches the net electricity production of the PTC power plant with high configurations almost everyday the prescribed load for some hours. These configuration can also produce enough thermal energy by the solar field to fill up the storage to produce energy till after midnight. But also in that configuration is coming to standstill every night and rises first with the incoming direct irradiance again. In this configuration there is a peak load of about \SI{12}{MW} coming from the parasitic consumer. 
 
-The plant with a large configuration can cover the prescribed load on almost any day, at least for a few hours. Such configurations can convert enough thermal energy from the solar field to continue generating until after midnight. Even this configuration drops out every night, rising only direct irradiance returns. In this configuration, parasitic loads are \SI{12}{MW}. 
+The plant with a large configuration can cover the prescribed load on almost any day, at least for a few hours. Such configurations can convert enough thermal energy from the solar field to continue generating until after midnight. Even this configuration drops out every night, rising only when direct irradiance returns. In this configuration, parasitic loads are \SI{12}{MW}. 
 
 
 %The overproduction of the net output depends on the gross output control and the variable parasitic consumers. The turbine output was preset for all PTC power plant simulation using the turbine output fraction of the TES dispatch control matrix which illustrated in Figure~\ref{PTC_turbineoutput} on Page~\pageref{PTC_turbineoutput}. So it was not possible to regulate the net output under variable external influences at any time. 
@@ -238,7 +238,7 @@ The overproduction of net output depends on gross output control and variable pa
 
 %It is obviously that the performance of the PCT power plant isn't great at all during the winter solstice. Neither under high then low performance configurations. This leads mainly from the declining optical performance of the solar collector field under impact of lower sunlight angle during the winter months. This performance loss can mainly reduce to the cosine efficiency of the solar field. Figure~\ref{PTC_field_eff} gives an impression of the strong influence of the cosine efficiency on the total optical field efficiency of the simulated PTC power plants. It can be seen that the cosine effect reduces the total field efficiency by almost 50~\% during the midday in June. 
 
-The performance of PTC power plants, at least in this simulation, is poor during northern solstice, irrespective of configuration. This is primarily a result of declining optical performance of the solar collector field under lower sunlight angle during the winter months. This performance loss can be attributed to the cosine efficiency of the solar field. Figure~\ref{PTC_field_eff} gives an impression of the influence of cosine efficiency on the total optical field efficiency of the simulated PTC power plants. The cosine effect reduces the total field efficiency by almost \SI{50\{\percent} at midday in June. 
+The performance of PTC power plants, at least in this simulation, is poor during northern solstice, irrespective of configuration. This is primarily a result of declining optical performance of the solar collector field under lower sunlight angle during the winter months. This performance loss can be attributed to the cosine efficiency of the solar field. Figure~\ref{PTC_field_eff} gives an impression of the influence of cosine efficiency on the total optical field efficiency of the simulated PTC power plants. The cosine effect reduces the total field efficiency by almost \SI{50}{\percent} at midday in June. 
 
 
 \begin{figure}[!htbp]
@@ -246,15 +246,15 @@ The performance of PTC power plants, at least in this simulation, is poor during
         \begin{subfigure}[b]{0.5\textwidth}
                 \centering
                 \includegraphics[width=1\textwidth]{FIG/PTC_field_eff_winter}
-                \caption{Avarage influence of the cosine efficiency on the avarage total optical field efficiency in June.}\label{PTC_field_eff_winter}
+                \caption{Effect of cosine efficiency on the average total optical field efficiency in June.}\label{PTC_field_eff_winter}
         \end{subfigure}%
         ~
         \begin{subfigure}[b]{0.5\textwidth}
                 \centering
                 \includegraphics[width=1\textwidth]{FIG/PTC_field_eff_summer}
-                \caption{Avarage influence of the cosine efficiency on the avarage total optical field efficiency in December.}\label{PTC_field_eff_summer}
+                \caption{Effect of cosine efficiency on the average total optical field efficiency in December.}\label{PTC_field_eff_summer}
         \end{subfigure}
-        \caption[Influence of the cosine efficiency on average total optical field efficiency of a PTC power plant for different months of the year.]{Influence of the cosine efficiency on average total optical field efficiency of a PTC power plant for different months of the year.}\label{PTC_field_eff}
+        \caption[Effect of cosine efficiency on average total optical field efficiency of a PTC power plant for different months of the year.]{Effect of cosine efficiency on average total optical field efficiency of a PTC power plant for different months of the year.}\label{PTC_field_eff}
 \end{figure}
 %The loss in optical field performance by the cosine effect arise from the low angle of sunlight, therefor is the efficiency loss in the summer months through the cosine effect comparability low and has just an low effect in the morning and evening hours. 
 %
@@ -276,9 +276,9 @@ The load behaviour of the two example plants at southern solstice is shown in Fi
 The smaller PTC configuration using a SM of \num{2.0} and \SI{8}{h} of TES can cover almost the full daytime load and part of the night time load. However, the plant cannot cover the prescribed load at night even during times of highest irradiance. Parasitic loads peak at \SI{15}{MW}. 
 
 
-%Figure~\ref{PTC_summer_load} shows also the load behavior of the PTC power plant with the highest simulated configuration, which doesn't stand still in this portrayed time span. The graph shows that the net out put is not constant at all. This is coming from the gross power output control and from the massive rises from the parasitic consumers, especially the solar field HTF pump. These pump needs to move a high volume of HTF through the HCEs. At a SM of 5.0 the solar field produce 5 times that much heat then the steam turbine actually needs at the design point. This over-scaling is necessary for the energy production in winter times during the night. Therefore the fractions of focused SCA's getting reduced when the generated energy filled up the storage completely and no more energy in demanded by the steam turbine. This is what  happens to the total parasitic consumption in the chart. The fractions of focused SCA's getting reduced so the power of solar field HTF pump is getting reduced as well. The peak of the parasitic consumers reaching a demand of about \SI{33}{MW} which makes about 27.5~\% of the gross turbine capacity.
+Figure~\ref{PTC_summer_load} shows also the load behavior of the PTC power plant with the highest simulated configuration, which doesn't stand still in this portrayed time span. The graph shows that the net out put is not constant at all. This is coming from the gross power output control and from the massive rises from the parasitic consumers, especially the solar field HTF pump. These pump needs to move a high volume of HTF through the HCEs. At a SM of 5.0 the solar field produce 5 times that much heat then the steam turbine actually needs at the design point. This over-scaling is necessary for the energy production in winter times during the night. Therefore the fractions of focused SCA's getting reduced when the generated energy filled up the storage completely and no more energy in demanded by the steam turbine. This is what  happens to the total parasitic consumption in the chart. The fractions of focused SCA's getting reduced so the power of solar field HTF pump is getting reduced as well. The peak of the parasitic consumers reaching a demand of about \SI{33}{MW} which makes about 27.5~\% of the gross turbine capacity.
 
-Figure~\ref{PTC_summer_load} also shows the behaviour of the plant with the largest configuration, which does not drop out in this time span. Net output is not constant. This is due to gross power output control and massive increases in parasitic load, especially the solar field HTF pumps. These pumps move a large volume of HTF through the HCEs. At a SM of \num{5.0}, the solar field produce \num{5} times as much heat as the steam turbine needs at the design point. This over-scaling is necessary for energy production during the night in winter. The focused SCA fraction is reduced when storage is full and steam turbine demand is met.
+%Figure~\ref{PTC_summer_load} also shows the behaviour of the plant with the largest configuration, which does not drop out in this time span. Net output is not constant. This is due to gross power output control and massive increases in parasitic load, especially the solar field HTF pumps. These pumps move a large volume of HTF through the HCEs. At a SM of \num{5.0}, the solar field produce \num{5} times as much heat as the steam turbine needs at the design point. This over-scaling is necessary for energy production during the night in winter. The focused SCA fraction is reduced when storage is full and steam turbine demand is met.
 
 % This is what happens to the total parasitic consumption in the chart. The fractions of focused SCA's getting reduced so the power of solar field HTF pump is getting reduced as well. The peak of the parasitic consumers reaching a demand of about \SI{33}{MW} which makes about 27.5~\% of the gross turbine capacity.
 
@@ -291,14 +291,15 @@ As the focused SCA fraction is reduced, so is the solar field HTF pump throughpu
                 \includegraphics[width=1\textwidth]{FIG/PTC_parasitics_low}
                 \caption{SM: \num{2.0} TES: \SI{8}{h}}\label{PTC_parasitics_low}
         \end{subfigure}
-\par\medskip % Linebreak              
+        
         \begin{subfigure}[b]{0.65\textwidth}
                 \centering
                 \includegraphics[width=1\textwidth]{FIG/PTC_parasitics_high}
-                \caption{SM: \num{5.0} TES: \SI{16}{h}\label{PTC_parasitics_high}
+                \caption{SM: \num{5.0} TES: \SI{16}{h}}\label{PTC_parasitics_high}
         \end{subfigure}
         \caption[Share of annual gross energy output of selected PTC power plant configurations.]{Share of annual gross energy output of selected PTC power plant configurations.}\label{PTC_parasitics}
 \end{figure}
+
 %The parasitic demand is composed from different electrical loads of the PTC power plant. Dominantly is the mentioned solar field HTF pump but also the condenser operation of the power cycle. Additionally are the parasitic consumption of the TES \& cycle HTF pump, the field collector drives and the fixed loads. Figure~\ref{PTC_parasitics} shows the share of the produced gross energy of the selected configurations for the simulated year. About 10~\% of the annual gross energy production is going to the parasitic consumers. Therefrom goes about one-third respectively to the condenser operation and the solar field HTF pump. The reaming parasitic load is shared by the TES \& cycle HTF pump and the fixed loads. The share of the field collector drives to the parasitic loads is below 1~\% in any case.
 
 About \SI{10}{\percent} of annual gross energy production goes to parasitic consumers. Dominant parasitic loads are the solar field HTF pump but also the condenser operation of the power cycle, followed by the TES and cycle HTF pump, field collector drives and fixed loads (Figure~\ref{PTC_parasitics}).
@@ -307,7 +308,7 @@ About \SI{10}{\percent} of annual gross energy production goes to parasitic cons
 For the configuration with a SM of \num{2.0} and \SI{8}{h} of TES, total net output is \SI{380.51}{GWh} (Figure~\ref{PTC_parasitics_low}). With total annual demand of \SI{711.75}{GWh}, load coverage is \SI{53.5}{\percent} for the smallest configuration. 
 %The annual net output result of the highest simulated PTC configuration can be found in Figure~\ref{PTC_parasitics_high} and is about \SI{646.70}{GWh} which results in a load covering from about 90.9~\% over the year of the prescribed load. 
 
-The annual net output of the largest configuration is \SI{646.70}{GWh}, which corresponds to a load coverage of \SI{90.9\{\percent} (Figure~\ref{PTC_parasitics_high}).
+The annual net output of the largest configuration is \SI{646.70}{GWh}, which corresponds to a load coverage of \SI{90.9}{\percent} (Figure~\ref{PTC_parasitics_high}).
 
 %The remaining load covering results of all simulated PTC power plants can be found in Figure~\ref{PTC_LCCF}. The chart shows that at a SM of 2 all simulated TES variations reaching a load curve covering of 53.4~\%. It can be noteced that the growing rate of the covering is declining with the rising SM. The growing rate from the SM 2.0 to 2.5 is between 10.9~\% and 14.9~\% while it is from the SM 4.5 to 5.0 just between 1~\% and 2~\%. Also there is no noticeable gain between using 12, 14 or \SI{16}{h} of TES. The difference is at highest 0.7~\%. 
 
@@ -323,7 +324,7 @@ At a SM of \num{2}, all TES variations achieve at least \SI{53.4}{\percent} cove
 
 The target \SI{90}{\percent} load coverage is reached at a SM of \num{5.0} and more than \SI{12}{h} of TES, implying a substantial investment. Load coverage of at least \SI{70}{\percent} was achieved in all simulated PTC configurations,  \SI{80}{\percent} load coverage was achieved by all configurations except the \SI{8}{h} TES.
 
-\subsubsection{Levelised costs of electricity}
+\subsubsection{Levelized costs of electricity}
 %For the calculated LCOE the finacial input parameter in Table~\ref{tbl: PTCFinance} and a simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE} was used. These results of the LCOE claculation for the simulated PTC configurations can be seen in Figure~\ref{PTC_LCOE}. 
 
 Financial parameters in Table~\ref{tbl: PTCFinance} and a simplified method (see Appendix~\ref{ChapterLCOE}, page \pageref{ChapterLCOE}) were used to compute LCOE. 
