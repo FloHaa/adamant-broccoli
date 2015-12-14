@@ -64,7 +64,7 @@ The Mulilo Sonnedix Prieska design has a DC/AC ratio of \num{1.15} \cite{Morse20
 The modules have a tilt angle of \SI{28.4}{\degree} (equivalent to Upington's latitude) and an azimuth of \SI{0}{\degree} (facing due north). The self-shading model was selected, with \num{2} modules along the side of row and \num{10} along the bottom, resulting in a shading loss of \SI{0.545}{\percent} on the solar radiation incident on the subarray. Further assumed losses are soiling, mismatch, diodes and connections and wiring losses. The assumed soiling losses reduce the solar radiation incident on the subarray by about \SI{5}{\percent}. The assumed mismatch loss of about \SI{2}{\percent} is related to slight differences in performance of individual modules in the array. Voltage drops across blocking diodes and electrical connections results in an assumed diode and connection loss of \SI{0.5}{\percent}. Further, resistive losses of \SI{2}{\percent} in wiring on the DC side and \SI{1}{\percent} wiring loss between the inverter and the grid connection point on the AC side of the system are assumed. (Loss factors are taken from an IEEE photovoltaics specialists conference paper on performance of grid-connected PV systems \cite{Marion2005}).
 
 %The for the simulation defined PV system parameter are summarized in Table~\ref{tbl: PVsystemdesign}.
-The system parameters are summarized in Table~\ref{tbl: PVsystemdesign}.
+The system parameters are summarized in Table~\ref{tbl: PVsystemdesign} (page \pageref{tbl: PVsystemdesign}).
 
 
 \begin{table}[htbp]  
@@ -93,6 +93,7 @@ Total land area & \si{\hectare} & \num{244} & \num{439} & \num{488} & \num{536} 
 \caption[PV system design parameters.]{PV system design parameters.}\label{tbl: PVsystemdesign}
 \end{table}
 
+\clearpage
 \subsubsection{Electrical energy storage (EES)}
 %The electrical energy storage is adapted though the system as it is shown in Figure~\ref{PV_model_config} on Page~\pageref{PV_model_config}. For the simulation in SAM the PCS was simplified to the conversion efficiency. The AC to DC conversion efficiency was assumed with \SI{99}{\percent} as well as the DC to AC efficiency. Nevertheless for the LCOE calculation it is still relevant to define the performance of the PCS. As it is shown in Table~\ref{tbl: PVsystemdesign} the inverter capacity range is between \SIlist{180;260}{\mega\wattsac} for the simulation cases with adapted storage. The maximum scheduled load from Section~\ref{SystemloadinSA} is \SI{100}{\mega\watt}. So depending from the PV inverter capacity the PCS capacity needs to variate as well to collect the  PV-overproduction. For the calculation of the LCOE it was assumed that the PCS needs to collects the inverter capacity minus the \SI{100}{MW} daily base load.
 
@@ -142,7 +143,7 @@ Table~\ref{tbl: EESsystemdesign} summarizes results of the parameters for the si
 	\begin{tabular}{ p{5.0cm} C{1.0cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} C{1.2cm} } 
 	\hline	
 \textbf{Item} & \textbf{Unit} & \multicolumn{5}{c}{\textbf{Value}} \\ \hline \hline
-Chemistry & - & \multicolumn{5}{c}{Lithium ion: nickel cobalt aluminum oxide} \\
+Chemistry & - & \multicolumn{5}{c}{Li-ion (NiCoAlO)} \\
 Cell nominal voltage & \si{\voltsdc} &\multicolumn{5}{c}{\num{3.6}}\\
 Internal resistance & \si{ohm} &\multicolumn{5}{c}{\num{0.1}}\\
 Fully charged cell voltage & \si{\voltsdc} &\multicolumn{5}{c}{\num{4.2}}\\
@@ -165,7 +166,7 @@ Cells & \textemdash & \num{5.1e6} & \num{6.3e6} & \num{7.6e6} & \num{8.8e6} & \n
 \caption[EES system design parameters.]{EES system design parameters.}\label{tbl: EESsystemdesign}
 \end{table}
 
-\subsubsection{Financial parameter} \label{SUBSUBPVFinancialparameter}
+\subsubsection{Financial parameters} \label{SUBSUBPVFinancialparameter}
 %As for the other systems is the PV power plant designed for a lifetime of \SI{25}{years} with land purchase costs of 3~000USD/ha \cite{Cassell2012} assumed.
 
 The plant is designed for a lifetime of \SI{25}{years} assuming land purchase costs of \SI{3000}{USD/\hectare} \cite{Cassell2012}.
@@ -182,7 +183,7 @@ The LCOE was calculated with different interest rates and O\&M costs for the PV 
 
 The storage costs are calculated from costs for the PCS, the battery bank and the replacement costs of the battery bank during the lifetime of the system. The costs\footnote{PCS specific costs of \SI{463}{\eur/\kilo\watt} \cite{Zakeri2015} using the average exchange rate in 2014 of \SI{1.33}{\usd/\eur} \cite{StatistaGmbH2015}.} of the PCS of \SI{615}{\usd/\kilo\watt} are taken from a comparative life cycle cost analysis of EES \cite{Zakeri2015} and is the average of a cost range (\SIrange{333}{798}{\usd/\kilo\watt}) of PCS for Li-ion-based EES systems. For the storage portion of the EES, a more optimistic value of \SI{300}{\usd/\kilo\watt\hour} was taken from a study of costs of battery packs for electric vehicles \cite{Nykvist2015}, which cites the costs for NCA Li-ion batteries from Tesla. The average storage cost for Li-Ion EES in other studies is \SI{914}{\usd/\kilo\watt\hour} \cite{Zakeri2015}. Studies set the cost for the replacement of the storage at approximately half of the storage costs \cite{Zakeri2015}. Assumed replacement costs are \SI{250}{USD/kWh}. The annual O\&M costs of \SI{3}{\percent} of the EES is based on IEA figures \cite{IEA2014c}.
 
-The financial parameters for the LCOE calculation are composed in Table~\ref{tbl: PVFinance}.
+The financial parameters for the LCOE calculation are summarized in Table~\ref{tbl: PVFinance} (page \pageref{tbl: PVFinance}).
 
 \begin{table}[!h]  
   \centering
