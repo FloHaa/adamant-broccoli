@@ -304,8 +304,8 @@ FUNCTION {write.url}
     	URLDatabase empty$
     	{
     		URLDate empty$
-    	    	{ "{\acessedthrough} <\url{" URL * "}> [{\acessedat} !no date!]." * write$ newline$ }
-    			{ "{\acessedthrough} <\url{" URL * "}> [{\acessedat} " URLDate * "]." * * write$ newline$ }
+    	    	{ "{\acessedthrough} \textless\url{" URL * "}\textgreater [{\acessedat} !no date!]." * write$ newline$ }
+    			{ "{\acessedthrough} \textless\url{" URL * "}\textgreater [{\acessedat} " URLDate * "]." * * write$ newline$ }
     		if$
     	}
     	{
@@ -318,8 +318,8 @@ FUNCTION {write.url}
     	}
     	{
     	URLDate empty$
-    		{ "{\acessedthroughp} " URLLibary * " <\url{" URL * "}> [{\acessedat} !no date!]." * * write$ newline$ }
-    		{ "{\acessedthroughp} " URLLibary * " <\url{" URL * "}> [{\acessedat} " URLDate * "]." * * * write$ newline$ }
+    		{ "{\acessedthroughp} " URLLibary * " \textless\url{" URL * "}\textgreater [{\acessedat} !no date!]." * * write$ newline$ }
+    		{ "{\acessedthroughp} " URLLibary * " \textless\url{" URL * "}\textgreater [{\acessedat} " URLDate * "]." * * * write$ newline$ }
     	if$
     	}
     if$

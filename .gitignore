@@ -16,6 +16,7 @@ twbooks_2015-16_v2/
 *.toc
 *.sh
 *.refs
+*.bib.bak
 
 
 *.db
