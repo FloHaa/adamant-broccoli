@@ -401,10 +401,10 @@ Medicine}}{}
   \null\vspace{8pt}
   \setcounter{page}{-9}
 
-\hspace*{-30pt}\scalebox{1.85}{\sffamily\textbf\doctypeprint}
-\vspace{17pt}
+\hspace*{-30pt}\scalebox{1.5}{\sffamily\textbf\doctypeprint}
+\vspace{10pt}
 
-\hspace*{-34pt}\scalebox{1.5}{%
+\hspace*{-34pt}\scalebox{1.2}{%
   \ifstr{\degreecourse}{Technisches Umweltmanagement und
     {\"O}kotoxikologie}
   {
@@ -413,38 +413,41 @@ Medicine}}{}
       \degreecourse
     \end{minipage}\vspace{5pt}}
   {
-    \begin{minipage}{0.75\linewidth}
+    \begin{minipage}{0.915\textwidth}
       \ifstr{\sprache}{german}{\ifstr{\doctype}{MASTERARBEIT}{zur Erlangung des akademischen Grades\\\glqq{}Master of Science in Engineering\grqq{}\\im Studiengang }{\ifstr{\doctype}{BACHELORARBEIT}{zur Erlangung des akademischen Grades\\\glqq{}Bachelor of Science in Engineering\grqq{}\\im Studiengang }{Im Studiengang}}}{\ifstr{\doctype}{MASTERTHESIS}{Thesis submitted in partial fulfillment of the requirements for the degree of Master of Science in Engineering at the University of Applied Sciences Technikum Wien - Degree Program }{\ifstr{\doctype}{BACHELORTHESIS}{Term paper submitted in partial fulfillment of the requirements for the degree of Bachelor of Science in Engineering at the University of Applied Sciences Technikum Wien - Degree Program }{In}}}
       \degreecourse\vspace{5pt}
     \end{minipage}}}
 
-  \vspace{54.7pt}
+%  \vspace{54.7pt}
+  \vspace{34.7pt}
   \hspace*{-30pt}\begin{minipage}{1.1\linewidth}
    \huge\bfseries\sffamily \@title
-\end{minipage}\vspace{47pt}
+\end{minipage}\vspace{37pt}
 
-\hspace*{-30pt}\Large
-\ifstr{\sprache}{german}{Ausgef{\"u}hrt von:~}{By:~}\@author
-
-\hspace*{-30pt}\Large
+%\hspace*{-30pt}\Large
+\hspace*{-30pt}\large
+\ifstr{\sprache}{german}{Ausgef{\"u}hrt von:~}{By:~}\@author\\
+%\hspace*{-30pt}\Large
+\hspace*{-30pt}\large
 \ifstr{\sprache}{german}{Personenkennzahl:~}{Student Number:~}
   \@studentnumber\vspace{0.9\baselineskip}
 
-\hspace*{-30pt}\Large
+%\hspace*{-30pt}\Large
+\hspace*{-30pt}\large
   \ifx\@secondsupervisor\@empty
 \ifstr{\sprache}{german}{BegutachterIn:}{Supervisor:~}
-   \begin{minipage}[t]{0.6\linewidth}
+   \begin{minipage}[t]{0.7\linewidth}
    \@supervisor
    \end{minipage}\vspace{0.8\baselineskip}
   \else
 \ifstr{\sprache}{german}{BegutachterInnen:}{Supervisors:~}
-   \begin{minipage}[t]{0.6\linewidth}
+   \begin{minipage}[t]{0.7\linewidth}
   \@supervisor\\
    \@secondsupervisor
   \end{minipage}\vspace{0.8\baselineskip}
   \fi
 
-\hspace*{-30pt}\Large\@place
+\hspace*{-30pt}\large\@place
 \ifstr{\sprache}{german}{, den~}{,~} \today
 
 \clearpage
