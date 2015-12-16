@@ -3,7 +3,7 @@
 
 \begin{sidewaystable} 
   \centering
-\begin{tabular}{ p{4.0cm}  C{1.0cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} | C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} } 
+\begin{tabularx}{\columnwidth}{ p{4.0cm}  C{2.0cm} XXXXX | XXXXX} 
 	\hline	
 \textbf{Item} & \textbf{Unit} & \multicolumn{10}{c}{\textbf{Value}} \\ \hline \hline
 Net turbine capacity & \si{\mega\wattel} & \multicolumn{10}{c}{100} \\
@@ -15,7 +15,7 @@ parasitic \\
 surplus net output\\
 net output\\
 LCC & \si{\percent} & \num{67.9} & \num{70.2} & \num{87.0} & \num{70.5} & \num{70.5}\\
-LCOE \\ 
+LCOE & \si{\usd/\mega\watt\hour} & \num{142.39} & \num{142.31} & \num{146.30} & \num{150.47} & \num{154.75} & \\ 
 \hline 
 Solar multiple & - & \multicolumn{5}{c}{3.0} & \multicolumn{5}{c}{3.5} \\
 TES capacity & h &   8 & 10 & 12 & 14 & 16 &  8 & 10 & 12 & 14 & 16 \\
@@ -27,8 +27,8 @@ LCC\\
 LCOE \\ 
 \hline \hline
 
-\end{tabular}
-\caption[Simulated configurations of the PV system with adapted EES.]{Simulated configurations of the PV system with adapted EES.}\label{tbl: CR_results}
+\end{tabularx}
+\caption[Simulation results of CR system.]{Simulation results of CR system.}\label{tbl: CR_results}
 \end{sidewaystable} 
 
 
