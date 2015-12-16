@@ -221,11 +221,11 @@ Land purchase &$c_{\text{LP}}$ & \num{3000} & \si{\usd/\hectare} & \cite{Cassell
 \subsubsection{PV power plant without storage}
 %As it was described before at the beginning of Section~\ref{section PV system}, the PV system was also simulated without using an EES system. These PV system was designed for a maximum power output of \SI{99.8}{\mega\wattsac} and \SI{115.0}{\mega\wattsdc} as it is defined in Table~\ref{tbl: PVsystemdesign}. It must be noted, that the following results are simulated for the first year of the PV system so for the performance results contains no degradation which is to be expected during the full lifetime. For the LCOE calculation a degradation factor was assumed as it was described in the previous section. 
 
-The PV system was also simulated without an EES. This PV system was designed for a maximum power output of \SI{99.8}{\mega\wattsac} and \SI{115.0}{\mega\wattsdc} (see Table~\ref{tbl: PVsystemdesign}). Only the first year was simulated, so the results do not account for the module degradation that would be expected during the full lifetime. For the LCOE calculation, a degradation factor was assumed as described in the previous section. 
+The \ac{PV} system was also simulated without an \ac{EES}. This \ac{PV} system was designed for a maximum power output of \SI{99.8}{\mega\wattsac} and \SI{115.0}{\mega\wattsdc} (see Table~\ref{tbl: PVsystemdesign}). Only the first year was simulated, so the results do not account for the module degradation that would be expected during the full lifetime. For the \ac{LCOE} calculation, a degradation factor was assumed as described in the previous section. 
 
 %Figure \ref{PVwithoutEESanual} visualizes the resulting annually load covering behavior. It can be seen, that the system can't cover the prescribed load at all. As it is usually for a solar powered system without storage the energy production standstill during the night time. The here shown annual average PV system power output covers about \SI{32.9}{\percent} of the prescribed load in the first year of the system. So the simulated PV system had a annual energy production during the first year of about \SI{233.69}{GWh}.
 
-This system cannot cover the prescribed load and there is no generation at night at all (Figure \ref{PVwithoutEESanual}). The annual average PV system power output covers \SI{32.9}{\percent} of the prescribed load in the first year of the system, corresponding to an annual energy production during the first year of \SI{233.69}{GWh}.
+This system cannot cover the prescribed load and there is no generation at night at all (Figure \ref{PVwithoutEESanual}). The annual average \ac{PV} system power output covers \SI{32.9}{\percent} of the prescribed load in the first year of the system, corresponding to an annual energy production during the first year of \SI{233.69}{GWh}.
 
 
 \begin{figure}[htbp]  
@@ -235,8 +235,7 @@ This system cannot cover the prescribed load and there is no generation at night
 \end{figure}
 %The simulation results of the energy output behaviour in Figure~\ref{PVwithoutEES} shows that there is a small differences of the daily peak system power output between winter and summer time even though the GHI peak during the summer time is about twice that high then the winter peak. This leads from the irradiation angle of the sunlight and the fixed module tilt angle. However, the shorter sunshine duration reduces the daily energy output anyways. Especially appreciable is the situation at the noon of the 27. December. There the PV field produces more than the inverter can process because they reached there max output power of \SI{99.8}{\mega\wattsac} At this day the PV system produces \SI{767}{\mega\watt\hour}, comparing this to the energy production at the 27. June (\SI{548}{\mega\watt\hour}) the difference in energy production between a summer and a winter day is just about \SI{29}{\percent}.
 
-There is a small difference in the daily peak power output between winter and summer, even though the GHI peak during the summer is twice as high as the winter peak (Figure~\ref{PVwithoutEES}). This is due to the irradiation angle of the sunlight and the fixed module tilt angle. However, the shorter sunshine duration reduces the daily energy output anyway. At noon on 27. December, the PV field produces more than the inverters can process because they have reached the maximum output power of \SI{99.8}{\mega\wattsac}. On this day, the PV system produces \SI{767}{\mega\watt\hour}. When comparing to energy production on 27. June (\SI{548}{\mega\watt\hour}), the difference in energy production between a summer and a winter day is about \SI{29}{\percent}.
-
+There is a small difference in the daily peak power output between winter and summer, even though the \ac{GHI} peak during the summer is twice as high as the winter peak (Figure~\ref{PVwithoutEES}). This is due to the irradiation angle of the sunlight and the fixed module tilt angle. However, the shorter sunshine duration reduces the daily energy output anyway. At noon on 27. December, the \ac{PV} field produces more than the inverters can process because they have reached the maximum output power of \SI{99.8}{\mega\wattsac}. On this day, the \ac{PV} system produces \SI{767}{\mega\watt\hour}. When comparing to energy production on 27. June (\SI{548}{\mega\watt\hour}), the difference in energy production between a summer and a winter day is about \SI{29}{\percent}.
 
 \begin{figure}[!htbp]
         \centering                
@@ -256,8 +255,7 @@ There is a small difference in the daily peak power output between winter and su
 
 %The LCOE was calculated taking into account of \SI{1}{\percent} annual degradation of the PV modules and under use of the remaining values from Table~\ref{tbl: PVFinance}. The LCOE was calculated using a the in Appendix~\ref{ChapterLCOE} documented method and results \SI{77.61}{USD/MWh}. Table~\ref{tbl: PVwithoutEESresult} summarizes the results of the PV system without adapted EES.
 
-The LCOE was calculated taking into account \SI{1}{\percent} annual degradation of the PV modules and using the remaining values from Table~\ref{tbl: PVFinance}. The LCOE was calculated using the method documented in Appendix~\ref{ChapterLCOE} and found to be \SI{77.61}{USD/MWh}. Table~\ref{tbl: PVwithoutEESresult} summarizes the results of the PV system without adapted EES.
-
+The \ac{LCOE} was calculated taking into account \SI{1}{\percent} annual degradation of the \ac{PV} modules and using the remaining values from Table~\ref{tbl: PVFinance}. The \ac{LCOE} was calculated using the method documented in Appendix~\ref{ChapterLCOE} and found to be \SI{77.61}{USD/MWh}. Table~\ref{tbl: PVwithoutEESresult} summarizes the results of the \ac{PV} system without adapted \ac{EES}.
 
 \begin{table}[htbp]  
   \centering
@@ -275,16 +273,15 @@ LCOE result & \num{77.61} & \si{\usd/\mega\watt\hour} \\
 \subsubsection{Load curve covering}
 %The PV system was also simulated with the adapted EES system as it was described before in Section~\ref{section PV system}. In order to find a suitable size of the PV system and for the adapted EES, there was 25 different configurations simulated as they are described in Table~\ref{tbl: PV_OverallConfig}. The lowest defined configuration was simulated using a PVM of 2.0 and a \SI{4}{h} of EES. The highest simulation configuration was defined with a PVM of 2.8 and a EES capacity for \SI{8}{h} at \SI{100}{\mega\watt} output. In the following the simulation results of these configurations are delineated  representative for the remaining 23 configurations in between. 
 
-The PV system was also simulated with the adapted EES system as described in Section~\ref{section PV system}. In order to find a suitable size for the PV system and for the adapted EES, 25 different configurations were simulated (Table~\ref{tbl: PV_OverallConfig}). The smallest configuration was simulated using a PVM of \num{2.0} and \SI{4}{h} of EES. The largest configuration was defined with a PVM of \num{2.8} and an EES capacity of \SI{8}{h} at \SI{100}{\mega\watt} output. In the following, these two extremes are treated. 
+The \ac{PV} system was also simulated with the adapted \ac{EES} system as described in Section~\ref{section PV system}. In order to find a suitable size for the \ac{PV} system and for the adapted \ac{EES}, 25 different configurations were simulated (Table~\ref{tbl: PV_OverallConfig}). The smallest configuration was simulated using a \ac{PVM} of \num{2.0} and \SI{4}{h} of \ac{EES}. The largest configuration was defined with a \ac{PVM} of \num{2.8} and an \ac{EES} capacity of \SI{8}{h} at \SI{100}{\mega\watt} output. In the following, these two extremes are treated. 
 
 %The simulation results are based on the first year energy output of the designed PV power plants and don't includes degradation of the PV system or the adapted EES system. 
 
-The simulation results are based on the first year energy output of the designed PV power plants and do not account for degradation of the PV system or the adapted EES system. 
+The simulation results are based on the first year energy output of the designed \ac{PV} power plants and do not account for degradation of the \ac{PV} system or the adapted \ac{EES} system. 
 
 %The result of the simulation for the both selected configurations are present in the annual average load profile in Figure~\ref{PV_annual_profil}. The simulation result shows that the highest configuration can cover the load almost completely during the simulated first year and just has appreciable shortfalls of covering in the morning hours. Considering the the load curve behavior from 10:00 to 16:00 it can be noticed, that the predicted load is covered over the whole year in that time span. Compared to that covers the lowest PV power plant configuration much less of the predicted load curve. The  annual average load profile shows that during the night the system coming to standstill from 0:00 to 5:00 over the full year. Nevertheless, the PV power plant can cover the prescribed load completely during the midday at any time of the year. The remaining  annual average load profile simulation results can be found in Appendix~\ref{all_load_profile}.
 
 The largest configuration can cover the load almost completely during the first year and has appreciable load coverage shortfalls only in the morning hours (Figure~\ref{PV_annual_profil}). The predicted load is covered over the whole year in the time span between 10:00 and 16:00. The smallest configuration covers much less of the predicted load curve; output drops to zero from 0:00 to 5:00 over the full year. Nevertheless, the plant can cover the prescribed load completely at midday at any time of the year. (For the remaining results, see Appendix~\ref{all_load_profile}).
-
 
 \begin{figure}[htbp]  
 \centering
@@ -294,82 +291,73 @@ The largest configuration can cover the load almost completely during the first 
 
 %The covering of the prescribed load during the day results mainly from the PV system, which also loads with there surplus power production the EES. During the night the EES taken over the covering of the load till it reaches the fixed bottom limit of the SOC. If the EES is fully loaded and the PV system is still producing more electricity than the prescribed load needs the surplus power is not going in to the load curve covering calculation as well as into the LCOE calculation as it was defined in Section~\ref{SystemloadinSA}. 
 
-Daytime load coverage is primarily by PV system, which also charges the EES with the surplus. During the night, the EES takes over the load until reaches the fixed bottom limit of the SOC. If the EES is fully charged and the PV system is still producing more electricity than the prescribed load needs, that surplus is not included in the load curve covering calculation, nor in the LCOE calculation as defined in Section~\ref{SystemloadinSA}. 
+Daytime load coverage is primarily by \ac{PV} system, which also charges the \ac{EES} with the surplus. During the night, the \ac{EES} takes over the load until reaches the fixed bottom limit of the \ac{SOC}. If the \ac{EES} is fully charged and the \ac{PV} system is still producing more electricity than the prescribed load needs, that surplus is not included in the load curve covering calculation, nor in the \ac{LCOE} calculation as defined in Section~\ref{SystemloadinSA}. 
+\pagebreak
 
+%The behavior of the power output of the selected simulated PV power plants and there power flow is shown in Figure~\ref{PV_winter_load} for the time with the lowest irradiance values. During the time of the winter solstice the value of GHI reaches just about \SI{630}{\watt\per\square\metre} in peak. The graph shows the behavior of the EES during the days and as it was described above the PV system first covers the prescribed load and then charges the EES with there surplus power. In the time span of the 22. to the 25. of June are the irradiance values of GHI during the days almost perfect. Nevertheless, both PV power plant configurations can't produce power without coming to standstill. The configuration with a PVM of 2.0 and \SI{4}{h} of EES stops covering the prescribed load before this steps down to the night reduction. But the PV power plant configuration with a PVM of 2.8 and \SI{8}{h} of EES covering the load till in the early morning hours. When comparing the value of the EES charging power it is obviously that there higher charging power peaks at a higher PVM configuration a the lower. 
+
+During the time of the northern solstice, the value of \ac{GHI} reaches \SI{630}{\watt\per\square\metre} at peak (Figure~\ref{PV_winter_load}). The graph shows the behaviour of the \ac{EES} during the day, during which the \ac{PV} system first covers the prescribed load and then charges the \ac{EES} with the surplus. In the time span of 22. to 25. June, the \ac{GHI} is optimal. Nevertheless, both plant configurations cannot maintain output over the entire 24 hour period. The configuration with a \ac{PVM} of \num{2.0} and \SI{4}{h} of \ac{EES} stops covering the prescribed load before this steps down at night. The plant configuration with a \ac{PVM} of \num{2.8} and \SI{8}{h} of \ac{EES} covers the load until the early morning hours. Charging power is greater at the higher \ac{PVM} configuration than at the lower.
 
 \begin{figure}[!bhtp]  
 \centering
 \includegraphics[width=1\linewidth]{FIG/PV_winter_load}
 \caption[PV system with adapted EES load profile during the time of winter solstice.]{PV system with adapted EES load profile during the time of winter solstice (15. June - 25. June).}\label{PV_winter_load}
 \end{figure}
-
-%The behavior of the power output of the selected simulated PV power plants and there power flow is shown in Figure~\ref{PV_winter_load} for the time with the lowest irradiance values. During the time of the winter solstice the value of GHI reaches just about \SI{630}{\watt\per\square\metre} in peak. The graph shows the behavior of the EES during the days and as it was described above the PV system first covers the prescribed load and then charges the EES with there surplus power. In the time span of the 22. to the 25. of June are the irradiance values of GHI during the days almost perfect. Nevertheless, both PV power plant configurations can't produce power without coming to standstill. The configuration with a PVM of 2.0 and \SI{4}{h} of EES stops covering the prescribed load before this steps down to the night reduction. But the PV power plant configuration with a PVM of 2.8 and \SI{8}{h} of EES covering the load till in the early morning hours. When comparing the value of the EES charging power it is obviously that there higher charging power peaks at a higher PVM configuration a the lower. 
-
-During the time of the northern solstice, the value of GHI reaches \SI{630}{\watt\per\square\metre} at peak (Figure~\ref{PV_winter_load}). The graph shows the behaviour of the EES during the day, during which the PV system first covers the prescribed load and then charges the EES with the surplus. In the time span of 22. to 25. June, the GHI is optimal. Nevertheless, both plant configurations cannot maintain output over the entire 24 hour period. The configuration with a PVM of \num{2.0} and \SI{4}{h} of EES stops covering the prescribed load before this steps down at night. The plant configuration with a PVM of \num{2.8} and \SI{8}{h} of EES covers the load until the early morning hours. Charging power is greater at the higher PVM configuration than at the lower.
-
 %During the winter times captures the EES the whole electricity power from the simulated PV systems, but this is not always the situation during the summer times. Figure~\ref{PV_summer_load} shows the load profile during the longest days of the year for the two selected configurations of the simulated PV power plants. The GHI rises up to \SI{1210}{\watt\per\square\metre} in peak at the portrayed time span.
 
-During the winter, the EES captures all the surplus from the simulated PV systems, but this is not always the situation during the summer. Figure~\ref{PV_summer_load} shows the load profile during the longest days of the year for the two selected configurations of the simulated PV power plants. The GHI rises up to \SI{1210}{\watt\per\square\metre} at peak in the time span shown.
+During the winter, the \ac{EES} captures all the surplus from the simulated \ac{PV} systems, but this is not always the situation during the summer. Figure~\ref{PV_summer_load} shows the load profile during the longest days of the year for the two selected configurations of the simulated \ac{PV} power plants. The \ac{GHI} rises up to \SI{1210}{\watt\per\square\metre} at peak in the time span shown.
 
+%The graph shows that the lowest PV power plant configuration can't cover the prescribed load during the night. The by the system provided power coming to stand still when the load got reduced for the night reduction at latest. Therefore the electricity production standstill during the night in the annual average load profile (Figure~\ref{PV_annual_profil}) as well. In comparison to that covers the highest PV power plant configuration almost the full prescribed load. Just during the following night times of days with lower irradiance (21. \& 22. December) comes the systems electricity output to standstill. Considering the system electricity output more precise, it offers high overproduction peaks which are the above mentioned situations where the storage got full charged and the PV system produces more power than the load requests.  
+
+The smallest \ac{PV} power plant configuration cannot cover the prescribed load during the night (Figure~\ref{PV_annual_profil}). By contrast, the largest plant configuration covers the prescribed load almost completely. The system has significant overproduction peaks, which are the aforementioned situations in which the storage was fully charged and the \ac{PV} system output exceeded demand.  
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=1\linewidth]{FIG/PV_summer_load}
 \caption[PV system with adapted EES load profile during the time of summer solstice.]{PV system with adapted EES load profile during the time of summer solstice (16. December - 26. December).}\label{PV_summer_load}
 \end{figure}
-
-%The graph shows that the lowest PV power plant configuration can't cover the prescribed load during the night. The by the system provided power coming to stand still when the load got reduced for the night reduction at latest. Therefore the electricity production standstill during the night in the annual average load profile (Figure~\ref{PV_annual_profil}) as well. In comparison to that covers the highest PV power plant configuration almost the full prescribed load. Just during the following night times of days with lower irradiance (21. \& 22. December) comes the systems electricity output to standstill. Considering the system electricity output more precise, it offers high overproduction peaks which are the above mentioned situations where the storage got full charged and the PV system produces more power than the load requests.  
-
-The smallest PV power plant configuration cannot cover the prescribed load during the night (Figure~\ref{PV_annual_profil}). By contrast, the largest plant configuration covers the prescribed load almost completely. The system has significant overproduction peaks, which are the aforementioned situations in which the storage was fully charged and the PV system output exceeded demand.  
-
-
 %This surplus output depends on the ratio between the PV and EES system. The behaviour of the ratio is shown in Figure~\ref{PV_energy_output}, which describes the share of the PV power plants energy output in the first year. The chart shows that the share of surplus energy rises with a higher PVM and decreases by larger EES capacity.
 
-This surplus output depends on the ratio of PV to EES. The behaviour of the ratio is shown in a breakdown of the plant output in the first year (Figure~\ref{PV_energy_output}). The chart shows that the share of surplus energy rises with higher PVM and decreases with larger EES capacity.
-
-\begin{figure}[htbp]  
-\centering
-\includegraphics[width=1\linewidth]{FIG/PV_energy_output}
-\caption[Share of energy output of all simulated PV power plants with adapted EES.]{Share of energy output of all simulated PV power plants with adapted EES.}\label{PV_energy_output}
-\end{figure}
+This surplus output depends on the ratio of \ac{PV} to \ac{EES}. The behaviour of the ratio is shown in a breakdown of the plant output in the first year (Figure~\ref{PV_energy_output}). The chart shows that the share of surplus energy rises with higher \ac{PVM} and decreases with larger \ac{EES} capacity.
 
 %The Figure also gives an idea of the amount of the energy output of the simulated PV power plants for covering the prescribed load. The lowest simulated configuration produces an energy output of about \SI{479.54}{GWh} in the first year which covers the prescribed load. The total sum of the annual prescribed load is \SI{711.75}{GWh}. Consequently, the lowest configuration of the simulated PV power plants covers 67.4~\% of the prescribed load in the first year. The share of the surplus output is 1.2~\% of the total generated energy. The energy output of the highest simulated configuration has a share of a surplus output of about 4.9~\% and produces an load covering energy output of about \SI{669.44}{GWh} in the first year. This output covers 94.1~\% of the prescribed load.
 
 The smallest configuration produces \SI{479.54}{GWh} in the first year, while sum total of the annual prescribed load is \SI{711.75}{GWh}, corresponding to a coverage of \SI{67.4}{\percent}. The share of the surplus output is \SI{1.2}{\percent} of the total generated energy. The surplus share of the largest configuration is \SI{4.9}{\percent}, the total output is \SI{669.44}{GWh} in the first year, corresponding to \SI{94.1}{\percent} coverage.
 
-%The from the energy output derived load curve covering results of the simulated PV power plant are shown in Figure~\ref{PV_LCCF}. At a PVM of 2.0 the size of the variations of EES don't have a big influence to the load curve covering. With the rising PVM the significance of the EES capacity gains as well. The forced target to covering 90~\% of the prescribed load is reached with the EES configuration 7 and \SI{8}{h} from a PVM of 2.6 on. The configuration PVM 2.6 with \SI{7}{h} of EES reaches actually just about 89.58~\% but reaching the 90~\% by round up. 70~\% load covering is reached by all EEs capacities and besides of the \SI{4}{h} EES configuration also all simulated EES variants reaching the covering of 80~\% of the prescribed load. 
-
-The from the energy output derived load curve covering results of the simulated PV power plant are shown in .
-
-At a PVM of \num{2.0}, variations in EES do not have a big influence on the load curve coverage (Figure~\ref{PV_LCCF}). With rising PVM, the significance of the EES capacity increases also. The target is reached with EES configuration 7, \SI{8}{h} from a PVM of 2.6 on. The configuration PVM \num{2.6} with \SI{7}{h} of EES achieves \SI{89.58}{\percent}. A \SI{70}{\percent} load coverage is reached by all EES capacities; besides the \SI{4}{h} EES configuration, all simulated EES variants achieve at least \SI{80}{\percent} coverage of the prescribed load. 
-
-
 \begin{figure}[htbp]  
 \centering
-\includegraphics[width=1\linewidth]{FIG/PV_LCCF}
+\includegraphics[width=0.82\linewidth]{FIG/PV_energy_output}
+\caption[Share of energy output of all simulated PV power plants with adapted EES.]{Share of energy output of all simulated PV power plants with adapted EES.}\label{PV_energy_output}
+\end{figure}
+%The from the energy output derived load curve covering results of the simulated PV power plant are shown in Figure~\ref{PV_LCCF}. At a PVM of 2.0 the size of the variations of EES don't have a big influence to the load curve covering. With the rising PVM the significance of the EES capacity gains as well. The forced target to covering 90~\% of the prescribed load is reached with the EES configuration 7 and \SI{8}{h} from a PVM of 2.6 on. The configuration PVM 2.6 with \SI{7}{h} of EES reaches actually just about 89.58~\% but reaching the 90~\% by round up. 70~\% load covering is reached by all EEs capacities and besides of the \SI{4}{h} EES configuration also all simulated EES variants reaching the covering of 80~\% of the prescribed load. 
+At a \ac{PVM} of \num{2.0}, variations in \ac{EES} do not have a big influence on the \ac{LCC} (Figure~\ref{PV_LCCF}). With rising \ac{PVM}, the significance of the \ac{EES} capacity increases also. The target is reached with \ac{EES} configuration 7, \SI{8}{h} from a \ac{PVM} of 2.6 on. The configuration \ac{PVM} \num{2.6} with \SI{7}{h} of \ac{EES} achieves \SI{89.58}{\percent}. A \SI{70}{\percent} load coverage is reached by all \ac{EES} capacities; besides the \SI{4}{h} \ac{EES} configuration, all simulated \ac{EES} variants achieve at least \SI{80}{\percent} coverage of the prescribed load. 
+\begin{figure}[htbp]  
+\centering
+\includegraphics[width=0.93\linewidth]{FIG/PV_LCCF}
 \caption[Load curve coverage of simulated PV systems with adapted EES.]{Load curve coverage of simulated PV systems with adapted EES.}\label{PV_LCCF}
 \end{figure}
 \pagebreak
 \subsubsection{Levelized costs of electricity}
-
 %The LCOE was calculated by using the finacial input parameter from Table~\ref{tbl: PVFinance} and a simplified method which is documented in Appendix~\ref{ChapterLCOE} on Page \pageref{ChapterLCOE}. It must be noted, that the calculation is based on the simulation result for the first year PV power plant results under consulting of a degradation factor for the PV system, but not for the EES. The results of the LCOE claculation for the simulated PV power plant configurations can be seen in Figure~\ref{PV_LCOE}. 
 
-The LCOE was calculated by using the financial input parameters from Table~\ref{tbl: PVFinance} and the simplified method documented in Appendix~\ref{ChapterLCOE}, page \pageref{ChapterLCOE}. The calculation is based on the simulation result for the first year PV power plant under consideration of a degradation factor for the PV system, but not for the EES. The results of the LCOE calculation for the simulated plant configurations are shown in Figure~\ref{PV_LCOE}. 
+The \ac{LCOE} was calculated by using the financial input parameters from Table~\ref{tbl: PVFinance} and the simplified method documented in Appendix~\ref{ChapterLCOE}, page \pageref{ChapterLCOE}. The calculation is based on the simulation result for the first year \ac{PV} power plant under consideration of a degradation factor for the \ac{PV} system, but not for the \ac{EES}. The results of the \ac{LCOE} calculation for the simulated plant configurations are shown in Figure~\ref{PV_LCOE}. 
 
 %The lowest LCOE result of \SI{336.34}{USD/MWh} is reached at a PVM of 2.2 using the lowest simulated EES configuration and is marginal lower than  \SI{338.02}{USD/MWh} at a PVM of 2.4 with the same EES configuration. Generally must be said that there are no overlaps of LCOE lines in this chart and the spacing leads from the EES system costs.
 
-The lowest LCOE of \SI{336.34}{\usd/\mega\watt\hour} is reached at a PVM of \num{2.2} using the smallest EES configuration and is marginally lower than \SI{338.02}{\usd/\mega\watt\hour} at a PVM of \num{2.4} with the same EES configuration. There are no overlaps of LCOE lines in this chart; the spread results from the EES system costs.
+The lowest \ac{LCOE} of \SI{336.34}{\usd/\mega\watt\hour} is reached at a \ac{PVM} of \num{2.2} using the smallest \ac{EES} configuration and is marginally lower than \SI{338.02}{\usd/\mega\watt\hour} at a \ac{PVM} of \num{2.4} with the same \ac{EES} configuration. There are no overlaps of \ac{LCOE} lines in this chart; the spread results from the \ac{EES} system costs.
 
 \begin{figure}[htbp]  
 \centering
-\includegraphics[width=1\linewidth]{FIG/PV_LCOE}
+\includegraphics[width=0.95\linewidth]{FIG/PV_LCOE}
 \caption[LCOE calculation results for PV systems with adapted EES simulation.]{LCOE calculation results for PV systems with adapted EES simulation.}\label{PV_LCOE}
 \end{figure}
 
 %Comprising the results of the LCOE calculation and associated load curve covering results shows that for covering 90\% of the predicted load the configuration of PVM 2.8 and \SI{7}{h} of EES reaching the lowest LCOE of \SI{417.57}{USD/MWh}. But the configuration owns an high value of surplus output of about 5.5~\% (see Figure~\ref{PV_energy_output}). The configuration PVM 2.6 reaches also the 90~\% load curve covering with a share of just 2.1~\% surplus output and a LCOE of \SI{425.75}{USD/MWh}.
 
-At \SI{90}{\percent} load coverage, the configuration of PVM \num{2.8} and \SI{7}{h} of EES achieves the lowest LCOE of \SI{417.57}{USD/MWh}. This configuration has a high surplus output of about \SI{5.5}{\percent} (see Figure~\ref{PV_energy_output}). The configuration PVM \num{2.6} also achieves \SI{90}{\percent} load curve coverage with just \SI{2.1}{\percent} surplus output and a LCOE of \SI{425.75}{USD/MWh}.
+At \SI{90}{\percent} \ac{LCC}, the configuration of \ac{PVM} \num{2.8} and \SI{7}{h} of \ac{EES} achieves the lowest \ac{LCOE} of \SI{417.57}{USD/MWh}. This configuration has a high surplus output of about \SI{5.5}{\percent} (see Figure~\ref{PV_energy_output}). The configuration \ac{PVM} \num{2.6} also achieves \SI{90}{\percent} \ac{LCC} with just \SI{2.1}{\percent} surplus output and a \ac{LCOE} of \SI{425.75}{USD/MWh}.
 
 %The lowest LCOE for reaching 80~\% of the prescribed load is \SI{366.94}{USD/MWh} using \SI{5}{h} of EES and also a PVM of 2.6. For reaching 70~\% the 2.2 and \SI{4}{h} of EES reaches the lowest LCOE of \SI{336.34}{USD/MWh}.
 
-The lowest LCOE for reaching \SI{80}{\percent} of the prescribed load is \SI{366.94}{\usd/\mega\watt\hour} using \SI{5}{h} of EES and at a PVM of \num{2.6}. For \SI{70}{\percent} coverage, a PVM of \num{2.2} and \SI{4}{h} of EES reaches the lowest LCOE of \SI{336.34}{\usd/\mega\watt\hour}.
+The lowest \ac{LCOE} for reaching \SI{80}{\percent} of the prescribed load is \SI{366.94}{\usd/\mega\watt\hour} using \SI{5}{h} of \ac{EES} and at a \ac{PVM} of \num{2.6}. For \SI{70}{\percent} coverage, a \ac{PVM} of \num{2.2} and \SI{4}{h} of \ac{EES} reaches the lowest \ac{LCOE} of \SI{336.34}{\usd/\mega\watt\hour}.
+
+The summarized results of the \ac{PV} \ac{LCC} analysis and \ac{LCOE} calculation can be seen in Appendix~\ref{Simulation results}, page~\pageref{tbl: PV_results}.
