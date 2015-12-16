@@ -82,10 +82,10 @@ The solar path for Upington is characterized in Figure~\ref{SunPathUpington}. Th
 
 \begin{figure}[htbp]  
 \centering
-\includegraphics[width=1\linewidth]{FIG/SunPathUpington}
+\includegraphics[width=0.85\linewidth]{FIG/SunPathUpington}
 \caption[Solar path diagram for Upington.]{Solar path diagram Upington \cite{PVsystSA2015}.}\label{SunPathUpington}
 \end{figure}
-\pagebreak
+
 %From the hourly irradiation values concludes a annual sum of \SI{2280}{\kilo\watt\hour\per\square\metre\year} by GHI and an annuall DNI amount of \SI{2621}{\kilo\watt\hour\per\square\metre\year}. When comparing this for the simulation used data with the solar irradiation maps in Figure~\ref{irradiation} the annual sum of GHI is corresponding. But it must be noted that the annual sum of DNI from SolarGIS map \cite{SolarGIS2015b} is about \SI{200}{\kilo\watt\hour\per\square\metre\year} higher than the value which was used for the simulation in this thesis.
 
 The annual totals are \SI{2280}{\kilo\watt\hour\per\square\metre\per\year} via \ac{GHI} and \SI{2621}{\kilo\watt\hour\per\square\metre\per\year} via \ac{DNI}. When comparing the data used for the simulation with the solar irradiation maps in Figure~\ref{irradiation}, note that the annual total \ac{DNI} acccording to SolarGIS \cite{SolarGIS2015b} is about \SI{200}{\kilo\watt\hour\per\square\metre\per\year} higher than the value used for the simulation in this thesis.
@@ -121,6 +121,11 @@ South Africa's solar power expansion began with the first round of the \ac{REIPP
 %Figure \ref{Solar-map} shows the allocation of all currently committed solar power plants of the REIPPPP. Yellow marked are PV-power plants and CSP plants are marked in orange (some marks cover them mutually). The numbers in the single marks expose in which REIPPPP-Round it belongs.
 Figure \ref{Solar-map} shows the location of all \ac{REIPPPP} solar power plants. \ac{PV} power plants are marked in yellow and \ac{CSP} plants are marked in orange. The numbers in the marks correspond to the applicable \ac{REIPPPP} round.
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth]{FIG/Solar-map}
+\caption[Allocation of all REIPPPP solar power plants in SA.]{Allocation of all REIPPPP solar power plants in SA \cite{Forder2015}.}\label{Solar-map}
+\end{figure}
 %Currently SA has 27 fully operational PV-power plants with a total capacity of \SI{1059.05}{\mega\watt} further six PV-power plants with in total of \SI{442.5}{\mega\watt} are under construction. \cite{Forder2015}
 
 %South Africa has 27 fully operational PV plants with a total capacity of \SI{1059.05}{\mega\watt}. A further six PV-power plants with a total of \SI{442.5}{\mega\watt} are under construction \cite{Forder2015}.
@@ -129,16 +134,9 @@ Figure \ref{Solar-map} shows the location of all \ac{REIPPPP} solar power plants
 
 South Africa has 27 fully operational PV plants with a total capacity of \SI{1059.05}{\mega\watt}, a further six with \SI{442.5}{\mega\watt} are under construction, one more with \SI{75}{\mega\watt} waiting to begin construction (approved and financed) and 12 more in approvals, planning and financing with a total capacity of \SI{813}{\mega\watt}. Of the total, 29 of 45 of the operational and planned plants are located in Northern Cape, five in the Western Cape and the North-West Province, three in Limpopo, two in Free State and one in the Eastern Cape. \cite{Forder2015}\footnote{Status: December 2015.}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=1\linewidth]{FIG/Solar-map}
-\caption[Allocation of all REIPPPP solar power plants in SA.]{Allocation of all REIPPPP solar power plants in SA \cite{Forder2015}.}\label{Solar-map}
-\end{figure}
-
 %"KaXu Solar One" is the first and currently only full operational CSP plant in SA. It is using parabolic trough technology and a 2.5~h thermal energy storage for generating \SI{100}{\mega\watt} capacity. The CSP-plants "Khi Solar One" and "Bokpoort CSP Project" with a capacity of each 50~MW are under construction as well as the \SI{100}{\mega\watt} "Xina CSP South Africa" project. Further three CSP-plants are awaiting construction, they have all a capacity of each \SI{100}{\mega\watt}. As mentioned before, all eight CSP projects are located in the Northern Cape Province of SA. \cite{Forder2015}
 
 \emph{KaXu Solar One} is the first and so far the only fully operational \ac{CSP} plant in South Africa. It uses parabolic trough technology with \SI{2.5}{\hour} thermal energy storage for \SI{100}{\mega\watt} generating capacity. The \ac{CSP} plants \emph{Khi Solar One} and \emph{Bokpoort CSP Project} with a capacity of \SI{50}{\mega\watt} each, as well as the \SI{100}{\mega\watt} projects \emph{Xina CSP South Africa} and \emph{Ilanga CSP 1}, are now under construction. An additional two \ac{CSP} plants, each with a generating capacity of \SI{100}{\mega\watt} are awaiting construction. \cite{Forder2015}\footnote{Status: December 2015.}
-
 \section{System load in South Africa and prescribed load profile} \label{SystemloadinSA}
 %The South African supply structure is based on coal-fired thermal power plants, as it was shown in Section~\ref{ElectricitySA} before. But also the renewable energy supply is getting noteworthy for the supply structure in SA. When taking an eye on Figure~\ref{systemload} it can be noted that wind and PV power also makes a small share of the daily electricity supply. It has to be said that by the time of spring in 2014 the KaXu Solar One CSP plant was not completed and so CSP supply in SA doesn't exist. The reveals that the power demand in SA rises in the morning hours and is coming to a peak demand in the evening hours. The surplus energy during the night got compensated by pump storage and reduction by supply imports. 
 
@@ -151,7 +149,7 @@ The South African electricity infrastructure is built on coal-fired thermal powe
 \end{figure}
 %It is shown that the PV supply can support the South African demand during the day and reduces thereby the generation of coal-fired thermal power plants. But by the time of the daily peak demand, in the evening hours, the PV supply is coming to standstill, whereby this demand needs to be covered by pumped storage or expansive diesel driven open cycle gas turbines (OCGTs).
 
-The \ac{PV} supply can help meet demand during the day, thereby reducing the need for coal-fired thermal power plants. By the time of the daily peak in the evening hours, however, the \ac{PV} supply has virtually disappeared. The difference must be covered by pumped storage or expensive diesel-driven \ac{OCGTs}.
+The \ac{PV} supply can help meet demand during the day, thereby reducing the need for coal-fired thermal power plants. By the time of the daily peak in the evening hours, however, the \ac{PV} supply has virtually disappeared. The difference must be covered by pumped storage or expensive diesel-driven \acp{OCGT}.
 
 %When taking an eye on the total unserved energy due to load shedding history of the first half year of 2015 in Figure~\ref{Load_shedding_sum} it is obviously that the capacity bottleneck in SA is mostly during the daytime and particularly during the evening peak hours till 22:00. This makes clear in which time period the support of new power plants is necessary for a secure electricity supply in SA.
 %The demand squeeze in When taking an eye on the total unserved energy due to load shedding history of the first half year of 2015 in Figure~\ref{Load_shedding_sum} it is obviously that the capacity bottleneck in SA is mostly during the daytime and particularly during the evening peak hours till 22:00. This makes clear in which time period the support of new power plants is necessary for a secure electricity supply in SA.
