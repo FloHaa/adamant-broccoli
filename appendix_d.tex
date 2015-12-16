@@ -3,32 +3,124 @@
 
 \begin{sidewaystable} 
   \centering
-\begin{tabularx}{\columnwidth}{ p{4.0cm}  C{2.0cm} XXXXX | XXXXX} 
+\begin{tabularx}{\columnwidth}{ p{4.0cm}  C{2.0cm} *5{>{\centering\arraybackslash}X} | *5{>{\centering\arraybackslash}X} } 
 	\hline	
 \textbf{Item} & \textbf{Unit} & \multicolumn{10}{c}{\textbf{Value}} \\ \hline \hline
 Net turbine capacity & \si{\mega\wattel} & \multicolumn{10}{c}{100} \\
 Gross turbine capacity & \si{\mega\wattel} & \multicolumn{10}{c}{111} \\ \hline
-Solar multiple & - & \multicolumn{5}{c}{2.0} & \multicolumn{5}{c}{2.5} \\
-TES capacity & h &  8 & 10 & 12 & 14 & 16 &  8 & 10 & 12 & 14 & 16 \\ 
-gross output \\
-parasitic \\
-surplus net output\\
-net output\\
-LCC & \si{\percent} & \num{67.9} & \num{70.2} & \num{87.0} & \num{70.5} & \num{70.5}\\
-LCOE & \si{\usd/\mega\watt\hour} & \num{142.39} & \num{142.31} & \num{146.30} & \num{150.47} & \num{154.75} & \\ 
+Solar multiple & - & \multicolumn{5}{c|}{2.0} & \multicolumn{5}{c}{2.5} \\
+TES capacity & h &  8 & 10 & 12 & 14 & 16 &  8 & 10 & 12 & 14 & 16 \\ \hline
+gross output & \si{\giga\watt\hour} & \num{544.9} & \num{562.2} & \num{563.8} & \num{564.7} & \num{565.2} & 606.9 & 648.7 & 655.9  & 659.8 & 662.6 \\
+parasitic & \si{\giga\watt\hour} & \num{45.1} & 46.1 & 46.3 & 46.3 & 46.4 & 52.5 & 55.3 & 55.8 & 56.1 & 56.3 \\
+surplus net output & \si{\giga\watt\hour} & 16.2 & 16.7 & 16.7 & 16.8 & 16.8 & 14.7 & 15.5 & 15.8 & 15.9 & 16.1 \\
+net output & \si{\giga\watt\hour} & 483.6 & 499.4 & 500.9 & 501.6 & 502.0 & 539.7 & 578.0 & 584.3 & 587.7 & 590.2\\
+LCC & \si{\percent} & \num{67.9} & \num{70.2} & \num{87.0} & \num{70.5} & \num{70.5} & 75.8 & 81.2 & 82.1 & 82.6 & 82.9 \\
+LCOE & \si{\usd/\mega\watt\hour} & 142.4 & 142.3 & 146.3 & 150.5 & 154.8 & 149.1 & 143.0 & 145.3 & 148.2 & 151.3\\ 
 \hline 
-Solar multiple & - & \multicolumn{5}{c}{3.0} & \multicolumn{5}{c}{3.5} \\
-TES capacity & h &   8 & 10 & 12 & 14 & 16 &  8 & 10 & 12 & 14 & 16 \\
-gross output \\
-parasitic \\
-surplus net output\\
-net output\\
-LCC\\
-LCOE \\ 
+Solar multiple & - & \multicolumn{5}{c|}{3.0} & \multicolumn{5}{c}{3.5} \\
+TES capacity & h &   8 & 10 & 12 & 14 & 16 &  8 & 10 & 12 & 14 & 16 \\ \hline
+gross output & \si{\giga\watt\hour} & 632.0 & 693.4 & 711.8 & 716.7 & 720.4 & 639.3 & 711.4 & 744.6 & 750.7 & 755.4 \\
+parasitic & \si{\giga\watt\hour} & 58.0 & 62.3 & 63.5 & 63.9 & 64.3 & 62.6 & 68.2 & 70.4 & 70.9 & 71.3 \\
+surplus net output & \si{\giga\watt\hour} & 12.5 & 13.2 & 13.8 & 14.0 & 14.2 & 11.0 & 11.4 & 11.9 & 12.2 & 12.4 \\
+net output & \si{\giga\watt\hour} & 561.5 & 617.8 & 634.4 & 638.7 & 641.9 & 565.7 & 631.9 & 662.3 & 667.6 & 671.7\\
+LCC & \si{\percent} & 78.9 & 86.8 & 89.1 & 89.7 & 90.2 & 79.5 & 88.8 & 93.0 & 93.8 & 94.4\\
+LCOE & \si{\usd/\mega\watt\hour} & 164.3 & 152.8 & 152.3 & 154.8 & 157.4 & 185.2 & 169.3 & 164.9 & 166.8 & 169.1 \\ 
 \hline \hline
-
 \end{tabularx}
-\caption[Simulation results of CR system.]{Simulation results of CR system.}\label{tbl: CR_results}
+\caption[Results of CR systems.]{Results of CR systems.}\label{tbl: CR_results}
+\end{sidewaystable} 
+
+
+
+\begin{sidewaystable} 
+  \centering
+\begin{tabularx}{\columnwidth}{ p{4.0cm}  C{2.0cm} *5{>{\centering\arraybackslash}X} | *5{>{\centering\arraybackslash}X} } 
+	\hline	
+\textbf{Item} & \textbf{Unit} & \multicolumn{10}{c}{\textbf{Value}} \\ \hline \hline
+Net turbine capacity & \si{\mega\wattel} & \multicolumn{10}{c}{100} \\
+Gross turbine capacity & \si{\mega\wattel} & \multicolumn{10}{c}{120} \\ \hline
+Solar multiple & - & \multicolumn{5}{c|}{2.0} & \multicolumn{5}{c}{2.5} \\
+TES capacity & h &  8 & 10 & 12 & 14 & 16 &  8 & 10 & 12 & 14 & 16 \\ \hline
+gross output & \si{\giga\watt\hour} & 433.5 & 433.3 & 433.3 & 433.0 & 432.6 & 519.1 & 545.9 & 549.0 & 550.5 & 551.1 \\
+parasitic & \si{\giga\watt\hour} & 44.3 & 44.3 & 44.4 & 44.4 & 44.4 & 52.6 & 55.0 & 55.3 & 55.5 & 55.6 \\
+surplus net output & \si{\giga\watt\hour} & 8.7 & 8.6 & 8.5 & 8.4 & 8.4 & 9.0 & 9.4 & 9.4 & 9.3 & 9.3\\
+net output & \si{\giga\watt\hour} & 380.5 & 380.3 & 380.4 & 380.1 & 379.8 & 457.5 & 481.5 & 484.3 & 485.6 & 486.1 \\
+LCC & \si{\percent} & 53.5 & 53.4 & 53.4 & 53.4 & 53.4 & 64.3 & 67.6 & 68.0 & 68.2 & 68.3\\
+LCOE & \si{\usd/\mega\watt\hour} & 157.0 & 168.4 & 179.8 & 191.4 & 202.9 & 145.2 & 147.0 & 155.1 & 163.6 & 172.3 \\ 
+\hline 
+Solar multiple & - & \multicolumn{5}{c|}{3.0} & \multicolumn{5}{c}{3.5} \\
+TES capacity & h & 8 & 10 & 12 & 14 & 16 &  8 & 10 & 12 & 14 & 16 \\ \hline
+gross output & \si{\giga\watt\hour} & 558.0 & 600.1 & 612.2 & 615.2 & 617.5 & 587.5 & 635.4 & 652.6 & 657.1 & 660.5 \\
+parasitic & \si{\giga\watt\hour} & 56.5 & 59.9 & 61.0 & 61.4 & 61.7 & 59.3 & 63.0 & 64.4 & 64.9 & 65.2 \\
+surplus net output & \si{\giga\watt\hour} & 8.0 & 8.5 & 8.5 & 8.3 & 8.2 & 7.8 & 8.2 & 8.1 & 8.0 & 7.9 \\
+net output & \si{\giga\watt\hour} & 493.5 & 531.7 & 542.7 & 545.5 & 547.5 & 520.4 & 564.2 & 580.1 & 584.2 & 587.4 \\
+LCC & \si{\percent} & 69.3 & 74.7 & 76.3 & 76.6 & 76.9 & 73.1 & 79.3 & 81.5 & 82.1 & 82.5\\
+LCOE & \si{\usd/\mega\watt\hour} & 147.3 & 144.9 & 150.0 & 157.2 & 164.5 & 152.6 & 148.4 & 151.8 & 158.2 & 164.7 \\ 
+\hline \hline
+\end{tabularx}
+\caption[Results of PTC systems.]{Results of PTC systems.}\label{tbl: PTC_results}
+\end{sidewaystable} 
+
+\begin{sidewaystable} 
+  \centering
+\begin{tabularx}{\columnwidth}{ p{4.0cm}  C{2.0cm} *5{>{\centering\arraybackslash}X} | *5{>{\centering\arraybackslash}X} } 
+	\hline	
+\textbf{Item} & \textbf{Unit} & \multicolumn{10}{c}{\textbf{Value}} \\ \hline \hline
+Net turbine capacity & \si{\mega\wattel} & \multicolumn{10}{c}{100} \\
+Gross turbine capacity & \si{\mega\wattel} & \multicolumn{10}{c}{120} \\ \hline
+Solar multiple & - & \multicolumn{5}{c|}{4.0} & \multicolumn{5}{c}{4.5} \\
+TES capacity & h & 8 & 10 & 12 & 14 & 16 &  8 & 10 & 12 & 14 & 16 \\ \hline
+gross output & \si{\giga\watt\hour} & 607.1 & 660.1 & 682.1 & 686.2 & 688.8 & 620.3 & 677.5 & 703.9 & 707.3 & 709.3 \\
+parasitic & \si{\giga\watt\hour} & 61.0 & 65.2 & 66.9 & 67.4 & 67.7 & 62.2 & 67.2 & 69.2 & 69.6 & 69.9 \\
+surplus net output & \si{\giga\watt\hour} & 8.1 & 8.0 & 7.9 & 7.7 & 7.6 & 8.3 & 7.9 & 7.6 & 7.4 & 7.3 \\
+net output & \si{\giga\watt\hour} & 538.0 & 586.9 & 607.3 & 611.1 & 613.5 & 549.9 & 602.4 & 627.1 & 630.4 & 632.2 \\
+LCC & \si{\percent} & 75.6 & 82.5 & 85.3 & 85.9 & 86.2 & 77.3 & 84.6 & 88.1 & 88.6 & 88.8 \\
+LCOE & \si{\usd/\mega\watt\hour} & 159.3 & 153.4 & 155.4 & 161.5 & 168.0 & 168.0 & 160.6 & 161.2 & 167.2 & 173.6\\ 
+\hline 
+Solar multiple & - & \multicolumn{5}{c|}{5.0} &  \\
+TES capacity & h & 8 & 10 & 12 & 14 & 16 &  \\ \hline
+gross output & \si{\giga\watt\hour} & 629.4 & 691.1 & 719.5 &  722.9 & 725.3 &\\
+parasitic & \si{\giga\watt\hour} & 63.3 & 68.4 & 70.4 & 70.8 & 71.0 & \\
+surplus net output & \si{\giga\watt\hour} & 8.5 & 8.2 & 7.9 & 7.6 & 7.6 &\\
+net output & \si{\giga\watt\hour} & 557.5 & 614.5 & 641.3 & 644.5 & 646.7 & \\
+LCC & \si{\percent} & 78.3 & 86.3 & 90.1 & 90.6 & 90.9 & \\
+LCOE & \si{\usd/\mega\watt\hour} & 177.0 & 167.7 & 167.4 & 173.3 & 179.5 &\\ 
+\hline \hline
+\end{tabularx}
+\caption[Residual results of PTC systems.]{Residual results of PTC systems.}\label{tbl: PTC_results2}
+\end{sidewaystable} 
+
+
+
+\begin{sidewaystable} 
+  \centering
+\begin{tabularx}{\columnwidth}{ p{4.0cm}  C{2.0cm} *5{>{\centering\arraybackslash}X} | *5{>{\centering\arraybackslash}X} } 
+	\hline	
+\textbf{Item} & \textbf{Unit} & \multicolumn{10}{c}{\textbf{Value}} \\ \hline \hline
+Maximum load supply & \si{\mega\wattel} & \multicolumn{10}{c}{100}\\ \hline
+PVM & - & \multicolumn{5}{c|}{1.0} & \multicolumn{5}{c}{1.8} \\
+EES capacity & h & \multicolumn{5}{c|}{-} & 4 & 5 & 6 & 7 & 8 \\ \hline
+surplus net output & \si{\giga\watt\hour} & \multicolumn{5}{c|}{-}  & 6.0 & 3.3 & 3.3 & 3.3 & 3.2 \\
+net output & \si{\giga\watt\hour} & \multicolumn{5}{c|}{233.7} & 479.5 & 484.8 & 485.9 & 486.5 & 487.0\\
+LCC & \si{\percent} & \multicolumn{5}{c|}{32.8} & 67.4 & 68.1 & 68.3 & 68.4 & 68.4 \\
+LCOE & \si{\usd/\mega\watt\hour} & \multicolumn{5}{c|}{77.6} & 344.5 & 336.3 & 338.0 & 343.7 & 350.5\\ 
+\hline 
+PVM & - & \multicolumn{5}{c|}{2.0} & \multicolumn{5}{c}{2.2} \\
+EES capacity & h & 4 & 5 & 6 & 7 & 8 & 4 & 5 & 6 & 7 & 8 \\ \hline
+surplus net output & \si{\giga\watt\hour} & 27.1 & 7.6 & 4.0 & 3.9 & 3.9 & 61.5 & 28.9 & 9.4 & 4.8 & 4.8 \\
+net output & \si{\giga\watt\hour} & 507.4 & 532.8 & 538.7 & 540.0 & 540.6 & 521.1 & 561.7 & 586.4 & 593.1 & 594.1 \\
+LCC & \si{\percent} & 71.3 & 74.9 & 75.7 & 75.9 & 75.9 & 73.2 & 78.9 & 82.4 & 83.3 & 83.5 \\
+LCOE & \si{\usd/\mega\watt\hour} & 402.5 & 376.5 & 366.9 & 366.9 & 371.9 & 463.2 & 427.9 & 402.5 & 392.5 & 391.6\\ 
+ \hline 
+PVM & - & \multicolumn{5}{c|}{2.4} & \multicolumn{5}{c}{2.6} \\
+EES capacity & h & 4 & 5 & 6 & 7 & 8 & 4 & 5 & 6 & 7 & 8 \\ \hline
+surplus net output & \si{\giga\watt\hour} &  101.2 & 62.7 & 31.4 & 13.6 & 11.3 & 14.2 & 10.3 & 6.5 & 3.9 & 3.4 \\
+net output & \si{\giga\watt\hour} & 528.4 & 576.6 & 615.3 & 637.6 & 641.0 & 533.9 & 583.6 & 630.7 & 663.2 & 669.4 \\
+LCC & \si{\percent} & 74.2 & 81.0 & 86.4 & 89.6 & 90.1 & 75.0 & 82.0 & 88.6 & 93.2 & 94.1 \\
+LCOE & \si{\usd/\mega\watt\hour} & 524.2 & 482.4 & 448.4 & 425.7 & 417.6 & 585.1 & 537.2 & 498.1 & 470.1 & 458.4\\ 
+\hline \hline
+\end{tabularx}
+\caption[Results of PV systems.]{Results of PV systems.}\label{tbl: PTC_results2}
 \end{sidewaystable} 
 
 

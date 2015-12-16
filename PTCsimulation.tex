@@ -51,7 +51,7 @@ The air-cooled condenser was selected, since water is scarce in the region. The 
 	\begin{tabular}{  p{7.0cm}  C{2.0cm}  C{2.0cm} } 
 	\hline	
 \textbf{Item} & \textbf{Value} & \textbf{Unit} \\ \hline \hline
-Turbine design capacity, gross  & 110 & \si{\mega\wattel} \\ 
+Turbine design capacity, gross  & 120 & \si{\mega\wattel} \\ 
 Turbine design capacity, net & 100 & \si{\mega\wattel} \\ 
 Boiler operating pressure & 100 & bar \\ 
 Design inlet temperature & 393 & \si{\celsius} \\ 
@@ -78,7 +78,7 @@ For the heat collecting element, Schott's PTR80 was selected. This receiver tube
 
 %The input data of the HCE for SAM comming from researchers of the American National Renewable Energy Laboratory (NREL) \cite{Kutscher2012}. The specified input parameter are documented in Appendix~\ref{PTCdocumentary} on Page~\pageref{PTC_HCE}. The total weighted losses of the HCE elements is \SI{207.35}{W/m} heat loss at design combined with about 0.85 optical derate (reduction in optical efficiency).
 
-The specifications for the HCE in SAM are provided by the National Renewable Energy Laboratory (NREL) \cite{Kutscher2012}. The specific parameters used are documented in Appendix~\ref{PTCdocumentary}, page~\pageref{PTC_HCE}. The total weighted loss through the HCE elements is \SI{207.35}{W/m} heat loss at design point combined with about 0.85 optical derate (reduction in optical efficiency).
+The specifications for the \ac{HCE} in \ac{SAM} are provided by  \ac{NREL} \cite{Kutscher2012}. The specific parameters used are documented in Appendix~\ref{PTCdocumentary}, page~\pageref{PTC_HCE}. The total weighted loss through the HCE elements is \SI{207.35}{W/m} heat loss at design point combined with about \SI{0.85} optical derate (reduction in optical efficiency).
 
 
 \subsubsection{Solar field}
@@ -95,7 +95,7 @@ The size of the solar field is coupled to the solar multiple and the thermal dem
 
 %Also the the solar field area and thereby the total land area depending by the SM. Equation~\ref{GL_PTCSolarfieldarea} shows the influence on the solar field area of the ratio between the row spacing and the SCA width. The roe spacing is assumed by \SI{18}{m} between the parallel SCAs. The total land area results by Equation~\ref{GL_PTCtotallandarea} and is the solar field area multiplies by the factor of non-solar field area. The factor is assumed by \si{1.4} in the simulation \cite{NREL2015a}.
 
-Equation~\ref{GL_PTCSolarfieldarea} shows the effect of row spacing to SCA width ratio on solar field area. The row spacing is assumed to be \SI{18}{m} between the parallel SCAs. The total land area is defined by Equation~\ref{GL_PTCtotallandarea} and is the solar field area multiplied by the factor of non-solar field area. A factor of \si{1.4} is assumed \cite{NREL2015a}.
+Equation~\ref{GL_PTCSolarfieldarea} shows the effect of row spacing to SCA width ratio on solar field area. The row spacing is assumed to be \SI{18}{m} between the parallel SCAs. The total land area is defined by Equation~\ref{GL_PTCtotallandarea} and is the solar field area multiplied by the factor of non-solar field area. A factor of \SI{1.4} is assumed \cite{NREL2015a}.
 
 \begin{align}
 \textrm{solar field area }(m^2) =\textrm{aperture area }(m^2) \times \frac{\textrm{row spacing }(m)}{ \textrm{SCA width }(m)} \label{GL_PTCSolarfieldarea}
@@ -224,7 +224,7 @@ Figure~\ref{PTC_winter_load} shows the load curve behaviour of the selected conf
 \begin{figure}[htbp]  
 \centering
 \includegraphics[width=1\linewidth]{FIG/PTC_winter_load}
-\caption[PTC load profile around the northern solstice (15. June - 25. June).]{PTC load profile around the northern solstice (15. June - 25. June).}\label{PTC_winter_load}
+\caption[PTC load profile around the northern solstice.]{PTC load profile around the northern solstice (15. June - 25. June).}\label{PTC_winter_load}
 \end{figure}
 %The net electricity production of the PTC power plant with low configurations don't reach the prescribed load at any time in this portrayed time line. Therefore it is obviously that the solar field don't collect enough thermal energy during the day for filling up the storage to supply the steam turbines also by night. The power that is produced by the solar field goes at any time directly to the power generation and without direct sun irradiance the production is coming to standstill. The parasitic consumer has a peak load of about \SI{8}{MW} during these days in these configuration.
 
@@ -272,7 +272,7 @@ The load behaviour of the two example plants at southern solstice is shown in Fi
 \begin{figure}[htbp]  
 \centering
 \includegraphics[width=1\linewidth]{FIG/PTC_summer_load}
-\caption[PTC load profile during the time of summer solstice (16. December - 26. December).]{PTC load profile during the time of summer solstice (16. December - 26. December).}\label{PTC_summer_load}
+\caption[PTC load profile during the time of summer solstice.]{PTC load profile during the time of summer solstice (16. December - 26. December).}\label{PTC_summer_load}
 \end{figure}
 %The lower PTC configuration which is using a SM of 2.0 and \SI{8}{h} of TES can cover almost the full daytime load and a part of the night time load eith the net electricity production. But under this configuration the PTC power plant can't cover the prescribed load during the night at the best irradiance time of the year, therefrom is also the mentioned gap in production in the annual average load curve coming which was mentioned at the beginning of these section. The net electricity production over-scaled prescribed load at the beginning of the days which leads from the mentioned gross power output control. The parasitic consumers reaching a peak demand of \SI{15}{MW} in this configuration. 
 
