@@ -3,12 +3,32 @@
 
 \begin{sidewaystable} 
   \centering
-\begin{tabular}{ p{2.0cm} C{2.0cm} C{2.0cm} C{2.0cm} C{2.0cm} C{2.0cm} C{2.0cm} C{2.0cm} } 
+\begin{tabular}{ p{4.0cm}  C{1.0cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} | C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} C{0.3cm} } 
 	\hline	
-\textbf{SM} & \textbf{TES} & \textbf{gross output} & \textbf{parasitic} & \textbf{surplus net output} & \textbf{net output} & \textbf{load curve covering} & \textbf{LCOE} \\ \hline \hline
+\textbf{Item} & \textbf{Unit} & \multicolumn{10}{c}{\textbf{Value}} \\ \hline \hline
+Net turbine capacity & \si{\mega\wattel} & \multicolumn{10}{c}{100} \\
+Gross turbine capacity & \si{\mega\wattel} & \multicolumn{10}{c}{111} \\ \hline
+Solar multiple & - & \multicolumn{5}{c}{2.0} & \multicolumn{5}{c}{2.5} \\
+TES capacity & h &  8 & 10 & 12 & 14 & 16 &  8 & 10 & 12 & 14 & 16 \\ 
+gross output \\
+parasitic \\
+surplus net output\\
+net output\\
+LCC & \si{\percent} & \num{67.9} & \num{70.2} & \num{87.0} & \num{70.5} & \num{70.5}\\
+LCOE \\ 
+\hline 
+Solar multiple & - & \multicolumn{5}{c}{3.0} & \multicolumn{5}{c}{3.5} \\
+TES capacity & h &   8 & 10 & 12 & 14 & 16 &  8 & 10 & 12 & 14 & 16 \\
+gross output \\
+parasitic \\
+surplus net output\\
+net output\\
+LCC\\
+LCOE \\ 
+\hline \hline
 
 \end{tabular}
-\caption[Simulated configurations of the PV system with adapted EES.]{Simulated configurations of the PV system with adapted EES.}\label{tbl: PV_OverallConfig}
+\caption[Simulated configurations of the PV system with adapted EES.]{Simulated configurations of the PV system with adapted EES.}\label{tbl: CR_results}
 \end{sidewaystable} 
 
 
